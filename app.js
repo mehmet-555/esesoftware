@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(path.join(rootDir, "/public")));
 app.set("view engine", "ejs")
 app.get("/", (req, res)=> {
-    res.render("sdf");
+    res.sendFile(path.join(__dirname, "/public/pages/index.html"))
 })
 
 module.exports = app;
