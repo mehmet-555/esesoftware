@@ -116,7 +116,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-family: Roboto Mono, monospace, sans-serif; /* 1 */
   font-feature-settings: normal; /* 2 */
   font-variation-settings: normal; /* 3 */
   font-size: 1em; /* 4 */
@@ -501,8 +501,15 @@ video {
   --tw-contain-paint:  ;
   --tw-contain-style:  ;
 }
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
+}
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 .block {
   display: block;
@@ -528,8 +535,37 @@ video {
 .min-w-\[260px\] {
   min-width: 260px;
 }
+.flex-col {
+  flex-direction: column;
+}
 .items-center {
   align-items: center;
+}
+.justify-around {
+  justify-content: space-around;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.rounded-md {
+  border-radius: 0.375rem;
+}
+.border-b {
+  border-bottom-width: 1px;
+}
+.border-b-2 {
+  border-bottom-width: 2px;
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+.border-\[\#7b3d3d\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(123 61 61 / var(--tw-border-opacity));
 }
 .bg-black {
   --tw-bg-opacity: 1;
@@ -539,6 +575,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
 }
+.bg-\[\#242424\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(36 36 36 / var(--tw-bg-opacity));
+}
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -547,13 +587,90 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-\[6px\] {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.px-\[6px\] {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
 .pt-\[7px\] {
   padding-top: 7px;
+}
+.font-mono {
+  font-family: Roboto Mono, monospace, sans-serif;
+}
+.text-\[13px\] {
+  font-size: 13px;
 }
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
+.leading-4 {
+  line-height: 1rem;
+}
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+.text-\[\#7cfc00\] {
+  --tw-text-opacity: 1;
+  color: rgb(124 252 0 / var(--tw-text-opacity));
+}
+.text-\[\#00ffa3\] {
+  --tw-text-opacity: 1;
+  color: rgb(0 255 163 / var(--tw-text-opacity));
+}
 .underline {
   text-decoration-line: underline;
+}
+
+.roboto-mono-thin {
+  font-family: Roboto Mono, monospace, sans-serif;
+  font-weight: 100;
+}
+
+.roboto-mono-light {
+  font-family: Roboto Mono, monospace, sans-serif;
+  font-weight: 300;
+}
+
+.roboto-mono-regular {
+  font-family: Roboto Mono, monospace, sans-serif;
+  font-weight: 400;
+}
+
+.roboto-mono-medium {
+  font-family: Roboto Mono, monospace, sans-serif;
+  font-weight: 500;
+}
+
+.roboto-mono-bold {
+  font-family: Roboto Mono, monospace, sans-serif;
+  font-weight: 700;
+}
+
+.bgGradient {
+  background: rgb(124, 0, 255);
+  background: radial-gradient(
+    circle,
+    rgba(124, 0, 255, 1) 0%,
+    rgba(40, 0, 25, 1) 0%,
+    rgba(9, 18, 127, 1) 100%,
+    rgba(0, 172, 17, 0.5494572829131652) 100%
+  );
 }

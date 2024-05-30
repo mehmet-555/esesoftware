@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.roboto-mono-thin {
+  @apply font-mono font-thin;
+}
+
+.roboto-mono-light {
+  @apply font-mono font-light;
+}
+
+.roboto-mono-regular {
+  @apply font-mono font-normal;
+}
+
+.roboto-mono-medium {
+  @apply font-mono font-medium;
+}
+
+.roboto-mono-bold {
+  @apply font-mono font-bold;
+}
+
+.bgGradient {
+  background: rgb(124, 0, 255);
+  background: radial-gradient(
+    circle,
+    rgba(124, 0, 255, 1) 0%,
+    rgba(40, 0, 25, 1) 0%,
+    rgba(9, 18, 127, 1) 100%,
+    rgba(0, 172, 17, 0.5494572829131652) 100%
+  );
+}

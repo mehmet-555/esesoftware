@@ -5,7 +5,11 @@ module.exports = {
     './src/**/*.css',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        mono: ['Roboto Mono', 'monospace', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 }
