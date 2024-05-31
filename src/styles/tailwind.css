@@ -60,7 +60,27 @@
   box-shadow: 0px 0px 20px 3px #a058eeb6;
 }
 
-
-
+.mainCustomheigth {                              /*  Bu pseudo-element, kaydırma çubuğunun tamamını hedef alır.  */
+  height: calc(100vh - 64px);
+  &::-webkit-scrollbar {
+    width: 10px;
+    background: #969696;
+  }
+  &::-webkit-scrollbar-button {                 /*  Kaydırma çubuğunun başında ve sonunda bulunan ok düğmelerini hedef alır.  */
+    background: #ccc; /* Düğmelerin arka plan rengi */
+    height: 0px; /* Düğmelerin yüksekliği */
+    width: 0px; /* Düğmelerin genişliği */
+  }
+  &::-webkit-scrollbar-thumb {                  /*  Kaydırma çubuğunun, sayfanın neresinde olduğunuzu gösteren sürüklenebilir kısmını hedef alır. */
+    background: #738cc2;
+    border-radius: 10px;
+  }
+  &::-webkit-scrollbar-track {                  /*  Kaydırma çubuğunun thumb kısmının üzerinde hareket ettiği yolu hedef alır.  */
+    background: #004165;
+  }
+  &::-webkit-resizer {
+    background: #888; /* Resizer kısmının arka plan rengi */
+  }
+}
 
 
