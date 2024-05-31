@@ -32,3 +32,35 @@
     rgba(0, 172, 17, 0.5494572829131652) 100%
   );
 }
+
+.ulAnchorElem:hover + div {
+  width: 100%;
+  left: 0;
+}
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-animation {
+  animation: rotate360 7s infinite linear running;
+}
+.rotate-animation:hover {
+  animation: rotate360 7s infinite linear paused;
+}
+
+
+
+
+#getStardedBtn:hover::before {
+  box-shadow: 0px 0px 20px 3px #a058eeb6;
+}
+
+
+
+
+
