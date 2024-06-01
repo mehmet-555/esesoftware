@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         mono: ['Roboto Mono', 'monospace', 'sans-serif'],
+        merriweather: ['Merriweather', 'serif'],
       },
       backgroundImage: {
         'initial-gradient': 'radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%)',
