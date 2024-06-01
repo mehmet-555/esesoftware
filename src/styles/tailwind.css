@@ -126,12 +126,39 @@
   }
 }
 
+.aiLayerTop {
+  background-image: url("/images/aibgSvg.svg");
+}
 
+.textGrad {
+  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+img.logo {
+  @apply w-auto h-6 text-slate-900 dark:text-white;
+}
+
+.logoSlide {
+  display: inline-block;
+  animation: 19s slide infinite linear;
+  min-width: 1659px;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
 /* Cards */
-body {
+/* body {
   background-color: black;
-}
+} */
 
 .container {
   width: 1200px !important;
