@@ -578,6 +578,9 @@ video {
 .mb-12 {
   margin-bottom: 3rem;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -590,11 +593,17 @@ video {
 .ml-5 {
   margin-left: 1.25rem;
 }
+.mr-28 {
+  margin-right: 7rem;
+}
 .mr-3 {
   margin-right: 0.75rem;
 }
 .mr-6 {
   margin-right: 1.5rem;
+}
+.mr-9 {
+  margin-right: 2.25rem;
 }
 .mt-12 {
   margin-top: 3rem;
@@ -626,8 +635,14 @@ video {
 .hidden {
   display: none;
 }
+.h-1 {
+  height: 0.25rem;
+}
 .h-10 {
   height: 2.5rem;
+}
+.h-14 {
+  height: 3.5rem;
 }
 .h-16 {
   height: 4rem;
@@ -637,6 +652,9 @@ video {
 }
 .h-8 {
   height: 2rem;
+}
+.h-80 {
+  height: 20rem;
 }
 .h-9 {
   height: 2.25rem;
@@ -685,6 +703,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.min-w-52 {
+  min-width: 13rem;
 }
 .min-w-\[260px\] {
   min-width: 260px;
@@ -757,6 +778,9 @@ video {
 .border-b {
   border-bottom-width: 1px;
 }
+.border-b-2 {
+  border-bottom-width: 2px;
+}
 .border-\[\#2d221b\] {
   --tw-border-opacity: 1;
   border-color: rgb(45 34 27 / var(--tw-border-opacity));
@@ -795,6 +819,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(25 32 42 / var(--tw-bg-opacity));
 }
+.bg-\[\#19202aa1\] {
+  background-color: #19202aa1;
+}
 .bg-\[\#5020b3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(80 32 179 / var(--tw-bg-opacity));
@@ -810,6 +837,9 @@ video {
 .bg-red-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(153 27 27 / var(--tw-bg-opacity));
+}
+.bg-transparent {
+  background-color: transparent;
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -866,6 +896,10 @@ video {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
 }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .py-\[2px\] {
   padding-top: 2px;
   padding-bottom: 2px;
@@ -878,6 +912,9 @@ video {
 }
 .pt-\[7px\] {
   padding-top: 7px;
+}
+.pb-1 {
+  padding-bottom: 0.25rem;
 }
 .text-center {
   text-align: center;
@@ -955,6 +992,10 @@ video {
 }
 .opacity-40 {
   opacity: 0.4;
+}
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
 .outline {
   outline-style: solid;
@@ -1126,6 +1167,31 @@ video {
   background-image: url("/images/aibgSvg.svg");
 }
 
+.bgDeneme {
+  position: relative;
+}
+.bgDeneme::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(6, 13, 24, 0) 0%, rgba(6, 13, 24, 1) 100%);
+}
+
+.contactFormT {
+  position: relative;
+}
+
+.contactLabelT {
+  position: relative;
+  color: #457576;
+  transition: all .4s ease;
+  font-size: 16px;
+  top: 15px;
+  left: 10px;
+}
 
 .textGrad {
   background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);

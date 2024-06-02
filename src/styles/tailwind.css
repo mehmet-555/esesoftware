@@ -130,6 +130,31 @@
   background-image: url("/images/aibgSvg.svg");
 }
 
+.bgDeneme {
+  position: relative;
+}
+.bgDeneme::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle, rgba(6, 13, 24, 0) 0%, rgba(6, 13, 24, 1) 100%);
+}
+
+.contactFormT {
+  position: relative;
+}
+
+.contactLabelT {
+  position: relative;
+  color: #457576;
+  transition: all .4s ease;
+  font-size: 16px;
+  top: 15px;
+  left: 10px;
+}
 
 .textGrad {
   background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
