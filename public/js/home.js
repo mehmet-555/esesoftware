@@ -1,28 +1,47 @@
-const inputs = document.querySelectorAll(".contactFormT input");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Contact Form Style Management
+    const inputs = document.querySelectorAll(".contactFormT input, .contactFormT textarea");
+    const setLabelStyle = (label, styles) => {
+        Object.assign(label.style, styles);
+    };
+
+    inputs.forEach(input => {
+        const label = input.previousElementSibling;
+        input.addEventListener("focus", () => {
+            setLabelStyle(label, {
+                top: "0px",
+                left: "5px",
+                fontSize: "13px",
+                color: "white"
+            });
+        });
+
+        input.addEventListener("blur", () => {
+            setLabelStyle(label, {
+                fontSize: "16px",
+                color: "#457576",
+                top: input.value === "" ? "15px" : "5px",
+                left: "5px"
+            });
+        });
+    });
+});
 
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    inputs.forEach(input => {
-        input.addEventListener("focus", (e)=> {
-            // console.log(e.target.previousElementSibling)
-            e.target.previousElementSibling.style.top = "0px"
-            e.target.previousElementSibling.style.left = "5px"
-            e.target.previousElementSibling.style.fontSize = "13px"            
-            e.target.previousElementSibling.style.color = "white"            
-        })
-    })
-    inputs.forEach(input => {
-        input.addEventListener("blur", (e)=> {
-            // console.log(e.target.previousElementSibling)
-            e.target.previousElementSibling.style.fontSize = "16px"
-            e.target.previousElementSibling.style.color = "#457576"
-            if(input.value === "") {
-                e.target.previousElementSibling.style.top = "15px"
-                e.target.previousElementSibling.style.left = "10px"
-            }else {
-                e.target.previousElementSibling.style.top = "5px"
-                e.target.previousElementSibling.style.left = "5px"
-            }
-        })
-    })
-})
+
+window.addEventListener("beforeunload", function() {
+    localStorage.setItem("scrollPosition", document.querySelector(".mainCustomheigth").scrollTop);
+});
+
+document.querySelector(".mainCustomheigth").addEventListener("scroll", function() {
+    localStorage.setItem("scrollPosition", document.querySelector(".mainCustomheigth").scrollTop);
+});
+
+window.addEventListener("load", function() {
+    var scrollPosition = localStorage.getItem("scrollPosition");
+    if (scrollPosition !== null) {
+        document.querySelector(".mainCustomheigth").scrollTop = parseInt(scrollPosition, 10);
+    }
+});
