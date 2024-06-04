@@ -33,28 +33,109 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Sık Sorulan Sorulan (SSS) Başlangıç
-
-    //  {Büyük Butonlar}
+    
+    //  {Büyük Butonlar başlangıç}
     const sssBigBtns = document.querySelectorAll(".sssBigBtn");
+
+    function plusToMinusAnimateTop(e) {
+        sssBigBtns.forEach(sssBigBtn => {
+            if(e.target === sssBigBtn) {
+                e.target.firstElementChild.classList.add("active");
+            }else {
+                if(sssBigBtn.firstElementChild.classList.contains("active")) {
+                    sssBigBtn.firstElementChild.classList.remove("active");
+                }
+            }
+        })
+        
+    }
+    function minusToPlusAnimateTop(e) {
+        sssBigBtns.forEach(sssBigBtn => {
+            if(e.target === sssBigBtn) {
+                e.target.firstElementChild.classList.remove("active");
+            }else {
+                if(sssBigBtn.firstElementChild.classList.contains("active"))
+                sssBigBtn.firstElementChild.classList.add("active");
+            }
+        })
+    }
+
     sssBigBtns.forEach(sssBigBtn => {
         sssBigBtn.addEventListener("click", (e)=> {
-            e.target.closest("li").style.padding = "1rem";
-            e.target.closest("li").querySelector(".hidden").classList.remove("hidden")
+
+            const acordionTopBody = e.target.closest("li").querySelector(".acordionTopBody");
+            if(acordionTopBody.classList.contains("showBody")) {
+                acordionTopBody.classList.remove("showBody");
+                minusToPlusAnimateTop(e)
+                closeAllInnerAcordionBodies ()
+                e.target.closest("li").style.padding = "0rem";
+            }else {
+                document.querySelector(".sssArea").querySelectorAll(".sssTopLi").forEach(liElem => {
+                    if(liElem.querySelector(".acordionTopBody").classList.contains("showBody")) {
+                        liElem.querySelector(".acordionTopBody").classList.remove("showBody")
+                        minusToPlusAnimateTop(e)
+                        closeAllInnerAcordionBodies ()
+                        liElem.style.padding = "0rem";
+                    }
+                })
+                acordionTopBody.classList.add("showBody");
+                plusToMinusAnimateTop(e)
+                e.target.closest("li").style.padding = "1rem";
+            }
         })
     })
 
+    
+    //  {Büyük Butonlar son}
+
     //  {Küçük Butonlar}
     const sssSmBtns = document.querySelectorAll(".sssSmBtn");
+
+    function plusToMinusAnimateInner(e) {
+        sssSmBtns.forEach(sssSmBtn => {
+            if(e.target === sssSmBtn) {
+                e.target.firstElementChild.classList.add("active");
+            }else {
+                if(sssSmBtn.firstElementChild.classList.contains("active")) {
+                    sssSmBtn.firstElementChild.classList.remove("active");
+                }
+            }
+        })
+        
+    }
+    function minusToPlusAnimateInner(e) {
+        sssSmBtns.forEach(sssSmBtn => {
+            if(e.target === sssSmBtn) {
+                e.target.firstElementChild.classList.remove("active");
+            }else {
+                if(sssSmBtn.firstElementChild.classList.contains("active"))
+                    sssSmBtn.firstElementChild.classList.add("active");
+            }
+        })
+    }
+    function closeAllInnerAcordionBodies () {
+        document.querySelectorAll(".sssInnerLi").forEach(sssInnerLiElem => {
+            sssInnerLiElem.querySelector(".innerLiBtnAnim").classList.toggle("active", false);
+            sssInnerLiElem.querySelector(".acordionInnerBody").classList.toggle("showBody", false);
+        })
+    }
     sssSmBtns.forEach(sssSmBtn => {
         sssSmBtn.addEventListener("click", (e)=> {
-            const closestUl = e.target.closest("ul");
-            const otherBtns = closestUl.querySelectorAll(".sssSmBtn");
-            otherBtns.forEach(otherBtn => {
-                if(e.target !== otherBtn) {
-                    otherBtn.click();
-                }
-            })
-            e.target.closest("li").querySelector(".pCntr").classList.contains("hidden") ? e.target.closest("li").querySelector(".pCntr").classList.remove("hidden") : e.target.closest("li").querySelector(".pCntr").classList.add("hidden"); 
+
+            const acordionInnerBody = e.target.closest("li").querySelector(".acordionInnerBody");
+            if(acordionInnerBody.classList.contains("showBody")) {
+                acordionInnerBody.classList.remove("showBody");
+                minusToPlusAnimateInner(e)
+            }else {
+                document.querySelector(".sssArea").querySelectorAll(".sssInnerLi").forEach(liElem => {
+                    if(liElem.querySelector(".acordionInnerBody").classList.contains("showBody")) {
+                        liElem.querySelector(".acordionInnerBody").classList.remove("showBody")
+                        minusToPlusAnimateInner(e)
+                    }
+                })
+                acordionInnerBody.classList.add("showBody");
+                plusToMinusAnimateInner(e)
+            }
         })
     })
     // Sık Sorulan Sorulan (SSS) Son
