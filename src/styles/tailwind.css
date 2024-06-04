@@ -149,7 +149,7 @@
 
 .contactLabelT {
   position: relative;
-  color: #457576;
+  color: #67afb1;
   transition: all .4s ease;
   font-size: 16px;
   top: 15px;
@@ -319,7 +319,7 @@ img.logo {
 .card-description {
   font-weight: 600;
   line-height: 32px;
-  color: hsla(0, 0%, 100%, 0.5);
+  color: #ffffff99;
   font-size: 16px;
   max-width: 470px;
 }
@@ -370,23 +370,24 @@ img.logo {
 /* Sık Sorulan Sorular Başlangıç */
 
 .sssArea li {
-  transition: all .6s linear;
+  transition: all .5s linear;
 }
 .sssInnerLi h4 {
-  transition: all .6s linear;
+  transition: all .5s linear;
 }
 .sssInnerLi:has(.acordionInnerBody.showBody) h4 {
-  color: #ff6767; 
+  color: #3cb063; 
 }
 .sssTopLi:has(.acordionTopBody.showBody) h3 {
-  color: #1a908c;
+  color: white;
 }
 .acordionTopBody {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all .6s linear;
+  /* transition: all .5s linear; */
+  transition: max-height .5s linear, opacity .4s linear, visibility .4s linear;
 }
 .acordionTopBody.showBody {
   max-height: 500px;
@@ -399,7 +400,7 @@ img.logo {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all .6s linear;
+  transition: max-height .5s linear, opacity .4s linear, visibility .4s linear;
 }
 .acordionInnerBody.showBody {
   max-height: 500px;
@@ -407,6 +408,22 @@ img.logo {
   visibility: visible;
 }
 
+.sssBigBtn:hover,
+.sssBigBtn:hover {
+  span {
+    &::before, &::after {
+      background-color: white;
+    }
+  }
+}
+.sssSmBtn:hover,
+.sssSmBtn:hover {
+  span {
+    &::before, &::after {
+      background-color: white;
+    }
+  }
+}
 
 .topLiBtnAnim {
   position: relative;
@@ -416,12 +433,12 @@ img.logo {
 .topLiBtnAnim::before {
   position: relative;
   width: 20px;
-  height: 5px;
+  height: 3px;
   opacity: 1;
 }
 .topLiBtnAnim::after {
   position: relative;
-  width: 5px;
+  width: 3px;
   height: 20px;
   opacity: 1;
 }
@@ -431,9 +448,10 @@ img.logo {
   top: 50%;
   left: 50%;
   content: "";
-  background-color: #ccc;
+  background-color: #9ca3af;
   transform: translate(-50%, -50%) rotate(-90deg);
-  transition: all .6s linear;
+  transition: top .5s linear, transform .5s linear, left .5s linear, opacity .5s linear, background-color .2s linear;
+  /* transition: all .5s linear; */
 }
 
 .topLiBtnAnim.active {
@@ -472,7 +490,7 @@ img.logo {
   content: "";
   background-color: #ccc;
   transform: translate(-50%, -50%) rotate(-90deg);
-  transition: all .6s linear;
+  transition: top .5s linear, left .5s linear, opacity .5s linear, transform .5s linear, background-color .2s linear;
 }
 
 .innerLiBtnAnim.active {
@@ -480,7 +498,7 @@ img.logo {
     transform: translate(-50%, -50%) rotate(90deg);
     opacity: 0;
   }
-  &::after {
+  &::after { 
     transform: translate(-50%, -50%) rotate(90deg);
   }
 }

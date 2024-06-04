@@ -1,37 +1,14 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Contact Form Style Management Başlangıç
-    const inputs = document.querySelectorAll(".contactFormT input, .contactFormT textarea");
-    const setLabelStyle = (label, styles) => {
-        Object.assign(label.style, styles);
-    };
+    // ContactFormFunction
+    contactFormAddStyleListenerFunc ()
 
-    inputs.forEach(input => {
-        const label = input.previousElementSibling;
-        input.addEventListener("focus", () => {
-            setLabelStyle(label, {
-                top: "0px",
-                left: "5px",
-                fontSize: "13px",
-                color: "white"
-            });
-        });
+    // SSSFunction
+    sssAddListenerFunc ();
+});
 
-        input.addEventListener("blur", () => {
-            setLabelStyle(label, {
-                fontSize: "16px",
-                color: "#457576",
-                top: input.value === "" ? "15px" : "5px",
-                left: "5px"
-            });
-        });
-    });
-    // Contact Form Style Management Son
-
-
-
-
+function sssAddListenerFunc () {
     // Sık Sorulan Sorulan (SSS) Başlangıç
     
     //  {Büyük Butonlar başlangıç}
@@ -84,11 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
-
-    
     //  {Büyük Butonlar son}
 
-    //  {Küçük Butonlar}
+    //  {Küçük Butonlar Başlangıç}
     const sssSmBtns = document.querySelectorAll(".sssSmBtn");
 
     function plusToMinusAnimateInner(e) {
@@ -138,9 +113,42 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         })
     })
+    //  {Küçük Butonlar Son}
     // Sık Sorulan Sorulan (SSS) Son
+}
 
-});
+
+function contactFormAddStyleListenerFunc () {
+    // Contact Form Style Management Başlangıç
+    const inputs = document.querySelectorAll(".contactFormT input, .contactFormT textarea");
+    const setLabelStyle = (label, styles) => {
+        Object.assign(label.style, styles);
+    };
+
+    inputs.forEach(input => {
+        const label = input.previousElementSibling;
+        input.addEventListener("focus", () => {
+            setLabelStyle(label, {
+                top: "0px",
+                left: "5px",
+                fontSize: "13px",
+                color: "white"
+            });
+        });
+
+        input.addEventListener("blur", () => {
+            setLabelStyle(label, {
+                fontSize: "16px",
+                color: "#67afb1",
+                top: input.value === "" ? "15px" : "5px",
+                left: "5px"
+            });
+        });
+    });
+    // Contact Form Style Management Son
+}
+
+
 
 
 // Sayfada Kaldığım Yer Başlangıç

@@ -737,6 +737,9 @@ video {
 .w-full {
   width: 100%;
 }
+.w-24 {
+  width: 6rem;
+}
 .min-w-52 {
   min-width: 13rem;
 }
@@ -800,6 +803,9 @@ video {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-2xl {
+  border-radius: 1rem;
+}
 .rounded-b-lg {
   border-bottom-right-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
@@ -830,6 +836,9 @@ video {
 .border-\[\#309ea3\] {
   --tw-border-opacity: 1;
   border-color: rgb(48 158 163 / var(--tw-border-opacity));
+}
+.border-\[\#8080806e\] {
+  border-color: #8080806e;
 }
 .border-b-\[\#fafad278\] {
   border-bottom-color: #fafad278;
@@ -872,6 +881,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 244 / var(--tw-bg-opacity));
 }
+.bg-\[\#ffffff8f\] {
+  background-color: #ffffff8f;
+}
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
@@ -883,10 +895,6 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -897,9 +905,6 @@ video {
 }
 .to-red-600 {
   --tw-gradient-to: #dc2626 var(--tw-gradient-to-position);
-}
-.p-4 {
-  padding: 1rem;
 }
 .px-1 {
   padding-left: 0.25rem;
@@ -957,8 +962,14 @@ video {
   padding-top: 2px;
   padding-bottom: 2px;
 }
+.pb-0 {
+  padding-bottom: 0px;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
+}
+.pb-12 {
+  padding-bottom: 3rem;
 }
 .pb-4 {
   padding-bottom: 1rem;
@@ -966,14 +977,26 @@ video {
 .ps-6 {
   padding-inline-start: 1.5rem;
 }
+.pt-4 {
+  padding-top: 1rem;
+}
 .pt-\[1px\] {
   padding-top: 1px;
 }
 .pt-\[7px\] {
   padding-top: 7px;
 }
+.pl-\[10px\] {
+  padding-left: 10px;
+}
+.pr-4 {
+  padding-right: 1rem;
+}
 .text-center {
   text-align: center;
+}
+.text-justify {
+  text-align: justify;
 }
 .indent-8 {
   text-indent: 2rem;
@@ -1042,9 +1065,13 @@ video {
   --tw-text-opacity: 1;
   color: rgb(96 111 194 / var(--tw-text-opacity));
 }
-.text-\[\#bebebe\] {
+.text-\[\#d4d4d4\] {
   --tw-text-opacity: 1;
-  color: rgb(190 190 190 / var(--tw-text-opacity));
+  color: rgb(212 212 212 / var(--tw-text-opacity));
+}
+.text-gray-400 {
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 .text-slate-900 {
   --tw-text-opacity: 1;
@@ -1057,8 +1084,8 @@ video {
 .underline {
   text-decoration-line: underline;
 }
-.opacity-40 {
-  opacity: 0.4;
+.opacity-60 {
+  opacity: 0.6;
 }
 .outline-none {
   outline: 2px solid transparent;
@@ -1256,7 +1283,7 @@ video {
 
 .contactLabelT {
   position: relative;
-  color: #457576;
+  color: #67afb1;
   transition: all .4s ease;
   font-size: 16px;
   top: 15px;
@@ -1437,7 +1464,7 @@ img.logo {
 .card-description {
   font-weight: 600;
   line-height: 32px;
-  color: hsla(0, 0%, 100%, 0.5);
+  color: #ffffff99;
   font-size: 16px;
   max-width: 470px;
 }
@@ -1488,23 +1515,24 @@ img.logo {
 /* Sık Sorulan Sorular Başlangıç */
 
 .sssArea li {
-  transition: all .6s linear;
+  transition: all .5s linear;
 }
 .sssInnerLi h4 {
-  transition: all .6s linear;
+  transition: all .5s linear;
 }
 .sssInnerLi:has(.acordionInnerBody.showBody) h4 {
-  color: #ff6767; 
+  color: #3cb063; 
 }
 .sssTopLi:has(.acordionTopBody.showBody) h3 {
-  color: #1a908c;
+  color: white;
 }
 .acordionTopBody {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all .6s linear;
+  /* transition: all .5s linear; */
+  transition: max-height .5s linear, opacity .4s linear, visibility .4s linear;
 }
 .acordionTopBody.showBody {
   max-height: 500px;
@@ -1517,7 +1545,7 @@ img.logo {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all .6s linear;
+  transition: max-height .5s linear, opacity .4s linear, visibility .4s linear;
 }
 .acordionInnerBody.showBody {
   max-height: 500px;
@@ -1525,6 +1553,22 @@ img.logo {
   visibility: visible;
 }
 
+.sssBigBtn:hover,
+.sssBigBtn:hover {
+  span {
+    &::before, &::after {
+      background-color: white;
+    }
+  }
+}
+.sssSmBtn:hover,
+.sssSmBtn:hover {
+  span {
+    &::before, &::after {
+      background-color: white;
+    }
+  }
+}
 
 .topLiBtnAnim {
   position: relative;
@@ -1534,12 +1578,12 @@ img.logo {
 .topLiBtnAnim::before {
   position: relative;
   width: 20px;
-  height: 5px;
+  height: 3px;
   opacity: 1;
 }
 .topLiBtnAnim::after {
   position: relative;
-  width: 5px;
+  width: 3px;
   height: 20px;
   opacity: 1;
 }
@@ -1549,9 +1593,10 @@ img.logo {
   top: 50%;
   left: 50%;
   content: "";
-  background-color: #ccc;
+  background-color: #9ca3af;
   transform: translate(-50%, -50%) rotate(-90deg);
-  transition: all .6s linear;
+  transition: top .5s linear, transform .5s linear, left .5s linear, opacity .5s linear, background-color .2s linear;
+  /* transition: all .5s linear; */
 }
 
 .topLiBtnAnim.active {
@@ -1590,7 +1635,7 @@ img.logo {
   content: "";
   background-color: #ccc;
   transform: translate(-50%, -50%) rotate(-90deg);
-  transition: all .6s linear;
+  transition: top .5s linear, left .5s linear, opacity .5s linear, transform .5s linear, background-color .2s linear;
 }
 
 .innerLiBtnAnim.active {
@@ -1598,7 +1643,7 @@ img.logo {
     transform: translate(-50%, -50%) rotate(90deg);
     opacity: 0;
   }
-  &::after {
+  &::after { 
     transform: translate(-50%, -50%) rotate(90deg);
   }
 }
