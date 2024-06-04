@@ -674,9 +674,6 @@ video {
 .h-80 {
   height: 20rem;
 }
-.h-9 {
-  height: 2.25rem;
-}
 .h-96 {
   height: 24rem;
 }
@@ -704,11 +701,11 @@ video {
 .w-10 {
   width: 2.5rem;
 }
+.w-24 {
+  width: 6rem;
+}
 .w-3\/5 {
   width: 60%;
-}
-.w-32 {
-  width: 8rem;
 }
 .w-4 {
   width: 1rem;
@@ -722,9 +719,6 @@ video {
 .w-60 {
   width: 15rem;
 }
-.w-9 {
-  width: 2.25rem;
-}
 .w-96 {
   width: 24rem;
 }
@@ -736,9 +730,6 @@ video {
 }
 .w-full {
   width: 100%;
-}
-.w-24 {
-  width: 6rem;
 }
 .min-w-52 {
   min-width: 13rem;
@@ -785,6 +776,9 @@ video {
 .whitespace-nowrap {
   white-space: nowrap;
 }
+.rounded-2xl {
+  border-radius: 1rem;
+}
 .rounded-3xl {
   border-radius: 1.5rem;
 }
@@ -802,9 +796,6 @@ video {
 }
 .rounded-xl {
   border-radius: 0.75rem;
-}
-.rounded-2xl {
-  border-radius: 1rem;
 }
 .rounded-b-lg {
   border-bottom-right-radius: 0.5rem;
@@ -829,10 +820,6 @@ video {
 .border-b-2 {
   border-bottom-width: 2px;
 }
-.border-\[\#2d221b\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(45 34 27 / var(--tw-border-opacity));
-}
 .border-\[\#309ea3\] {
   --tw-border-opacity: 1;
   border-color: rgb(48 158 163 / var(--tw-border-opacity));
@@ -855,20 +842,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(6 13 24 / var(--tw-bg-opacity));
 }
-.bg-\[\#143a45\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(20 58 69 / var(--tw-bg-opacity));
-}
 .bg-\[\#171325\] {
   --tw-bg-opacity: 1;
   background-color: rgb(23 19 37 / var(--tw-bg-opacity));
-}
-.bg-\[\#19202a45\] {
-  background-color: #19202a45;
-}
-.bg-\[\#19202a\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(25 32 42 / var(--tw-bg-opacity));
 }
 .bg-\[\#19202aa1\] {
   background-color: #19202aa1;
@@ -974,6 +950,12 @@ video {
 .pb-4 {
   padding-bottom: 1rem;
 }
+.pl-\[10px\] {
+  padding-left: 10px;
+}
+.pr-4 {
+  padding-right: 1rem;
+}
 .ps-6 {
   padding-inline-start: 1.5rem;
 }
@@ -986,20 +968,11 @@ video {
 .pt-\[7px\] {
   padding-top: 7px;
 }
-.pl-\[10px\] {
-  padding-left: 10px;
-}
-.pr-4 {
-  padding-right: 1rem;
-}
 .text-center {
   text-align: center;
 }
 .text-justify {
   text-align: justify;
-}
-.indent-8 {
-  text-indent: 2rem;
 }
 .font-merriweather {
   font-family: Merriweather, serif;
@@ -1010,10 +983,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .text-4xl {
   font-size: 2.25rem;
