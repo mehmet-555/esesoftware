@@ -578,6 +578,10 @@ video {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
 .mb-12 {
   margin-bottom: 3rem;
 }
@@ -718,6 +722,9 @@ video {
 }
 .w-60 {
   width: 15rem;
+}
+.w-7\/12 {
+  width: 58.333333%;
 }
 .w-96 {
   width: 24rem;
@@ -885,10 +892,6 @@ video {
 .px-1 {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-.px-14 {
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
 }
 .px-2 {
   padding-left: 0.5rem;
@@ -1615,6 +1618,18 @@ img.logo {
   &::after { 
     transform: translate(-50%, -50%) rotate(90deg);
   }
+}
+
+
+/* Yapay zeka alanı */
+
+.aiBg {
+  background-image: url(images/bunudene.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 700px;
+  border-radius: 50px;
 }
 
 .before\:absolute::before {

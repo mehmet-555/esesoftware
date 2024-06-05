@@ -502,3 +502,15 @@ img.logo {
     transform: translate(-50%, -50%) rotate(90deg);
   }
 }
+
+
+/* Yapay zeka alanı */
+
+.aiBg {
+  background-image: url(images/bunudene.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 700px;
+  border-radius: 50px;
+}
