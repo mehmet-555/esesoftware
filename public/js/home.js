@@ -230,7 +230,50 @@ function aiRwdScrollFunc() {
             console.log(slideShow.scrollLeft);
         });
     });
+     
+    slideShow.addEventListener("scroll", (e) => {
+        const scrollAmount = parseInt(window.getComputedStyle(slideShow.parentElement).getPropertyValue("width"));
+        
+        const positions = [
+            0,
+            (1 * scrollAmount) + 4,
+            (2 * scrollAmount) + 8,
+            (3 * scrollAmount) + 12,
+            (4 * scrollAmount) + 16
+        ];
+    
+        const slideBtns = document.querySelectorAll(".slideBtn");
+    
+        // Önce tüm butonlardan 'active' sınıfını kaldır
+        slideBtns.forEach(slideBtn => {
+            slideBtn.classList.remove('active');
+        });
+    
+        let closestIndex = 0;
+        let minDiff = Infinity;
+        const currentScroll = slideShow.scrollLeft;
+    
+        // En yakın pozisyonu bul
+        positions.forEach((position, index) => {
+            const diff = Math.abs(currentScroll - position);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closestIndex = index;
+            }
+        });
+    
+        // En yakın pozisyonun butonuna 'active' sınıfı ekle
+        slideBtns.forEach(slideBtn => {
+            if (Number(slideBtn.dataset.index) === closestIndex) {
+                slideBtn.classList.add('active');
+            }
+        });
+    });
 }
+
+
+
+
 
 
 

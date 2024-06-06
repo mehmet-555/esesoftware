@@ -554,9 +554,9 @@ img.logo {
     /* width: 20px; */
     position: relative;
     transition: all .3s linear;
-    &:hover::after {
+    /* &:hover::after {
       background-color: #422d48;
-    }
+    } */
     &::after {
       content: "";
       background-color: gray;
@@ -569,4 +569,7 @@ img.logo {
       transition: all .2s linear;
     }
   }
+}
+.slideBtn.active::after {
+  background-color: black;
 }
