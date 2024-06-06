@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // SSSFunction
     sssAddListenerFunc ();
+
+    // AiBgBtns
+    aiBgBtnStyle()
+
+    // aiBtRWDBtns
+    aiRwdScrollFunc()
 });
 
 function sssAddListenerFunc () {
@@ -146,6 +152,84 @@ function contactFormAddStyleListenerFunc () {
         });
     });
     // Contact Form Style Management Son
+}
+
+
+function aiBgBtnStyle() {
+    const parags = [
+        "Yapay zeka, büyük veri setlerini hızla analiz edebilir ve en doğru sonuçları çıkarabilir. Bu, projelerimizin erken aşamalarında daha sağlam temeller atmamıza yardımcı olur.",
+        "AI, gelecekteki trendleri ve kullanıcı davranışlarını tahmin ederek daha stratejik kararlar almamızı sağlar. Bu sayede projelerimiz her zaman bir adım önde olur.",
+        "Kod yazım sürecinde yapay zeka destekli araçlar kullanarak hataları minimize eder ve kod kalitesini artırırız. Ayrıca, AI tabanlı testler ile yazılımlarımızın güvenli ve sorunsuz çalışmasını sağlarız.",
+        "Yapay zeka, yazılım test süreçlerinde olası hataları ve performans sorunlarını hızlıca tespit eder. Bu sayede, projelerimiz en yüksek kalitede kullanıma sunulur.",
+        "Yazılımın piyasaya sürülmesinden sonra, yapay zeka tabanlı analiz araçlarıyla kullanıcı geri bildirimlerini ve performansı izleyerek sürekli iyileştirmeler yaparız."
+    ]
+    const btns = document.querySelectorAll(".aiBgBtn");
+    Array.from(btns).forEach(btn => {
+        btn.addEventListener("click", (e)=> {
+            let index = 1;
+            Array.from(btns).forEach(btn => {
+                btn.classList.remove("active")
+            })
+            btn.classList.add("active");
+            let btnNm = 1;
+            Array.from(btns).forEach(btn => {
+                
+                if(!btn.classList.contains("active")) {
+                    btnNm ++;
+                }else {
+                    index = btnNm;
+                }
+            })
+            // console.log(index)
+            setTimeout(() => {
+                document.querySelector(".aiParamElem").textContent = parags[index - 1];
+            }, 200);
+        })
+    })
+}
+
+
+
+function aiRwdScrollFunc() {
+    const slideBtns = document.querySelectorAll(".slideBtn");
+    const slideShow = document.querySelector(".slideShow");
+    
+    Array.from(slideBtns).forEach(slideBtn => {
+        slideBtn.addEventListener("click", (e) => {
+            const scrollAmount = parseInt(window.getComputedStyle(slideShow.parentElement).getPropertyValue("width"));
+            console.log(scrollAmount);
+            
+            const index = Number(slideBtn.dataset.index);
+            let extraScroll = 0;
+
+            switch (index) {
+                case 0:
+                    extraScroll = 0;
+                    break;
+                case 1:
+                    extraScroll = 4;
+                    break;
+                case 2:
+                    extraScroll = 8;
+                    break;
+                case 3:
+                    extraScroll = 12;
+                    break;
+                case 4:
+                    extraScroll = 16;
+                    break;
+                default:
+                    extraScroll = 0;
+                    break;
+            }
+
+            slideShow.scrollTo({ 
+                left: (index * scrollAmount) + extraScroll, 
+                behavior: 'smooth' 
+            });
+            console.log(slideShow.scrollLeft);
+        });
+    });
 }
 
 

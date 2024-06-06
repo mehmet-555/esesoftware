@@ -507,10 +507,66 @@ img.logo {
 /* Yapay zeka alanı */
 
 .aiBg {
-  background-image: url("/images/aibgbyfreepik.png");
-  background-position: center;
+  background-image: url("/images/aibgbyfreepik2.png");
+  background-position: 0% 0%;
   background-size: 100%;
   background-repeat: no-repeat;
   height: 700px;
-  border-radius: 50px;
+  min-width: 750px;
+  border-radius: 25px;
+}
+.aiBg .aiBgBtn .btnCircleIcon {
+  margin-right: 0px;
+  height: 0px;
+  width: 0px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: all .2s linear;
+}
+.aiBg .aiBgBtn.active .btnCircleIcon{
+  margin-right: 8px;
+  height: 10px;
+  width: 10px;
+  background-color: black;
+  border-radius: 50%;
+}
+.aiBg .aiBgBtn.active {
+  background-color: #fff8f8e7;
+}
+
+
+
+
+
+
+.slideShow {
+  scrollbar-width: none;
+}
+.slideBtnNav {
+  width: 75%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  .slideBtn {
+    flex-shrink: 0;
+    flex-grow: 1;
+    padding: 1rem;
+    /* width: 20px; */
+    position: relative;
+    transition: all .3s linear;
+    &:hover::after {
+      background-color: #422d48;
+    }
+    &::after {
+      content: "";
+      background-color: gray;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 95%;
+      height: 2px;
+      transition: all .2s linear;
+    }
+  }
 }
