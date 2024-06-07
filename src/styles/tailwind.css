@@ -541,6 +541,9 @@ img.logo {
 
 .slideShow {
   scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 .slideBtnNav {
   width: 75%;
@@ -559,7 +562,7 @@ img.logo {
     } */
     &::after {
       content: "";
-      background-color: gray;
+      background-color: rgb(199, 199, 199);
       position: absolute;
       top: 50%;
       left: 50%;
