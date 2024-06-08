@@ -576,3 +576,48 @@ img.logo {
 .slideBtn.active::after {
   background-color: black;
 }
+
+
+/* Social Media Icons */
+.socialBtn {
+  .github {
+    i {
+      transition: all .2s linear;
+    }
+    &:hover i {
+      color: white;
+    }
+  }
+  .linkedin {
+    i {
+      transition: all .2s linear;
+    }
+    &:hover i {
+      color: #2e4990;
+    }
+  }
+  .twitter {
+    i {
+      transition: all .2s linear;
+    }
+    &:hover i {
+      color: white;
+    }
+  }
+  .instagram {
+    i {
+      transition: all .2s linear;
+    }
+    &:hover i {
+      color: #f73232;
+    }
+  }
+  .youtube {
+    i {
+      transition: all .2s linear;
+    }
+    &:hover i {
+      color: red;
+    }
+  }
+}
