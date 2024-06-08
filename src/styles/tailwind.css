@@ -586,6 +586,7 @@ img.logo {
     }
     &:hover i {
       color: white;
+      transform: scale(1.15);
     }
   }
   .linkedin {
@@ -594,6 +595,7 @@ img.logo {
     }
     &:hover i {
       color: #2e4990;
+      transform: scale(1.15);
     }
   }
   .twitter {
@@ -601,6 +603,7 @@ img.logo {
       transition: all .2s linear;
     }
     &:hover i {
+      transform: scale(1.15);
       color: white;
     }
   }
@@ -610,6 +613,7 @@ img.logo {
     }
     &:hover i {
       color: #f73232;
+      transform: scale(1.15);
     }
   }
   .youtube {
@@ -618,6 +622,7 @@ img.logo {
     }
     &:hover i {
       color: red;
+      transform: scale(1.15);
     }
   }
 }
