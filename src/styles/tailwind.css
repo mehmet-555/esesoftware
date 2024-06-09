@@ -162,7 +162,12 @@
 #contactSubmiBtn:hover {
   box-shadow: 0 0 10px 10px #461a32;
 }
-
+input[type="text"], textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0; /* Varsayılan köşe yuvarlatmalarını sıfırlayın */
+}
 .textGrad {
   background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
   -webkit-background-clip: text;
@@ -328,7 +333,7 @@ img.logo {
   &::after {
     content: "";
     position: absolute;
-    left: 45%;
+    left: 40%;
     animation-name: locationIcon;
     animation-duration: 2s;
     animation-timing-function: linear;
@@ -423,8 +428,7 @@ img.logo {
       background-color: white;
     }
   }
-}
-
+} 
 .topLiBtnAnim {
   position: relative;
   width: 10px;
