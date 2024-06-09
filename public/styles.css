@@ -561,14 +561,14 @@ video {
 .right-9 {
   right: 2.25rem;
 }
-.top-2\/4 {
-  top: 50%;
-}
 .top-28 {
   top: 7rem;
 }
 .top-\[37\%\] {
   top: 37%;
+}
+.top-\[45\%\] {
+  top: 45%;
 }
 .z-20 {
   z-index: 20;
@@ -657,9 +657,6 @@ video {
 }
 .mt-16 {
   margin-top: 4rem;
-}
-.mt-4 {
-  margin-top: 1rem;
 }
 .mt-5 {
   margin-top: 1.25rem;
@@ -2181,6 +2178,14 @@ img.logo {
 
   .lg\:mr-9 {
     margin-right: 2.25rem;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:flex {
+    display: flex;
   }
 
   .lg\:h-96 {
