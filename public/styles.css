@@ -561,8 +561,8 @@ video {
 .right-9 {
   right: 2.25rem;
 }
-.top-10 {
-  top: 2.5rem;
+.top-2\/4 {
+  top: 50%;
 }
 .top-28 {
   top: 7rem;
@@ -595,6 +595,10 @@ video {
 .my-3 {
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
+}
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .my-8 {
   margin-top: 2rem;
@@ -636,9 +640,6 @@ video {
 .ml-4 {
   margin-left: 1rem;
 }
-.ml-5 {
-  margin-left: 1.25rem;
-}
 .ml-8 {
   margin-left: 2rem;
 }
@@ -651,17 +652,11 @@ video {
 .mr-4 {
   margin-right: 1rem;
 }
-.mr-6 {
-  margin-right: 1.5rem;
-}
 .mt-12 {
   margin-top: 3rem;
 }
 .mt-16 {
   margin-top: 4rem;
-}
-.mt-28 {
-  margin-top: 7rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -741,6 +736,9 @@ video {
 .h-\[50px\] {
   height: 50px;
 }
+.h-\[764px\] {
+  height: 764px;
+}
 .h-auto {
   height: auto;
 }
@@ -777,6 +775,9 @@ video {
 .w-5 {
   width: 1.25rem;
 }
+.w-5\/6 {
+  width: 83.333333%;
+}
 .w-60 {
   width: 15rem;
 }
@@ -789,14 +790,14 @@ video {
 .w-\[70\%\] {
   width: 70%;
 }
+.w-\[95\%\] {
+  width: 95%;
+}
 .w-auto {
   width: auto;
 }
 .w-full {
   width: 100%;
-}
-.w-\[95\%\] {
-  width: 95%;
 }
 .min-w-52 {
   min-width: 13rem;
@@ -824,6 +825,14 @@ video {
 }
 .basis-auto {
   flex-basis: auto;
+}
+.translate-x-centerx {
+  --tw-translate-x: 0%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.translate-y-centery {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -872,6 +881,9 @@ video {
 }
 .gap-3 {
   gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .gap-5 {
   gap: 1.25rem;
@@ -970,6 +982,10 @@ video {
 .bg-\[\#5020b3\] {
   --tw-bg-opacity: 1;
   background-color: rgb(80 32 179 / var(--tw-bg-opacity));
+}
+.bg-\[\#5f4343\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(95 67 67 / var(--tw-bg-opacity));
 }
 .bg-\[\#f4f4f4\] {
   --tw-bg-opacity: 1;
@@ -1138,6 +1154,10 @@ video {
 .text-\[14px\] {
   font-size: 14px;
 }
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1181,6 +1201,10 @@ video {
 .tracking-wider {
   letter-spacing: 0.05em;
 }
+.text-\[\#01178e\] {
+  --tw-text-opacity: 1;
+  color: rgb(1 23 142 / var(--tw-text-opacity));
+}
 .text-\[\#606fc2\] {
   --tw-text-opacity: 1;
   color: rgb(96 111 194 / var(--tw-text-opacity));
@@ -1215,6 +1239,9 @@ video {
 }
 .underline {
   text-decoration-line: underline;
+}
+.underline-offset-2 {
+  text-underline-offset: 2px;
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
@@ -1334,6 +1361,18 @@ video {
 }
 #getContactBtn:hover {
   box-shadow: 0 0 10px 10px #461a32;
+}
+
+#getStartedBtn {
+  transition: all .2s linear;
+  img {
+    transition: all .2s linear;
+    width: 50px;
+    height: 50px;
+  }
+  &:hover img {
+    background: #fff;
+  }
 }
 
 .bgGradient {
@@ -1463,7 +1502,7 @@ img.logo {
 
 .logoSlide {
   display: inline-block;
-  animation: 19s slide infinite linear;
+  animation: 30s slide infinite linear;
   min-width: 1659px;
 }
 
@@ -1505,8 +1544,8 @@ img.logo {
 .gradient-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  padding: 30px;
+  gap: 16px;
+  padding: 8px;
   @media screen and (max-width: 991px) {
     grid-template-columns: 1fr;
   }
@@ -1531,26 +1570,26 @@ img.logo {
 
 .container-card {
   position: relative;
-  border: 1px solid #d3d3d340;
+  border: 2px solid #d3d3d340;
   background: transparent;
   background-clip: padding-box;
   border-radius: 45px;
-  padding: 40px;
+  padding: 32px;
   transition: all .4s linear;
   img {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 }
 .container-card:hover {
   cursor: pointer;
   position: relative;
-  border: 1px solid lightgrey;
+  border: 2px solid rgb(163, 163, 163);
   background: linear-gradient(180deg, #422d48, #1a171c, #080509);
   background-clip: padding-box;
   border-radius: 45px;
-  padding: 40px;
+  padding: 32px;
   img {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 }
 .container-card:hover .card-description {
@@ -1562,6 +1601,7 @@ img.logo {
 .bg-yellow-box,
 .bg-blue-box {
   position: relative;
+  height: 100%;
 }
 
 .bg-green-box::after,
@@ -2007,12 +2047,16 @@ img.logo {
     height: 18rem;
   }
 
-  .sm\:w-80 {
-    width: 20rem;
+  .sm\:w-3\/4 {
+    width: 75%;
   }
 
   .sm\:w-5\/6 {
     width: 83.333333%;
+  }
+
+  .sm\:w-80 {
+    width: 20rem;
   }
 
   .sm\:justify-center {
@@ -2028,9 +2072,19 @@ img.logo {
     padding-right: 1.5rem;
   }
 
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 }
 @media (min-width: 768px) {
@@ -2050,6 +2104,10 @@ img.logo {
 
   .md\:h-80 {
     height: 20rem;
+  }
+
+  .md\:w-2\/3 {
+    width: 66.666667%;
   }
 
   .md\:w-3\/4 {
@@ -2086,6 +2144,11 @@ img.logo {
     padding-right: 2rem;
   }
 
+  .md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .md\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -2099,6 +2162,11 @@ img.logo {
   .md\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }
 @media (min-width: 1024px) {
@@ -2127,6 +2195,10 @@ img.logo {
     width: 66.666667%;
   }
 
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -2134,11 +2206,20 @@ img.logo {
   .lg\:justify-around {
     justify-content: space-around;
   }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 @media (min-width: 1280px) {
 
   .xl\:ml-0 {
     margin-left: 0px;
+  }
+
+  .xl\:w-1\/2 {
+    width: 50%;
   }
 
   .xl\:w-7\/12 {

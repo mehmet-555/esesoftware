@@ -64,6 +64,18 @@
   box-shadow: 0 0 10px 10px #461a32;
 }
 
+#getStartedBtn {
+  transition: all .2s linear;
+  img {
+    transition: all .2s linear;
+    width: 50px;
+    height: 50px;
+  }
+  &:hover img {
+    background: #fff;
+  }
+}
+
 .bgGradient {
   background: rgb(124, 0, 255);
   background: radial-gradient(
@@ -180,7 +192,7 @@ img.logo {
 
 .logoSlide {
   display: inline-block;
-  animation: 19s slide infinite linear;
+  animation: 30s slide infinite linear;
   min-width: 1659px;
 }
 
@@ -222,8 +234,8 @@ img.logo {
 .gradient-cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  padding: 30px;
+  gap: 16px;
+  padding: 8px;
   @media screen and (max-width: 991px) {
     grid-template-columns: 1fr;
   }
@@ -248,26 +260,26 @@ img.logo {
 
 .container-card {
   position: relative;
-  border: 1px solid #d3d3d340;
+  border: 2px solid #d3d3d340;
   background: transparent;
   background-clip: padding-box;
   border-radius: 45px;
-  padding: 40px;
+  padding: 32px;
   transition: all .4s linear;
   img {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 }
 .container-card:hover {
   cursor: pointer;
   position: relative;
-  border: 1px solid lightgrey;
+  border: 2px solid rgb(163, 163, 163);
   background: linear-gradient(180deg, #422d48, #1a171c, #080509);
   background-clip: padding-box;
   border-radius: 45px;
-  padding: 40px;
+  padding: 32px;
   img {
-    margin-bottom: 32px;
+    margin-bottom: 20px;
   }
 }
 .container-card:hover .card-description {
@@ -279,6 +291,7 @@ img.logo {
 .bg-yellow-box,
 .bg-blue-box {
   position: relative;
+  height: 100%;
 }
 
 .bg-green-box::after,
