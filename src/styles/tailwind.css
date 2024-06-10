@@ -98,6 +98,18 @@
   width: 100%;
   left: 0;
 }
+.servicesModal.close {
+  visibility: hidden;
+  opacity: 0;
+  width: 24rem;
+  height: 0rem;
+}
+.servicesModal.open {
+  visibility: visible;
+  opacity: 1;
+  width: 24rem;
+  height: 15rem;
+}
 @keyframes rotate360 {
   0% {
     transform: rotate(0deg);

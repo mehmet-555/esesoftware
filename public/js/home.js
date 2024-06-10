@@ -12,6 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // aiBtRWDBtns
     aiRwdScrollFunc()
+
+    //servisler ve hizmetler butonu
+    addListenerToNavBtns ()
 });
 
 function sssAddListenerFunc () {
@@ -295,3 +298,32 @@ window.addEventListener("load", function() {
     }
 });
 // Sayfada Kaldığım Yer Son
+
+
+
+
+
+
+
+
+
+// Nav Buttons functions Başlangıç
+
+function addListenerToNavBtns() {
+    const navAnchorElem1 = document.querySelector(".navAnchorElem1");
+    const servicesModal = document.querySelector(".servicesModal");
+
+    const servicesBtn = document.querySelector(".navAnchorElem1");
+    const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
+
+    navAnchorElem1.addEventListener("click", (e) => {
+        const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 12*16}px`;
+
+        if (servicesModal.classList.contains("close")) {
+            servicesModal.classList.replace("close", "open");
+            servicesModal.style.left = leftString;
+        } else {
+            servicesModal.classList.replace("open", "close");
+        }
+    });
+}
