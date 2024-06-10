@@ -23,6 +23,11 @@ module.exports = {
       translate: {
         'centery': '-50%',
         'centerx': '0%',
+      },
+      screens: {
+        'xxxs': "320px",
+        'xxs': '360px',
+        'xs': '480px'
       }
     },
   },

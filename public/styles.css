@@ -504,6 +504,24 @@ video {
 .container {
   width: 100%;
 }
+@media (min-width: 320px) {
+
+  .container {
+    max-width: 320px;
+  }
+}
+@media (min-width: 360px) {
+
+  .container {
+    max-width: 360px;
+  }
+}
+@media (min-width: 480px) {
+
+  .container {
+    max-width: 480px;
+  }
+}
 @media (min-width: 640px) {
 
   .container {
@@ -555,11 +573,17 @@ video {
 .bottom-\[1px\] {
   bottom: 1px;
 }
+.left-0 {
+  left: 0px;
+}
 .left-1\/2 {
   left: 50%;
 }
 .right-9 {
   right: 2.25rem;
+}
+.top-0 {
+  top: 0px;
 }
 .top-28 {
   top: 7rem;
@@ -733,6 +757,9 @@ video {
 .h-\[50px\] {
   height: 50px;
 }
+.h-\[540px\] {
+  height: 540px;
+}
 .h-\[764px\] {
   height: 764px;
 }
@@ -784,9 +811,6 @@ video {
 .w-8 {
   width: 2rem;
 }
-.w-\[70\%\] {
-  width: 70%;
-}
 .w-\[95\%\] {
   width: 95%;
 }
@@ -798,9 +822,6 @@ video {
 }
 .min-w-52 {
   min-width: 13rem;
-}
-.min-w-\[260px\] {
-  min-width: 260px;
 }
 .min-w-\[3318px\] {
   min-width: 3318px;
@@ -885,6 +906,9 @@ video {
 .gap-5 {
   gap: 1.25rem;
 }
+.self-end {
+  align-self: flex-end;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -954,6 +978,10 @@ video {
 .border-\[\#989898\] {
   --tw-border-opacity: 1;
   border-color: rgb(152 152 152 / var(--tw-border-opacity));
+}
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
 }
 .border-b-\[\#fafad278\] {
   border-bottom-color: #fafad278;
@@ -1098,6 +1126,9 @@ video {
 .pb-12 {
   padding-bottom: 3rem;
 }
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1180,6 +1211,9 @@ video {
 .font-light {
   font-weight: 300;
 }
+.font-medium {
+  font-weight: 500;
+}
 .font-normal {
   font-weight: 400;
 }
@@ -1221,6 +1255,10 @@ video {
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 .text-gray-400 {
   --tw-text-opacity: 1;
@@ -1371,7 +1409,14 @@ video {
     background: #fff;
   }
 }
-
+#navMenuBtn {
+  i {
+    transition: all 200ms linear;
+  }
+  &:hover i {
+    color: white;
+  }
+}
 .bgGradient {
   background: rgb(124, 0, 255);
   background: radial-gradient(
@@ -1433,7 +1478,12 @@ video {
     background: #888; /* Resizer kısmının arka plan rengi */
   }
 }
-
+@media (max-width: 640px) {
+  .mainCustomheigth {
+    height: auto; /* Bu, height'in geçersiz kılınmasını sağlar */
+    min-height: calc(100vh - 64px); /* 640px altında min-height olarak ayarlanır */
+  }
+}
 .aiLayerTop {
   background-image: url("/images/aibgSvg.svg");
 }
@@ -1835,8 +1885,8 @@ img.logo {
   background-position: 0% 0%;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 700px;
-  min-width: 750px;
+  max-width: 1160px;
+  min-width: 724px;
   border-radius: 25px;
 }
 .aiBg .aiBgBtn .btnCircleIcon {
@@ -2013,6 +2063,36 @@ img.logo {
 .hover\:opacity-100:hover {
   opacity: 1;
 }
+@media (min-width: 320px) {
+
+  .xxxs\:inline-block {
+    display: inline-block;
+  }
+
+  .xxxs\:hidden {
+    display: none;
+  }
+}
+@media (min-width: 360px) {
+
+  .xxs\:hidden {
+    display: none;
+  }
+}
+@media (min-width: 480px) {
+
+  .xs\:block {
+    display: block;
+  }
+
+  .xs\:min-w-\[260px\] {
+    min-width: 260px;
+  }
+
+  .xs\:justify-around {
+    justify-content: space-around;
+  }
+}
 @media (min-width: 640px) {
 
   .sm\:my-8 {
@@ -2034,10 +2114,6 @@ img.logo {
 
   .sm\:block {
     display: block;
-  }
-
-  .sm\:hidden {
-    display: none;
   }
 
   .sm\:h-72 {
@@ -2097,6 +2173,18 @@ img.logo {
 
   .md\:ml-8 {
     margin-left: 2rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-80 {
@@ -2188,6 +2276,10 @@ img.logo {
     display: flex;
   }
 
+  .lg\:hidden {
+    display: none;
+  }
+
   .lg\:h-96 {
     height: 24rem;
   }
@@ -2216,11 +2308,24 @@ img.logo {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:font-normal {
+    font-weight: 400;
+  }
 }
 @media (min-width: 1280px) {
 
   .xl\:ml-0 {
     margin-left: 0px;
+  }
+
+  .xl\:h-\[650px\] {
+    height: 650px;
   }
 
   .xl\:w-1\/2 {
@@ -2229,5 +2334,10 @@ img.logo {
 
   .xl\:w-7\/12 {
     width: 58.333333%;
+  }
+
+  .xl\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }

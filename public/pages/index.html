@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -24,9 +26,9 @@
 
 <body class="h-screen">
     <nav
-        class="fixed w-full bg-black border-b border-b-[#fafad278] flex items-center justify-around h-16 overflow-hidden z-30">
+        class="fixed w-full bg-black border-b border-b-[#fafad278] flex items-center justify-between xs:justify-around h-16 overflow-hidden z-30">
         <div class="logoContainer">
-            <a href="#" class="flex items-center px-4 py-3 min-w-[260px] overflow-hidden">
+            <a href="#" class="flex items-center px-4 py-3 xs:min-w-[260px] overflow-hidden">
                 <span class="inline-block h-10 w-10 mr-3 rotate-animation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.46 62.46">
                         <defs>
@@ -62,7 +64,7 @@
                         </g>
                     </svg>
                 </span>
-                <span class="inline-block h-8 w-44 pt-[7px]">
+                <span class="hidden xxxs:inline-block  h-8 w-44 pt-[7px]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204.61 17.18">
                         <defs>
                             <style>
@@ -103,7 +105,7 @@
                 </span>
             </a>
         </div>
-        <div class="navButtons items-center hidden lg:flex">
+        <div class="navButtons items-center hidden md:block lg:flex">
             <ul class="flex items-center">
 
                 <li class="relative mx-2">
@@ -118,7 +120,7 @@
 
                     </div>
                 </li>
-                <li class="relative mx-2">
+                <li class="relative mx-2 hidden lg:block">
                     <a href="#"
                         class="ulAnchorElem px-[6px] py-1 rounded-md text-[14px] tracking-[.5px] text-white inline-block">
                         <span class="pointer-events-none">
@@ -130,7 +132,7 @@
 
                     </div>
                 </li>
-                <li class="relative mx-2">
+                <li class="relative mx-2 hidden lg:block">
                     <a href="#"
                         class="ulAnchorElem px-[6px] py-1 rounded-md text-[14px] tracking-[.5px] text-white inline-block">
                         <span class="pointer-events-none">
@@ -142,7 +144,7 @@
 
                     </div>
                 </li>
-                <li class="relative mx-2">
+                <li class="relative mx-2 hidden lg:block">
                     <a href="#"
                         class="ulAnchorElem px-[6px] py-1 rounded-md text-[14px] tracking-[.5px] text-white inline-block">
                         <span class="pointer-events-none">
@@ -167,9 +169,12 @@
                 </div>
             </div>
         </div>
-        <div>
-            <button type="button" id="navMenuBtn">
-                <span id="navMenuBtnSpn"></span>
+        <div class="self-end pb-2 xxxs:hidden xxs:hidden xs:block md:hidden">
+            <span><span class="text-xs text-gray-400">v.</span> <span class="text-xs text-gray-300">1.0.1</span> </span>
+        </div>
+        <div class="block lg:hidden">
+            <button type="button" id="navMenuBtn" class="px-3 py-1 mr-4 ml-1 outline-none transition-all duration-200 border-2 border-gray-400 hover:border-white rounded-lg">
+                <i class="fa-solid fa-ellipsis-vertical pointer-events-none text-lg text-gray-400 hover:text-white"></i>
             </button>
         </div>
     </nav>
@@ -180,8 +185,8 @@
         <div class="relative mt-12 flex justify-center">
             <video src="/videos/iStock-1995393129.mp4" class="w-[95%] sm:w-5/6 md:w-3/4 lg:w-4/6 rounded-3xl " loop muted autoplay playsinline></video>
         </div>
-        <div class="relative">
-            <div class="absolute top-[45%] translate-y-centery translate-x-centerx w-full">
+        <div class="relative flex justify-center">
+            <div class="w-11/12 absolute top-[45%] translate-y-centery translate-x-centerx">
                 <h2 class="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold tracking-wider word-wider text-center flex flex-col items-center gap-4 justify-center mb-8">
                     <img style="background-color: #5f4343;" class="rounded-full" src="/images/inovation.png" alt="inovation image" width="50" height="50">
                     İnovasyonun Gücünü Keşfedin
@@ -275,7 +280,7 @@
         </div>
         <div class="h-96 aiLayerTop"></div>
         <div class="flex justify-center bg-white">
-            <div class="block sm:hidden w-full">
+            <div class="block md:hidden w-full">
                 <h2 class="text-2xl sm:text-3xl md:text-4xl text-white text-center textGrad my-3 sm:my-8 md:my-10">Geliştirme Sürecinde Yapay Zeka Kullanımı</h2>
                 <div class="p-2">
                     <div class="flex items-start gap-5 overflow-x-scroll slideShow snap-mandatory snap-x">
@@ -351,35 +356,35 @@
                     </div>
                 </div>
             </div>
-            <div class="w-[70%] hidden sm:block">
+            <div class="w-11/12  hidden md:flex flex-col items-center">
                 <h2 class="text-4xl text-white text-center textGrad my-12">Geliştirme Sürecinde Yapay Zeka Kullanımı</h2>
-                <div class="mt-7 mb-14 aiBg flex flex-col justify-between">
+                <div class="mt-7 mb-14 aiBg h-[540px] xl:h-[650px] flex flex-col justify-between">
                     <div>
                         <div class="px-3 py-4 flex gap-2">
                             <button type="button" class="aiBgBtn active flex items-center bg-[#ffffff59] hover:bg-[#ffffffa6] transition-all duration-500 p-2 rounded-3xl">
                                 <div class="btnCircleIcon"></div>
-                                <div class="text-sm">Hızlı ve Doğru Analizler</div>
+                                <div class="text-xs lg:text-sm font-medium lg:font-normal">Hızlı ve Doğru Analizler</div>
                             </button>
                             <button type="button" class="aiBgBtn flex items-center bg-[#ffffff59] hover:bg-[#ffffffa6] transition-all duration-500 p-2 rounded-3xl">
                                 <div class="btnCircleIcon"></div>
-                                <div class="text-sm">Öngörü ve Tahmin</div>
+                                <div class="text-xs lg:text-sm font-medium lg:font-normal">Öngörü ve Tahmin</div>
                             </button>
                             <button type="button" class="aiBgBtn flex items-center bg-[#ffffff59] hover:bg-[#ffffffa6] transition-all duration-500 p-2 rounded-3xl">
                                 <div class="btnCircleIcon"></div>
-                                <div class="text-sm">Geliştirme</div>
+                                <div class="text-xs lg:text-sm font-medium lg:font-normal">Geliştirme</div>
                             </button>
                             <button type="button" class="aiBgBtn flex items-center bg-[#ffffff59] hover:bg-[#ffffffa6] transition-all duration-500 p-2 rounded-3xl">
                                 <div class="btnCircleIcon"></div>
-                                <div class="text-sm">Test ve Optimizasyon</div>
+                                <div class="text-xs lg:text-sm font-medium lg:font-normal">Test ve Optimizasyon</div>
                             </button>
                             <button type="button" class="aiBgBtn flex items-center bg-[#ffffff59] hover:bg-[#ffffffa6] transition-all duration-500 p-2 rounded-3xl">
                                 <div class="btnCircleIcon"></div>
-                                <div class="text-sm">Lansman ve Bakım</div>
+                                <div class="text-xs lg:text-sm font-medium lg:font-normal">Lansman ve Bakım</div>
                             </button>
                         </div>
                     </div>
                     <div class="flex justify-end">
-                        <div class="mb-10 px-8 py-8 text-2xl text-white">
+                        <div class="mb-10 px-8 py-8 text-xl xl:text-2xl text-white">
                             <p class="text-center aiParamElem bg-[#0000009c] rounded-3xl p-4">Yapay zeka, büyük veri setlerini hızla analiz edebilir ve en doğru sonuçları çıkarabilir. Bu, projelerimizin erken aşamalarında daha sağlam temeller atmamıza yardımcı olur.</p>
                         </div>
                     </div>
@@ -1530,6 +1535,9 @@
             </ul>
         </div>
         <div id="mobileLeftBar" class="absolute left-0 top-0 w">
+
+        </div>
+        <div class="w-">
 
         </div>
         <footer class="relative flex justify-center bottom-0 w-full bg-black text-white">

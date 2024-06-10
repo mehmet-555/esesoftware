@@ -76,7 +76,12 @@
   }
 }
 #navMenuBtn {
-  
+  i {
+    transition: all 200ms linear;
+  }
+  &:hover i {
+    color: white;
+  }
 }
 .bgGradient {
   background: rgb(124, 0, 255);
@@ -139,7 +144,12 @@
     background: #888; /* Resizer kısmının arka plan rengi */
   }
 }
-
+@media (max-width: 640px) {
+  .mainCustomheigth {
+    height: auto; /* Bu, height'in geçersiz kılınmasını sağlar */
+    min-height: calc(100vh - 64px); /* 640px altında min-height olarak ayarlanır */
+  }
+}
 .aiLayerTop {
   background-image: url("/images/aibgSvg.svg");
 }
@@ -530,8 +540,8 @@ img.logo {
   background-position: 0% 0%;
   background-size: 100%;
   background-repeat: no-repeat;
-  height: 700px;
-  min-width: 750px;
+  max-width: 1160px;
+  min-width: 724px;
   border-radius: 25px;
 }
 .aiBg .aiBgBtn .btnCircleIcon {
