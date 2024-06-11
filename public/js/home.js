@@ -331,14 +331,16 @@ function addListenerToNavBtns() {
     function onElem2() {
         if(servicesModal.classList.contains("open")) {
             servicesModal.classList.replace("open", "close");
-            servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");          
+            servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");           //Burası kapatma ---   1  
             servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");
+            initalStateModal ()
+            initialStateModalRightSide ()
         }
     }
 
     function updateModalPosition() {
         const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
-        const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 15*16}px`;
+        const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 19*16}px`;
         console.log(leftString)
         servicesModal.style.left = leftString;
     }
@@ -351,11 +353,13 @@ function addListenerToNavBtns() {
         if (servicesModal.classList.contains("close")) {
             servicesModal.classList.replace("close", "open");
             e.target.nextElementSibling.classList.replace("left-1/2", "left-0");          
-            e.target.nextElementSibling.classList.replace("w-0", "w-full");           
+            e.target.nextElementSibling.classList.replace("w-0", "w-full");                  
         } else {
             servicesModal.classList.replace("open", "close");
             e.target.nextElementSibling.classList.replace("left-0", "left-1/2");          
-            e.target.nextElementSibling.classList.replace("w-full", "w-0");     
+            e.target.nextElementSibling.classList.replace("w-full", "w-0");                  //Burası kapatma ---   2
+            initalStateModal ()
+            initialStateModalRightSide ()
         }
     });
 
@@ -365,8 +369,10 @@ function addListenerToNavBtns() {
         if(window.innerWidth <= 768) {
             if(servicesModal.classList.contains("open")) {
                 servicesModal.classList.replace("open", "close");
-                servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");          
+                servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");            //Burası kapatma ---   3
                 servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");
+                initalStateModal ()
+                initialStateModalRightSide ()
             }
                  
         }
@@ -376,12 +382,27 @@ function addListenerToNavBtns() {
             if (servicesModal.classList.contains("open")) {
                 servicesModal.classList.replace("open", "close");
                 servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");
-                servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");
+                servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");                    //Burası kapatma ---   4
+                initalStateModal ()
+                initialStateModalRightSide ()
             }
         }
     });
     
 }
+
+function initalStateModal () {
+    const navRoleBtns = document.querySelectorAll(".navRoleBtns");
+    const servicesActiveBtn = document.querySelector(".servicesActiveBtn");
+
+    navRoleBtns.forEach(btn => {
+        btn.firstElementChild.nextElementSibling.classList.remove("text-white");
+        if(btn.dataset.index == 0) {
+            btn.firstElementChild.nextElementSibling.classList.add("text-white");
+        }
+        servicesActiveBtn.classList.remove("top-0", "top-[60px]", "top-[120px]", "top-[180px]", "top-[240px]");
+    })
+} 
 
 
 function addListenerToNavRoleBtns() {
@@ -394,29 +415,108 @@ function addListenerToNavRoleBtns() {
         })
         roleBtn.addEventListener("mouseenter", (e) => {
             navRoleBtns.forEach(btn => {
-                btn.firstElementChild.nextElementSibling.classList.remove("text-white")
+                btn.firstElementChild.nextElementSibling.classList.remove("text-white");
+                btn.firstElementChild.nextElementSibling.classList.add("text-[#ffffff99]");
             })
             e.target.firstElementChild.nextElementSibling.classList.add("text-white");
-            // Öncelikle tüm top-* sınıflarını kaldır
-            servicesActiveBtn.classList.remove("top-0", "top-[68px]", "top-[136px]", "top-[202px]", "top-[270px]");
-
+            servicesActiveBtn.classList.remove("top-0", "top-[60px]", "top-[120px]", "top-[180px]", "top-[240px]");
+            showContentsOnServicesOnModal(roleBtn.dataset.index);
             switch (roleBtn.dataset.index) {
                 case "0":
                     servicesActiveBtn.classList.add("top-0");
                     break;
                 case "1":
-                    servicesActiveBtn.classList.add("top-[68px]");
+                    servicesActiveBtn.classList.add("top-[60px]");
                     break;
                 case "2":
-                    servicesActiveBtn.classList.add("top-[136px]");
+                    servicesActiveBtn.classList.add("top-[120px]");
                     break;
                 case "3":
-                    servicesActiveBtn.classList.add("top-[202px]");
+                    servicesActiveBtn.classList.add("top-[180px]");
                     break;
                 case "4":
-                    servicesActiveBtn.classList.add("top-[270px]");
+                    servicesActiveBtn.classList.add("top-[240px]");
                     break;
             }
         });
     });
+}
+
+function initialStateModalRightSide() {
+    const modalServicesContent = document.getElementById("modalServicesContent");
+    const content = [
+        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
+        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
+        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
+        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> SEO Hizmeti</a></li>`,
+        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
+        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
+    ];
+    
+    modalServicesContent.innerHTML = "";  // Önceki içerikleri temizleyin
+    content.forEach((liElem, idx) => {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = liElem;
+        const liElement = tempDiv.firstChild;
+        modalServicesContent.appendChild(liElement);
+        setTimeout(() => {
+            liElement.classList.add('visible');
+        }, idx * 75); // Her eleman için 75ms gecikme eklenir
+    });
+}
+
+function showContentsOnServicesOnModal(index) {
+    const modalServicesContent = document.getElementById("modalServicesContent");
+
+    const contents = [
+        [
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> SEO Hizmeti</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
+        ],
+        [
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> AE ile Yeniden Dağıtım</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> FS Gerçek Zamanlı Senkronizasyon</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Cloud Run ile Serverless</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> AE ile Ölçeklendirilebilirlik</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> CS ile Depolama Alanı</a></li>`
+        ],
+        [
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 1</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 2</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 3</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 4</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 5</a></li>`
+        ],
+        [
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 1</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 2</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 3</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 4</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 5</a></li>`
+        ],
+        [
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 1</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 2</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 3</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 4</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 5</a></li>`
+        ]
+    ];
+    modalServicesContent.textContent = "";
+    if (index >= 0 && index < contents.length) {
+        contents[index].forEach((liElem, idx) => {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = liElem;
+            const liElement = tempDiv.firstChild;
+            modalServicesContent.appendChild(liElement);
+
+            setTimeout(() => {
+                liElement.classList.add('visible');
+            }, idx * 75); // Her eleman için 100ms gecikme eklenir
+        });
+    }
 }
