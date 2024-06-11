@@ -1537,43 +1537,65 @@
         <div id="mobileLeftBar" class="absolute left-0 top-0 w">
 
         </div>
-        <div class="servicesModal close fixed transition-all duration-500 border border-[#0b4242] rounded-xl bg-[#040607f5]">
+        <div class="servicesModal z-20 close fixed transition-all duration-500 border border-[#0b4242] rounded-xl bg-[#040607f5]">
             <div class="h-full px-4 py-5 flex items-start justify-center text-white">
                 <div class="h-full flex flex-col gap-3 relative pr-8">
-                    <div class="flex items-center h-auto px-4 py-3">
-                        <a href="#" role="button" class="flex items-center">
-                            <img width="32" height="32" src="/images/webNavIcon.png" alt="Web Icon" class="inline-block mr-4 h-8 w-8">
-                            <span class="inline-block w-36">WEB</span>
+                    <div class="flex items-center h-auto">
+                        <a href="#" role="button" data-index="0" class="h-14 pl-4 flex items-center navRoleBtns">
+                            <img width="32" height="32" src="/images/webNavIcon.png" alt="Web Icon" class="inline-block mr-4 h-8 w-8 pointer-events-none">
+                            <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">WEB</span>
                         </a>
                     </div>
-                    <div class="flex items-center h-auto px-4 py-3">
-                        <a href="#" role="button" class="flex items-center">
-                            <img width="32" height="32" src="/images/gcpNavIcon.svg" alt="Google Cloud Platform Icon" class="inline-block mr-4 h-8 w-8">
-                            <span class="inline-block w-36">GCP</span>
+                    <div class="flex items-center h-auto">
+                        <a href="#" role="button" data-index="1" class="h-14 pl-4 flex items-center navRoleBtns">
+                            <img width="32" height="32" src="/images/gcpNavIcon.svg" alt="Google Cloud Platform Icon" class="inline-block mr-4 h-8 w-8 pointer-events-none">
+                            <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">GCP</span>
                         </a>
                     </div>
-                    <div class="flex items-center h-auto px-4 py-3">
-                        <a href="#" role="button" class="flex items-center">
-                            <img width="32" height="32" src="/images/automationNavIcon.png" alt="Automation Icon" class="inline-block mr-4 h-8 w-8">
-                            <span class="inline-block w-36">Otomasyon</span>
+                    <div class="flex items-center h-auto">
+                        <a href="#" role="button" data-index="2" class="h-14 pl-4 flex items-center navRoleBtns">
+                            <img width="32" height="32" src="/images/automationNavIcon.png" alt="Automation Icon" class="inline-block mr-4 h-8 w-8 pointer-events-none">
+                            <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">Otomasyon</span>
                         </a>
                     </div>
-                    <div class="flex items-center h-auto px-4 py-3">
-                        <a href="#" role="button" class="flex items-center">
-                            <img width="32" height="32" src="/images/businessNavIcon.png" alt="Business Icon" class="inline-block mr-4 h-8 w-8">
-                            <span class="inline-block w-36">İşletme/Kurumsal</span>
+                    <div class="flex items-center h-auto">
+                        <a href="#" role="button" data-index="3" class="h-14 pl-4 flex items-center navRoleBtns">
+                            <img width="32" height="32" src="/images/businessNavIcon.png" alt="Business Icon" class="inline-block mr-4 h-8 w-8 pointer-events-none">
+                            <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">İşletme/Kurumsal</span>
                         </a>
                     </div>
-                    <div class="flex items-center h-auto px-4 py-3">
-                        <a href="#" role="button" class="flex items-center">
-                            <img width="32" height="32" src="/images/puppter.png" alt="Web Scraping Icon" class="inline-block mr-4 h-8 w-8">
-                            <span class="inline-block w-36">Web Scraping</span>
+                    <div class="flex items-center h-auto">
+                        <a href="#" role="button" data-index="4" class="h-14 pl-4 flex items-center navRoleBtns">
+                            <img width="32" height="32" src="/images/puppter.png" alt="Web Scraping Icon" class="inline-block mr-4 h-8 w-8 pointer-events-none">
+                            <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">Web Scraping</span>
                         </a>
+                    </div>
+                    <div class="servicesActiveBtn absolute top-0 left-0 h-14 w-[208px] border border-[#2d343a] transition-all duration-200 rounded-xl pointer-events-none">
+
                     </div>
                 </div>
                 <div class="w-[2px] h-[328px] bg-slate-800"></div>
-                <div class="h-full">
-                    contents
+                <div class="h-[328px]">
+                    <ul class="flex flex-col ml-2 gap-3">
+                        <li>
+                            <a href="#" class="inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> Statik Web Sitesi Kurulumu</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> Web Uygulaması Geliştirme</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> Web Hosting</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> SEO Hizmeti</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> UI / UX Tasarımı</a>
+                        </li>
+                        <li>
+                            <a href="#" class="inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> Yeniden Yapılandırma</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>

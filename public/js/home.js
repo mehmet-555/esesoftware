@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //servisler ve hizmetler butonu
     addListenerToNavBtns ()
+
+    // Servisler ve hizmetler Modal ı
+    addListenerToNavRoleBtns ()
 });
 
 function sssAddListenerFunc () {
@@ -378,4 +381,42 @@ function addListenerToNavBtns() {
         }
     });
     
+}
+
+
+function addListenerToNavRoleBtns() {
+    const navRoleBtns = document.querySelectorAll(".navRoleBtns");
+    const servicesActiveBtn = document.querySelector(".servicesActiveBtn");
+
+    navRoleBtns.forEach(roleBtn => {
+        roleBtn.addEventListener("click", (e)=> {
+            e.preventDefault();
+        })
+        roleBtn.addEventListener("mouseenter", (e) => {
+            navRoleBtns.forEach(btn => {
+                btn.firstElementChild.nextElementSibling.classList.remove("text-white")
+            })
+            e.target.firstElementChild.nextElementSibling.classList.add("text-white");
+            // Öncelikle tüm top-* sınıflarını kaldır
+            servicesActiveBtn.classList.remove("top-0", "top-[68px]", "top-[136px]", "top-[202px]", "top-[270px]");
+
+            switch (roleBtn.dataset.index) {
+                case "0":
+                    servicesActiveBtn.classList.add("top-0");
+                    break;
+                case "1":
+                    servicesActiveBtn.classList.add("top-[68px]");
+                    break;
+                case "2":
+                    servicesActiveBtn.classList.add("top-[136px]");
+                    break;
+                case "3":
+                    servicesActiveBtn.classList.add("top-[202px]");
+                    break;
+                case "4":
+                    servicesActiveBtn.classList.add("top-[270px]");
+                    break;
+            }
+        });
+    });
 }

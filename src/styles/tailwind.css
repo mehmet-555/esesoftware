@@ -102,15 +102,38 @@
   top: 0px;
   visibility: hidden;
   opacity: 0;
-  width: 40rem;
-  height: 30rem;
+  width: auto;
+  height: auto;
 }
 .servicesModal.open {
   top: 96px;
   visibility: visible;
   opacity: 1;
-  width: 30rem;
+  width: auto;
   height: auto;
+}
+.servicesActiveBtn {
+  position: absolute;
+  &::after {
+    position: relative;
+    font-size: 24px;
+    top: 20%;
+    left:104%;
+    transform: translate(8px, -50%) scale(1.05);
+    content: ">";
+  }
+}
+.top-[68px] {
+  top: 68px;
+}
+.top-[136px] {
+  top: 136px;
+}
+.top-[202px] {
+  top: 202px;
+}
+.top-[270px] {
+  top: 270px;
 }
 @keyframes rotate360 {
   0% {
