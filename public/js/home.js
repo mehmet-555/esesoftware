@@ -314,16 +314,68 @@ function addListenerToNavBtns() {
     const servicesModal = document.querySelector(".servicesModal");
 
     const servicesBtn = document.querySelector(".navAnchorElem1");
-    const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
+    
+    const navAnchorElem2s = document.querySelectorAll(".navAnchorElem2");
+
+    Array.from(navAnchorElem2s).forEach(elem => {
+        elem.addEventListener("mouseenter", (e)=> {
+            setTimeout(() => {
+                onElem2();
+            }, 600);
+        })
+    })
+
+    function onElem2() {
+        if(servicesModal.classList.contains("open")) {
+            servicesModal.classList.replace("open", "close");
+            servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");          
+            servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");
+        }
+    }
+
+    function updateModalPosition() {
+        const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
+        const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 15*16}px`;
+        console.log(leftString)
+        servicesModal.style.left = leftString;
+    }
 
     navAnchorElem1.addEventListener("click", (e) => {
-        const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 12*16}px`;
+        e.preventDefault();
+        
+        updateModalPosition();
 
         if (servicesModal.classList.contains("close")) {
             servicesModal.classList.replace("close", "open");
-            servicesModal.style.left = leftString;
+            e.target.nextElementSibling.classList.replace("left-1/2", "left-0");          
+            e.target.nextElementSibling.classList.replace("w-0", "w-full");           
         } else {
             servicesModal.classList.replace("open", "close");
+            e.target.nextElementSibling.classList.replace("left-0", "left-1/2");          
+            e.target.nextElementSibling.classList.replace("w-full", "w-0");     
         }
     });
+
+
+    window.addEventListener("resize", (e)=> {
+        updateModalPosition();
+        if(window.innerWidth <= 768) {
+            if(servicesModal.classList.contains("open")) {
+                servicesModal.classList.replace("open", "close");
+                servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");          
+                servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");
+            }
+                 
+        }
+    })
+    document.addEventListener("click", (e) => {
+        if (!servicesModal.contains(e.target) && !navAnchorElem1.contains(e.target)) {
+            if (servicesModal.classList.contains("open")) {
+                servicesModal.classList.replace("open", "close");
+                servicesBtn.nextElementSibling.classList.replace("left-0", "left-1/2");
+                servicesBtn.nextElementSibling.classList.replace("w-full", "w-0");
+            }
+        }
+    });
+    
 }

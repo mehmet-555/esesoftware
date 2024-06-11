@@ -99,16 +99,18 @@
   left: 0;
 }
 .servicesModal.close {
+  top: 0px;
   visibility: hidden;
   opacity: 0;
-  width: 24rem;
-  height: 0rem;
+  width: 40rem;
+  height: 30rem;
 }
 .servicesModal.open {
+  top: 96px;
   visibility: visible;
   opacity: 1;
-  width: 24rem;
-  height: 15rem;
+  width: 30rem;
+  height: auto;
 }
 @keyframes rotate360 {
   0% {
@@ -666,4 +668,14 @@ img.logo {
       transform: scale(1.15);
     }
   }
+}
+
+
+/* Olmayan Tw Classları */
+
+.left-0 {
+  left: 0;
+}
+.w-full {
+  width: 100%;
 }
