@@ -24,7 +24,7 @@
         rel="stylesheet">
 </head>
 
-<body class="h-screen">
+<body class="h-screen relative">
     <nav
         class="fixed w-full bg-black border-b border-b-[#fafad278] flex items-center justify-between xs:justify-around h-16 overflow-hidden z-30">
         <div class="logoContainer">
@@ -203,7 +203,7 @@
                     Web geliştirme, bulut çözümleri, uçtan uca sistem tasarımı ve otomasyon hizmetleri ile işinizi geleceğe taşıyın.
                 </p>
                 <div class="flex justify-center mt-16">
-                    <a href="#" id="getContactBtn" class="inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 roboto-mono-regular text-lg px-3 py-2 text-white border-4 border-[#309ea3] rounded-xl transition-all duration-300 hover:text-white hover:border-[#8466ff]">İletişime Geç</a>
+                    <a href="#" id="getContactBtn" class="inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 roboto-mono-regular text-lg px-3 py-2 text-white border-4 border-[#309ea3] rounded-xl transition-all duration-300 hover:text-white hover:border-[#8466ff]"> < İletişime Geç > </a>
                 </div>
             </div>
             <div class="w-full overflow-hidden h-[764px]">
@@ -1501,7 +1501,7 @@
                                         <textarea name="contactMessage" id="contactMessage" class="relative outline-none border-b-2 bg-transparent text-white resize-none h-[176px]"></textarea>
                                     </div>
                                     <div class="flex justify-center my-8">
-                                        <button id="contactSubmiBtn" type="submit" class="text-[#606fc2] outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-1 roboto-mono-regular">Gönder</button>
+                                        <button id="contactSubmiBtn" type="submit" class="text-[#606fc2] outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> < Gönder > </button>
                                     </div>
                                 </div>
                             </div>
@@ -1534,39 +1534,37 @@
                 <i class="absolute top-[37%] fa-solid fa-arrow-right text-white pt-[1px] ml-1"></i>
             </ul>
         </div>
-        <div id="mobileLeftBar" class="absolute left-0 top-0 w">
-
-        </div>
+        
         <div class="servicesModal z-20 close fixed transition-all duration-500 border border-[#0b4242] rounded-xl bg-[#040607f5]">
             <div class="h-full px-4 py-5 flex items-start justify-center text-white">
                 <div class="h-full w-60 flex flex-col gap-3 relative pr-8">
                     <div class="flex items-center h-auto">
                         <a href="#" role="button" data-index="0" class="h-12 pl-4 flex items-center navRoleBtns">
-                            <img width="28" height="28" src="/images/webNavIcon.png" alt="Web Icon" class="inline-block mr-4 h-7 w-7 pointer-events-none">
+                            <img width="26" height="26" src="/images/webNavIcon.png" alt="Web Icon" class="inline-block mr-4 h-[26px] w-[26px] pointer-events-none">
                             <span class="inline-block w-36 transition-all duration-200 tracking-wider text-white pointer-events-none">WEB</span>
                         </a>
                     </div>
                     <div class="flex items-center h-auto">
                         <a href="#" role="button" data-index="1" class="h-12 pl-4 flex items-center navRoleBtns">
-                            <img width="28" height="28" src="/images/gcpNavIcon.svg" alt="Google Cloud Platform Icon" class="inline-block mr-4 h-7 w-7 pointer-events-none">
+                            <img width="26" height="26" src="/images/gcpNavIcon.svg" alt="Google Cloud Platform Icon" class="inline-block mr-4 h-[26px] w-[26px] pointer-events-none">
                             <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">GCP</span>
                         </a>
                     </div>
                     <div class="flex items-center h-auto">
                         <a href="#" role="button" data-index="2" class="h-12 pl-4 flex items-center navRoleBtns">
-                            <img width="28" height="28" src="/images/automationNavIcon.png" alt="Automation Icon" class="inline-block mr-4 h-7 w-7 pointer-events-none">
+                            <img width="26" height="26" src="/images/automationNavIcon.png" alt="Automation Icon" class="inline-block mr-4 h-[26px] w-[26px] pointer-events-none">
                             <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">Otomasyon</span>
                         </a>
                     </div>
                     <div class="flex items-center h-auto">
                         <a href="#" role="button" data-index="3" class="h-12 pl-4 flex items-center navRoleBtns">
-                            <img width="28" height="28" src="/images/businessNavIcon.png" alt="Business Icon" class="inline-block mr-4 h-7 w-7 pointer-events-none">
+                            <img width="26" height="26" src="/images/businessNavIcon.png" alt="Business Icon" class="inline-block mr-4 h-[26px] w-[26px] pointer-events-none">
                             <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">İşletme/Kurumsal</span>
                         </a>
                     </div>
                     <div class="flex items-center h-auto">
                         <a href="#" role="button" data-index="4" class="h-12 pl-4 flex items-center navRoleBtns">
-                            <img width="28" height="28" src="/images/puppter.png" alt="Web Scraping Icon" class="inline-block mr-4 h-7 w-7 pointer-events-none">
+                            <img width="26" height="26" src="/images/puppter.png" alt="Web Scraping Icon" class="inline-block mr-4 h-[26px] w-[26px] pointer-events-none">
                             <span class="inline-block w-36 transition-all duration-200 tracking-wider text-[#ffffff99] pointer-events-none">Web Scraping</span>
                         </a>
                     </div>
@@ -1577,6 +1575,7 @@
                 <div class="w-[2px] h-auto bg-slate-800"></div>
                 <div class="h-auto w-[295px]">
                     <ul id="modalServicesContent" class="flex flex-col ml-2 gap-[14px]">
+                        <li class='text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>
                         <li>
                             <a href="#" class="inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> Statik Web Sitesi Kurulumu</a>
                         </li>
@@ -1585,9 +1584,6 @@
                         </li>
                         <li>
                             <a href="#" class="inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> Web Hosting</a>
-                        </li>
-                        <li>
-                            <a href="#" class="inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> SEO Hizmeti</a>
                         </li>
                         <li>
                             <a href="#" class="inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200"><span class="text-sm text-gray-400 mr-1">></span> UI / UX Tasarımı</a>
@@ -1683,6 +1679,14 @@
             </div>
         </footer>
     </main>
+    <div id="mobileLeftBar" class="md:hidden close absolute leftBarCustomWH bg-[#f0f0f0]">
+
+        <div class="lbBtnArea">
+            <button id="mobileLeftBarBtn" type="button">
+                <i class="fa-solid fa-chevron-right close text-stone-800 text-xl pt-[1px]"></i>
+            </button>
+        </div>
+    </div>
     <script src="/js/home.js"></script>
     <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
 </body>

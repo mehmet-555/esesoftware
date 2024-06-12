@@ -664,6 +664,9 @@ video {
 .ml-2 {
   margin-left: 0.5rem;
 }
+.ml-3 {
+  margin-left: 0.75rem;
+}
 .ml-4 {
   margin-left: 1rem;
 }
@@ -745,9 +748,6 @@ video {
 .h-64 {
   height: 16rem;
 }
-.h-7 {
-  height: 1.75rem;
-}
 .h-8 {
   height: 2rem;
 }
@@ -762,6 +762,9 @@ video {
 }
 .h-\[200px\] {
   height: 200px;
+}
+.h-\[26px\] {
+  height: 26px;
 }
 .h-\[2px\] {
   height: 2px;
@@ -823,9 +826,6 @@ video {
 .w-60 {
   width: 15rem;
 }
-.w-7 {
-  width: 1.75rem;
-}
 .w-72 {
   width: 18rem;
 }
@@ -834,6 +834,9 @@ video {
 }
 .w-\[208px\] {
   width: 208px;
+}
+.w-\[26px\] {
+  width: 26px;
 }
 .w-\[295px\] {
   width: 295px;
@@ -1055,6 +1058,10 @@ video {
 .bg-\[\#5f4343\] {
   --tw-bg-opacity: 1;
   background-color: rgb(95 67 67 / var(--tw-bg-opacity));
+}
+.bg-\[\#f0f0f0\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 240 240 / var(--tw-bg-opacity));
 }
 .bg-\[\#f4f4f4\] {
   --tw-bg-opacity: 1;
@@ -1302,6 +1309,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(152 152 152 / var(--tw-text-opacity));
 }
+.text-\[\#adadad\] {
+  --tw-text-opacity: 1;
+  color: rgb(173 173 173 / var(--tw-text-opacity));
+}
 .text-\[\#d4d4d4\] {
   --tw-text-opacity: 1;
   color: rgb(212 212 212 / var(--tw-text-opacity));
@@ -1328,6 +1339,10 @@ video {
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
+}
+.text-stone-800 {
+  --tw-text-opacity: 1;
+  color: rgb(41 37 36 / var(--tw-text-opacity));
 }
 .text-white {
   --tw-text-opacity: 1;
@@ -1547,29 +1562,43 @@ video {
 }
 
 .mainCustomheigth {
-  /*  Bu pseudo-element, kaydırma çubuğunun tamamını hedef alır.  */
+  /* Bu pseudo-element, kaydırma çubuğunun tamamını hedef alır. */
   height: calc(100vh - 64px);
+  
   &::-webkit-scrollbar {
-    width: 10px;
-    background: #969696;
+    width: 8px;
+    background: transparent;
   }
+  
   &::-webkit-scrollbar-button {
-    /*  Kaydırma çubuğunun başında ve sonunda bulunan ok düğmelerini hedef alır.  */
+    /* Kaydırma çubuğunun başında ve sonunda bulunan ok düğmelerini hedef alır. */
     background: #ccc; /* Düğmelerin arka plan rengi */
     height: 0px; /* Düğmelerin yüksekliği */
     width: 0px; /* Düğmelerin genişliği */
   }
+  
   &::-webkit-scrollbar-thumb {
-    /*  Kaydırma çubuğunun, sayfanın neresinde olduğunuzu gösteren sürüklenebilir kısmını hedef alır. */
-    background: #738cc2;
+    /* Kaydırma çubuğunun, sayfanın neresinde olduğunuzu gösteren sürüklenebilir kısmını hedef alır. */
+    background: #a9d7dd;
     border-radius: 10px;
   }
+  
   &::-webkit-scrollbar-track {
-    /*  Kaydırma çubuğunun thumb kısmının üzerinde hareket ettiği yolu hedef alır.  */
-    background: #004165;
+    /* Kaydırma çubuğunun thumb kısmının üzerinde hareket ettiği yolu hedef alır. */
+    background: transparent;
   }
+  
   &::-webkit-resizer {
-    background: #888; /* Resizer kısmının arka plan rengi */
+    background: transparent; /* Resizer kısmının arka plan rengi */
+  }
+}
+
+/* Responsive stil */
+@media (min-width: 640px) {
+  .mainCustomheigth {
+    &::-webkit-scrollbar-track {
+      background: white;
+    }
   }
 }
 @media (max-width: 640px) {
@@ -2118,6 +2147,95 @@ img.logo {
 }
 .text-lg {
   font-size: 20px;
+}
+
+
+
+
+
+
+
+/* Mobile Left Nav */
+
+#mobileLeftBar {
+  position: fixed;
+  transition: all .4s ease-in-out;
+  
+  .lbBtnArea {
+    display: block;
+    position: relative;
+    top: 10%;
+    right: 0;
+    transform: translate(100%, 0);
+    
+    &::before, &::after {
+      display: block;
+      content: "";
+      width: 18px;
+      height: 30px;
+      z-index: -5;
+      border-top-right-radius: 60%;
+      background-color: rgb(255, 233, 233);
+      position: absolute;
+      border-bottom-right-radius: 60%;
+    }
+    
+    &::before {
+      top: -7px;
+      left: 0px;
+    }
+    
+    &::after {
+      top: 30px;
+      left: 0px;
+    }
+    
+    button {
+      background: rgb(255, 233, 233);
+      color: #000;
+      padding: 1rem .4rem 1rem .5rem;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+  }
+}
+
+#mobileLeftBar.close {
+  transform: translate(-100%, 0px);
+}
+#mobileLeftBar.open {
+  transform: translate(0%, 0px);
+}
+
+.leftBarCustomWH {
+  height: calc(100vh - 4rem);
+  width: 300px;
+  max-width: calc(100% - 4rem);
+  top: 4rem;
+}
+.fa-chevron-right {
+  transition: all .5s linear;
+  animation-name: fadeInChevron;
+  animation-duration: .75s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: backwards;
+  animation-direction: alternate-reverse;
+  transform-origin: center;
+}
+.fa-chevron-right.open {
+  transform: rotateY(180deg);
+}
+.fa-chevron-right.close {
+  transform: rotateY(0deg);
+}
+@keyframes fadeInChevron {
+  0% {
+    color: #292524;
+  }
+  100% {
+    color: #786c69;
+  }
 }
 .before\:absolute::before {
   content: var(--tw-content);

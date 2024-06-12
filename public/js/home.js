@@ -18,6 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Servisler ve hizmetler Modal ı
     addListenerToNavRoleBtns ()
+
+    // Mobile Lefft bar
+    leftBarBtnListener ()
 });
 
 function sssAddListenerFunc () {
@@ -445,10 +448,10 @@ function addListenerToNavRoleBtns() {
 function initialStateModalRightSide() {
     const modalServicesContent = document.getElementById("modalServicesContent");
     const content = [
+        `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
-        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> SEO Hizmeti</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
     ];
@@ -469,36 +472,40 @@ function showContentsOnServicesOnModal(index) {
     const modalServicesContent = document.getElementById("modalServicesContent");
 
     const contents = [
-        [
+        [   
+            `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> SEO Hizmeti</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
         ],
-        [
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> AE ile Yeniden Dağıtım</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> FS Gerçek Zamanlı Senkronizasyon</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Cloud Run ile Serverless</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> AE ile Ölçeklendirilebilirlik</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap p-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> CS ile Depolama Alanı</a></li>`
+        [   
+            `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Google Cloud Platform</li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> AE ile Yeniden Dağıtım</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> FS Gerçek Zamanlı Senkronizasyon</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Cloud Run ile Serverless</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> AE ile Ölçeklendirilebilirlik</a></li>`,
+            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> CS ile Depolama Alanı</a></li>`
         ],
-        [
+        [   
+            `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Otomasyon</li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 1</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 2</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 3</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 4</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 5</a></li>`
         ],
-        [
+        [   
+            `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>İşletme / Kurumsal</li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 1</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 2</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 3</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 4</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 5</a></li>`
         ],
-        [
+        [   
+            `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Scraping</li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 1</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 2</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Placeholder 3</a></li>`,
@@ -519,4 +526,60 @@ function showContentsOnServicesOnModal(index) {
             }, idx * 75); // Her eleman için 100ms gecikme eklenir
         });
     }
+}
+
+
+
+
+
+
+
+
+
+
+// LeftBarnav
+
+window.addEventListener("resize", (e)=> {
+    if(window.innerWidth >= 768) {
+        closeMobileLeftModal();
+    }
+})
+
+
+function leftBarBtnListener () {
+    
+    mobileLeftBarBtn.addEventListener("click", (e)=> {
+        if(mobileLeftBar.classList.contains("close")) {
+            openMobileLeftModal()
+        }else {
+            closeMobileLeftModal()
+        }
+    })
+}
+
+function openMobileLeftModal () {
+
+    const mobileLeftBarBtn = document.getElementById("mobileLeftBarBtn");
+    const mobileLeftBar = document.getElementById("mobileLeftBar");
+    const mainElem = document.querySelector(".mainCustomheigth");
+
+
+    mobileLeftBar.classList.replace("close", "open");
+    document.body.style.overflow = "hidden";
+    mainElem.style.overflow = "hidden";
+    mainElem.style.filter = "blur(2px)"
+    mobileLeftBarBtn.firstElementChild.classList.add("open");
+    mobileLeftBarBtn.firstElementChild.classList.remove("close");
+}
+function closeMobileLeftModal () {
+
+    const mobileLeftBarBtn = document.getElementById("mobileLeftBarBtn");
+    const mobileLeftBar = document.getElementById("mobileLeftBar");
+    const mainElem = document.querySelector(".mainCustomheigth");
+    
+    mobileLeftBar.classList.replace("open", "close");
+    document.body.style.overflow = "auto";
+    mainElem.style.overflow = "auto";
+    mainElem.style.filter = "none"
+    mobileLeftBarBtn.firstElementChild.classList.remove("open");
 }
