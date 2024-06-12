@@ -567,7 +567,8 @@ function openMobileLeftModal () {
     mobileLeftBar.classList.replace("close", "open");
     document.body.style.overflow = "hidden";
     mainElem.style.overflow = "hidden";
-    mainElem.style.filter = "blur(2px)"
+    mainElem.style.filter = "blur(2px)";
+    mainElem.style.pointerEvents = "none";
     mobileLeftBarBtn.firstElementChild.classList.add("open");
     mobileLeftBarBtn.firstElementChild.classList.remove("close");
 }
@@ -580,6 +581,7 @@ function closeMobileLeftModal () {
     mobileLeftBar.classList.replace("open", "close");
     document.body.style.overflow = "auto";
     mainElem.style.overflow = "auto";
-    mainElem.style.filter = "none"
+    mainElem.style.filter = "none";
+    mainElem.style.pointerEvents = "auto";
     mobileLeftBarBtn.firstElementChild.classList.remove("open");
 }

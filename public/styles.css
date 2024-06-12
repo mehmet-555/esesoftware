@@ -594,11 +594,17 @@ video {
 .top-\[45\%\] {
   top: 45%;
 }
+.top-\[62px\] {
+  top: 62px;
+}
 .z-20 {
   z-index: 20;
 }
 .z-30 {
   z-index: 30;
+}
+.z-40 {
+  z-index: 40;
 }
 .mx-2 {
   margin-left: 0.5rem;
@@ -808,6 +814,9 @@ video {
 .w-3 {
   width: 0.75rem;
 }
+.w-3\/4 {
+  width: 75%;
+}
 .w-36 {
   width: 9rem;
 }
@@ -852,6 +861,9 @@ video {
 }
 .w-full {
   width: 100%;
+}
+.w-2\/3 {
+  width: 66.666667%;
 }
 .min-w-52 {
   min-width: 13rem;
@@ -989,6 +1001,10 @@ video {
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
 }
+.rounded-t-none {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
 .border {
   border-width: 1px;
 }
@@ -1003,10 +1019,6 @@ video {
 }
 .border-b-2 {
   border-bottom-width: 2px;
-}
-.border-\[\#0b4242\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(11 66 66 / var(--tw-border-opacity));
 }
 .border-\[\#2d343a\] {
   --tw-border-opacity: 1;
@@ -1029,6 +1041,15 @@ video {
 }
 .border-b-\[\#fafad278\] {
   border-bottom-color: #fafad278;
+}
+.border-l-\[\#fafad278\] {
+  border-left-color: #fafad278;
+}
+.border-r-\[\#fafad278\] {
+  border-right-color: #fafad278;
+}
+.border-t-\[transparent\] {
+  border-top-color: transparent;
 }
 .bg-\[\#0000009c\] {
   background-color: #0000009c;
@@ -1091,6 +1112,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#000000\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -1514,9 +1539,10 @@ video {
   opacity: 0;
   width: auto;
   height: auto;
+  pointer-events: none;
 }
 .servicesModal.open {
-  top: 96px;
+  top: 63px;
   visibility: visible;
   opacity: 1;
   width: auto;
@@ -1555,6 +1581,11 @@ video {
 }
 .rotate-animation:hover {
   animation: rotate360 7s infinite linear paused;
+}
+@media (max-width: 640px) {
+  .rotate-animation:hover {
+      animation: rotate360 7s infinite linear running;
+  }
 }
 
 #getStardedBtn:hover::before {
@@ -2163,7 +2194,7 @@ img.logo {
   
   .lbBtnArea {
     display: block;
-    position: relative;
+    position: absolute;
     top: 10%;
     right: 0;
     transform: translate(100%, 0);
@@ -2234,7 +2265,7 @@ img.logo {
     color: #292524;
   }
   100% {
-    color: #786c69;
+    color: #d6c3be;
   }
 }
 .before\:absolute::before {

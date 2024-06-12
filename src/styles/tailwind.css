@@ -104,9 +104,10 @@
   opacity: 0;
   width: auto;
   height: auto;
+  pointer-events: none;
 }
 .servicesModal.open {
-  top: 96px;
+  top: 63px;
   visibility: visible;
   opacity: 1;
   width: auto;
@@ -145,6 +146,11 @@
 }
 .rotate-animation:hover {
   animation: rotate360 7s infinite linear paused;
+}
+@media (max-width: 640px) {
+  .rotate-animation:hover {
+      animation: rotate360 7s infinite linear running;
+  }
 }
 
 #getStardedBtn:hover::before {
@@ -742,7 +748,7 @@ img.logo {
   
   .lbBtnArea {
     display: block;
-    position: relative;
+    position: absolute;
     top: 10%;
     right: 0;
     transform: translate(100%, 0);
@@ -813,6 +819,6 @@ img.logo {
     color: #292524;
   }
   100% {
-    color: #786c69;
+    color: #d6c3be;
   }
 }
