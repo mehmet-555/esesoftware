@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
 
@@ -99,7 +100,7 @@
   left: 0;
 }
 .servicesModal.close {
-  top: 0px;
+  top: 45px;
   visibility: hidden;
   opacity: 0;
   width: auto;
@@ -329,7 +330,7 @@ img.logo {
   background: transparent;
   background-clip: padding-box;
   border-radius: 45px;
-  padding: 32px;
+  padding: 32px 24px 32px 24px;
   transition: all .4s linear;
   img {
     margin-bottom: 20px;
@@ -342,7 +343,7 @@ img.logo {
   background: linear-gradient(180deg, #422d48, #1a171c, #080509);
   background-clip: padding-box;
   border-radius: 45px;
-  padding: 32px;
+  padding: 32px 24px 32px 24px;
   img {
     margin-bottom: 20px;
   }
@@ -373,10 +374,6 @@ img.logo {
   border-radius: 45px;
 }
 
-.bg-green-box::after {
-  background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
-}
-
 .bg-white-box::after {
   background: linear-gradient(71deg, #121013, #b0afb0, #121013);
 }
@@ -395,7 +392,6 @@ img.logo {
   letter-spacing: -0.02em;
   line-height: 40px;
   font-style: normal;
-  font-size: 28px;
   padding-bottom: 8px;
 }
 
@@ -783,8 +779,56 @@ img.logo {
       border-bottom-right-radius: 20px;
     }
   }
+  .font-poppins {
+    .navliaElem {
+      &::after {
+        content: "";
+        transition: transform 0.3s;
+        border-right: 2px solid currentcolor;
+        border-bottom: 2px solid currentcolor;
+        width: 8px;
+        height: 8px;
+        transform: rotate(-45deg);
+        transition: all .3s linear;
+        color: #7d84ab;
+        margin-left: 6px;
+      }
+      &:hover::after,
+      &:active::after,
+      &:focus::after {
+        color: white;
+      }
+      
+      &:hover span:first-of-type,
+      &:active span:first-of-type,
+      &:focus span:first-of-type {
+        color: white;
+      }
+      &:hover div:first-of-type img,
+      &:active div:first-of-type img,
+      &:focus div:first-of-type img {
+        animation: swing ease-in-out 0.5s 1 alternate;
+      }
+    }
+  }
 }
-
+@keyframes swing {
+  0%, 30%, 50%, 70%, 100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+}
 #mobileLeftBar.close {
   transform: translate(-100%, 0px);
 }
