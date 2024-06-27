@@ -21,6 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mobile Lefft bar
     leftBarBtnListener ()
+    mobileLeftBarNavliElemCollapseF();
+
+    // Mobile RightBar
+    ModalFunction ()
 });
 
 function sssAddListenerFunc () {
@@ -584,4 +588,134 @@ function closeMobileLeftModal () {
     mainElem.style.filter = "none";
     mainElem.style.pointerEvents = "auto";
     mobileLeftBarBtn.firstElementChild.classList.remove("open");
+    const btns = document.querySelectorAll(".font-poppins .navLiABtnCollapse:not(.disabled)");
+    closeAllBtnModals(btns);
+}
+
+function mobileLeftBarNavliElemCollapseF() {
+    const btns = document.querySelectorAll(".font-poppins .navLiABtnCollapse:not(.disabled)");
+    btns.forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        const modal = e.currentTarget.nextElementSibling;
+        if (modal.classList.contains("close")) {
+          closeAllBtnModals(btns);
+          openTargetBtnModal(modal);
+        } else {
+          closeAllBtnModals(btns);
+          closeTargetBtnModal(modal);
+        }
+      });
+    });
+  }
+  
+  function openTargetBtnModal(modal) {
+    modal.classList.replace("close", "open");
+    modal.style.maxHeight = modal.scrollHeight + 'px';
+    modal.style.opacity = '1';
+    modal.previousElementSibling.classList.add("rotate");
+  }
+  
+  function closeTargetBtnModal(modal) {
+    modal.style.maxHeight = modal.scrollHeight + 'px';
+    requestAnimationFrame(() => {
+      modal.style.maxHeight = '0';
+      modal.style.opacity = '1';
+      modal.classList.replace("open", "close");
+      modal.previousElementSibling.classList.remove("rotate");
+    });
+  }
+  
+  function closeAllBtnModals(btns) {
+    btns.forEach(btn => {
+      const modal = btn.nextElementSibling;
+      if (modal.classList.contains("open")) {
+        modal.style.maxHeight = modal.scrollHeight + 'px';
+        requestAnimationFrame(() => {
+          modal.style.maxHeight = '0';
+          modal.style.opacity = '1';
+          modal.classList.replace("open", "close");
+          btn.classList.remove("rotate"); // rotate sınıfını kaldır
+        });
+      }
+    });
+  }
+  
+  
+
+
+
+//  MobileRishtAsideModalF
+
+function ModalFunction () {
+    const navMenuBtn = document.getElementById("navMenuBtn");
+    const modal = document.querySelector(".mobileOptionsModalCntr ");
+
+    navMenuBtn.addEventListener("click", (e)=> {
+        if(modal.classList.contains("translate-x-full")) {
+            openMobileRightModal(modal);
+        }else {
+            closeMobileRightModal(modal);
+        }
+    })
+}
+
+function openMobileRightModal(modal) {
+    modal.classList.replace("translate-x-full", "translate-x-0");
+    convertBtnStyle();
+
+    closeMobileLeftModal ()
+
+    const mainElem = document.querySelector(".mainCustomheigth");
+    document.body.style.overflow = "hidden";
+    mainElem.style.overflow = "hidden";
+    mainElem.style.filter = "blur(2px)";
+    mainElem.style.pointerEvents = "none";
+}
+function closeMobileRightModal(modal) {
+    modal.classList.replace("translate-x-0", "translate-x-full");
+    convertBtnBackStyle();
+
+    const mainElem = document.querySelector(".mainCustomheigth");
+    document.body.style.overflow = "auto";
+    mainElem.style.overflow = "auto";
+    mainElem.style.filter = "none";
+    mainElem.style.pointerEvents = "auto";
+}
+
+
+function toggleClass(elementId, oldClass, newClass) {
+    const element = document.getElementById(elementId);
+    element.classList.replace(oldClass, newClass);
+}
+
+function convertBtnStyle() {
+    const mappings = [
+        ["pice1", "translate-y-0", "translate-y-[10px]"],
+        ["pice2", "rotate-0", "rotate-45"],
+        ["pice3", "rotate-0", "-rotate-45"],
+        ["pice4", "max-w-[30px]", "max-w-0"],
+        ["pice5", "translate-y-0", "translate-y-[-8px]"],
+        ["pice6", "rotate-0", "-rotate-45"],
+        ["pice7", "rotate-0", "rotate-45"]
+    ];
+
+    mappings.forEach(mapping => {
+        toggleClass(mapping[0], mapping[1], mapping[2]);
+    });
+}
+
+function convertBtnBackStyle() {
+    const mappings = [
+        ["pice1", "translate-y-[10px]", "translate-y-0"],
+        ["pice2", "rotate-45", "rotate-0"],
+        ["pice3", "-rotate-45", "rotate-0"],
+        ["pice4", "max-w-0", "max-w-[30px]"],
+        ["pice5", "translate-y-[-8px]", "translate-y-0"],
+        ["pice6", "-rotate-45", "rotate-0"],
+        ["pice7", "rotate-45", "rotate-0"]
+    ];
+
+    mappings.forEach(mapping => {
+        toggleClass(mapping[0], mapping[1], mapping[2]);
+    });
 }
