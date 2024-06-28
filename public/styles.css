@@ -1394,6 +1394,21 @@ video {
 .pt-\[7px\] {
   padding-top: 7px;
 }
+.pb-\[3px\] {
+  padding-bottom: 3px;
+}
+.pt-\[2px\] {
+  padding-top: 2px;
+}
+.pb-\[2px\] {
+  padding-bottom: 2px;
+}
+.pb-\[1px\] {
+  padding-bottom: 1px;
+}
+.pt-\[0px\] {
+  padding-top: 0px;
+}
 .text-center {
   text-align: center;
 }
