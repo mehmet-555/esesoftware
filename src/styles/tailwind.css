@@ -157,7 +157,9 @@
 #getStardedBtn:hover::before {
   box-shadow: 0px 0px 20px 3px #a058eeb6;
 }
-
+#getStardedBtnFromMobile:hover::before {
+  box-shadow: 0px 0px 20px 3px #a058eeb6;
+}
 .mainCustomheigth {
   /* Bu pseudo-element, kaydırma çubuğunun tamamını hedef alır. */
   height: calc(100vh - 64px);

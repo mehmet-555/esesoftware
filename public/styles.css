@@ -692,6 +692,12 @@ video {
 .ml-8 {
   margin-left: 2rem;
 }
+.ml-\[\.1rem\] {
+  margin-left: .1rem;
+}
+.ml-\[\.3rem\] {
+  margin-left: .3rem;
+}
 .mr-0 {
   margin-right: 0px;
 }
@@ -892,9 +898,6 @@ video {
 }
 .w-\[55px\] {
   width: 55px;
-}
-.w-\[58px\] {
-  width: 58px;
 }
 .w-\[88px\] {
   width: 88px;
@@ -1292,6 +1295,10 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+.px-\[2px\] {
+  padding-left: 2px;
+  padding-right: 2px;
 }
 .px-\[6px\] {
   padding-left: 6px;
@@ -1754,7 +1761,9 @@ video {
 #getStardedBtn:hover::before {
   box-shadow: 0px 0px 20px 3px #a058eeb6;
 }
-
+#getStardedBtnFromMobile:hover::before {
+  box-shadow: 0px 0px 20px 3px #a058eeb6;
+}
 .mainCustomheigth {
   /* Bu pseudo-element, kaydırma çubuğunun tamamını hedef alır. */
   height: calc(100vh - 64px);

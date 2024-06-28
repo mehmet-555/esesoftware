@@ -28,7 +28,7 @@
     <nav
         class="fixed w-full bg-black border-b border-b-[#fafad278] flex items-center justify-between xs:justify-around h-16 overflow-hidden z-30">
         <div class="logoContainer">
-            <a href="#" class="flex items-center px-4 py-3 xs:min-w-[260px] overflow-hidden">
+            <a href="/" class="flex items-center px-4 py-3 xs:min-w-[260px] overflow-hidden">
                 <span class="inline-block h-10 w-10 mr-3 rotate-animation">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.46 62.46">
                         <defs>
@@ -126,6 +126,7 @@
                         <span class="pointer-events-none">
                             Devops
                         </span>
+                        <span class="px-[2px] ml-[.1rem] text-white font-bold bg-[#079b0b] rounded text-xs pointer-events-none">Beta</span>
                     </a>
                     <div
                         class="absolute bottom-[1px] w-0 left-1/2 transition-all duration-700 ulHoverE h-[2px] pointer-events-none bg-gradient-to-r from-blue-600 to-red-600">
@@ -160,8 +161,8 @@
         </div>
         <div class="navRightSide hidden lg:block">
             <div>
-                <div class="">
-                    <button id="getStardedBtn"
+                <div>
+                    <a id="getStardedBtn" href="/project" target="_blank"
                         class="relative roboto-mono-regular flex items-center outline before:transition-all duration-300 outline-[#309ea3] rounded-lg px-1 py-[2px] before:content-[''] before:absolute before:w-full before:top-0 before:left-0 before:rounded-[8px] before:min-h-full">
                         <span class="text-white mx-[6px]"> < </span>
                         <div class="flex flex-col">
@@ -169,7 +170,7 @@
                             <span class="whitespace-nowrap text-white text-[13px] leading-4">& Teklif Al</span>
                         </div>
                         <span class="text-white mx-[6px]"> > </span>
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1939,6 +1940,16 @@
     <div class="mobileOptionsModalCntr lg:hidden fixed top-16 w-full translate-x-full h-full bg-[#000b18f2] text-[#818181] transition-all duration-500">
         <div class="mobileOptionsModal relative w-fit bg-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl">
             <ul class="font-poppins font-bold text-base text-center flex flex-col gap-3 py-4">
+                <li class="flex justify-center p-4">
+                    <a id="getStardedBtnFromMobile" href="/project" target="_blank" class="relative roboto-mono-regular flex items-center outline before:transition-all duration-300 outline-[#309ea3] rounded-lg px-1 py-[2px] before:content-[''] before:absolute before:w-full before:top-0 before:left-0 before:rounded-[8px] before:min-h-full">
+                        <span class="text-white mx-[6px]"> &lt; </span>
+                        <div class="flex flex-col">
+                            <span class="whitespace-nowrap text-[#606fc2] text-[13px] leading-4">Proje Başlat</span>
+                            <span class="whitespace-nowrap text-white text-[13px] leading-4">&amp; Teklif Al</span>
+                        </div>
+                        <span class="text-white mx-[6px]"> &gt; </span>
+                    </a>
+                </li>
                 <li>
                     <a href="#" class="py-1 px-6 flex flex-col items-center w-full textGrad2 transition-all duration-200">
                         <span>Servisler ve Hizmetler</span>
@@ -1946,9 +1957,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="py-1 px-6 flex flex-col items-center w-full textGrad2 transition-all duration-200">
-                        <span>Devops</span>
-                        <div class="w-[58px] h-[1px] bg-gradient-to-r from-blue-600 to-red-600"></div>
+                    <a href="#" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
+                        <div><span class=" textGrad2">Devops</span><span class="px-[2px] ml-[.3rem] text-white font-bold bg-[#079b0b] rounded text-xs pointer-events-none">Beta</span></div>
+                        <div class="w-24 h-[1px] bg-gradient-to-r from-blue-600 to-red-600"></div>
                     </a>
                 </li>
                 <li>
