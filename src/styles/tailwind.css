@@ -145,6 +145,9 @@
 .rotate-animation {
   animation: rotate360 7s infinite linear running;
 }
+.rotate-animation2 {
+  animation: rotate360 12s infinite linear running;
+}
 .rotate-animation:hover {
   animation: rotate360 7s infinite linear paused;
 }
@@ -938,4 +941,28 @@ img.logo {
   transition: max-width .2s cubic-bezier(.37,.01,0,.98);
   margin-left: auto;
   margin-right: auto;
+}
+
+/* softwareTForm */
+
+#softwareTForm label.selected {
+  border: 2px solid #a3a3a3;
+}
+#softwareTForm .inputCntr.selected {
+  border-bottom: 2px solid #a3a3a3;
+}
+#softwareTForm label:hover .inputCntr {
+  border-color: #d3d3d35f;
+}
+#softwareTForm label.selected:hover .inputCntr {
+  border-color: #a3a3a3;
+}
+
+#softwareTypeSubmitBtn:hover,
+#softwareTypeSubmitBtn:active {
+  box-shadow: 0 0 10px 10px #3a0f27;
+}
+#softwareTypeSubmitBtn:hover i,
+#softwareTypeSubmitBtn:active i {
+  color: gainsboro;
 }
