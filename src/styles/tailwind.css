@@ -754,9 +754,30 @@ img.logo {
   font-size: 20px;
 }
 
+/* Word spacing için */
 
-
-
+.ws-1 {
+  word-spacing: 2px;
+}
+.ws-2 {
+  word-spacing: 3px;
+}
+.ws-3 {
+  word-spacing: 4px;
+}
+.ws-4 {
+  word-spacing: 5px;
+}
+.ws-5 {
+  word-spacing: 6px;
+}
+.ws-6 {
+  word-spacing: 8px;
+}
+.skipInkNone {
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
 /* Olmayan Tw Classları Devam Özellikle en zor animasyon */
 
 .translate-y-\[10px\] {
@@ -945,24 +966,26 @@ img.logo {
 
 /* softwareTForm */
 
-#softwareTForm label.selected {
+.softwareTFormC label.selected {
   border: 2px solid #a3a3a3;
 }
-#softwareTForm .inputCntr.selected {
+.softwareTFormC .inputCntr.selected {
   border-bottom: 2px solid #a3a3a3;
 }
-#softwareTForm label:hover .inputCntr {
+.softwareTFormC label:hover .inputCntr {
   border-color: #d3d3d35f;
 }
-#softwareTForm label.selected:hover .inputCntr {
+.softwareTFormC label.selected:hover .inputCntr {
   border-color: #a3a3a3;
 }
 
-#softwareTypeSubmitBtn:hover,
-#softwareTypeSubmitBtn:active {
+.projectNextBtn:hover,
+.projectNextBtn:active {
   box-shadow: 0 0 10px 10px #3a0f27;
 }
-#softwareTypeSubmitBtn:hover i,
-#softwareTypeSubmitBtn:active i {
+.projectNextBtn:hover i,
+.projectNextBtn:active i {
   color: gainsboro;
 }
+
+

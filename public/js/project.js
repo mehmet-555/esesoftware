@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Labellerın borderını ve aradaki çizginin borderını değiştiren fonksiyon
 function labelStyles() {
-    const form = document.getElementById("softwareTForm");
+    const form = document.querySelector(".softwareTFormC");
     const inputs = form.querySelectorAll("input[type='radio']");
 
     inputs.forEach(i => {
@@ -39,7 +39,7 @@ function labelStyles() {
     });
 };
 
-
+// Sonraki sayfayı getiren fonksiyon
 function nextPageWithValueF () {
     const form = document.getElementById("softwareTForm");
     const inputs = form.querySelectorAll("input[type='radio']");
@@ -61,7 +61,7 @@ function nextPageWithValueF () {
 
         if (nextPageName) {
             const safeNextPageName = encodeURIComponent(nextPageName);
-            const newUrl = `http://localhost:3000/project/${safeNextPageName}`;
+            const newUrl = `http://192.168.1.108:3000/project/${safeNextPageName}`;
             console.log(newUrl);
             window.location.href = newUrl;
         } else {
@@ -69,3 +69,21 @@ function nextPageWithValueF () {
         }
     })
 }
+
+// Required Spanı Spesifik Hover Olayı 
+
+// let recipeMap = new Map([
+//     [1, ""],
+//     ['tomatoes', 350],
+//     ['onion',    50]
+// ]);
+
+// function showRequiredDeatilF () {
+//     const softwareTypeSpans = document.querySelectorAll(".requiredArea");
+
+//     softwareTypeSpans.forEach(requiredSpan => {
+//         if(requiredSpan.dataset.index === "0") {
+
+//         }
+//     })
+// }
