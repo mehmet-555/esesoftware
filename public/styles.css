@@ -1462,6 +1462,9 @@ video {
 .pt-\[7px\] {
   padding-top: 7px;
 }
+.pl-\[3\.5px\] {
+  padding-left: 3.5px;
+}
 .text-center {
   text-align: center;
 }
@@ -1537,6 +1540,9 @@ video {
 }
 .leading-\[26px\] {
   line-height: 26px;
+}
+.leading-\[27px\] {
+  line-height: 27px;
 }
 .tracking-\[\.5px\] {
   letter-spacing: .5px;
