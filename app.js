@@ -20,19 +20,6 @@ app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 
-// Business Logic
-// app.use((req, res, next) => {
-//     console.log(req.subdomains)
-//     console.log(1)
-//     if (req.subdomains.includes('project')) {
-//         app.use(projectRouter);
-//         console.log(2)
-//     } else {
-//         next();
-//     }
-
-//     // PRODUCT İÇİN DÜZENLE
-// });
 app.use("/project", projectRouter);
 app.use("/about", aboutRouter);
 app.use("/", homeRouter);
