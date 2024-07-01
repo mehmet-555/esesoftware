@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     labelStyles();
 
-    // nextPageWithValueF ()
+    nextPageWithValueF ()
 });
 
 
@@ -47,3 +47,34 @@ function labelStyles() {
         });
     });
 };
+
+// Sonraki sayfayı getiren fonksiyon
+function nextPageWithValueF () {
+    const form = document.getElementById("softwareTForm2");
+    const inputs = form.querySelectorAll("input[type='radio']");
+
+    let nextPageName;
+
+    const webTypeSubmitBtn = document.getElementById("webTypeSubmitBtn");
+
+    webTypeSubmitBtn.addEventListener("click", (e)=> {
+        e.preventDefault();
+
+        for (const i of inputs) {
+            if (i.checked) {
+                nextPageName = i.value;
+                console.log(nextPageName);
+                break;
+            }
+        }
+
+        if (nextPageName) {
+            const safeNextPageName = encodeURIComponent(nextPageName);
+            const newUrl = `http://192.168.1.108:3000/project/web-project/${safeNextPageName}`;
+            console.log(newUrl);
+            window.location.href = newUrl;
+        } else {
+            console.log("No radio button selected.");
+        }
+    })
+}
