@@ -1678,6 +1678,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(230 230 230 / var(--tw-text-opacity));
 }
+.text-\[\#ececec\] {
+  --tw-text-opacity: 1;
+  color: rgb(236 236 236 / var(--tw-text-opacity));
+}
 .text-\[\#efefef\] {
   --tw-text-opacity: 1;
   color: rgb(239 239 239 / var(--tw-text-opacity));
@@ -2790,7 +2794,7 @@ img.logo {
   color: white;
 }
 
-#slideContactFormPTL {
+#slideScopeFormPTS {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2811,15 +2815,31 @@ img.logo {
   input[type="text"]:hover,
   select:hover,
   label:hover{
-    outline: 2px solid #182352;
+    outline: 2px solid #868686;
+  }
+  select.selectedOption,
+  input[type="text"].validInputText {
+    outline: 2px solid #3d64ff !important;
+    color: #ececec;
   }
   input[type="text"]:focus,
   select:focus {
-    outline: 2px solid #5074ff;
+    outline: 2px solid #d8d8d8;
   }
   label:has(input:checked) {
-    outline: 2px solid #148c0b; 
+    outline: 2px solid #3d64ff; 
+    color: #ececec;
+  }
 }
+
+.placeholder\:text-\[\#b8b8b8\]::-moz-placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(184 184 184 / var(--tw-text-opacity));
+}
+
+.placeholder\:text-\[\#b8b8b8\]::placeholder {
+  --tw-text-opacity: 1;
+  color: rgb(184 184 184 / var(--tw-text-opacity));
 }
 
 .before\:absolute::before {
@@ -3250,8 +3270,16 @@ img.logo {
     justify-content: flex-start;
   }
 
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
+  }
+
+  .md\:border-b-0 {
+    border-bottom-width: 0px;
   }
 
   .md\:border-t {
@@ -3279,6 +3307,10 @@ img.logo {
 
   .md\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .md\:pl-4 {
+    padding-left: 1rem;
   }
 
   .md\:pr-4 {

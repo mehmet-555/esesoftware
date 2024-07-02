@@ -999,7 +999,7 @@ img.logo {
   color: white;
 }
 
-#slideContactFormPTL {
+#slideScopeFormPTS {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -1020,13 +1020,19 @@ img.logo {
   input[type="text"]:hover,
   select:hover,
   label:hover{
-    outline: 2px solid #182352;
+    outline: 2px solid #868686;
+  }
+  select.selectedOption,
+  input[type="text"].validInputText {
+    outline: 2px solid #3d64ff !important;
+    color: #ececec;
   }
   input[type="text"]:focus,
   select:focus {
-    outline: 2px solid #5074ff;
+    outline: 2px solid #d8d8d8;
   }
   label:has(input:checked) {
-    outline: 2px solid #148c0b; 
-}
+    outline: 2px solid #3d64ff; 
+    color: #ececec;
+  }
 }
