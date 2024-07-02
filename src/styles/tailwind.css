@@ -1009,3 +1009,24 @@ img.logo {
   background-size: 1.5em 1.5em;
   padding-right: 2.5rem; 
 }
+/* #slideContactFormPTL:hover {
+  outline: 2px solid #355733;
+}
+#slideContactFormPTL:focus {
+  outline: 2px solid #148c0b;
+} */
+
+#slideFormCntrInner {
+  input[type="text"]:hover,
+  select:hover,
+  label:hover{
+    outline: 2px solid #182352;
+  }
+  input[type="text"]:focus,
+  select:focus {
+    outline: 2px solid #5074ff;
+  }
+  label:has(input:checked) {
+    outline: 2px solid #148c0b; 
+}
+}
