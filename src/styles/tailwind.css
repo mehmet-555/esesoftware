@@ -1035,4 +1035,7 @@ img.logo {
     outline: 2px solid #3d64ff; 
     color: #ececec;
   }
+  textarea {
+    scrollbar-width: none;
+  }
 }

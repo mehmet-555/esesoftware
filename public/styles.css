@@ -516,6 +516,12 @@ video {
     max-width: 360px;
   }
 }
+@media (min-width: 380px) {
+
+  .container {
+    max-width: 380px;
+  }
+}
 @media (min-width: 480px) {
 
   .container {
@@ -670,6 +676,9 @@ video {
 .mb-14 {
   margin-bottom: 3.5rem;
 }
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -747,6 +756,9 @@ video {
 }
 .mt-16 {
   margin-top: 4rem;
+}
+.mt-3 {
+  margin-top: 0.75rem;
 }
 .mt-4 {
   margin-top: 1rem;
@@ -1124,6 +1136,9 @@ video {
 .self-end {
   align-self: flex-end;
 }
+.overflow-auto {
+  overflow: auto;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1300,6 +1315,10 @@ video {
 .bg-\[\#19202aa1\] {
   background-color: #19202aa1;
 }
+.bg-\[\#1d4ed8\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
 .bg-\[\#2f1d37\] {
   --tw-bg-opacity: 1;
   background-color: rgb(47 29 55 / var(--tw-bg-opacity));
@@ -1461,6 +1480,10 @@ video {
 .py-\[2px\] {
   padding-top: 2px;
   padding-bottom: 2px;
+}
+.py-\[3px\] {
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 .pb-0 {
   padding-bottom: 0px;
@@ -2830,6 +2853,9 @@ img.logo {
     outline: 2px solid #3d64ff; 
     color: #ececec;
   }
+  textarea {
+    scrollbar-width: none;
+  }
 }
 
 .placeholder\:text-\[\#b8b8b8\]::-moz-placeholder {
@@ -3046,6 +3072,10 @@ img.logo {
   .xxxs\:hidden {
     display: none;
   }
+
+  .xxxs\:w-7\/12 {
+    width: 58.333333%;
+  }
 }
 
 @media (min-width: 360px) {
@@ -3053,12 +3083,28 @@ img.logo {
   .xxs\:hidden {
     display: none;
   }
+
+  .xxs\:w-1\/2 {
+    width: 50%;
+  }
+}
+
+@media (min-width: 380px) {
+
+  .xxs2\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (min-width: 480px) {
 
   .xs\:block {
     display: block;
+  }
+
+  .xs\:w-2\/5 {
+    width: 40%;
   }
 
   .xs\:w-4\/5 {
@@ -3103,6 +3149,10 @@ img.logo {
 
   .sm\:h-72 {
     height: 18rem;
+  }
+
+  .sm\:w-1\/3 {
+    width: 33.333333%;
   }
 
   .sm\:w-11\/12 {
@@ -3210,6 +3260,10 @@ img.logo {
     width: 50%;
   }
 
+  .md\:w-1\/3 {
+    width: 33.333333%;
+  }
+
   .md\:w-2\/3 {
     width: 66.666667%;
   }
@@ -3248,6 +3302,11 @@ img.logo {
 
   .md\:w-auto {
     width: auto;
+  }
+
+  .md\:w-fit {
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .md\:w-full {

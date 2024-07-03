@@ -97,66 +97,64 @@
             </div>
             <div id="slideFormCntr" class="w-full">
                 <div id="slideFormCntrInner" class="flex w-full overflow-hidden">
-                    <div id="slideFormContact" class="w-full shrink-0">
-                        <div id="slideFormContact" class="w-full shrink-0">
-                            <div>
-                                <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
-                                    <p class="text-[#b8b8b8] tracking-wide">BU projenin ana iletişim kişisi hakkında bilgileri giriniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
+                    <div id="slideFormContact" class="w-full shrink-0 hidden">
+                        <div>
+                            <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
+                                <p class="text-[#b8b8b8] tracking-wide">Bu projenin ana iletişim kişisi hakkında bilgileri giriniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
+                            </div>
+                        </div>
+                        <div id="slideContactFormA" class="pb-6 md:pb-0 pt-0 md:pt-10 border-b border-b-gray-800 md:border-t md:border-t-gray-800">
+                            <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0 border-t border-t-gray-800 md:border-t-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Ad soyad:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="3">*</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 flex justify-center px-1">
+                                    <input type="text" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="Ad Soyad" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
                                 </div>
                             </div>
-                            <div id="slideScopeFormA" class="pb-6 md:pb-0 pt-0 md:pt-10 border-b border-b-gray-800 md:border-t md:border-t-gray-800">
-                                <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0 border-t border-t-gray-800 md:border-t-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">Ad soyad:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="3">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex justify-center px-1">
-                                        <input type="text" id="slideContactFormNSI" name="slideScopeFormPNL" placeholder="Ad Soyad" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                            <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">E-posta:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="4">*</span>
                                     </div>
                                 </div>
-                                <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">E-posta:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="4">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex justify-center px-1">
-                                        <input type="email" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="E-posta" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
-                                    </div>
-                                </div>
-                                <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">Telefon:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex px-1">
-                                        <input type="text" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="Telefon" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
-                                    </div>
-                                </div>
-                                <div class="flex flex-col md:flex-row md:mb-10">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">İşletme/Şİrket ismi:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="6">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex px-1">
-                                        <input type="text" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="İşletme/Şirket İsmi" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
-                                    </div>
+                                <div class="w-full md:w-1/2 flex justify-center px-1">
+                                    <input type="email" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="E-posta" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
                                 </div>
                             </div>
-                            <div class="flex mt-10">
-                                <div class="w-full md:pl-4">
-                                    <button id="softwareTypeSubmitBtn" type="button" class="projectNextBtn text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> &lt; 
-                                        <span class="mx-2 text-[#b8b8b8]">İleri</span>
-                                        <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i>
-                                    &gt; </button>
+                            <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Telefon:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 flex px-1">
+                                    <input type="text" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="Telefon" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:mb-10">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">İşletme/Şirket ismi:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="6">*</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 flex px-1">
+                                    <input type="text" id="slideContactFormNSI" name="slideContactFormPNL" placeholder="İŞletme/Şirket İsmi" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
                                 </div>
                             </div>
                         </div>
+                        <div class="flex mt-10">
+                            <div class="w-full flex justify-start">
+                                <button id="softwareTypeSubmitBtn" type="submit" class="projectNextBtn text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> &lt; 
+                                    <span class="mx-2 text-[#b8b8b8]">İleri</span>
+                                    <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i>
+                                &gt; </button>
+                            </div>
+                        </div>
                     </div>
-                    <div id="slideFormScope" class="w-full shrink-0">
+                    <div id="slideFormScope" class="w-full shrink-0 hidden">
                         <div>
                             <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
                                 <p class="text-[#b8b8b8] tracking-wide">Projenin büyüklüğünü, kapsamını, doğasını tahmin edebilmemiz için aşağıdaki alanları doldurunuz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
@@ -268,58 +266,180 @@
                             </div>
                         </div>
                     </div>
-                    <div id="slideFormDetails" class="w-full h-96 shrink-0">
-                        <div id="slideFormContact" class="w-full shrink-0">
-                            <div>
-                                <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
-                                    <p class="text-[#b8b8b8] tracking-wide">Bize yaptığınız işi, sattığınız ürün veya hizmetleri açıklayınız:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
+                    <div id="slideFormDetails" class="w-full shrink-0 hidden">
+                        <div>
+                            <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
+                                <p class="text-[#b8b8b8] tracking-wide">Bize yaptınız işi, sattığınız ürün ve hizmetleri açıklayın:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
+                            </div>
+                        </div>
+                        <div id="slideDetailsFormA" class="pb-6 md:pb-0 pt-0 md:pt-10 border-b border-b-gray-800 md:border-t md:border-t-gray-800">
+                            <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0 border-t border-t-gray-800 md:border-t-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Ürün ve hizmetlerinizi açıklayınız:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="3">*</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-1/2 flex justify-center px-1">
+                                    <textarea id="slideDetailsFormNSI" name="slideDetailsFormPNL" placeholder="Ürün ve Hizmetler" class="w-full h-16 overflow-auto p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200 resize-none"></textarea>
                                 </div>
                             </div>
-                            <div id="slideScopeFormA" class="pb-6 md:pb-0 pt-0 md:pt-10 border-b border-b-gray-800 md:border-t md:border-t-gray-800">
-                                <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0 border-t border-t-gray-800 md:border-t-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">Ürün veya Hizmetler:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="3">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex justify-center px-1">
-                                        <textarea id="slideContactFormNSI" name="slideScopeFormPNL" placeholder="Ürün veya Hizmetler" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                            <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Rakipleriniz kimlerdir ve sizi rakiplerinizden farklı kılan nedir:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="4">*</span>
                                     </div>
                                 </div>
-                                <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">Rakipleriniz kimlerdir ve işinizi(sizi) özel veya farklı kılan nedir:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="4">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex justify-center px-1">
-                                        <textarea id="slideContactFormNSI" name="slideContactFormPNL" placeholder="Rakipleriniz ve Siz" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
-                                    </div>
+                                <div class="w-full md:w-1/2 flex justify-center px-1">
+                                    <textarea id="slideDetailsFormNSI" name="slideDetailsFormPNL" placeholder="Rakipleriniz ve Farkınız" class="w-full h-16 overflow-auto p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200 resize-none"></textarea>
                                 </div>
-                                <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
-                                    <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
-                                        <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
-                                            <p class="text-sm text-[#b8b8b8] tracking-wide">Müşterilerinizin yaş ortalaması nedir:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
-                                        </div>
-                                    </div>
-                                    <div class="w-full md:w-1/2 flex px-1">
-                                        
-                                    </div>
-                                </div>
-                                
                             </div>
-                            <div class="flex mt-10">
-                                <div class="w-full md:pl-4">
-                                    <button id="softwareTypeSubmitBtn" type="button" class="projectNextBtn text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> &lt; 
-                                        <span class="mx-2 text-[#b8b8b8]">İleri</span>
-                                        <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i>
-                                    &gt; </button>
+                            <div class="flex flex-col md:flex-row md:mb-10">
+                                <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Müşterilerinizin yaş ortalmasını seçiniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
+                                    </div>
                                 </div>
+                                <div class="w-full md:w-1/2 flex px-1">
+                                    <div class="w-1/3">
+                                        <div class="flex justify-start">
+                                            <label for="slideDetailsFormCRL1" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL1">
+                                                <span class="ml-[6px] pointer-events-none"> 18-30 </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-1/3">
+                                        <div class="flex justify-center">
+                                            <label for="slideDetailsFormCRL2" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <span class="mr-[6px] pointer-events-none">30-45</span>
+                                                <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL2">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-1/3">
+                                        <div class="flex justify-end">
+                                            <label for="slideDetailsFormCRL3" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <span class="mr-[6px] pointer-events-none">45-70</span>
+                                                <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL3">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="flex mt-10">
+                            <div class="w-1/2 flex justify-start md:justify-end md:pr-4">
+                                <button id="softwareTypeSubmitBtn" type="submit" class="projectNextBtn text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> &lt; 
+                                    <i class="fa-solid ml-2 fa-arrow-left text-[#b8b8b8] transition-all duration-200"></i>
+                                    <span class="mx-2 text-[#b8b8b8]">Geri</span>
+                                &gt; </button>
+                            </div>
+                            <div class="w-1/2 flex justify-end md:justify-start md:pl-4">
+                                <button id="softwareTypeSubmitBtn" type="submit" class="projectNextBtn text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> &lt; 
+                                    <span class="mx-2 text-[#b8b8b8]">İleri</span>
+                                    <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i>
+                                &gt; </button>
                             </div>
                         </div>
                     </div>
-                    <div id="slideFormBudget" class="w-full h-96 shrink-0">
-                        bütçe diviawdawdawdawdawd
+                    <div id="slideFormBudget" class="w-full shrink-0">
+                        <div>
+                            <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
+                                <p class="text-[#b8b8b8] tracking-wide">Bize bütçenizden ve ne zaman yayında görmek istediğinizden bahsedin:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
+                            </div>
+                        </div>
+                        <div id="slideDetailsFormA" class="pb-6 md:pb-0 pt-0 md:pt-10 border-b border-b-gray-800 md:border-t md:border-t-gray-800">
+                            <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
+                                <div class="w-full md:w-1/3 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0 border-t border-t-gray-800 md:border-t-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Bütçenizi seçiniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="3">*</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-2/3 flex justify-center px-1">
+                                    <div class="w-1/3">
+                                        <div class="flex justify-start">
+                                            <label for="slideDetailsFormCRL1" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL1">
+                                                <span class="text-sm xxs2:text-base ml-[6px] pointer-events-none"> <i class="fa-solid fa-greater-than-equal text-sm"></i> 40K </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-1/3">
+                                        <div class="flex justify-center">
+                                            <label for="slideDetailsFormCRL2" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <span class="text-sm xxs2:text-base mr-[6px] pointer-events-none"> <i class="fa-solid fa-greater-than-equal text-sm"></i> 80K </span>
+                                                <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL2">
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-1/3">
+                                        <div class="flex justify-end">
+                                            <label for="slideDetailsFormCRL3" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <span class="text-sm xxs2:text-base mr-[6px] pointer-events-none"> <i class="fa-solid fa-greater-than-equal text-sm"></i> 200K </span>
+                                                <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL3">
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col md:flex-row md:mb-10">
+                                <div class="w-full md:w-1/3 md:flex md:justify-start md:items-center md:pr-4">
+                                    <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Projeyi ne zaman yayında görmek istediğinizi seçin:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
+                                    </div>
+                                </div>
+                                <div class="w-full md:w-2/3 flex flex-col md:flex-row md:justify-between md:items-center px-1">
+                                    <div class="w-2/3 xxxs:w-7/12 xxs:w-1/2 xs:w-2/5 sm:w-1/3 md:w-fit mb-3 md:mb-0">
+                                        <div class="flex justify-start">
+                                            <label for="slideDetailsFormCRL1" class="w-full md:w-fit flex flex-col justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <div>
+                                                    <span class="mr-[6px] pointer-events-none">2-4 Hafta</span>
+                                                    <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL3">
+                                                </div>
+                                                <div>
+                                                    <span class="inline-block mt-3 px-[2px] py-[3px] font-semibold text-sm bg-red-800 rounded-md">%5 İndirim</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-2/3 xxxs:w-7/12 xxs:w-1/2 xs:w-2/5 sm:w-1/3 md:w-fit mb-3 md:mb-0">
+                                        <div class="flex justify-center">
+                                            <label for="slideDetailsFormCRL2" class="w-full md:w-fit flex flex-col justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <div>
+                                                    <span class="mr-[6px] pointer-events-none">4-8 Hafta</span>
+                                                    <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL3">
+                                                </div>
+                                                <div>
+                                                    <span class="inline-block mt-3 px-[2px] py-[3px] font-semibold text-sm bg-red-800 rounded-md">%10 İndirim</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="w-2/3 xxxs:w-7/12 xxs:w-1/2 xs:w-2/5 sm:w-1/3 md:w-fit">
+                                        <div class="flex justify-end">
+                                            <label for="slideDetailsFormCRL3" class="w-full md:w-fit flex flex-col justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md">
+                                                <div>
+                                                    <span class="mr-[6px] pointer-events-none">8-12 Hafta</span>
+                                                    <input type="radio" name="slideDetailsFormCRL" id="slideDetailsFormCRL3">
+                                                </div>
+                                                <div>
+                                                    <span class="inline-block mt-3 px-[2px] py-[3px] font-semibold text-sm bg-red-800 rounded-md">%20 İndirim</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex mt-10">
+                            <div class="w-full flex justify-start">
+                                <button id="softwareTypeSubmitBtn" type="submit" class="projectNextBtn bg-[#1d4ed8] text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular"> &lt; 
+                                    <span class="mx-2 text-[#b8b8b8]">Gönder</span>
+                                    <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i>
+                                &gt; </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
