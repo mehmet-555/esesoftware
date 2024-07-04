@@ -987,6 +987,8 @@ img.logo {
   color: gainsboro;
 }
 
+/* Web Statik Form Html */
+
 #stepByStepNav li.completed::before,
 #stepByStepNav li.completed::after {
   background-color: #148c0b;
@@ -997,45 +999,99 @@ img.logo {
 
 #stepByStepNav li.active strong {
   color: white;
+  background-color: #353d47;
+  padding: 0 6px;
+  border-radius: 12px;
 }
 
-#slideScopeFormPTS {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="%23ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>');
-  background-repeat: no-repeat;
-  background-position: right 0.75rem center;
-  background-size: 1.5em 1.5em;
-  padding-right: 2.5rem; 
-}
-/* #slideContactFormPTL:hover {
-  outline: 2px solid #355733;
-}
-#slideContactFormPTL:focus {
-  outline: 2px solid #148c0b;
-} */
+/* Contact, Scope, Details ve Budget flowunu kapsayan nested yapı başlangıcı */
 
 #slideFormCntrInner {
-  input[type="text"]:hover,
-  select:hover,
-  label:hover{
-    outline: 2px solid #868686;
+  /* Sadece select elementi için appearance sıfırlaması */
+  select {
+    appearance: none; /* Tarayıcı varsayılan stilini kaldırır */
+    -webkit-appearance: none; /* Safari/Chrome için */
+    -moz-appearance: none; /* Firefox için */
+    padding: 10px; /* İç boşluk */
+    font-size: 16px; /* Yazı tipi boyutu */
+    padding-right: 2rem; /* Ok simgesi için sağ boşluk */
+    background: #353d47 url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTcgMTBMMTIgMTVMMTcgMTAiIHN0cm9rZT0iI2I4YjhiOCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==') no-repeat right 1rem center;
+    background-size: 1.5rem; /* Ok simgesi boyutu */
+    &:focus-visible {
+      outline-offset: 0;
+      outline: none;
+    }
+  } 
+
+  /* hover, focus, focus-visible valid */
+  #slideFormContact {
+    input[type="text"],
+    input[type="email"] {
+      &:hover {
+        outline: 2px solid #636871;
+      }
+      &:focus {
+        outline: 2px solid #c4c6c8;
+      }
+    }
+    input[type="text"].validI,
+    input[type="email"].validI {
+        outline: 2px solid #225ecd;
+    }
+    button[disabled] {
+      opacity: 0;
+    }
   }
-  select.selectedOption,
-  input[type="text"].validInputText {
-    outline: 2px solid #3d64ff !important;
-    color: #ececec;
+  #slideFormScope {
+    label, select {
+      outline: 2px solid transparent;
+    }
+    input[type="text"],
+    select,
+    label {
+      &:hover {
+        outline: 2px solid #636871;
+      }
+    }
+    input[type="text"],
+    select {
+      &:focus {
+        outline: 2px solid #c4c6c8;
+      }
+    }
+    input[type="text"].validI,
+    select.validI,
+    label:has(input:checked)  {
+      outline: 2px solid #225ecd !important;
+    }
   }
-  input[type="text"]:focus,
-  select:focus {
-    outline: 2px solid #d8d8d8;
+  #slideFormDetails {
+    textarea,
+    label {
+      outline: 2px solid transparent;
+      &:hover {
+        outline: 2px solid #636871;
+      }
+    }
+    textarea {
+      &:focus {
+        outline: 2px solid #c4c6c8;
+      }
+    }
+    label:has(input:checked),
+    textarea.validI {
+      outline: 2px solid #225ecd !important;
+    }
   }
-  label:has(input:checked) {
-    outline: 2px solid #3d64ff; 
-    color: #ececec;
-  }
-  textarea {
-    scrollbar-width: none;
+  #slideFormBudget {
+    label {
+      outline: 2px solid transparent;
+      &:hover {
+        outline: 2px solid #636871;
+      }
+    }
+    label:has(input:checked) {
+      outline: 2px solid #225ecd !important;
+    }
   }
 }
