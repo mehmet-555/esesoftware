@@ -1,12 +1,5 @@
 document.addEventListener("DOMContentLoaded", (e)=> {
 
-    document.addEventListener("DOMContentLoaded", function() {
-        var disabledButtons = document.querySelectorAll('#slideFormCntrInner  button[disabled]');
-        disabledButtons.forEach(function(button) {
-            button.style.opacity = '0';
-        });
-    });
-
     validateContactAndActiveNBtn();
     validateScopeAndActiveNandBBtns();
     validateDetailsAndActiveNandBBtns();
