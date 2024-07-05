@@ -348,7 +348,6 @@ function addListenerToNavBtns() {
     function updateModalPosition() {
         const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
         const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 19*16}px`;
-        console.log(leftString)
         servicesModal.style.left = leftString;
     }
 
