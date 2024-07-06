@@ -4,46 +4,47 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function validateSteps() {
     const steps = document.querySelectorAll(".slideStepC");
-    const navItems = document.querySelectorAll("[data-stepnav]");
+    const navItems = document.querySelectorAll(".stepByStepNav li");
 
     steps.forEach((step, index) => {
         const inputs = step.querySelectorAll("[data-validate]");
-        const nextButton = step.querySelector(".btn.next");
+        const nextButton = step.querySelector(".btn-next");
         const backButton = step.querySelector(".btn-back");
-        const submitButton = step.querySelector("button[type='submit']");
 
         inputs.forEach(input => {
             input.addEventListener("input", () => {
-                validateInputs(inputs, nextButton, backButton, submitButton, navItems, index);
+                validateInputs(inputs, nextButton, navItems, index);
             });
 
-            if(input.type === "radio") {
-                const radioGroup = step.querySelectorAll(`input[name="${input.name}"]`);
-                radioGroup.forEach(radio => {
+            if (input.type === "radio") {
+                const radios = step.querySelectorAll(`input[name="${input.name}"]`);
+                radios.forEach(radio => {
                     radio.addEventListener("click", () => {
-                        validateInputs(inputs, nextButton, backButton, submitButton, navItems, index);
+                        validateInputs(inputs, nextButton, navItems, index);
                     });
+                });
+            } else {
+                input.addEventListener("click", () => {
+                    validateInputs(inputs, nextButton, navItems, index);
                 });
             }
         });
 
-        if(nextButton) {
-            nextButton.addEventListener("click", (e) => {
+        if (nextButton) {
+            nextButton.addEventListener("click", () => {
                 showStep(steps, navItems, index + 1);
             });
         }
-        if(backButton) {
-            backButton.addEventListener("click", (e) => {
-                showStep(steps, navItems, index - 1)
+
+        if (backButton) {
+            backButton.addEventListener("click", () => {
+                showStep(steps, navItems, index - 1);
             });
         }
-        if(submitButton) {
-            console.log("There is a submit button!");
-        }
     });
-};
+}
 
-function validateInputs(inputs, nextButton, backButton, submitButton, navItems, index) {
+function validateInputs(inputs, nextButton, navItems, index) {
     let allValid = true;
 
     inputs.forEach(input => {
@@ -55,99 +56,60 @@ function validateInputs(inputs, nextButton, backButton, submitButton, navItems, 
         }
     });
 
-    if (nextButton) {
-        nextButton.disabled = !allValid;
-    }
-    if (backButton) {
-        backButton.disabled = !allValid;
-    }
-    if (submitButton) {
-        submitButton.disabled = !allValid;
-    }
+    nextButton.disabled = !allValid;
     if (allValid) {
         navItems[index].classList.add("completed");
     } else {
         navItems[index].classList.remove("completed");
     }
 }
+
 function isValid(input) {
     const value = input.value;
-    validateType = input.dataset.validate;
+    const validateType = input.getAttribute("data-validate");
 
     switch (validateType) {
-        case "name" :
-            const nameSurnamePattern = /^[A-Za-zşŞçÇğĞüÜöÖıİ]{3,} [A-Za-zşŞçÇğĞüÜöÖıİ]{3,}$/;
-            console.log(validateType);
-            return nameSurnamePattern.test(value);
+        case "nameSurname":
+            return value.length >= 6 && value.includes(" ");
         case "email":
             const emailPattern = /^[^\s@]+@[^\s@]+\.com$/;
-            console.log(validateType);
             return emailPattern.test(value);
         case "phone":
             const validFormat1 = /^0\d{10}$/;
             const validFormat2 = /^[1-9]\d{9}$/;
-            console.log(validateType);
             return validFormat1.test(value) || validFormat2.test(value);
         case "company":
-            console.log(validateType);
             return value.length >= 6;
         case "projectName":
-            console.log(validateType);
             return value.length >= 6;
         case "select":
-            console.log(validateType);
             return value !== "default";
         case "textarea":
-            console.log(validateType);
             return value.length >= 30;
         case "radio":
-            console.log(validateType);
-            const radioGroup = document.querySelectorAll(`input[name="${input.name}"]`);
-            return Array.from(radioGroup).some(radio => radio.checked);
+            const radios = document.querySelectorAll(`input[name="${input.name}"]`);
+            return Array.from(radios).some(radio => radio.checked);
         default:
-            console.log(validateType);
             return false;
-    };
-};
+    }
+}
 
 function showStep(steps, navItems, index) {
-    if(index < 0 || index >= steps.length) {
+    if (index < 0 || index >= steps.length) {
         return;
-    };
+    }
 
-    const stepWidth = 100;
+    const stepWidth = 100; // Her adımın genişliği yüzde cinsinden
+
     steps.forEach((step, i) => {
         step.style.transform = `translateX(-${stepWidth * index}%)`;
     });
 
     navItems.forEach((navItem, i) => {
-        if(i === index) {
+        if (i === index) {
             navItem.classList.add("active");
-        }else {
+        } else {
             navItem.classList.remove("active");
         }
     });
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
