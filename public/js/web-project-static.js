@@ -66,6 +66,7 @@ function validateContactAndActiveNBtn () {
     // E-posta İnputu (.com ile bitmesi gerekiyor)
     slideFormContact2.addEventListener("input", (e) => {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         const emailValue = e.target.value;
         // E-posta doğrulaması: en az bir karakter, @ işareti, en az bir karakter, .com ile bitmesi
@@ -84,6 +85,7 @@ function validateContactAndActiveNBtn () {
     // Telefon Numarası İnputu  (Aşağıdaki REGEX düzenlerinde olucak)
     slideFormContact3.addEventListener("input", (e) => {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         const phoneValue = e.target.value;
         const validFormat1 = /^0\d{10}$/; // 05555555555 formatı
@@ -102,6 +104,7 @@ function validateContactAndActiveNBtn () {
     // İşletme/Şirket İsmi İnputu (En az 6 karakter uzunluğunda)
     slideFormContact4.addEventListener("input", (e)=> {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         if(e.target.value.length >= 6) {
             e.target.classList.add("validI");
@@ -178,6 +181,7 @@ function validateScopeAndActiveNandBBtns() {
     // Proje Adı İnputu  (En az 6 karakter uzunluğunda)
     slideFormScope1.addEventListener("input", (e)=> {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         if(e.target.value.length >= 6) {
             e.target.classList.add("validI");
@@ -192,6 +196,7 @@ function validateScopeAndActiveNandBBtns() {
     // Select Box (Default değer hariç bir değer seçilmesi gerekiyor)
     slideFormScope2.addEventListener("change", (e)=> {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         if(e.target.value !== "default") {
             e.target.classList.add("validI")
@@ -207,6 +212,7 @@ function validateScopeAndActiveNandBBtns() {
     slideFormScopeContentInputs.forEach(input => {
         input.addEventListener("click", (e) => {
             const currentStep = e.target.closest(".slideStepC").dataset.step;
+            const currentStepEl = e.target.closest(".slideStepC");
             console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormScopeContentInputs.forEach(i => {
@@ -226,6 +232,7 @@ function validateScopeAndActiveNandBBtns() {
     slideFormScopeInspirderInputs.forEach(input => {
         input.addEventListener("click", (e) => {
             const currentStep = e.target.closest(".slideStepC").dataset.step;
+            const currentStepEl = e.target.closest(".slideStepC");
             console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormScopeInspirderInputs.forEach(i => {
@@ -309,6 +316,7 @@ function validateDetailsAndActiveNandBBtns() {
     // Ürün ve Hizmetler TextAreası  (En az 30 karakter uzunluğunda)
     slideFormDetails1.addEventListener("input", (e)=> {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         if(e.target.value.length >= 30) {
             e.target.classList.add("validI");
@@ -323,6 +331,7 @@ function validateDetailsAndActiveNandBBtns() {
     // Rakipleriniz ve Farkınız TextAreası  (En az 30 karakter uzunluğunda)
     slideFormDetails2.addEventListener("input", (e)=> {
         const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
         console.log(currentStep);
         if(e.target.value.length >= 30) {
             e.target.classList.add("validI");
@@ -338,6 +347,7 @@ function validateDetailsAndActiveNandBBtns() {
     slideFormDetailsAgeAvInputs.forEach(input => {
         input.addEventListener("click", (e) => {
             const currentStep = e.target.closest(".slideStepC").dataset.step;
+            const currentStepEl = e.target.closest(".slideStepC");
             console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormDetailsAgeAvInputs.forEach(i => {
@@ -420,6 +430,7 @@ function validateBudgetAndActiveNandBBtns() {
     slideFormBudgetBudgetInputs.forEach(input => {
         input.addEventListener("click", (e) => {
             const currentStep = e.target.closest(".slideStepC").dataset.step;
+            const currentStepEl = e.target.closest(".slideStepC");
             console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormBudgetBudgetInputs.forEach(i => {
@@ -440,6 +451,7 @@ function validateBudgetAndActiveNandBBtns() {
     slideFormBudgetTimingInputs.forEach(input => {
         input.addEventListener("click", (e) => {
             const currentStep = e.target.closest(".slideStepC").dataset.step;
+            const currentStepEl = e.target.closest(".slideStepC");
             console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormBudgetTimingInputs.forEach(i => {
