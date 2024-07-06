@@ -79,25 +79,25 @@
             </a>
         </div>
         <div class="text-white flex flex-col items-center justify-center">
-            <div id="stepByStepNavCntr" class="w-full sm:w-4/5 md:w-3/4 lg:w-3/5 mt-4">
-                <ul id="stepByStepNav" class="flex items-center mb-4">
-                    <li id="stepByStepNavContact" class="active flex justify-center items-end relative w-1/4 h-16 before:content-['1'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
+            <div class="w-full sm:w-4/5 md:w-3/4 lg:w-3/5 mt-4">
+                <ul class="stepByStepNav flex items-center mb-4">
+                    <li class="stepByStepNavContact active flex justify-center items-end relative w-1/4 h-16 before:content-['1'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
                         <strong class="text-sm text-[#9b9b9b] pointer-events-none tracking-[0.5px] transition-all duration-200">İletişim</strong>
                     </li>
-                    <li id="stepByStepNavScope" class="flex justify-center items-end relative w-1/4 h-16 before:content-['2'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
+                    <li class="stepByStepNavScope flex justify-center items-end relative w-1/4 h-16 before:content-['2'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
                         <strong class="text-sm text-[#9b9b9b] pointer-events-none tracking-[0.5px] transition-all duration-200">Kapsam</strong>
                     </li>
-                    <li id="stepByStepNavDetails" class="flex justify-center items-end relative w-1/4 h-16 before:content-['3'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
+                    <li class="stepByStepNavDetails flex justify-center items-end relative w-1/4 h-16 before:content-['3'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
                         <strong class="text-sm text-[#9b9b9b] pointer-events-none tracking-[0.5px] transition-all duration-200">Detaylar</strong>
                     </li>
-                    <li id="stepByStepNavBudget" class="flex justify-center items-end relative w-1/4 h-16 before:content-['4'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
+                    <li class="stepByStepNavBudget flex justify-center items-end relative w-1/4 h-16 before:content-['4'] before:rounded-full before:bg-[#353d47] before:w-9 before:h-9 before:absolute before:top-0 before:flex before:justify-center before:items-center before:transition-all before:duration-300 after:w-full after:h-[2px] after:content-[''] after:-z-10 after:absolute after:left-0 after:top-[17px] after:bg-[#353d47] after::transition-all after::duration-300">
                         <strong class="text-sm text-[#9b9b9b] pointer-events-none tracking-[0.5px] transition-all duration-200">Bütçe</strong>
                     </li>
                 </ul>
             </div>
-            <div id="slideFormCntr" class="w-full">
-                <div id="slideFormCntrInner" class="flex w-full overflow-hidden">
-                    <div id="slideFormContact" class="w-full shrink-0 transition-all duration-200">
+            <div class="slideFormCntr w-full">
+                <div class="flex w-full overflow-hidden">
+                    <div id="slideFormContact" class="slideFormContact slideStepC w-full shrink-0 transition-all duration-200" data-step="contact">
                         <div>
                             <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
                                 <p class="text-[#b8b8b8] tracking-wide">Bu projenin ana iletişim kişisi hakkında bilgileri giriniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
@@ -111,7 +111,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex justify-center px-1">
-                                    <input type="text" id="slideFormContact1" name="slideFormContact1" placeholder="Ad Soyad" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                                    <input type="text" id="slideFormContact1" name="slideFormContact1" placeholder="Ad Soyad" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200" data-validate="nameSurname">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
@@ -121,7 +121,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex justify-center px-1">
-                                    <input type="email" id="slideFormContact2" name="slideFormContact2" placeholder="E-posta" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                                    <input type="email" id="slideFormContact2" name="slideFormContact2" placeholder="E-posta" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200" data-validate="email">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
@@ -131,7 +131,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex px-1">
-                                    <input type="text" id="slideFormContact3" name="slideFormContact3" placeholder="Telefon" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                                    <input type="text" id="slideFormContact3" name="slideFormContact3" placeholder="Telefon" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200" data-validate="phone">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row md:mb-10">
@@ -141,11 +141,11 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex px-1">
-                                    <input type="text" id="slideFormContact4" name="slideFormContact4" placeholder="İşletme/Şirket İsmi" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                                    <input type="text" id="slideFormContact4" name="slideFormContact4" placeholder="İşletme/Şirket İsmi" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200" data-validate="company">
                                 </div>
                             </div>
                         </div>
-                        <div class="flex mt-10">
+                        <div class="flex mt-10 px-[2px]">
                             <div class="w-full flex justify-start">
                                 <button id="slideFormContactBtnNext" type="button" class="btn-next text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular" disabled="true"> &lt; 
                                     <span class="mx-2 text-[#b8b8b8]">İleri</span>
@@ -154,7 +154,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="slideFormScope" class="w-full shrink-0 transition-all duration-200">
+                    <div id="slideFormScope" class="slideFormScope slideStepC w-full shrink-0 transition-all duration-200" data-step="scope">
                         <div>
                             <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
                                 <p class="text-[#b8b8b8] tracking-wide">Projenin büyüklüğünü, kapsamını, doğasını tahmin edebilmemiz için aşağıdaki alanları doldurunuz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
@@ -168,7 +168,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex justify-center px-1">
-                                    <input type="text" id="slideFormScope1" name="slideFormScope1" placeholder="Proje İsmi" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200">
+                                    <input type="text" id="slideFormScope1" name="slideFormScope1" placeholder="Proje İsmi" class="w-full p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200" data-validate="projectName">
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
@@ -178,7 +178,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex justify-center px-1">
-                                    <select name="slideFormScope2" id="slideFormScope2" class="w-full p-[10px] border text-[#b8b8b8] border-[#1f2937] outline-offset-0 rounded-md transition-all duration-200">
+                                    <select name="slideFormScope2" id="slideFormScope2" class="w-full p-[10px] border text-[#b8b8b8] border-[#1f2937] outline-offset-0 rounded-md transition-all duration-200" data-validate="select">
                                         <option value="default">Web Sitesi Türü</option>
                                         <option value="kurumsal-web-sitesi">Web Sitesi (Kurumsal)</option>
                                         <option value="urun-tanıtım-web-sitesi">Ürün Tanıtım Web Sitesi</option>
@@ -202,7 +202,7 @@
                                     <div class="w-1/3">
                                         <div class="flex justify-start">
                                             <label for="slideFormScope3" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
-                                                <input type="radio" name="slideFormScopeA" id="slideFormScope3">
+                                                <input type="radio" name="slideFormScopeA" id="slideFormScope3" data-validate="radio">
                                                 <span class="ml-[6px] pointer-events-none">Evet</span>
                                             </label>
                                         </div>
@@ -211,7 +211,7 @@
                                         <div class="flex justify-center">
                                             <label for="slideFormScope4" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="mr-[6px] pointer-events-none">Kısmen</span>
-                                                <input type="radio" name="slideFormScopeA" id="slideFormScope4">
+                                                <input type="radio" name="slideFormScopeA" id="slideFormScope4" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
@@ -219,7 +219,7 @@
                                         <div class="flex justify-end">
                                             <label for="slideFormScope5" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="mr-[6px] pointer-events-none">Hayır</span>
-                                                <input type="radio" name="slideFormScopeA" id="slideFormScope5">
+                                                <input type="radio" name="slideFormScopeA" id="slideFormScope5" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
@@ -235,7 +235,7 @@
                                     <div class="w-1/2">
                                         <div class="flex justify-start">
                                             <label for="slideFormScope6" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
-                                                <input type="radio" name="slideFormScopeB" id="slideFormScope6">
+                                                <input type="radio" name="slideFormScopeB" id="slideFormScope6" data-validate="radio">
                                                 <span class="ml-[6px] pointer-events-none">Evet var</span>
                                             </label>
                                         </div>
@@ -244,14 +244,14 @@
                                         <div class="flex justify-end">
                                             <label for="slideFormScope7" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="mr-[6px] pointer-events-none">Hayır yok</span>
-                                                <input type="radio" name="slideFormScopeB" id="slideFormScope7">
+                                                <input type="radio" name="slideFormScopeB" id="slideFormScope7" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex mt-10">
+                        <div class="flex mt-10 px-[2px]">
                             <div class="w-1/2 flex justify-start md:justify-end md:pr-4">
                                 <button id="slideFormScopeBtnBack" type="button" class="btn-back text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular" disabled="true"> &lt; 
                                     <i class="fa-solid ml-2 fa-arrow-left text-[#b8b8b8] transition-all duration-200"></i>
@@ -266,7 +266,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="slideFormDetails" class="w-full shrink-0 transition-all duration-200">
+                    <div id="slideFormDetails" class="slideFormDetails slideStepC w-full shrink-0 transition-all duration-200" data-step="details">
                         <div>
                             <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
                                 <p class="text-[#b8b8b8] tracking-wide">Bize yaptınız işi, sattığınız ürün ve hizmetleri açıklayın:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
@@ -280,7 +280,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex justify-center px-1">
-                                    <textarea id="slideFormDetails1" name="slideFormDetails1" placeholder="Ürün ve Hizmetler" class="w-full h-16 overflow-auto p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200 resize-none"></textarea>
+                                    <textarea id="slideFormDetails1" name="slideFormDetails1" placeholder="Ürün ve Hizmetler" class="w-full h-16 overflow-auto p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200 resize-none" data-validate="textarea"></textarea>
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row md:mb-10 border-b border-b-gray-800 pb-6 md:border-b-0 md:pb-0">
@@ -290,20 +290,20 @@
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex justify-center px-1">
-                                    <textarea id="slideFormDetails2" name="slideFormDetails2" placeholder="Rakipleriniz ve Farkınız" class="w-full h-16 overflow-auto p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200 resize-none"></textarea>
+                                    <textarea id="slideFormDetails2" name="slideFormDetails2" placeholder="Rakipleriniz ve Farkınız" class="w-full h-16 overflow-auto p-[10px] border text-[#ececec] placeholder:text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-none outline-offset-0 transition-all duration-200 resize-none" data-validate="textarea"></textarea>
                                 </div>
                             </div>
                             <div class="flex flex-col md:flex-row md:mb-10">
                                 <div class="w-full md:w-1/2 md:flex md:justify-start md:items-center md:pr-4">
                                     <div class="flex items-center mb-4 pt-4 md:mb-0 md:pt-0">
-                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Müşterilerinizin yaş ortalmasını seçiniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
+                                        <p class="text-sm text-[#b8b8b8] tracking-wide">Müşterilerinizin(ziyaretçilerinizin) yaş ortalamasını seçiniz:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="5">*</span>
                                     </div>
                                 </div>
                                 <div class="w-full md:w-1/2 flex px-1">
                                     <div class="w-1/3">
                                         <div class="flex justify-start">
                                             <label for="slideFormDetails3" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
-                                                <input type="radio" name="slideFormDetailsA" id="slideFormDetails3">
+                                                <input type="radio" name="slideFormDetailsA" id="slideFormDetails3" data-validate="radio">
                                                 <span class="ml-[6px] pointer-events-none"> 18-30 </span>
                                             </label>
                                         </div>
@@ -312,7 +312,7 @@
                                         <div class="flex justify-center">
                                             <label for="slideFormDetails4" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="mr-[6px] pointer-events-none">30-45</span>
-                                                <input type="radio" name="slideFormDetailsA" id="slideFormDetails4">
+                                                <input type="radio" name="slideFormDetailsA" id="slideFormDetails4" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
@@ -320,14 +320,14 @@
                                         <div class="flex justify-end">
                                             <label for="slideFormDetails5" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="mr-[6px] pointer-events-none">45-70</span>
-                                                <input type="radio" name="slideFormDetailsA" id="slideFormDetails5">
+                                                <input type="radio" name="slideFormDetailsA" id="slideFormDetails5" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex mt-10">
+                        <div class="flex mt-10 px-[2px]">
                             <div class="w-1/2 flex justify-start md:justify-end md:pr-4">
                                 <button id="slideFormDetailsBtnBack" type="button" class="btn-back text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular" disabled="true"> &lt; 
                                     <i class="fa-solid ml-2 fa-arrow-left text-[#b8b8b8] transition-all duration-200"></i>
@@ -342,7 +342,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="slideFormBudget" class="w-full shrink-0 transition-all duration-200">
+                    <div id="slideFormBudget" class="slideFormBudget slideStepC w-full shrink-0 transition-all duration-200" data-step="budget">
                         <div>
                             <div class="flex items-center mb-10 pt-10 border-t border-t-gray-800">
                                 <p class="text-[#b8b8b8] tracking-wide">Bize bütçenizden ve ne zaman yayında görmek istediğinizden bahsedin:</p><span class="inline-block w-4 min-w-4 h-4 pl-[3.5px] ml-2 text-2xl leading-[27px] rounded-full bg-gray-600 text-white cursor-pointer requiredArea" data-span="2">*</span>
@@ -359,7 +359,7 @@
                                     <div class="w-1/3">
                                         <div class="flex justify-start">
                                             <label for="slideFormBudget1" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
-                                                <input type="radio" name="slideFormBudgetA" id="slideFormBudget1">
+                                                <input type="radio" name="slideFormBudgetA" id="slideFormBudget1" data-validate="radio">
                                                 <span class="text-sm xxs2:text-base ml-[6px] pointer-events-none"> <i class="fa-solid fa-greater-than-equal text-sm"></i> 40K </span>
                                             </label>
                                         </div>
@@ -368,7 +368,7 @@
                                         <div class="flex justify-center">
                                             <label for="slideFormBudget2" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="text-sm xxs2:text-base mr-[6px] pointer-events-none"> <i class="fa-solid fa-greater-than-equal text-sm"></i> 80K </span>
-                                                <input type="radio" name="slideFormBudgetA" id="slideFormBudget2">
+                                                <input type="radio" name="slideFormBudgetA" id="slideFormBudget2" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
@@ -376,7 +376,7 @@
                                         <div class="flex justify-end">
                                             <label for="slideFormBudget3" class="flex justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <span class="text-sm xxs2:text-base mr-[6px] pointer-events-none"> <i class="fa-solid fa-greater-than-equal text-sm"></i> 200K </span>
-                                                <input type="radio" name="slideFormBudgetA" id="slideFormBudget3">
+                                                <input type="radio" name="slideFormBudgetA" id="slideFormBudget3" data-validate="radio">
                                             </label>
                                         </div>
                                     </div>
@@ -394,7 +394,7 @@
                                             <label for="slideFormBudget4" class="w-full md:w-fit flex flex-col justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <div>
                                                     <span class="mr-[6px] pointer-events-none">2-4 Hafta</span>
-                                                    <input type="radio" name="slideFormBudgetB" id="slideFormBudget4">
+                                                    <input type="radio" name="slideFormBudgetB" id="slideFormBudget4" data-validate="radio">
                                                 </div>
                                                 <div>
                                                     <span class="inline-block mt-3 px-[2px] py-[3px] font-semibold text-sm bg-red-800 rounded-md">%5 İndirim</span>
@@ -407,7 +407,7 @@
                                             <label for="slideFormBudget5" class="w-full md:w-fit flex flex-col justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md transition-all duration-200">
                                                 <div>
                                                     <span class="mr-[6px] pointer-events-none">4-8 Hafta</span>
-                                                    <input type="radio" name="slideFormBudgetB" id="slideFormBudget5">
+                                                    <input type="radio" name="slideFormBudgetB" id="slideFormBudget5" data-validate="radio">
                                                 </div>
                                                 <div>
                                                     <span class="inline-block mt-3 px-[2px] py-[3px] font-semibold text-sm bg-red-800 rounded-md">%10 İndirim</span>
@@ -420,7 +420,7 @@
                                             <label for="slideFormBudget6" class="w-full md:w-fit flex flex-col justify-center items-center p-[10px] border text-[#b8b8b8] border-[#1f2937] bg-[#353d47] rounded-md outline-2 outline-transparent transition-all duration-200">
                                                 <div>
                                                     <span class="mr-[6px] pointer-events-none">8-12 Hafta</span>
-                                                    <input type="radio" name="slideFormBudgetB" id="slideFormBudget6">
+                                                    <input type="radio" name="slideFormBudgetB" id="slideFormBudget6" data-validate="radio">
                                                 </div>
                                                 <div>
                                                     <span class="inline-block mt-3 px-[2px] py-[3px] font-semibold text-sm bg-red-800 rounded-md">%20 İndirim</span>
@@ -431,7 +431,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex mt-10">
+                        <div class="flex mt-10 px-[2px]">
                             <div class="w-1/2 flex justify-start md:justify-end md:pr-4">
                                 <button id="slideFormBudgetBtnBack" type="button" class="btn-back text-[#606fc2] flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular" disabled="true"> &lt; 
                                     <i class="fa-solid ml-2 fa-arrow-left text-[#b8b8b8] transition-all duration-200"></i>
@@ -441,13 +441,16 @@
                             <div class="w-1/2 flex justify-end md:pl-4">
                                 <button id="slideFormBudgetBtnSubmit" type="submit" class="text-[#606fc2] bg-indigo-900 flex items-center outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular" disabled="true"> &lt; 
                                     <span class="mx-2 text-[#b8b8b8]">Gönder</span>
-                                    <!-- <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i> -->
                                 &gt; </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        
+        <div>
+            <p class="text-[#9f9f9f] underline underline-offset-4 italic text-[11px] leading-5 mt-8 tracking-wide"><span class="text-white text-[13px]">Not:</span> Bu form sadece bilgi amaçlıdır. Esesoftware, teklifleri değiştirme, iptal etme ve gözden geçirme hakkını saklı tutar.</p>
         </div>
     </div>
     <script src="/js/web-project-static.js"></script>

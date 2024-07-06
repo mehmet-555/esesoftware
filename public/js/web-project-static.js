@@ -7,23 +7,16 @@ document.addEventListener("DOMContentLoaded", (e)=> {
 
 });
 
-var flowCntr = document.getElementById("slideFormCntrInner");
-var contactForm = document.getElementById("slideFormContact");
 
+
+var stepsArrays = Array.from(document.querySelectorAll(".slideStepC"));
 
 
 // Contact Step Validate Function
 function validateContactAndActiveNBtn () {
     // stepByStepNavContactLiElem
 
-    const stepByStepNavContact = document.getElementById("stepByStepNavContact");
-
-    // step elementleri
-    const contactStep = document.getElementById("slideFormContact");
-    const scopeStep = document.getElementById("slideFormScope");
-    const detailsStep = document.getElementById("slideFormDetails");
-    const bugdetStep = document.getElementById("slideFormBudget");
-    const stepsArrays = [contactStep, scopeStep, detailsStep, bugdetStep];
+    const stepByStepNavContact = document.querySelector(".stepByStepNavContact");
 
     // Contact Form Inputs
     const slideFormContact1 = document.getElementById("slideFormContact1");
@@ -57,6 +50,9 @@ function validateContactAndActiveNBtn () {
 
     // Ad-Soyad İnputu  (En az 6 karakter uzunluğunda ve boşluk içermesi gerekiyor)
     slideFormContact1.addEventListener("input", (e)=> {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        const currentStepEl = e.target.closest(".slideStepC");
+        console.log(currentStep);
         if(e.target.value.length >= 6 && e.target.value.includes(" ")) {
             e.target.classList.add("validI");
         }else {
@@ -69,6 +65,8 @@ function validateContactAndActiveNBtn () {
 
     // E-posta İnputu (.com ile bitmesi gerekiyor)
     slideFormContact2.addEventListener("input", (e) => {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         const emailValue = e.target.value;
         // E-posta doğrulaması: en az bir karakter, @ işareti, en az bir karakter, .com ile bitmesi
         const emailPattern = /^[^\s@]+@[^\s@]+\.com$/;
@@ -85,6 +83,8 @@ function validateContactAndActiveNBtn () {
 
     // Telefon Numarası İnputu  (Aşağıdaki REGEX düzenlerinde olucak)
     slideFormContact3.addEventListener("input", (e) => {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         const phoneValue = e.target.value;
         const validFormat1 = /^0\d{10}$/; // 05555555555 formatı
         const validFormat2 = /^[1-9]\d{9}$/; // 5555555555 formatı
@@ -101,6 +101,8 @@ function validateContactAndActiveNBtn () {
 
     // İşletme/Şirket İsmi İnputu (En az 6 karakter uzunluğunda)
     slideFormContact4.addEventListener("input", (e)=> {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         if(e.target.value.length >= 6) {
             e.target.classList.add("validI");
         }else {
@@ -117,8 +119,9 @@ function validateContactAndActiveNBtn () {
     slideFormContactBtnNext.addEventListener("click", (e)=> {
         stepsArrays.forEach(stepElem => {
             stepElem.style.transform = "translate(-100%)";
-            document.getElementById("stepByStepNavContact").classList.remove("active");
-            document.getElementById("stepByStepNavScope").classList.add("active");
+            document.querySelector(".stepByStepNavContact").classList.remove("active");
+            document.querySelector(".stepByStepNavScope").classList.add("active");
+            console.log(document.querySelector(".stepByStepNavScope"))
         })
     })
 }
@@ -130,14 +133,7 @@ function validateScopeAndActiveNandBBtns() {
 
     // stepByStepNavScopeLiElem
 
-    const stepByStepNavScope = document.getElementById("stepByStepNavScope");
-
-    // step elementleri
-    const contactStep = document.getElementById("slideFormContact");
-    const scopeStep = document.getElementById("slideFormScope");
-    const detailsStep = document.getElementById("slideFormDetails");
-    const bugdetStep = document.getElementById("slideFormBudget");
-    const stepsArrays = [contactStep, scopeStep, detailsStep, bugdetStep];
+    const stepByStepNavScope = document.querySelector(".stepByStepNavScope");
 
     // Scope Form Inputs
     const slideFormScope1 = document.getElementById("slideFormScope1");
@@ -181,6 +177,8 @@ function validateScopeAndActiveNandBBtns() {
 
     // Proje Adı İnputu  (En az 6 karakter uzunluğunda)
     slideFormScope1.addEventListener("input", (e)=> {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         if(e.target.value.length >= 6) {
             e.target.classList.add("validI");
         }else {
@@ -193,6 +191,8 @@ function validateScopeAndActiveNandBBtns() {
 
     // Select Box (Default değer hariç bir değer seçilmesi gerekiyor)
     slideFormScope2.addEventListener("change", (e)=> {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         if(e.target.value !== "default") {
             e.target.classList.add("validI")
         }else {
@@ -206,6 +206,8 @@ function validateScopeAndActiveNandBBtns() {
     // İçerik Sağlama Kısmı 
     slideFormScopeContentInputs.forEach(input => {
         input.addEventListener("click", (e) => {
+            const currentStep = e.target.closest(".slideStepC").dataset.step;
+            console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormScopeContentInputs.forEach(i => {
                 if(i.classList.contains("validI")) {
@@ -223,6 +225,8 @@ function validateScopeAndActiveNandBBtns() {
     // Esinlenme Kısmı 
     slideFormScopeInspirderInputs.forEach(input => {
         input.addEventListener("click", (e) => {
+            const currentStep = e.target.closest(".slideStepC").dataset.step;
+            console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormScopeInspirderInputs.forEach(i => {
                 if(i.classList.contains("validI")) {
@@ -245,15 +249,15 @@ function validateScopeAndActiveNandBBtns() {
     slideFormScopeBtnNext.addEventListener("click", (e)=> {
         stepsArrays.forEach(stepElem => {
             stepElem.style.transform = "translate(-200%)";
-            document.getElementById("stepByStepNavScope").classList.remove("active");
-            document.getElementById("stepByStepNavDetails").classList.add("active");
+            document.querySelector(".stepByStepNavScope").classList.remove("active");
+            document.querySelector(".stepByStepNavDetails").classList.add("active");
         })
     })
     slideFormScopeBtnBack.addEventListener("click", (e)=> {
         stepsArrays.forEach(stepElem => {
             stepElem.style.transform = "translate(0%)";
-            document.getElementById("stepByStepNavScope").classList.remove("active");
-            document.getElementById("stepByStepNavContact").classList.add("active");
+            document.querySelector(".stepByStepNavScope").classList.remove("active");
+            document.querySelector(".stepByStepNavContact").classList.add("active");
         })
     })
 }
@@ -265,14 +269,8 @@ function validateDetailsAndActiveNandBBtns() {
 
     // stepByStepNavDetailsLiElem
 
-    const stepByStepNavDetails = document.getElementById("stepByStepNavDetails");
+    const stepByStepNavDetails = document.querySelector(".stepByStepNavDetails");
 
-    // step elementleri
-    const contactStep = document.getElementById("slideFormContact");
-    const scopeStep = document.getElementById("slideFormScope");
-    const detailsStep = document.getElementById("slideFormDetails");
-    const bugdetStep = document.getElementById("slideFormBudget");
-    const stepsArrays = [contactStep, scopeStep, detailsStep, bugdetStep];
 
     // Details Form Inputs
     const slideFormDetails1 = document.getElementById("slideFormDetails1");
@@ -310,6 +308,8 @@ function validateDetailsAndActiveNandBBtns() {
 
     // Ürün ve Hizmetler TextAreası  (En az 30 karakter uzunluğunda)
     slideFormDetails1.addEventListener("input", (e)=> {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         if(e.target.value.length >= 30) {
             e.target.classList.add("validI");
         }else {
@@ -322,6 +322,8 @@ function validateDetailsAndActiveNandBBtns() {
 
     // Rakipleriniz ve Farkınız TextAreası  (En az 30 karakter uzunluğunda)
     slideFormDetails2.addEventListener("input", (e)=> {
+        const currentStep = e.target.closest(".slideStepC").dataset.step;
+        console.log(currentStep);
         if(e.target.value.length >= 30) {
             e.target.classList.add("validI");
         }else {
@@ -335,6 +337,8 @@ function validateDetailsAndActiveNandBBtns() {
     // Yaş Ortalaması Kısmı 
     slideFormDetailsAgeAvInputs.forEach(input => {
         input.addEventListener("click", (e) => {
+            const currentStep = e.target.closest(".slideStepC").dataset.step;
+            console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormDetailsAgeAvInputs.forEach(i => {
                 if(i.classList.contains("validI")) {
@@ -355,15 +359,15 @@ function validateDetailsAndActiveNandBBtns() {
     slideFormDetailsBtnNext.addEventListener("click", (e)=> {
         stepsArrays.forEach(stepElem => {
             stepElem.style.transform = "translate(-300%)";
-            document.getElementById("stepByStepNavDetails").classList.remove("active");
-            document.getElementById("stepByStepNavBudget").classList.add("active");
+            document.querySelector(".stepByStepNavDetails").classList.remove("active");
+            document.querySelector(".stepByStepNavBudget").classList.add("active");
         })
     })
     slideFormDetailsBtnBack.addEventListener("click", (e)=> {
         stepsArrays.forEach(stepElem => {
             stepElem.style.transform = "translate(-100%)";
-            document.getElementById("stepByStepNavDetails").classList.remove("active");
-            document.getElementById("stepByStepNavScope").classList.add("active");
+            document.querySelector(".stepByStepNavDetails").classList.remove("active");
+            document.querySelector(".stepByStepNavScope").classList.add("active");
         })
     })
 } 
@@ -373,14 +377,7 @@ function validateDetailsAndActiveNandBBtns() {
 function validateBudgetAndActiveNandBBtns() {
     // stepByStepNavBudgetLiElem
 
-    const stepByStepNavBudget = document.getElementById("stepByStepNavBudget");
-
-    // step elementleri
-    const contactStep = document.getElementById("slideFormContact");
-    const scopeStep = document.getElementById("slideFormScope");
-    const detailsStep = document.getElementById("slideFormDetails");
-    const bugdetStep = document.getElementById("slideFormBudget");
-    const stepsArrays = [contactStep, scopeStep, detailsStep, bugdetStep];
+    const stepByStepNavBudget = document.querySelector(".stepByStepNavBudget");
 
     // Details Form Inputs
     const slideFormBudget1 = document.getElementById("slideFormBudget1");  //label bütçe içindeki input 1
@@ -422,6 +419,8 @@ function validateBudgetAndActiveNandBBtns() {
     // Bütçe Kısmı 
     slideFormBudgetBudgetInputs.forEach(input => {
         input.addEventListener("click", (e) => {
+            const currentStep = e.target.closest(".slideStepC").dataset.step;
+            console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormBudgetBudgetInputs.forEach(i => {
                 if(i.classList.contains("validI")) {
@@ -440,6 +439,8 @@ function validateBudgetAndActiveNandBBtns() {
     // Zamanlama Kısmı 
     slideFormBudgetTimingInputs.forEach(input => {
         input.addEventListener("click", (e) => {
+            const currentStep = e.target.closest(".slideStepC").dataset.step;
+            console.log(currentStep);
             // Önce tüm inputlardan validI sınıfını kaldır
             slideFormBudgetTimingInputs.forEach(i => {
                 if(i.classList.contains("validI")) {
@@ -462,11 +463,63 @@ function validateBudgetAndActiveNandBBtns() {
     slideFormBudgetBtnBack.addEventListener("click", (e)=> {
         stepsArrays.forEach(stepElem => {
             stepElem.style.transform = "translate(-200%)";
-            document.getElementById("stepByStepNavBudget").classList.remove("active");
-            document.getElementById("stepByStepNavDetails").classList.add("active");
+            document.querySelector(".stepByStepNavBudget").classList.remove("active");
+            document.querySelector(".stepByStepNavDetails").classList.add("active");
         })
     })
     slideFormBudgetBtnSubmit.addEventListener("click", (e)=> {
         e.preventDefault();
     })
 }
+
+
+
+
+// OPTİMİZE EDİLMİŞ HALİ(Diğer Form Türleri{web-statik, web-dynamic, automation ve other-Form} İçinde Geçerli Hale Getirilmiştir)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
