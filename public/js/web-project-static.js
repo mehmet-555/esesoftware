@@ -35,7 +35,6 @@ function validateSteps() {
         }
         if (submitButton) {
             submitButton.addEventListener("click", (e) => {
-                console.log("There is a submit button!");
             })
         }
     });
@@ -52,7 +51,6 @@ function validateInputs(inputs, nextButton, backButton, submitButton, navItems, 
             input.classList.add("validI");
         }
     });
-    console.log(nextButton, backButton, submitButton)
     if (nextButton) {
         nextButton.disabled = !allValid;
     }
