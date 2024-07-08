@@ -11,8 +11,9 @@ webProjectRouter.get("/static-web", (req, res, next) => {
     res.sendFile(path.join(__dirname, "../public/pages/project/web-staticForm.html"));
 });
 webProjectRouter.get("/dynamic-web", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html"));
+    res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html")); 
 });
+
 webProjectRouter.get("/", (req, res, next)=> {
     res.sendFile(path.join(__dirname, "../public/pages/project/web-project.html"));
 })

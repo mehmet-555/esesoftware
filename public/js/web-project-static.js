@@ -21,16 +21,33 @@ function validateSteps() {
             if (e.target.matches("[data-validate][type='radio']")) {
                 validateInputs(inputs, nextButton, backButton, submitButton, navItems, index);
             }
+            if(e.target.matches("[data-validate][type='checkbox']")) {
+                validateInputs(inputs, nextButton, backButton, submitButton, navItems, index)
+            }
         });
 
         if (nextButton) {
             nextButton.addEventListener("click", (e) => {
                 showStep(steps, navItems, index + 1);
+                setTimeout(() => {
+                    if (document.documentElement.clientWidth < 450) {
+                        window.scrollTo({ top: 130, behavior: 'smooth' });
+                    } else {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }, 500);
             });
         }
         if (backButton) {
             backButton.addEventListener("click", (e) => {
                 showStep(steps, navItems, index - 1);
+                setTimeout(() => {
+                    if (document.documentElement.clientWidth < 450) {
+                        window.scrollTo({ top: 130, behavior: 'smooth' });
+                    } else {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }, 500);
             });
         }
         if (submitButton) {
@@ -73,18 +90,24 @@ function isValid(input) {
 
     switch (validateType) {
         case "name":
-            const nameSurnamePattern = /^[A-Za-zşŞçÇğĞüÜöÖıİ]{3,} [A-Za-zşŞçÇğĞüÜöÖıİ]{3,}$/;
+            const nameSurnamePattern = /^(?:[A-Za-zşŞçÇğĞüÜöÖıİ]{3,}\s+)+[A-Za-zşŞçÇğĞüÜöÖıİ]{3,}$/;
             return nameSurnamePattern.test(value);
         case "email":
-            const emailPattern = /^[^\s@]+@[^\s@]+\.com$/;
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             return emailPattern.test(value);
         case "phone":
-            const validFormat1 = /^0\d{10}$/;
-            const validFormat2 = /^[1-9]\d{9}$/;
-            return validFormat1.test(value) || validFormat2.test(value);
+            const phonePattern = /^(?:05\d{9}|5\d{9})$/;
+            const removeSpaces = (value) => value.replace(/\s+/g, '');
+            const cleanedValue = removeSpaces(value);
+            return phonePattern.test(cleanedValue);
         case "company":
+            const companyPattern = /^(?:[A-Za-zşŞçÇğĞüÜöÖıİ]{3,}\s*)+$/;
+            return companyPattern.test(value);
         case "projectName":
-            return value.length >= 6;
+            const projectNamePattern = /^(?:[A-Za-zşŞçÇğĞüÜöÖıİ]{3,}\s*)+$/;
+            return projectNamePattern.test(value);
+        case "targetGroup":
+            return value.length >= 4;
         case "select":
             return value !== "default";
         case "textarea":
@@ -92,6 +115,9 @@ function isValid(input) {
         case "radio":
             const radioGroup = document.querySelectorAll(`input[name="${input.name}"]`);
             return Array.from(radioGroup).some(radio => radio.checked);
+        case "check":
+            const checkGroup = document.querySelectorAll(`input[name="${input.name}"]`);
+            return Array.from(checkGroup).some(checkBox => checkBox.checked);
         default:
             return false;
     }

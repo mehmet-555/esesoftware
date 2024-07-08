@@ -1044,7 +1044,8 @@ img.logo {
   } 
 
   /* hover, focus, focus-visible valid */
-  .slideFormContact {
+  .slideFormContact,
+  .dslideFormContact {
     input[type="text"],
     input[type="email"] {
       &:hover {
@@ -1058,6 +1059,34 @@ img.logo {
     input[type="email"].validI {
         outline: 2px solid #225ecd;
     }
+    button[disabled] {
+      opacity: 0;
+    }
+  }
+  .dslideFormProject {
+    input[type="text"],
+    select,
+    label,
+    textarea {
+      outline: 2px solid transparent;
+      &:hover {
+        outline: 2px solid #636871;
+      }
+    }
+    input[type="text"],
+    select,
+    textarea {
+      &:focus {
+        outline: 2px solid #c4c6c8;
+      }
+    }
+    input[type="text"].validI,
+    select.validI,
+    label:has(input:checked),
+    textarea.validI {
+      outline: 2px solid #225ecd !important;
+    }
+
     button[disabled] {
       opacity: 0;
     }
@@ -1110,7 +1139,8 @@ img.logo {
       opacity: 0;
     }
   }
-  .slideFormBudget {
+  .slideFormBudget,
+  .dslideFormBudget {
     label {
       outline: 2px solid transparent;
       &:hover {
@@ -1135,31 +1165,43 @@ img.logo {
 .slideFormContact input[type="email"]:focus,
 .slideFormScope input[type="text"]:focus,
 .slideFormScope select:focus,
-.slideFormDetails textarea:focus {
+.slideFormDetails textarea:focus, 
+.dslideFormContact input[type="text"]:focus,             
+.dslideFormContact input[type="email"]:focus,
+.dslideFormProject input[type="text"]:focus,
+.dslideFormProject select:focus,
+.dslideFormProject textarea:focus {
   outline: 2px solid #c4c6c8;
 }
 
+/* Geçerli durumlar */
 .slideFormContact input[type="text"].validI,
 .slideFormContact input[type="email"].validI,
+.dslideFormContact input[type="text"].validI,
+.dslideFormContact input[type="email"].validI,
 .slideFormScope input[type="text"].validI,
+.slideFormScope label:has(input:checked),
 .slideFormScope select.validI,
-.slideFormDetails textarea.validI {
-  outline: 2px solid #225ecd;
+.dslideFormProject input[type="text"].validI,
+.dslideFormProject select.validI,
+.dslideFormProject textarea.validI,
+.slideFormDetails textarea.validI,
+.slideFormBudget label:has(input:checked),
+.slideFormDetails label:has(input:checked),
+.dslideFormProject label:has(input:checked),
+.dslideFormBudget label:has(input:checked) {
+  outline: 2px solid #225ecd !important;
 }
 
 /* Disabled butonlar */
 .slideFormContact button[disabled],
 .slideFormScope button[disabled],
 .slideFormDetails button[disabled],
-.slideFormBudget button[disabled] {
+.slideFormBudget button[disabled], 
+.dslideFormContact button[disabled],
+.dslideFormProject button[disabled],
+.dslideFormBudget button[disabled] {
   opacity: 0;
-}
-
-/* Seçilen label'lar */
-.slideFormScope label:has(input:checked),
-.slideFormDetails label:has(input:checked),
-.slideFormBudget label:has(input:checked) {
-  outline: 2px solid #225ecd !important;
 }
 
 /* Varsayılan input outline'ları */
@@ -1172,7 +1214,8 @@ img.logo {
 }
 
 /* Tarayıcı varsayılan stillerini kaldırmak ve select stilleri */
-.slideFormScope select {
+.slideFormScope select,
+.dslideFormProject select {
   appearance: none; /* Tarayıcı varsayılan stilini kaldırır */
   -webkit-appearance: none; /* Safari/Chrome için */
   -moz-appearance: none; /* Firefox için */
@@ -1184,6 +1227,7 @@ img.logo {
 }
 
 /* scrollbar kaldırma */
-.slideFormDetails textarea {
+.slideFormDetails textarea,
+.dslideFormProject textarea {
   scrollbar-width: none;
 }

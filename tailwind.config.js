@@ -29,7 +29,10 @@ module.exports = {
         'xxxs': "320px",
         'xxs': '360px',
         'xxs2': '380px',
-        'xs': '480px'
+        'xxs3': '454px',
+        'xs': '480px',
+        'xs2': '540px',
+        'xs3': '594px'
       }
     },
   },
