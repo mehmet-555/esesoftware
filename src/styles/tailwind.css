@@ -1231,3 +1231,165 @@ img.logo {
 .dslideFormProject textarea {
   scrollbar-width: none;
 }
+
+
+
+
+
+/* Sayfadaki ToolTipler */
+
+[data-content] {
+  --arrow-size : 10px;
+  position: relative;
+  z-index: 10;
+}
+[data-content]::before,
+[data-content]::after {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 50%;
+  bottom: calc(100% + var(--arrow-size));
+  pointer-events: none;
+  transition: opacity .2s linear, transform .2s linear;
+  will-change: opacity, transform, visibility;
+}
+[data-content]::before {
+  content: attr(data-content);
+  padding: 4px;
+  min-width: 50px;
+  max-width: 130px;
+  width: max-content;
+  border-radius: 6px;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: rgb(239, 239, 239);
+  color: #353d47;
+  text-align: center;
+  white-space: pre-wrap;
+  transform:  translate(-50%, calc(0px - var(--arrow-size))) scale(0.5);
+}
+@media (min-width: 800px) {
+  [data-content]::before {
+    max-width: 160px;
+  }
+}
+[data-content]::after {
+  content: "";
+  border-style: solid;
+  border-width: var(--arrow-size) var(--arrow-size) 0px var(--arrow-size); 
+  border-color: rgb(239, 239, 239) transparent transparent transparent;
+  transition-duration: 0s;
+  transform-origin: top;
+  transform: translate(-50%) scale(0);
+}
+[data-content]:hover::after,
+[data-content]:hover::before {
+  visibility: visible;
+  opacity: 1;
+}
+[data-content]:hover::before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
+}
+[data-content]:hover::after {
+  transition-delay: 0.5s;
+  transition-duration: 0.5s;
+  transform: translateX(-50%) scaleY(1);
+}
+
+/* Mobil İçin Click ile Tooltip Görünürlüğü */
+
+[data-content].active::before,
+[data-content].active::after {
+  visibility: visible;
+  opacity: 1;
+} 
+[data-content].active::before {
+  transition-delay: 0.3s;
+  transform: translate(-50%, calc(0px - var(--arrow-size))) scale(1);
+}
+[data-content].active::after {
+  transition-delay: 0.5s;
+  transition-duration: 0.5s;
+  transform: translateX(-50%) scaleY(1);
+} 
+
+/* Tooltip Konumlandırma */
+
+/* leftler */
+[data-content-location="left"]::before,
+[data-content-location="left"]::after {
+  left: auto;
+  right: calc(100% + var(--arrow-size));
+  bottom: 50%;
+}
+[data-content-location="left"]::before {
+  transform: translate(calc(0px - var(--arrow-size)), 50%) scale(0.5);
+}
+[data-content-location="left"]:hover::before,
+[data-content-location="left"].active::before {
+  transform: translate(calc(0px - var(--arrow-size)), 50%) scale(1);
+}
+[data-content-location="left"]::after {
+  border-width: var(--arrow-size) 0px var(--arrow-size) var(--arrow-size);
+  border-color: transparent transparent transparent rgb(239, 239, 239);
+  transform-origin: left; 
+  transform: translateY(50%)  translateX(-1px) scaleX(0);
+}
+[data-content-location="left"]:hover::after,
+[data-content-location="left"].active::after {
+  transform: translateY(50%)  translateX(-1px) scaleX(1);
+}
+/* right lar */
+[data-content-location="right"]::before,
+[data-content-location="right"]::after {                                                      
+  left: calc(100% + var(--arrow-size));
+  bottom: 50%;
+}
+[data-content-location="right"]::before {
+  transform: translate(var(--arrow-size), 50%) scale(0.5);
+}
+[data-content-location="right"]:hover::before,
+[data-content-location="right"].active::before {
+  transform: translate(var(--arrow-size), 50%) scale(1);
+}
+[data-content-location="right"]::after {
+  border-width: var(--arrow-size) var(--arrow-size) var(--arrow-size) 0px;
+  border-color: transparent rgb(239, 239, 239) transparent transparent;
+  transform-origin: right;
+  transform: translateY(50%) translateX(2px) scale(0);
+}
+[data-content-location="right"]:hover::after,
+[data-content-location="right"].active::after {
+  transform: translateY(50%) translateX(2px) scale(1);
+}
+/* bottomlar */
+[data-content-location="bottom"]::before,
+[data-content-location="bottom"]::after {
+  top: calc(100% + var(--arrow-size));
+  bottom: auto;
+}
+[data-content-location="bottom"]::before {
+  transform: translate(-50%, var(--arrow-size)) scale(0.5);
+}
+[data-content-location="bottom"]:hover::before,
+[data-content-location="bottom"].active::before {
+  transform: translate(-50%, var(--arrow-size)) scale(1);
+}
+[data-content-location="bottom"]::after {
+  border-width: 0px var(--arrow-size) var(--arrow-size) var(--arrow-size);
+  border-color: transparent transparent rgb(239, 239, 239) transparent;
+  transform-origin: bottom;
+  transform: translateX(-50%) translateY(1px) scaleY(0); /* Eksik olan kısım */
+}
+[data-content-location="bottom"]:hover::after,
+[data-content-location="bottom"].active::after {
+  transform: translateX(-50%) translateY(1px) scaleY(1) /* Eksik olan kısım */
+}
+
+
+
+
+
+
