@@ -526,7 +526,7 @@ function showContentsOnServicesOnModal(index) {
 
             setTimeout(() => {
                 liElement.classList.add('visible');
-            }, idx * 75); // Her eleman için 100ms gecikme eklenir
+            }, idx * 125); // Her eleman için 125ms gecikme eklenir
         });
     }
 }

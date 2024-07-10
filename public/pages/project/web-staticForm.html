@@ -9,12 +9,10 @@
     <link rel="icon" href="http://192.168.1.108:3000/../../../images/favIcon.svg" type="image/x-icon" id="EseSoftware">
     <link rel="stylesheet" href="../../styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
@@ -168,6 +166,9 @@
                                 &gt; </button>
                             </div>
                         </div>
+                        <div>
+                            <p class="text-[#9f9f9f] underline underline-offset-4 italic text-[11px] leading-5 mt-8 tracking-wide"><span class="text-white text-[13px]">Not:</span> Bu form sadece bilgi amaçlıdır. Esesoftware, teklifleri değiştirme, iptal etme ve gözden geçirme hakkını saklı tutar.</p>
+                        </div>
                     </div>
                     <div class="slideFormScope slideStepC px-[1.5px] w-full shrink-0 transition-all duration-200" data-step="scope">
                         <div>
@@ -295,6 +296,9 @@
                                 &gt; </button>
                             </div>
                         </div>
+                        <div>
+                            <p class="text-[#9f9f9f] underline underline-offset-4 italic text-[11px] leading-5 mt-8 tracking-wide"><span class="text-white text-[13px]">Not:</span> Bu form sadece bilgi amaçlıdır. Esesoftware, teklifleri değiştirme, iptal etme ve gözden geçirme hakkını saklı tutar.</p>
+                        </div>
                     </div>
                     <div class="slideFormDetails slideStepC px-[1.5px] w-full shrink-0 transition-all duration-200" data-step="details">
                         <div>
@@ -382,6 +386,9 @@
                                     <i class="fa-solid mr-2 fa-arrow-right text-[#b8b8b8] transition-all duration-200"></i>
                                 &gt; </button>
                             </div>
+                        </div>
+                        <div>
+                            <p class="text-[#9f9f9f] underline underline-offset-4 italic text-[11px] leading-5 mt-8 tracking-wide"><span class="text-white text-[13px]">Not:</span> Bu form sadece bilgi amaçlıdır. Esesoftware, teklifleri değiştirme, iptal etme ve gözden geçirme hakkını saklı tutar.</p>
                         </div>
                     </div>
                     <div class="slideFormBudget slideStepC px-[1.5px] w-full shrink-0 transition-all duration-200" data-step="budget">
@@ -495,69 +502,33 @@
                                 &gt; </button>
                             </div>
                         </div>
+                        <div>
+                            <p class="text-[#9f9f9f] underline underline-offset-4 italic text-[11px] leading-5 mt-8 tracking-wide"><span class="text-white text-[13px]">Not:</span> Bu form sadece bilgi amaçlıdır. Esesoftware, teklifleri değiştirme, iptal etme ve gözden geçirme hakkını saklı tutar.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div>
-            <p class="text-[#9f9f9f] underline underline-offset-4 italic text-[11px] leading-5 mt-8 tracking-wide"><span class="text-white text-[13px]">Not:</span> Bu form sadece bilgi amaçlıdır. Esesoftware, teklifleri değiştirme, iptal etme ve gözden geçirme hakkını saklı tutar.</p>
-        </div>
     </div>
-    <script>
-        class Tooltip {
-        constructor(selector) {
-            this.tooltips = document.querySelectorAll(selector);
-            this.init();
-        }
-
-        init() {
-            this.tooltips.forEach(tooltip => {
-            tooltip.addEventListener('mouseenter', () => this.showTooltip(tooltip));
-            tooltip.addEventListener('mouseleave', () => this.hideTooltip(tooltip));
-            tooltip.addEventListener('click', (e) => this.toggleTooltip(tooltip, e));
-            });
-
-            document.addEventListener('click', (e) => {
-            if (window.innerWidth <= 800) {
-                this.tooltips.forEach(tooltip => {
-                if (!tooltip.contains(e.target)) {
-                    this.hideTooltip(tooltip);
-                }
-                });
-            }
-            });
-        }
-
-        showTooltip(tooltip) {
-            if (window.innerWidth > 800) {
-                tooltip.classList.add('active');
-            }
-        }
-
-        hideTooltip(tooltip) {
-            tooltip.classList.remove('active');
-        }
-
-        toggleTooltip(tooltip, event) {
-            if (window.innerWidth <= 800) {
-                event.stopPropagation();
-                tooltip.classList.toggle('active');
-            }
-        }
-        }
-
-        // Tooltip sınıfını başlatma
-        document.addEventListener('DOMContentLoaded', () => {
-        const tT = new Tooltip('[data-tooltip]');
-        tT.init();
-        });
-    </script>
     <script type="module">
-        import FormValidator from '../../js/fV.js';
-        document.addEventListener("DOMContentLoaded", () => {
-            const formValidator = new FormValidator();
-            formValidator.o();
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+                // fV.js
+                const { default: FormValidator } = await import('../../js/fV.js');
+                const formValidator = new FormValidator();
+                formValidator.o();
+
+
+                // tT.js
+                const { default: tT } = await import("../../js/tT.js");
+                const toolTip = new tT('[data-tooltip]');
+                toolTip.init();
+
+                console.warn("FormValidator and ToolTip has been loaded successfully.");
+            } catch (error) {
+                console.error("Failed to load FormValidator and ToolTip module:", error);
+            }
         });
     </script>
 </body>
