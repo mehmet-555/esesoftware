@@ -1381,11 +1381,11 @@ img.logo {
   border-width: 0px var(--arrow-size) var(--arrow-size) var(--arrow-size);
   border-color: transparent transparent rgb(239, 239, 239) transparent;
   transform-origin: bottom;
-  transform: translateX(-50%) translateY(1px) scaleY(0); /* Eksik olan kısım */
+  transform: translateX(-50%) translateY(2px) scaleY(0); /* Eksik olan kısım */
 }
 [data-content-location="bottom"]:hover::after,
 [data-content-location="bottom"].active::after {
-  transform: translateX(-50%) translateY(1px) scaleY(1) /* Eksik olan kısım */
+  transform: translateX(-50%) translateY(2px) scaleY(1) /* Eksik olan kısım */
 }
 
 

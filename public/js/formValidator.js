@@ -7,21 +7,22 @@ export default class FormValidator {
     constructor() {
         this.steps = document.querySelectorAll(".slideStepC");
         this.navItems = document.querySelectorAll("[data-stepnav]");
-        this.init();
+
+        this.formData = {}; // Tüm form verilerini tutmak için nesne
     }
 
     init() {
-        document.addEventListener("DOMContentLoaded", () => {
-            this.validateSteps();
-        });
+        console.log("init çalıştı")
+        this.validateSteps();
     }
 
     validateSteps() {
+        console.log("validateInputs çalıştı")
         this.steps.forEach((step, index) => {
             const inputs = step.querySelectorAll("[data-validate]");
             const nextButton = step.querySelector(".btn-next");
             const backButton = step.querySelector(".btn-back");
-            const submitButton = step.querySelector("button[type='submit']");
+            const submitButton = step.querySelector("#slideFormBudgetBtnSubmit");
 
             step.addEventListener("input", (e) => {
                 if (e.target.matches("[data-validate]")) {
@@ -36,7 +37,11 @@ export default class FormValidator {
             });
 
             if (nextButton) {
-                nextButton.addEventListener("click", () => {
+                nextButton.addEventListener("click", (e) => {
+                    e.preventDefault()
+                    const formData = new FormData(e.target.closest(".frm"));
+                    this.collectFormData(formData); // Form verilerini toplama
+
                     this.showStep(index + 1);
                     setTimeout(()=>{
                         const t = document.documentElement.clientWidth < 450 ? 130 : 0;
@@ -49,7 +54,7 @@ export default class FormValidator {
             }
 
             if (backButton) {
-                backButton.addEventListener("click", () => {
+                backButton.addEventListener("click", (e) => {
                     this.showStep(index - 1);
                     setTimeout(()=>{
                         const t = document.documentElement.clientWidth < 450 ? 130 : 0;
@@ -60,8 +65,87 @@ export default class FormValidator {
                     }, 400)
                 });
             }
+
+            if(submitButton) {
+                submitButton.addEventListener("click", (e)=> {
+                    e.preventDefault();
+                    console.log("SUBMI BUTON TETİKLENDİ")
+                    const formData = new FormData(e.target.closest(".frm"));
+                    this.collectFormData(formData); // Son form verilerini de toplama
+                    console.log("Final Form Data:", this.formData); // Tüm verileri gösterme
+
+                    fetch('/project/web-project/static-web', {
+                        method: 'POST',
+                        body: JSON.stringify(this.formData),
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Accept':  'application/json'
+                        }
+                    }).then(response => console.log(response))
+                      .catch(error => console.error('Error:', error));
+                })
+            }
         });
     }
+
+
+    collectFormData(formData) {
+        formData.forEach((value, key) => {
+            const elements = document.querySelectorAll(`[name="${key}"]`);
+            if (elements.length > 1) {
+                // Radyo butonları veya çoklu checkbox'lar için
+                if (elements[0].type === 'radio') {
+                    elements.forEach(element => {
+                        if (element.checked) {
+                            this.formData[key] = element.value;
+                        }
+                    });
+                } else if (elements[0].type === 'checkbox') {
+                    if (!Array.isArray(this.formData[key])) {
+                        this.formData[key] = [];
+                    }
+                    elements.forEach(element => {
+                        if (element.checked && !this.formData[key].includes(element.value)) {
+                            this.formData[key].push(element.value);
+                        }
+                    });
+                }
+            } else {
+                // Tek eleman
+                const element = elements[0];
+                if (element.type === 'checkbox') {
+                    this.formData[key] = element.checked ? value : '';
+                } else if (element.type === 'radio') {
+                    if (element.checked) {
+                        this.formData[key] = value;
+                    }
+                } else {
+                    this.formData[key] = value;
+                }
+            }
+        });
+    
+        // Checkbox'ların "on" değerini düzeltme ve radioları kontrol etme
+        for (const key in this.formData) {
+            if (Array.isArray(this.formData[key])) {
+                this.formData[key] = this.formData[key].filter(value => value !== 'on');
+                if (this.formData[key].length === 0) {
+                    delete this.formData[key];
+                }
+            } else if (this.formData[key] === 'on') {
+                const elements = document.querySelectorAll(`[name="${key}"]`);
+                elements.forEach(element => {
+                    if (element.checked) {
+                        this.formData[key] = element.value;
+                    }
+                });
+            }
+        }
+    }
+    
+
+
+
 
     validateInputs(inputs, nextButton, backButton, submitButton, index) {
         let allValid = true;

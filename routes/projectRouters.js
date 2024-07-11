@@ -10,6 +10,11 @@ const rootDir = require("../utils/rootDir");
 webProjectRouter.get("/static-web", (req, res, next) => {
     res.sendFile(path.join(__dirname, "../public/pages/project/web-staticForm.html"));
 });
+webProjectRouter.post("/static-web", (req, res, next) => {
+    console.log(typeof req.body)
+    console.log(req.body);
+    res.status(201).send("Form Başarılı bir şekilde alındı")
+});
 webProjectRouter.get("/dynamic-web", (req, res, next) => {
     res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html")); 
 });
