@@ -69,25 +69,116 @@ export default class FormValidator {
             if(submitButton) {
                 submitButton.addEventListener("click", (e)=> {
                     e.preventDefault();
-                    console.log("SUBMI BUTON TETİKLENDİ")
+                    console.log("SUBMIT BUTON TETİKLENDİ")
                     const formData = new FormData(e.target.closest(".frm"));
                     this.collectFormData(formData); // Son form verilerini de toplama
                     console.log("Final Form Data:", this.formData); // Tüm verileri gösterme
 
-                    fetch('/project/web-project/static-web', {
+                    e.target.firstElementChild.classList.add("unvsble");
+                    e.target.querySelector(".loader").classList.add("visible");
+
+
+                    function fetchWithTimeout(url, options, timeout = 15000) {
+                        return new Promise((resolve, reject) => {
+                            const timer = setTimeout(() => {
+                                reject(new Error('Request timed out'));
+                            }, timeout);
+                    
+                            fetch(url, options)
+                                .then(response => {
+                                    clearTimeout(timer);
+                                    resolve(response);
+                                })
+                                .catch(error => {
+                                    clearTimeout(timer);
+                                    reject(error);
+                                });
+                        });
+                    }
+                    
+                    fetchWithTimeout('/project/web-project/static-web', {
                         method: 'POST',
                         body: JSON.stringify(this.formData),
                         headers: {
                             'Content-Type': 'application/json',
-                            'Accept':  'application/json'
+                            'Accept': 'application/json'
                         }
-                    }).then(response => console.log(response))
-                      .catch(error => console.error('Error:', error));
+                    })
+                    .then(response => {
+                        console.log(response.ok)
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        console.log(data);
+                        setTimeout(() => {
+                            e.target.querySelector(".loader").classList.remove("visible");
+                            e.target.querySelector(".tickSign").classList.add("visible");
+                            this.cleanForm();
+                            setTimeout(() => {
+                                document.querySelector(".submitSuccessModal").classList.add("showModal");
+                                this.steps.forEach(step => {
+                                    step.style.transform = "translate(0%)";
+                                    step.querySelector("button").disabled = true;
+                                });
+                                this.navItems.forEach(liElem => {
+                                    liElem.classList.remove("active");
+                                });
+                                this.navItems[0].classList.add("active");
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: 'smooth'
+                                });
+                            }, 750);
+                        }, 1500);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+
+                        setTimeout(() => {
+                            e.target.querySelector(".loader").classList.remove("visible");
+                            e.target.querySelector(".crossSign").classList.add("visible");
+                            this.cleanForm();
+                            setTimeout(() => {
+                                document.querySelector(".submitErrorModal").classList.add("showModal");
+                                this.steps.forEach(step => {
+                                    step.style.transform = "translate(0%)";
+                                    step.querySelector("button").disabled = true;
+                                });
+                                this.navItems.forEach(liElem => {
+                                    liElem.classList.remove("active");
+                                });
+                                this.navItems[0].classList.add("active");
+                                window.scrollTo({
+                                    top: 0,
+                                    behavior: 'smooth'
+                                });
+                            }, 750);
+                        }, 1500);
+                    });
                 })
             }
         });
     }
 
+    cleanForm() {
+        this.formData = {}; // Form verilerini temizle
+        const inputs = document.querySelectorAll("[data-validate]");
+        inputs.forEach(input => {
+            if (input.type === 'checkbox' || input.type === 'radio') {
+                input.checked = false;
+            } else {
+                input.value = '';
+            }
+            input.classList.remove("validI");
+        });
+
+        this.navItems.forEach(navItem => {
+            navItem.classList.remove("completed");
+        });
+    }
 
     collectFormData(formData) {
         formData.forEach((value, key) => {

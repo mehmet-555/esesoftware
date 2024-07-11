@@ -13,7 +13,7 @@ webProjectRouter.get("/static-web", (req, res, next) => {
 webProjectRouter.post("/static-web", (req, res, next) => {
     console.log(typeof req.body)
     console.log(req.body);
-    res.status(201).send("Form Başarılı bir şekilde alındı")
+    res.status(201).send("Server response: Request received successfully")
 });
 webProjectRouter.get("/dynamic-web", (req, res, next) => {
     res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html")); 
