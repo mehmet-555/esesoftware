@@ -703,6 +703,9 @@ video {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.-ml-1 {
+  margin-left: -0.25rem;
+}
 .mb-0 {
   margin-bottom: 0px;
 }
@@ -1114,6 +1117,9 @@ video {
 }
 .basis-auto {
   flex-basis: auto;
+}
+.border-collapse {
+  border-collapse: collapse;
 }
 .origin-left {
   transform-origin: left;
@@ -2784,6 +2790,15 @@ img.logo {
   font-size: 20px;
 }
 
+/* text underline doğru boyut için */
+
+.custom-underline {
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 2px; /* Alt çizginin kelimeden uzaklığını ayarlayın */
+  text-decoration-thickness: 1px; /* Alt çizginin kalınlığını ayarlayın */
+}
+
 /* Word spacing için */
 
 .ws-1 {
@@ -3500,10 +3515,73 @@ button span.loader::after {
 
 
 /* Servisler ve Hizmetler Sayfası */
+/* Servisler ve Hizmetler Sayfası */
 
-/* .servicesMainCH table {
-  
-} */
+.servicesMainCH table {
+  border-collapse: separate;
+  border-spacing: 0px 10px;
+}
+
+/* Köşeleri yuvarla */
+.servicesMainCH table thead tr:first-child th:first-child,
+.servicesMainCH table thead tr:first-child td:first-child {
+  border-top-left-radius: 12px;
+}
+
+.servicesMainCH table thead tr:first-child th:last-child,
+.servicesMainCH table thead tr:first-child td:last-child {
+  border-top-right-radius: 12px;
+}
+
+.servicesMainCH table tbody tr:last-child th:first-child,
+.servicesMainCH table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+
+.servicesMainCH table tbody tr:last-child th:last-child,
+.servicesMainCH table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+
+/* Çift indeksli satırlar ve dolgu */
+.servicesMainCH tr:nth-child(even) {
+  background-color: #efefef;
+}
+
+.servicesMainCH tr td {
+  padding: 4px 6px;
+}
+
+/* Başlık hücreleri */
+.servicesMainCH th {
+  background-color: #060d18;
+  color: white;
+}
+
+.servicesMainCH thead th {
+  background-color: #060d18;
+  color: white;
+  font-weight: 500;
+}
+
+.servicesMainCH thead th:not(:first-child) {
+  text-align: left;
+  padding-left: 6px;
+}
+
+.servicesMainCH thead tr th {
+  padding: 8px 0px;
+}
+
+/* Veri hücreleri */
+.servicesMainCH td {
+  font-size: 14px; 
+  padding: 0 6px;
+}
+
+.servicesMainCH tbody tr td:first-child strong {
+  font-weight: 500;
+}
 
 .placeholder\:text-\[\#b8b8b8\]::-moz-placeholder {
   --tw-text-opacity: 1;
