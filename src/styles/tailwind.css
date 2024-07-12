@@ -192,7 +192,9 @@
     background: transparent; /* Resizer kısmının arka plan rengi */
   }
 }
-
+.servicesMainCH {
+  height: calc(100vh - 4rem);
+}
 /* Responsive stil */
 @media (min-width: 640px) {
   .mainCustomheigth {
@@ -1233,8 +1235,86 @@ img.logo {
 }
 
 
+/* Loader Animasyonu Sınıflar */
 
-
+/* bu class ın çalışması için spanın transition özelliği olmalı */
+button span.unvsble {
+  opacity: 0;
+}
+button span.loader {
+  position: relative;
+  display: inline-block;
+  opacity: 0;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  max-height: 24px;
+  border-radius: 50%;
+  border-width: 3px 1px 3px 1px; 
+  border-style: solid dotted solid dotted;
+  border-color: #de3500 rgba(255, 255, 255, 0.3) #fff rgba(151, 107, 93, 0.3);
+  box-sizing: border-box;
+  animation: 1.5s buttonSubmit linear infinite;
+}
+button span.loader.visible {
+  opacity: 1;
+}
+button span.loader::before,
+button span.loader::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  border: 5px solid transparent;
+  border-bottom-color: #fff;
+  transform: translate(-5px, 8px) rotate(-39deg);
+}
+button span.loader::after {
+  border-color: #de3500 #0000 #0000 #0000;
+  transform: translate(17px, 0px) rotate(-42deg);
+}
+.tickSign.visible {
+  opacity: 1;
+}
+.tickSign::after {
+  content: "\2713";
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  color: #148c0b;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(-48%) translateY(-14%);
+}
+.crossSign::after {
+  content: "\2717";
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  width: 30px;
+  min-width: 30px;
+  height: 30px;
+  min-height: 30px;
+  color: #de3500;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(-48%) translateY(-14%);
+}
+.crossSign.visible {
+  opacity: 1;
+}
+@keyframes buttonSubmit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 /* Sayfadaki ToolTipler */
 
@@ -1381,15 +1461,25 @@ img.logo {
   border-width: 0px var(--arrow-size) var(--arrow-size) var(--arrow-size);
   border-color: transparent transparent rgb(239, 239, 239) transparent;
   transform-origin: bottom;
-  transform: translateX(-50%) translateY(1px) scaleY(0); /* Eksik olan kısım */
+  transform: translateX(-50%) translateY(2px) scaleY(0); /* Eksik olan kısım */
 }
 [data-content-location="bottom"]:hover::after,
 [data-content-location="bottom"].active::after {
-  transform: translateX(-50%) translateY(1px) scaleY(1) /* Eksik olan kısım */
+  transform: translateX(-50%) translateY(2px) scaleY(1) /* Eksik olan kısım */
+}
+/* Submit Error-Success Modals */
+.submitSuccessModal.showModal {
+  opacity: 1 !important;
+  visibility: visible;
+}
+.submitErrorModal.showModal {
+  opacity: 1 !important;
+  visibility: visible;
 }
 
 
+/* Servisler ve Hizmetler Sayfası */
 
-
-
-
+/* .servicesMainCH table {
+  
+} */

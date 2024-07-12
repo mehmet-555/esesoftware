@@ -7,12 +7,27 @@ const webProjectRouter = express.Router();
 
 const rootDir = require("../utils/rootDir");
 
-webProjectRouter.get("/static-web", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "../public/pages/project/web-staticForm.html"));
-});
-webProjectRouter.get("/dynamic-web", (req, res, next) => {
-    res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html")); 
-});
+
+webProjectRouter.route("/static-web")
+    .get((req, res, next) => {
+        console.log(req)
+        res.sendFile(path.join(__dirname, "../public/pages/project/web-staticForm.html"));
+    })
+    .post((req, res, next) => {
+        console.log(typeof req.body);
+        console.log(req.body);
+        res.status(201).send("Server response: Request received successfully");
+    });
+
+webProjectRouter.route("/dynamic-web")
+    .get((req, res, next) => {
+        res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html"));
+    })
+    .post((req, res, next) => {
+        console.log(typeof req.body);
+        console.log(req.body);
+        res.status(201).send("Server response: Request received successfully");
+    });
 
 webProjectRouter.get("/", (req, res, next)=> {
     res.sendFile(path.join(__dirname, "../public/pages/project/web-project.html"));
