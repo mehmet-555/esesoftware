@@ -192,7 +192,9 @@
     background: transparent; /* Resizer kısmının arka plan rengi */
   }
 }
-
+.servicesMainCH {
+  height: calc(100vh - 4rem);
+}
 /* Responsive stil */
 @media (min-width: 640px) {
   .mainCustomheigth {
@@ -1476,3 +1478,8 @@ button span.loader::after {
 }
 
 
+/* Servisler ve Hizmetler Sayfası */
+
+/* .servicesMainCH table {
+  
+} */
