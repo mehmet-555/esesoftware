@@ -3,7 +3,7 @@ export default class Tooltip {
         this.tooltips = document.querySelectorAll(selector);
         this.init();
     }
-    //Bu sınıfı daha sonrasında güncelleyerek span elementlerine bir mobil attribute ü birde masaüstü attribute ü ekleyerek değişken ortamlar için değişken data-content-location haline getireceğim. . .
+    //Bu sınıfı daha sonrasında güncelleyerek span elementlerine bir mobil attribute ü birde masaüstü attribute ü ekleyerek değişken ortamlar için değişken data-content-location haline getireceğim. . . ..
     init() {
         this.tooltips.forEach(tooltip => {
         tooltip.addEventListener('mouseenter', () => this.showTooltip(tooltip));
@@ -26,7 +26,7 @@ export default class Tooltip {
         if (window.innerWidth > 800) {
             tooltip.classList.add('active');
         }
-    }
+    }  
 
     hideTooltip(tooltip) {
         tooltip.classList.remove('active');
