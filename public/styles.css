@@ -612,6 +612,9 @@ video {
 .left-\[4\.5\%\] {
   left: 4.5%;
 }
+.right-0 {
+  right: 0px;
+}
 .right-9 {
   right: 2.25rem;
 }
@@ -674,6 +677,10 @@ video {
 .mx-\[6px\] {
   margin-left: 6px;
   margin-right: 6px;
+}
+.my-1 {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
 }
 .my-12 {
   margin-top: 3rem;
@@ -738,6 +745,9 @@ video {
 }
 .mb-\[-10px\] {
   margin-bottom: -10px;
+}
+.mb-\[561px\] {
+  margin-bottom: 561px;
 }
 .mb-auto {
   margin-bottom: auto;
@@ -871,6 +881,9 @@ video {
 .h-32 {
   height: 8rem;
 }
+.h-36 {
+  height: 9rem;
+}
 .h-4 {
   height: 1rem;
 }
@@ -906,9 +919,6 @@ video {
 }
 .h-\[200px\] {
   height: 200px;
-}
-.h-\[2500px\] {
-  height: 2500px;
 }
 .h-\[26px\] {
   height: 26px;
@@ -1020,6 +1030,9 @@ video {
 }
 .w-\[208px\] {
   width: 208px;
+}
+.w-\[22\.5\%\] {
+  width: 22.5%;
 }
 .w-\[26px\] {
   width: 26px;
@@ -1253,6 +1266,9 @@ video {
 .overflow-hidden {
   overflow: hidden;
 }
+.overflow-y-auto {
+  overflow-y: auto;
+}
 .overflow-x-hidden {
   overflow-x: hidden;
 }
@@ -1330,6 +1346,9 @@ video {
 }
 .border-b-2 {
   border-bottom-width: 2px;
+}
+.border-l-2 {
+  border-left-width: 2px;
 }
 .border-r {
   border-right-width: 1px;
@@ -1450,6 +1469,9 @@ video {
 }
 .bg-\[\#19202aa1\] {
   background-color: #19202aa1;
+}
+.bg-\[\#1c0505cc\] {
+  background-color: #1c0505cc;
 }
 .bg-\[\#1e2125\] {
   --tw-bg-opacity: 1;
@@ -1678,8 +1700,14 @@ video {
 .pb-\[1px\] {
   padding-bottom: 1px;
 }
+.pb-\[50px\] {
+  padding-bottom: 50px;
+}
 .pl-10 {
   padding-left: 2.5rem;
+}
+.pl-2 {
+  padding-left: 0.5rem;
 }
 .pl-4 {
   padding-left: 1rem;
@@ -1901,6 +1929,10 @@ video {
 .text-blue-700 {
   --tw-text-opacity: 1;
   color: rgb(29 78 216 / var(--tw-text-opacity));
+}
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 .text-gray-300 {
   --tw-text-opacity: 1;
@@ -2202,9 +2234,9 @@ video {
     background: transparent; /* Resizer kısmının arka plan rengi */
   }
 }
-.servicesMainCH {
-  height: calc(100vh - 4rem);
-}
+/* .servicesMainCH {
+  
+} */
 /* Responsive stil */
 @media (min-width: 640px) {
   .mainCustomheigth {
@@ -3583,6 +3615,17 @@ button span.loader::after {
   font-weight: 500;
 }
 
+
+.bgReact {
+  background: url("../../images/blogBG.jpg");
+  background-position: top -7px center;
+  background-size: cover;
+}
+
+.blogShd {
+  box-shadow: 0px 0px 5px 0px #0b675e;
+}
+
 .placeholder\:text-\[\#b8b8b8\]::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(184 184 184 / var(--tw-text-opacity));
@@ -4224,6 +4267,10 @@ button span.loader::after {
     width: 75%;
   }
 
+  .lg\:w-\[55\%\] {
+    width: 55%;
+  }
+
   .lg\:flex-row {
     flex-direction: row;
   }
@@ -4234,6 +4281,11 @@ button span.loader::after {
 
   .lg\:justify-around {
     justify-content: space-around;
+  }
+
+  .lg\:px-2 {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .lg\:text-4xl {

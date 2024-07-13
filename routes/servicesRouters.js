@@ -25,7 +25,7 @@ servicesRouter.use("/", (req, res, next) => {
 
 
 webSRouter.get("/creating-static-web-site", (req, res, next) => {
-    res.status(200).render("services/webServices/creatingStaticWebSite");
+    res.status(200).render("services/webServices/creatingStaticWebSite2");
 })
 
 // webSRouter.get("/", (req, res, next) => {

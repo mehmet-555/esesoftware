@@ -192,9 +192,9 @@
     background: transparent; /* Resizer kısmının arka plan rengi */
   }
 }
-.servicesMainCH {
-  height: calc(100vh - 4rem);
-}
+/* .servicesMainCH {
+  
+} */
 /* Responsive stil */
 @media (min-width: 640px) {
   .mainCustomheigth {
@@ -1554,4 +1554,15 @@ button span.loader::after {
 
 .servicesMainCH tbody tr td:first-child strong {
   font-weight: 500;
+}
+
+
+.bgReact {
+  background: url("../../images/blogBG.jpg");
+  background-position: top -7px center;
+  background-size: cover;
+}
+
+.blogShd {
+  box-shadow: 0px 0px 5px 0px #0b675e;
 }

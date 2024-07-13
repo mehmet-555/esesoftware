@@ -12,6 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mobile RightBar
     ModalFunction ()
+    // Footer ı gösterme
+    showFooter ()
+
+
+    // BlogUnitsShow Author
+    showAuthor()
 });
 
 
@@ -393,4 +399,67 @@ function convertBtnBackStyle() {
     mappings.forEach(mapping => {
         toggleClass(mapping[0], mapping[1], mapping[2]);
     });
+}
+
+
+
+
+
+
+
+
+
+
+function showFooter() {
+    const footer = document.querySelector(".footer");
+    const mainElem = document.querySelector(".servicesMainCH");
+    const leftAsideSticky = document.querySelector(".leftAsideSticky");
+    const rightAsideSticky = document.querySelector(".rightAsideSticky");
+    const areaX = document.querySelector(".areaX");
+    
+    const footerHeight = window.getComputedStyle(footer).getPropertyValue("height");
+    console.log("footerHeight:", footerHeight);
+
+    mainElem.firstElementChild.style.marginBottom = footerHeight;
+
+    if (leftAsideSticky && areaX && rightAsideSticky) {
+        const areaXWidth = window.getComputedStyle(areaX).getPropertyValue("width");
+
+        leftAsideSticky.style.width = `calc(${areaXWidth} - 2px)`;
+        rightAsideSticky.style.width = `calc(${areaXWidth} - 2px)`;
+        leftAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
+        rightAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
+    } else {
+        console.error("Element not found.");
+    }
+}
+
+
+window.addEventListener('load', showFooter);
+
+window.addEventListener('resize', showFooter);
+
+
+
+// Blog Functions 
+
+function showAuthor() {
+    const blogsArr = document.querySelectorAll(".blogUnit");
+
+    blogsArr.forEach(blog => {
+        const blogLayer = blog.querySelector(".blogLayer");
+        blog.addEventListener("mouseover", (e) => {
+            e.target.querySelector(".secretArea").style.opacity = "1";
+            e.target.querySelector(".secretArea").style.visibility = "visible";
+
+
+            blogLayer.style.top = "40px";
+        });
+        blog.addEventListener("mouseleave", (e) => {
+            e.target.querySelector(".secretArea").style.opacity = "0";
+            e.target.querySelector(".secretArea").style.visibility = "hidden";
+
+            blogLayer.style.top = "64px";
+        })
+    })
 }
