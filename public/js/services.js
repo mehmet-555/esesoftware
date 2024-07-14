@@ -499,7 +499,8 @@ function openFirstNavAcArea () {
     const scrollspyNavACArr = document.querySelectorAll(".scrollspyNavAC");
 
     scrollspyNavACArr[0].classList.add("open");
-    manuelOpenClose ()
+    manuelOpenClose ();
+    scrollspyInterSectionApi();
 }
 
 function manuelOpenClose () {
@@ -515,4 +516,60 @@ function manuelOpenClose () {
             }
         })
     })
+}
+
+function scrollspyInterSectionApi() {
+    const headerSections = document.querySelectorAll(".entryfoheader");
+
+    const options = {
+        root: null, // Viewport kullan
+        rootMargin: '-250px 0px 0px 0px', // Üstte 250px boşluk, sağda 0px, altta 0px, solda 0px
+        threshold: 0.1 // Elementin %10'u görünür olduğunda tetiklenir
+    };
+
+    let activeLink = null;
+
+    const callback = (entries, observer) => {
+        entries.forEach(entry => {
+            const id = entry.target.getAttribute('id');
+            const navLink = document.querySelector(`a[href="#${id}"]`);
+
+            if (entry.isIntersecting) {
+                if (activeLink && activeLink !== navLink) {
+                    activeLink.classList.remove('active');
+                }
+
+                navLink.classList.add('active');
+                activeLink = navLink;
+            } else {
+                if (navLink.classList.contains('active')) {
+                    navLink.classList.remove('active');
+                }
+            }
+        });
+
+        // Entries dizisini top değerine göre sıralıyoruz
+        const visibleEntries = entries.filter(entry => entry.isIntersecting);
+        visibleEntries.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+        // İlk görünen (en üstteki) entry'yi alıyoruz
+        if (visibleEntries.length > 0) {
+            const firstVisibleEntry = visibleEntries[0];
+            const id = firstVisibleEntry.target.getAttribute('id');
+            const navLink = document.querySelector(`a[href="#${id}"]`);
+
+            if (activeLink && activeLink !== navLink) {
+                activeLink.classList.remove('active');
+            }
+
+            navLink.classList.add('active');
+            activeLink = navLink;
+        }
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+
+    headerSections.forEach(section => {
+        observer.observe(section);
+    });
 }

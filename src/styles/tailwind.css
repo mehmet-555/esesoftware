@@ -1603,16 +1603,20 @@ button span.loader::after {
 }
 
 .scrollspyNavAC {
-  transition: max-height .3s linear, opacity .5s linear;
+  transition: max-height .5s linear, opacity .3s linear;
   max-height: 0px;
   opacity: 0;
 }
 .scrollspyNavAC.open {
-  transition: max-height .3s linear, opacity .5s linear;
+  transition: max-height .3s linear, opacity .3s linear;
   max-height: 1000px;
   opacity: 1;
 }
 .scrollspyNavAC .scrollspyNavACaElem:hover .scrollspyIconSpan2::after,
 .scrollspyNavAC .scrollspyNavACaElem:hover h4 {
   color: #09009f;
+}
+
+.scrollspyNavAC a[href].active span h4{
+  color: #0600ff !important;
 }
