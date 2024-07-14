@@ -162,15 +162,21 @@
     <div class="w-full h-16"></div>
     <main class="servicesMainCH overflow-hidden bg-[#060d1805]">
         <div id="mainFirstElem" class="relative z-20 mb-[561px] flex items-stretch w-full overflow-hidden">
-            <div class="areaX hidden lg:flex items-start w-[22.5%] border-r-2 bg-[#efefef] border-r-[#8080802e]">
-                
-            </div>
-            <div id="scrollableElem" class="bg-white areaY w-full lg:w-[55%] h-full overflow-y-auto pb-[50px]">
-                <div class="sticky top-3 left-[4.5%] bg-[#1e2125] rounded-lg h-7 w-11/12"></div>
+            <div class="areaX w-[22.5%] hidden lg:block border-r-2 bg-[#efefef] border-r-[#8080802e]"></div>
+            <div id="scrollableElem" class="relative bg-white areaY w-full lg:w-[55%] h-full overflow-y-auto pb-[50px] pt-10">
+                <div class="fixed h-10 w-[86.5%] lg:w-[49.5%] top-[76px] left-1/2 opacity-100 visible translate-x-centery bg-[#1e2125] rounded-lg transition-all duration-300 flex items-center" data-pageNav>
+                    <p class="text-slate-200 text-sm tracking-wider pl-4">
+                        <span class="bg-[#353d47] px-1 py-[2px] rounded">services</span>
+                        / 
+                        <span class="bg-[#353d47] px-1 py-[2px] rounded">web-services</span> 
+                        / 
+                        <span class="bg-[#353d47] px-1 py-[2px] rounded">creating-static-web-site</span>
+                    </p>
+                </div>
                 <div class="flex justify-center px-4 lg:px-2">
                     <div class="w-11/12">
                         <div class="text-[#001527]">
-                            <h1 class=""> // Statik Web Sitesi Kurulumu</h1>
+                            <h1 class=""> // Statik Web Sitesi Geliştirme</h1>
                             <h2 class="text-2xl my-3 bg-[#efefef] inline-block px-[6px] py-[2px] rounded-md">Statik Web Sitesi Nedir?</h2>
                             <p class="text-sm">Statik web sitesi, her kullanıcıya aynı içerik ve bilgileri sunan, sabit HTML dosyalarından oluşan bir web sitesidir. Bu tür siteler, her ziyaretçi için aynı şekilde görüntülenir ve dinamik içerik oluşturmaz. Statik web siteleri, genellikle küçük işletmeler, portföy siteleri, kişisel bloglar ve basit bilgi sunma amaçlı siteler için idealdir.</p>
                             <h2 class="text-2xl my-3 bg-[#efefef] inline-block px-[6px] py-[2px] rounded-md">Statik Web Sitesi Avantajları</h2>
@@ -272,7 +278,7 @@
                                     olarak, müşterilerimize kaliteli ve profesyonel statik web sitesi kurulum hizmetleri sunuyoruz. Her işletmenin kendine özgü ihtiyaçları olduğunu biliyoruz ve bu ihtiyaçlara en uygun çözümleri sunmak için buradayız.
                                 </span>
                             </p>
-                            <h2 class="text-2xl my-3 bg-[#efefef] inline-block px-[6px] py-[2px] rounded-md">Statik Web Sitesi Kurulum Süreci</h2>
+                            <h2 class="text-2xl my-3 bg-[#efefef] inline-block px-[6px] py-[2px] rounded-md">Statik Web Sitesi Geliştirme Süreci</h2>
                             <ul class="pl-6">
                                 <li class="mb-2">
                                     <p>
@@ -536,13 +542,7 @@
                     </div>
                 </div>
             </div>
-            <div class="areaZ w-[22.5%] hidden lg:block text-center border-l-2 bg-[#efefef] border-r-[#8080802e]">
-                AreaZ
-                AreaZ
-                AreaZ
-                AreaZ
-                AreaZ
-            </div>
+            <div class="areaZ w-[22.5%] hidden lg:block border-l-2 bg-[#efefef] border-r-[#8080802e]"></div>
         </div>
         <div id="mainSecondElem" class="fixed bottom-0 w-full">
             <footer class=" transition-all footer duration-300 flex overflow-hidden justify-center w-full bg-black text-white">
@@ -627,12 +627,12 @@
             </footer>
         </div>
     </main>
-    <div class="leftAsideSticky fixed top-16 z-20 left-0 w-full px-4 hidden lg:flex  flex-col  bg-[#efefef]">
-        <div class="flex flex-col justify-center h-full">
-            <div class="w-full flex flex-col items-center justify-center">
+    <div class="leftAsideSticky fixed top-16 z-20 left-0 w-full px-4 hidden lg:flex  flex-col justify-start bg-[#efefef]">
+        <div class="flex flex-col justify-start h-full">
+            <div class="w-full flex items-center justify-start pl-4 py-3">
                 <div>
-                    <span class="hidden xxxs:inline-block  h-8 w-44 pt-[7px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204.61 17.18">
+                    <span class="hidden xxxs:inline-block  h-8 w-44 pt-[5px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline py-1" viewBox="0 0 204.61 17.18">
                             <defs>
                                 <style>
                                     .cls-1 {
@@ -661,43 +661,102 @@
                 </div>
             </div>
             <div>
-                <div class="flex justify-center mb-6">
-                    <a id="getStardedBtnFromMobile" href="/project" target="_blank" class="relative w-3/4 max-w-36 roboto-mono-regular flex items-center justify-center outline before:transition-all duration-300 outline-[#06252f] hover:outline-[#1c4654] rounded-[6px] px-1 py-[2px] before:content-[''] before:absolute before:w-full before:top-0 before:left-0 before:rounded-[8px] before:min-h-full">
-                        <span class="text-white mx-[6px]"> &lt; </span>
-                        <div class="flex flex-col">
-                            <span class="whitespace-nowrap text-[#606fc2] font-semibold text-[13px] leading-4">Proje Başlat</span>
-                            <span class="whitespace-nowrap text-[#001527] font-bold text-[13px] leading-4">&amp; Teklif Al</span>
+                <ul class="">
+                    <li class="mb-3"><h3 class="text-[#001527] font-medium">Sayfa İçeriği</h3></li>
+                    <li class="scrollspyNavA">
+                        <a href="#" role="button" class="flex items-center">
+                            <span class="scrollspyIconSpan flex items-center relative"></span>
+                            <span class="text-[#4f4f4f] font-medium">Statik Web Sitesi Geliştirme</span>
+                        </a>
+                        <div class="scrollspyNavAC">
+                            <ul>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Statik Web Sitesi Nedir?</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Statik Web Sitesi Avantajları</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Neden ve Ne Zaman Statik Web Sitesi Tercih Edilmeli?</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Hizmetlerimiz</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Statik Web Sitesi Geliştirme Süreci</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Neden Bizi Tercih Etmelisiniz?</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Bu Alanda Kullandığımız Teknolojiler ve Araçlar</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Bizimle İletişime Geçin</h4></span>
+                                    </a>
+                                </li>
+                                <li class="mb-3 ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Statik Web Siteleri ve Dinamik Web Uygulamaları Arasındaki Farklar</h4></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <span class="text-white mx-[6px]"> &gt; </span>
-                    </a>
-                </div>
-                <div class="flex justify-center">
-                    <div class="w-44 bg-[#00132c] rounded-lg flex flex-col items-center justify-center">
-                        <div class="flex flex-col items-center">
-                            <div class="flex justify-center pb-2 pt-4">
-                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="55" height="20"><style>a:hover #llink{fill:url(#b);stroke:#ccc}a:hover #rlink{fill:#4183c4}</style><linearGradient id="a" x2="0" y2="100%"><stop offset="0" stop-color="#fcfcfc" stop-opacity="0"></stop><stop offset="1" stop-opacity=".1"></stop></linearGradient><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#ccc" stop-opacity=".1"></stop><stop offset="1" stop-opacity=".1"></stop></linearGradient><g stroke="#d5d5d5"><rect stroke="none" fill="#fcfcfc" x="0.5" y="0.5" width="54" height="19" rx="2"></rect><rect x="60.5" y="0.5" width="29" height="19" rx="2" fill="#fafafa" style="
-                                    display: none;
-                                "></rect><rect x="60" y="7.5" width="0.5" height="5" stroke="#fafafa" style="
-                                    display: none;
-                                "></rect><path d="M60.5 6.5 l-3 3v1 l3 3" stroke="d5d5d5" fill="#fafafa" style="
-                                    display: none;
-                                "></path></g><image x="5" y="3" width="14" height="14" xlink:href="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjMTgxNzE3IiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+"></image><g aria-hidden="false" fill="#333" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" text-rendering="geometricPrecision" font-weight="700" font-size="110px" line-height="14px"><a target="_blank" xlink:href="https://github.com/azouaoui-med/react-pro-sidebar"><text aria-hidden="true" x="355" y="150" fill="#fff" transform="scale(.1)" textLength="270">Stars</text><text x="355" y="140" transform="scale(.1)" textLength="270">Stars</text><rect id="llink" stroke="#d5d5d5" fill="url(#a)" x=".5" y=".5" width="54" height="19" rx="2"></rect></a><a target="_blank" xlink:href="https://github.com/azouaoui-med/react-pro-sidebar/stargazers" style="
-                                    display: none;
-                                "><rect width="30" x="60" height="20" fill="rgba(0,0,0,0)"></rect><text aria-hidden="true" x="745" y="150" fill="#fff" transform="scale(.1)" textLength="210">1.6k</text><text id="rlink" x="745" y="140" transform="scale(.1)" textLength="210">1.6k</text></a></g></svg>
-                            </div>
-                            <a href="#" class="pb-4 pt-2">
-                                <span class="text-base text-white">Check it out!</span>
-                            </a>
+                    </li>
+                    <li class="scrollspyNavA">
+                        <a href="#" role="button" class="flex items-center">
+                            <span class="scrollspyIconSpan flex items-center"></span>
+                            <span class="text-[#4f4f4f] font-medium">Call To Action</span>
+                        </a>
+                        <div class="scrollspyNavAC">
+                            <ul>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Placeholder 1</h4></span>
+                                    </a>
+                                </li>
+                                <li class="ml-3">
+                                    <a href="#" class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span><h4 class="text-sm text-[#4f4f4f] font-medium transition-all duration-300">Placeholder 2</h4></span>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="rightAsideSticky fixed top-16 z-20 right-0 w-full px-4 hidden lg:flex  flex-col  bg-[#efefef]">
-        <div class="flex flex-col justify-center h-full">
+        <div class="flex flex-col justify-center items-center h-full">
             <div class="flex flex-col gap-4 items-center justify-center">
-                <div class="w-5/6 blogShd blogUnit rounded-lg overflow-hidden">
+                <div class="w-5/6 max-w-52 min-w-48 blogShd blogUnit rounded-lg overflow-hidden">
                     <a href="#">
                         <div class="relative h-36 bgReact">
                             <div class="absolute top-16 blogLayer transition-all duration-200 pointer-events-none bottom-0 right-0 left-0 bg-[#1c0505cc]">
@@ -721,7 +780,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="w-5/6 blogShd blogUnit rounded-lg overflow-hidden">
+                <div class="w-5/6 max-w-52 min-w-48 blogShd blogUnit rounded-lg overflow-hidden">
                     <a href="#">
                         <div class="relative h-36 bgReact">
                             <div class="absolute top-16 blogLayer transition-all duration-200 pointer-events-none bottom-0 right-0 left-0 bg-[#1c0505cc]">
@@ -746,8 +805,13 @@
                     </a>
                 </div>
             </div>
-            <div>
-                daha fazlasını gör alanı
+            <div class="mt-4">
+                <a href="#" target="_blank" class="flex items-center justify-around max-w-52 min-w-48 py-1 bg-[#063065] rounded-md">
+                    <span class="pl-2">
+                        <svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-200 overflow-visible"><path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+                    </span>
+                    <span class="text-slate-200 text-sm pr-1 -ml-3">Daha Fazla Blog / Makale</span>
+                </a>
             </div>
         </div>
     </div>

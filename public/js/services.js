@@ -18,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // BlogUnitsShow Author
     showAuthor()
+
+    // PagePagination
+    setPageNav ()
+
 });
 
 
@@ -418,7 +422,6 @@ function showFooter() {
     const areaX = document.querySelector(".areaX");
     
     const footerHeight = window.getComputedStyle(footer).getPropertyValue("height");
-    console.log("footerHeight:", footerHeight);
 
     mainElem.firstElementChild.style.marginBottom = footerHeight;
 
@@ -463,3 +466,27 @@ function showAuthor() {
         })
     })
 }
+
+
+
+// PageNav func 
+
+function setPageNav() {
+    const pageNavElem = document.querySelector("[data-pageNav]");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            pageNavElem.style.opacity = "0";    
+            pageNavElem.style.visibility = "hidden";    
+        } else {
+            pageNavElem.style.opacity = "1";    
+            pageNavElem.style.visibility = "visible";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Mobil veya negatif scroll için kontrol
+    });
+}
+
+

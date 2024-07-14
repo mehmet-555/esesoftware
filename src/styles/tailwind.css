@@ -774,6 +774,10 @@ img.logo {
   text-decoration-thickness: 1px; /* Alt çizginin kalınlığını ayarlayın */
 }
 
+.z-50 {
+  z-index: +50;
+}
+
 /* Word spacing için */
 
 .ws-1 {
@@ -1565,4 +1569,40 @@ button span.loader::after {
 
 .blogShd {
   box-shadow: 0px 0px 5px 0px #0b675e;
+}
+
+
+/* Scrollspy Alanı */
+
+.scrollspyIconSpan::after {
+  content: "";
+  display: block;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: all .4s linear;
+  color: #7d84ab;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.scrollspyIconSpan2::after {
+  content: "";
+  display: inline-block;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  width: 6px;
+  height: 6px;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  transition: all .3s linear;
+  color: #7d84ab;
+  margin-right: 6px;
+}
+
+.scrollspyNavAC .scrollspyNavACaElem:hover .scrollspyIconSpan2::after,
+.scrollspyNavAC .scrollspyNavACaElem:hover h4 {
+  color: #09009f;
 }

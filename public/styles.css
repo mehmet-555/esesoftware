@@ -651,6 +651,9 @@ video {
 .top-\[62px\] {
   top: 62px;
 }
+.top-\[76px\] {
+  top: 76px;
+}
 .-z-10 {
   z-index: -10;
 }
@@ -712,6 +715,9 @@ video {
 }
 .-ml-1 {
   margin-left: -0.25rem;
+}
+.-ml-3 {
+  margin-left: -0.75rem;
 }
 .mb-0 {
   margin-bottom: 0px;
@@ -1058,6 +1064,9 @@ video {
 .w-\[55px\] {
   width: 55px;
 }
+.w-\[86\.5\%\] {
+  width: 86.5%;
+}
 .w-\[88px\] {
   width: 88px;
 }
@@ -1080,6 +1089,9 @@ video {
 .min-w-24 {
   min-width: 6rem;
 }
+.min-w-48 {
+  min-width: 12rem;
+}
 .min-w-5 {
   min-width: 1.25rem;
 }
@@ -1100,6 +1112,9 @@ video {
 }
 .max-w-36 {
   max-width: 9rem;
+}
+.max-w-52 {
+  max-width: 13rem;
 }
 .max-w-56 {
   max-width: 14rem;
@@ -1265,6 +1280,9 @@ video {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-visible {
+  overflow: visible;
 }
 .overflow-y-auto {
   overflow-y: auto;
@@ -1454,6 +1472,10 @@ video {
 .bg-\[\#060d18\] {
   --tw-bg-opacity: 1;
   background-color: rgb(6 13 24 / var(--tw-bg-opacity));
+}
+.bg-\[\#063065\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(6 48 101 / var(--tw-bg-opacity));
 }
 .bg-\[\#079b0b\] {
   --tw-bg-opacity: 1;
@@ -1718,6 +1740,9 @@ video {
 .pl-\[10px\] {
   padding-left: 10px;
 }
+.pr-1 {
+  padding-right: 0.25rem;
+}
 .pr-4 {
   padding-right: 1rem;
 }
@@ -1863,6 +1888,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(57 57 57 / var(--tw-text-opacity));
 }
+.text-\[\#4f4f4f\] {
+  --tw-text-opacity: 1;
+  color: rgb(79 79 79 / var(--tw-text-opacity));
+}
 .text-\[\#5074ff\] {
   --tw-text-opacity: 1;
   color: rgb(80 116 255 / var(--tw-text-opacity));
@@ -1942,6 +1971,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+.text-slate-200 {
+  --tw-text-opacity: 1;
+  color: rgb(226 232 240 / var(--tw-text-opacity));
+}
 .text-slate-900 {
   --tw-text-opacity: 1;
   color: rgb(15 23 42 / var(--tw-text-opacity));
@@ -1968,6 +2001,9 @@ video {
 }
 .opacity-0 {
   opacity: 0;
+}
+.opacity-100 {
+  opacity: 1;
 }
 .opacity-60 {
   opacity: 0.6;
@@ -2831,6 +2867,10 @@ img.logo {
   text-decoration-thickness: 1px; /* Alt çizginin kalınlığını ayarlayın */
 }
 
+.z-50 {
+  z-index: +50;
+}
+
 /* Word spacing için */
 
 .ws-1 {
@@ -3626,6 +3666,42 @@ button span.loader::after {
   box-shadow: 0px 0px 5px 0px #0b675e;
 }
 
+
+/* Scrollspy Alanı */
+
+.scrollspyIconSpan::after {
+  content: "";
+  display: block;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: all .4s linear;
+  color: #7d84ab;
+  margin-right: 6px;
+  margin-bottom: 4px;
+}
+.scrollspyIconSpan2::after {
+  content: "";
+  display: inline-block;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  width: 6px;
+  height: 6px;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  transition: all .3s linear;
+  color: #7d84ab;
+  margin-right: 6px;
+}
+
+.scrollspyNavAC .scrollspyNavACaElem:hover .scrollspyIconSpan2::after,
+.scrollspyNavAC .scrollspyNavACaElem:hover h4 {
+  color: #09009f;
+}
+
 .placeholder\:text-\[\#b8b8b8\]::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(184 184 184 / var(--tw-text-opacity));
@@ -4265,6 +4341,10 @@ button span.loader::after {
 
   .lg\:w-9\/12 {
     width: 75%;
+  }
+
+  .lg\:w-\[49\.5\%\] {
+    width: 49.5%;
   }
 
   .lg\:w-\[55\%\] {
