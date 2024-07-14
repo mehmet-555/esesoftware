@@ -392,5 +392,6 @@ function convertBtnBackStyle() {
 
     mappings.forEach(mapping => {
         toggleClass(mapping[0], mapping[1], mapping[2]);
+        
     });
 }
