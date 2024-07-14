@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // PagePagination
     setPageNav ()
 
+    // Page scrollspy
+    openFirstNavAcArea ()
 });
 
 
@@ -469,7 +471,7 @@ function showAuthor() {
 
 
 
-// PageNav func 
+// PagePaginationNav func 
 
 function setPageNav() {
     const pageNavElem = document.querySelector("[data-pageNav]");
@@ -490,3 +492,27 @@ function setPageNav() {
 }
 
 
+
+// scrollspy functions 
+
+function openFirstNavAcArea () {
+    const scrollspyNavACArr = document.querySelectorAll(".scrollspyNavAC");
+
+    scrollspyNavACArr[0].classList.add("open");
+    manuelOpenClose ()
+}
+
+function manuelOpenClose () {
+    const buttons = document.querySelector(".leftAsideSticky").querySelectorAll("[role='button'");
+    
+    buttons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            buttons.forEach(button => {
+                button.nextElementSibling.classList.remove("open");
+            })
+            if(!e.target.nextElementSibling.classList.contains("open")) {
+                e.target.nextElementSibling.classList.add("open");
+            }
+        })
+    })
+}
