@@ -33,6 +33,9 @@ module.exports = {
         'xs': '480px',
         'xs2': '540px',
         'xs3': '594px'
+      },
+      fontWeight: {
+        'custom-medium': '501'
       }
     },
   },
