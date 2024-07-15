@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Servisler ve hizmetler Modal ı
     addListenerToNavRoleBtns ()
-
+    updateModalPosition()
     // Mobile Lefft bar
     leftBarBtnListener ()
     mobileLeftBarNavliElemCollapseF();
@@ -41,7 +41,7 @@ function addListenerToNavBtns() {
     const servicesBtn = document.querySelector(".navAnchorElem1");
     
     const navAnchorElem2s = document.querySelectorAll(".navAnchorElem2");
-
+    
     Array.from(navAnchorElem2s).forEach(elem => {
         elem.addEventListener("mouseenter", (e)=> {
             setTimeout(() => {
@@ -111,7 +111,13 @@ function addListenerToNavBtns() {
     });
     
 }
-
+function updateModalPosition() {
+    const servicesBtn = document.querySelector(".navAnchorElem1");
+    const servicesModal = document.querySelector(".servicesModal");
+    const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
+    const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 19*16}px`;
+    servicesModal.style.left = leftString;
+}
 function initalStateModal () {
     const navRoleBtns = document.querySelectorAll(".navRoleBtns");
     const servicesActiveBtn = document.querySelector(".servicesActiveBtn");

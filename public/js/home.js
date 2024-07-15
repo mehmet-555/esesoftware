@@ -394,7 +394,7 @@ function addListenerToNavBtns() {
             }
         }
     });
-    
+     
 }
 
 function initalStateModal () {

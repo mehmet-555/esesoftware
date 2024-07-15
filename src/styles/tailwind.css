@@ -1669,3 +1669,16 @@ button span.loader::after {
 .rightAsideSticky {
   transition: overflow .3s linear, max-height .3s linear;
 }
+
+
+/* services breadcrump area */
+
+[data-pagenav] a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s linear;
+}
+[data-pagenav] a:hover {
+  text-decoration-color: #efefef;
+}
