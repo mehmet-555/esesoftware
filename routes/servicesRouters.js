@@ -29,7 +29,10 @@ webSRouter.get("/creating-static-web-site", (req, res, next) => {
     res.status(200).render("services/webServices/creatingStaticWebSite2");
     console.log(req.ip)
 })
-
+webSRouter.get("/creating-dynamic-web-app", (req, res, next) => {
+    res.status(200).render("services/webServices/creatingDynamicWebApp");
+    console.log(req.ip)
+})
 // webSRouter.get("/", (req, res, next) => {
 //     // res.status(200).render("services/webServices/webServices");
 // });

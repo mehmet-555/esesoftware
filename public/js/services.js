@@ -15,10 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Footer ı gösterme
     showFooter ()
 
-
-    // BlogUnitsShow Author
-    showAuthor()
-
     // PagePagination
     setPageNav ()
 
@@ -173,14 +169,14 @@ function initialStateModalRightSide() {
     const modalServicesContent = document.getElementById("modalServicesContent");
     const content = [
         `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>`,
-        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
-        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
+        `<li class='fade-in'><a href="/services/web-services/creating-static-web-site" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
+        `<li class='fade-in'><a href="/services/web-services/creating-dynamic-web-app" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
     ];
     
-    modalServicesContent.innerHTML = "";  // Önceki içerikleri temizleyin
+    modalServicesContent.innerHTML = ""; 
     content.forEach((liElem, idx) => {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = liElem;
@@ -188,7 +184,7 @@ function initialStateModalRightSide() {
         modalServicesContent.appendChild(liElement);
         setTimeout(() => {
             liElement.classList.add('visible');
-        }, idx * 75); // Her eleman için 75ms gecikme eklenir
+        }, idx * 75);
     });
 }
 
@@ -198,8 +194,8 @@ function showContentsOnServicesOnModal(index) {
     const contents = [
         [   
             `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
+            `<li class='fade-in'><a href="/services/web-services/creating-static-web-site" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
+            `<li class='fade-in'><a href="/services/web-services/creating-dynamic-web-app" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
@@ -457,27 +453,7 @@ window.addEventListener('resize', showFooter);
 
 // Blog Functions 
 
-function showAuthor() {
-    const blogsArr = document.querySelectorAll(".blogUnit");
-
-    blogsArr.forEach(blog => {
-        const blogLayer = blog.querySelector(".blogLayer");
-        blog.addEventListener("mouseover", (e) => {
-            e.target.querySelector(".secretArea").style.opacity = "1";
-            e.target.querySelector(".secretArea").style.visibility = "visible";
-
-
-            blogLayer.style.top = "40px";
-        });
-        blog.addEventListener("mouseleave", (e) => {
-            e.target.querySelector(".secretArea").style.opacity = "0";
-            e.target.querySelector(".secretArea").style.visibility = "hidden";
-
-            blogLayer.style.top = "64px";
-        })
-    })
-}
-
+// yazarız bakalım
 
 
 // PagePaginationNav func 
@@ -555,20 +531,6 @@ function scrollspyInterSectionApi() {
             activeLink = navLink;
         }
 
-        // Menüyü Otomatik Aç Kapayap
-
-        // Array.from(scrollspyNavACArr).forEach(scrollspyNavAC => {
-        //     if(scrollspyNavAC.querySelector("a.active")) {
-
-        //         scrollspyNavAC.classList.add("open");
-        //         scrollspyNavAC.closest(".scrollspyNavA").querySelector(".scrollspyIconSpan").classList.add("open");
-        //         scrollspyNavAC.closest(".scrollspyNavA").querySelector(".scrollspyIconSpan").nextElementSibling.classList.add("active");
-        //     }else {
-        //         scrollspyNavAC.classList.remove("open");
-        //         scrollspyNavAC.closest(".scrollspyNavA").querySelector(".scrollspyIconSpan").classList.remove("open");
-        //         scrollspyNavAC.closest(".scrollspyNavA").querySelector(".scrollspyIconSpan").nextElementSibling.classList.remove("active");
-        //     }
-        // })        benim orijinal
         const scrollspyNavACArr = document.querySelectorAll(".scrollspyNavAC");
         scrollspyNavACArr.forEach(scrollspyNavAC => {
             const isActive = scrollspyNavAC.querySelector("a.active") !== null;

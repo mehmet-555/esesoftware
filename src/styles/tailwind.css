@@ -1362,6 +1362,17 @@ button span.loader::after {
   white-space: pre-wrap;
   transform:  translate(-50%, calc(0px - var(--arrow-size))) scale(0.5);
 }
+table [data-content]::before {
+  background-color: #3756ff;
+  color: #fff;
+}
+
+table [data-content-location="right"]::after {
+  border-color: transparent transparent transparent #3756ff;
+}
+table [data-content-location="right"]:hover::after {
+  border-color: transparent #3756ff transparent transparent;
+}
 @media (min-width: 800px) {
   [data-content]::before {
     max-width: 160px;
@@ -1661,9 +1672,26 @@ button span.loader::after {
 #table2 thead th:not(:first-child) {
   text-align: center !important;
 }
-#table2 thead th {
-  font-size: 14px !important;
+
+/* crating web app */
+
+#table2 tr td:first-child,
+#table2 tbody tr td:not(:first-child) {
+  font-size: 12px;
 }
+
+/* Medya Sorguları */
+@media (min-width: 1024px) {
+  #table2 tr td:first-child {
+    font-size: 14px;
+  }
+
+  #table2 tbody tr td:not(:first-child) {
+    font-size: 14px !important;
+  }
+}
+
+
 
 .leftAsideSticky,
 .rightAsideSticky {
@@ -1681,4 +1709,28 @@ button span.loader::after {
 }
 [data-pagenav] a:hover {
   text-decoration-color: #efefef;
+}
+
+
+/* Blog cardları için uzun metni kesme class ı */
+
+.truncate2 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blogCardLink .blogLayer {
+  transition: bottom .2s linear;
+}
+.blogCardLink .secretArea {
+  transition: opacity .3s linear;
+}
+.blogCardLink:hover .blogLayer {
+  bottom: -7px;
+}
+.blogCardLink:hover .secretArea {
+  opacity: 1;
 }
