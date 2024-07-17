@@ -820,6 +820,18 @@ img.logo {
   max-width: 0;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
+.bg-[#0027ff] {
+  background-color: #0027ff;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
+}
+
 /* Mobile Left Nav */
 
 #mobileLeftBar {

@@ -740,9 +740,6 @@ video {
 .mb-6 {
   margin-bottom: 1.5rem;
 }
-.mb-60 {
-  margin-bottom: 15rem;
-}
 .mb-7 {
   margin-bottom: 1.75rem;
 }
@@ -1817,6 +1814,9 @@ video {
 }
 .indent-3 {
   text-indent: 0.75rem;
+}
+.indent-4 {
+  text-indent: 1rem;
 }
 .font-merriweather {
   font-family: Merriweather, serif;
@@ -2952,6 +2952,18 @@ img.logo {
 }
 .max-w-0 {
   max-width: 0;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.bg-[#0027ff] {
+  background-color: #0027ff;
+}
+
+.pl-6 {
+  padding-left: 1.5rem;
 }
 
 /* Mobile Left Nav */

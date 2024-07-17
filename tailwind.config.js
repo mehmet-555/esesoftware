@@ -3,6 +3,7 @@ module.exports = {
     './views/**/*.ejs',
     './public/**/*.html',
     './src/**/*.css',
+    './model/**/*.json'
   ],
   theme: {
     extend: {

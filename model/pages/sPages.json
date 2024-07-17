@@ -32,7 +32,7 @@
                         {
                             "id": "entryforObserver1",
                             "subContentHeader": "Statik Web Sitesi Nedir?",
-                            "subContent": "<p class='text-sm'>Statik web sitesi, her kullanıcıya aynı içerik ve bilgileri sunan, sabit HTML dosyalarından oluşan bir web sitesidir. Bu tür siteler, her ziyaretçi için aynı şekilde görüntülenir ve dinamik içerik oluşturmaz. Statik web siteleri, genellikle küçük işletmeler, portföy siteleri, kişisel bloglar ve basit bilgi sunma amaçlı siteler için idealdir.</p>"
+                            "subContent": "<p class='indent-4 text-sm'>Statik web sitesi, her kullanıcıya aynı içerik ve bilgileri sunan, sabit HTML dosyalarından oluşan bir web sitesidir. Bu tür siteler, her ziyaretçi için aynı şekilde görüntülenir ve dinamik içerik oluşturmaz. Statik web siteleri, genellikle küçük işletmeler, portföy siteleri, kişisel bloglar ve basit bilgi sunma amaçlı siteler için idealdir.</p>"
                         },
                         {
                             "id": "entryforObserver2",
@@ -67,7 +67,7 @@
                         {
                             "id": "entryforObserver10",
                             "subContentHeader": "Bu Alanda Hizmetlerimiz",
-                            "subContent": "<p>\n<span class=\"text-sm font-semibold custom-underline\">Esesoftware</span>\n<span class=\"text-sm\">olarak, müşterilerimize kaliteli ve profesyonel statik web sitesi kurulum hizmetleri sunuyoruz. Her işletmenin kendine özgü ihtiyaçları olduğunu biliyoruz ve bu ihtiyaçlara en uygun çözümleri sunmak için buradayız.</span>\n</p>"
+                            "subContent": "<p class=\"indent-4\">\n<span class=\"text-sm font-semibold custom-underline\">Esesoftware</span>\n<span class=\"text-sm\">olarak, müşterilerimize kaliteli ve profesyonel statik web sitesi kurulum hizmetleri sunuyoruz. Her işletmenin kendine özgü ihtiyaçları olduğunu biliyoruz ve bu ihtiyaçlara en uygun çözümleri sunmak için buradayız.</span>\n</p>"
                         },
                         {
                             "id": "entryforObserver11",
@@ -82,12 +82,12 @@
                         {
                             "id": "entryforObserver13",
                             "subContentHeader": "Daha Fazla Bilgi Alın",
-                            "subContent": "<p class=\"text-sm\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\">&lt; İletişime Geç &gt;</a>\n</div>"
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\">&lt; İletişime Geç &gt;</a>\n</div>"
                         },
                         {
                             "id": "entryforObserver14",
                             "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
-                            "subContent": "<p class=\"text-sm\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\">&lt; Proje Başlat &gt;</a>\n</div>"
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\">&lt; Proje Başlat &gt;</a>\n</div>"
                         }
                     ]
                 }
@@ -126,7 +126,7 @@
                         {
                             "id": "entryforObserver1",
                             "subContentHeader": "Dinamik Web Uygulaması Nedir?",
-                            "subContent": "<p class=\"text-sm\">Dinamik web uygulamaları, kullanıcı etkileşimlerine ve veritabanlarına dayalı olarak anlık olarak içerik oluşturabilen, sürekli değişen ve güncellenen web uygulamalarıdır. Bu tür uygulamalar, her kullanıcıya kişiselleştirilmiş ve etkileşimli içerikler sunar. Dinamik web uygulamaları, geniş veri tabanları, sunucu tarafı betikleri ve istemci tarafı teknolojiler kullanarak çalışır.</p>"
+                            "subContent": "<p class=\"text-sm indent-4\">Dinamik web uygulamaları, kullanıcı etkileşimlerine ve veritabanlarına dayalı olarak anlık olarak içerik oluşturabilen, sürekli değişen ve güncellenen web uygulamalarıdır. Bu tür uygulamalar, her kullanıcıya kişiselleştirilmiş ve etkileşimli içerikler sunar. Dinamik web uygulamaları, geniş veri tabanları, sunucu tarafı betikleri ve istemci tarafı teknolojiler kullanarak çalışır.</p>"
                         },
                         {
                             "id": "entryforObserver2",
@@ -161,7 +161,7 @@
                         {
                             "id": "entryforObserver10",
                             "subContentHeader": "Bu Alanda Hizmetlerimiz",
-                            "subContent": "<p>\n<span class=\"text-sm font-semibold custom-underline\">Esesoftware</span>\n<span class=\"text-sm\">olarak, müşterilerimize kaliteli ve profesyonel statik web sitesi kurulum hizmetleri sunuyoruz. Her işletmenin kendine özgü ihtiyaçları olduğunu biliyoruz ve bu ihtiyaçlara en uygun çözümleri sunmak için buradayız.</span>\n</p>"
+                            "subContent": "<p class=\"indent-4\">\n<span class=\"text-sm font-semibold custom-underline\">Esesoftware</span>\n<span class=\"text-sm\">olarak, müşterilerimize kaliteli ve profesyonel statik web sitesi kurulum hizmetleri sunuyoruz. Her işletmenin kendine özgü ihtiyaçları olduğunu biliyoruz ve bu ihtiyaçlara en uygun çözümleri sunmak için buradayız.</span>\n</p>"
                         },
                         {
                             "id": "entryforObserver11",
@@ -176,13 +176,38 @@
                         {
                             "id": "entryforObserver13",
                             "subContentHeader": "Daha Fazla Bilgi Alın",
-                            "subContent": "<p class=\"text-sm\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
                         },
                         {
                             "id": "entryforObserver14",
                             "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
-                            "subContent": "<p class=\"text-sm\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
                         }
+                    ]
+                }
+            }
+        },
+        {
+            "pageTitle": "Web Hosting",
+            "pageHeaders": {
+                "a1": {
+                    
+                },
+                "a2": {
+    
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "",
+                    "subContents": [
+
+                    ]
+                },
+                "a2": {
+                    "header": "",
+                    "subContents": [
+
                     ]
                 }
             }
