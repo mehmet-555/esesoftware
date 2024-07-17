@@ -507,7 +507,7 @@ function scrollspyInterSectionApi() {
     const viewportHeight = window.innerHeight;
     const dynamicBottomMargin = -(viewportHeight - 180) + 'px';
     const options = {
-        root: null, // Viewport kullan
+        root: null, 
         rootMargin: `-170px 0px ${dynamicBottomMargin} 0px`,
         threshold: 0.01
     };

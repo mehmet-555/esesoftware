@@ -1549,7 +1549,13 @@ table [data-content-location="right"]:hover::after {
 .servicesMainCH thead th {
   background-color: #060d18;
   color: white;
+  font-size: 12px;
   font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .servicesMainCH thead th {
+    font-size: 14px;
+  }
 }
 
 .servicesMainCH thead th:not(:first-child) {
@@ -1563,12 +1569,17 @@ table [data-content-location="right"]:hover::after {
 
 /* Veri hücreleri */
 .servicesMainCH td {
-  font-size: 14px; 
+  font-size: 12px; 
   padding: 0 6px;
+}
+@media (min-width: 1024px) {
+  .servicesMainCH table td {
+    font-size: 14px;
+  }
 }
 
 .servicesMainCH tbody tr td:first-child strong {
-  font-weight: 501;
+  font-weight: 601;
 }
 
 
@@ -1690,7 +1701,11 @@ table [data-content-location="right"]:hover::after {
     font-size: 14px !important;
   }
 }
-
+@media (max-width: 1024px) {
+  .pricingT tr td {
+    padding: 4px 2px;
+  }
+}
 
 
 .leftAsideSticky,
