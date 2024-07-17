@@ -192,9 +192,9 @@
     background: transparent; /* Resizer kısmının arka plan rengi */
   }
 }
-.servicesMainCH {
-  height: calc(100vh - 4rem);
-}
+/* .servicesMainCH {
+  
+} */
 /* Responsive stil */
 @media (min-width: 640px) {
   .mainCustomheigth {
@@ -772,6 +772,10 @@ img.logo {
   text-decoration: underline;
   text-underline-offset: 2px; /* Alt çizginin kelimeden uzaklığını ayarlayın */
   text-decoration-thickness: 1px; /* Alt çizginin kalınlığını ayarlayın */
+}
+
+.z-50 {
+  z-index: +50;
 }
 
 /* Word spacing için */
@@ -1358,6 +1362,17 @@ button span.loader::after {
   white-space: pre-wrap;
   transform:  translate(-50%, calc(0px - var(--arrow-size))) scale(0.5);
 }
+table [data-content]::before {
+  background-color: #3756ff;
+  color: #fff;
+}
+
+table [data-content-location="right"]::after {
+  border-color: transparent transparent transparent #3756ff;
+}
+table [data-content-location="right"]:hover::after {
+  border-color: transparent #3756ff transparent transparent;
+}
 @media (min-width: 800px) {
   [data-content]::before {
     max-width: 160px;
@@ -1534,7 +1549,13 @@ button span.loader::after {
 .servicesMainCH thead th {
   background-color: #060d18;
   color: white;
+  font-size: 12px;
   font-weight: 500;
+}
+@media (min-width: 1024px) {
+  .servicesMainCH thead th {
+    font-size: 14px;
+  }
 }
 
 .servicesMainCH thead th:not(:first-child) {
@@ -1548,10 +1569,183 @@ button span.loader::after {
 
 /* Veri hücreleri */
 .servicesMainCH td {
-  font-size: 14px; 
+  font-size: 12px; 
   padding: 0 6px;
+}
+@media (min-width: 1024px) {
+  .servicesMainCH table td {
+    font-size: 14px;
+  }
 }
 
 .servicesMainCH tbody tr td:first-child strong {
-  font-weight: 500;
+  font-weight: 601;
+}
+
+
+.bgReact {
+  background: url("../../images/blogBG.jpg");
+  background-position: top -7px center;
+  background-size: cover;
+}
+
+.blogShd {
+  box-shadow: 0px 0px 5px 0px #0b675e;
+}
+
+
+/* Scrollspy Alanı */
+
+.scrollspyIconSpan::after {
+  content: "";
+  display: block;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  transform-origin: center;
+  transition: all .4s linear;
+  color: #7d84ab;
+  margin-right: 10px;
+  margin-bottom: 4px;
+}
+.scrollspyIconSpan2::after {
+  content: "";
+  display: inline-block;
+  border-right: 2px solid currentcolor;
+  border-bottom: 2px solid currentcolor;
+  width: 6px;
+  height: 6px;
+  transform: rotate(-45deg);
+  transform-origin: center;
+  transition: all .3s linear;
+  color: #7d84ab;
+  margin-right: 12px;
+}
+
+.scrollspyNavAC {
+  transition: max-height .1s linear, opacity .3s linear;
+  max-height: 0px;
+  opacity: 0;
+}
+.scrollspyIconSpan.open::after {
+  transform: rotate(-135deg);
+  margin-top: 4px;
+} 
+.scrollspyNavAC.open {
+  transition: max-height .3s linear, opacity .3s linear;
+  max-height: 1000px;
+  opacity: 1;
+}
+.scrollspyNavACHeader {
+  transition: all .2s linear;
+}
+.scrollspyNavACHeader.active {
+  color: #2f2d9c;
+}
+.scrollspyNavAC .scrollspyNavACaElem:hover .scrollspyIconSpan2::after,
+.scrollspyNavAC .scrollspyNavACaElem:hover h4 {
+  transition: all .1s linear;
+  color: #2f2d9c;
+}
+
+.scrollspyNavAC a[href].active span h4{
+  color: #2f2d9c !important;
+} 
+.scrollspyNavAC a[href] {
+  position: relative;
+}
+.scrollspyNavAC a[href]::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  bottom: 0;
+  display: block;
+  width: 2px;
+  height: 80%;
+  background-color: #3f42564f;
+  transform: translateY(-50%);
+}
+.scrollspyNavAC a[href].active::before {
+  background-color: #2f2d9c !important;
+}
+.entryfoheader h2 {
+  transition: all .4s linear;
+}
+.entryfoheader h2.styleHeader {
+  color: #2f2d9c; 
+}
+
+/* statik web sitesi tablo 2 */
+
+#table2 thead th:not(:first-child) {
+  text-align: center !important;
+}
+
+/* crating web app */
+
+#table2 tr td:first-child,
+#table2 tbody tr td:not(:first-child) {
+  font-size: 12px;
+}
+
+/* Medya Sorguları */
+@media (min-width: 1024px) {
+  #table2 tr td:first-child {
+    font-size: 14px;
+  }
+
+  #table2 tbody tr td:not(:first-child) {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 1024px) {
+  .pricingT tr td {
+    padding: 4px 2px;
+  }
+}
+
+
+.leftAsideSticky,
+.rightAsideSticky {
+  transition: overflow .3s linear, max-height .3s linear;
+}
+
+
+/* services breadcrump area */
+
+[data-pagenav] a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+  transition: text-decoration-color .2s linear;
+}
+[data-pagenav] a:hover {
+  text-decoration-color: #efefef;
+}
+
+
+/* Blog cardları için uzun metni kesme class ı */
+
+.truncate2 {
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.blogCardLink .blogLayer {
+  transition: bottom .2s linear;
+}
+.blogCardLink .secretArea {
+  transition: opacity .3s linear;
+}
+.blogCardLink:hover .blogLayer {
+  bottom: -7px;
+}
+.blogCardLink:hover .secretArea {
+  opacity: 1;
 }

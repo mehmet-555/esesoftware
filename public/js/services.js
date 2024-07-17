@@ -5,13 +5,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Servisler ve hizmetler Modal ı
     addListenerToNavRoleBtns ()
-
+    updateModalPosition()
     // Mobile Lefft bar
     leftBarBtnListener ()
     mobileLeftBarNavliElemCollapseF();
 
     // Mobile RightBar
     ModalFunction ()
+    // Footer ı gösterme
+    showFooter ()
+
+    // PagePagination
+    setPageNav ()
+
+    // Page scrollspy
+    openFirstNavAcArea ()
+
+    // href kontorl
+    hrefControl()
 });
 
 
@@ -26,7 +37,7 @@ function addListenerToNavBtns() {
     const servicesBtn = document.querySelector(".navAnchorElem1");
     
     const navAnchorElem2s = document.querySelectorAll(".navAnchorElem2");
-
+    
     Array.from(navAnchorElem2s).forEach(elem => {
         elem.addEventListener("mouseenter", (e)=> {
             setTimeout(() => {
@@ -96,7 +107,13 @@ function addListenerToNavBtns() {
     });
     
 }
-
+function updateModalPosition() {
+    const servicesBtn = document.querySelector(".navAnchorElem1");
+    const servicesModal = document.querySelector(".servicesModal");
+    const servicesBtnLeftDistance = servicesBtn.getBoundingClientRect().left;
+    const leftString = `${(Number(servicesBtnLeftDistance) + 70) - 19*16}px`;
+    servicesModal.style.left = leftString;
+}
 function initalStateModal () {
     const navRoleBtns = document.querySelectorAll(".navRoleBtns");
     const servicesActiveBtn = document.querySelector(".servicesActiveBtn");
@@ -152,14 +169,14 @@ function initialStateModalRightSide() {
     const modalServicesContent = document.getElementById("modalServicesContent");
     const content = [
         `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>`,
-        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
-        `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
+        `<li class='fade-in'><a href="/services/web-services/creating-static-web-site" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
+        `<li class='fade-in'><a href="/services/web-services/creating-dynamic-web-app" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
         `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
     ];
     
-    modalServicesContent.innerHTML = "";  // Önceki içerikleri temizleyin
+    modalServicesContent.innerHTML = ""; 
     content.forEach((liElem, idx) => {
         const tempDiv = document.createElement('div');
         tempDiv.innerHTML = liElem;
@@ -167,7 +184,7 @@ function initialStateModalRightSide() {
         modalServicesContent.appendChild(liElement);
         setTimeout(() => {
             liElement.classList.add('visible');
-        }, idx * 75); // Her eleman için 75ms gecikme eklenir
+        }, idx * 75);
     });
 }
 
@@ -177,8 +194,8 @@ function showContentsOnServicesOnModal(index) {
     const contents = [
         [   
             `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>Web Geliştirme</li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
-            `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
+            `<li class='fade-in'><a href="/services/web-services/creating-static-web-site" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Statik Web Sitesi Kurulumu</a></li>`,
+            `<li class='fade-in'><a href="/services/web-services/creating-dynamic-web-app" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Uygulaması Geliştirme</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Web Hosting</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> UI / UX Tasarımı</a></li>`,
             `<li class='fade-in'><a href="#" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Yeniden Yapılandırma</a></li>`
@@ -393,5 +410,214 @@ function convertBtnBackStyle() {
     mappings.forEach(mapping => {
         toggleClass(mapping[0], mapping[1], mapping[2]);
         
+    });
+}
+
+
+
+
+
+
+
+
+
+
+function showFooter() {
+    const footer = document.querySelector(".footer");
+    const mainElem = document.querySelector(".servicesMainCH");
+    const leftAsideSticky = document.querySelector(".leftAsideSticky");
+    const rightAsideSticky = document.querySelector(".rightAsideSticky");
+    const areaX = document.querySelector(".areaX");
+    
+    const footerHeight = window.getComputedStyle(footer).getPropertyValue("height");
+
+    mainElem.firstElementChild.style.marginBottom = footerHeight;
+
+    if (leftAsideSticky && areaX && rightAsideSticky) {
+        const areaXWidth = window.getComputedStyle(areaX).getPropertyValue("width");
+
+        leftAsideSticky.style.width = `calc(${areaXWidth} - 2px)`;
+        rightAsideSticky.style.width = `calc(${areaXWidth} - 2px)`;
+        leftAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
+        rightAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
+    } else {
+        console.error("Element not found.");
+    }
+}
+
+
+window.addEventListener('load', showFooter);
+
+window.addEventListener('resize', showFooter);
+
+
+
+// Blog Functions 
+
+// yazarız bakalım
+
+
+// PagePaginationNav func 
+
+function setPageNav() {
+    const pageNavElem = document.querySelector("[data-pageNav]");
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", () => {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            pageNavElem.style.opacity = "0";    
+            pageNavElem.style.visibility = "hidden";    
+        } else {
+            pageNavElem.style.opacity = "1";    
+            pageNavElem.style.visibility = "visible";
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Mobil veya negatif scroll için kontrol
+    });
+}
+
+
+
+// scrollspy functions 
+
+function openFirstNavAcArea () {
+    const scrollspyNavACArr = document.querySelectorAll(".scrollspyNavAC");
+    scrollspyNavACArr[0].classList.add("open");
+    manuelOpenClose ();
+    scrollspyInterSectionApi();
+}
+
+function manuelOpenClose () {
+    const buttons = document.querySelectorAll(".leftAsideSticky [role='button']");
+    
+    buttons.forEach(button => {
+        button.addEventListener("click", (e) => {
+            buttons.forEach(button => {
+                button.nextElementSibling.classList.remove("open");
+            })
+            if(!e.target.nextElementSibling.classList.contains("open")) {
+                e.target.nextElementSibling.classList.add("open");
+            }
+        })
+    })
+}
+
+function scrollspyInterSectionApi() {
+    const headerSections = document.querySelectorAll(".entryfoheader");
+    const viewportHeight = window.innerHeight;
+    const dynamicBottomMargin = -(viewportHeight - 180) + 'px';
+    const options = {
+        root: null, 
+        rootMargin: `-170px 0px ${dynamicBottomMargin} 0px`,
+        threshold: 0.01
+    };
+    let activeLink = null;
+
+    const callback = (entries, observer) => {
+
+        const visibleEntries = entries.filter(entry => entry.isIntersecting);
+
+        if (visibleEntries.length > 0) {
+            visibleEntries.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+            const firstVisibleEntry = visibleEntries[0];
+            const id = firstVisibleEntry.target.getAttribute('id');
+            const navLink = document.querySelector(`a[href="#${id}"]`);
+
+            if (activeLink && activeLink !== navLink) {
+                activeLink.classList.remove('active');
+            }
+
+            navLink.classList.add('active');
+            activeLink = navLink;
+        }
+
+        const scrollspyNavACArr = document.querySelectorAll(".scrollspyNavAC");
+        scrollspyNavACArr.forEach(scrollspyNavAC => {
+            const isActive = scrollspyNavAC.querySelector("a.active") !== null;
+            scrollspyNavAC.classList.toggle("open", isActive);
+            const iconSpan = scrollspyNavAC.closest(".scrollspyNavA")?.querySelector(".scrollspyIconSpan");
+            if (iconSpan) {
+                iconSpan.classList.toggle("open", isActive);
+                const nextElement = iconSpan.nextElementSibling;
+                if (nextElement) {
+                    nextElement.classList.toggle("active", isActive);
+                }
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    
+
+    headerSections.forEach(section => observer.unobserve(section));
+    headerSections.forEach(section => observer.observe(section));
+}
+
+
+// left sticky make overflow hidden
+function handleScroll() {
+    const distanceFromBottom = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
+    
+    const leftSticky = document.querySelector(".leftAsideSticky");
+    const stickyHeight = window.getComputedStyle(leftSticky).getPropertyValue("height");
+    
+    const stickies = document.querySelectorAll(".leftAsideSticky, .rightAsideSticky");
+    
+    if (distanceFromBottom <= 150) {
+        stickies.forEach(sticky => {
+            sticky.style.maxHeight = `${stickyHeight}`;
+            sticky.style.overflow = "hidden";
+        });
+    } else {
+        stickies.forEach(sticky => {
+            sticky.style.maxHeight = `5000px`;
+            sticky.style.overflow = "visible";
+        });
+    }
+}
+
+
+window.addEventListener('load', scrollspyInterSectionApi);
+window.addEventListener('resize', scrollspyInterSectionApi);
+window.addEventListener('scroll', handleScroll);
+
+
+
+
+
+
+
+
+function hrefControl() {
+    // Navigasyon çubuğunuzun yüksekliğini burada belirtin
+    const navbarHeight = 100; // Örneğin 70px yükseklikte bir navbarınız varsa
+
+    // Tüm iç bağlantıları seç
+    const internalLinks = document.querySelectorAll('a[href^="#"]');
+
+    // Her bağlantı için event listener ekle
+    internalLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Varsayılan işlemi engelle
+            e.preventDefault();
+
+            // Hedef elementin ID'sini al
+            const targetId = link.getAttribute('href').substring(1);
+            
+            const targetElement = document.getElementById(targetId);
+            // console.log(targetElement)
+            if (targetElement) {
+                targetElement.firstElementChild.classList.add("styleHeader");
+                setTimeout(() => {
+                    targetElement.firstElementChild.classList.remove("styleHeader");
+                }, 750);
+                // Hedef elemente yumuşak bir şekilde scroll yap
+                window.scrollTo({
+                    top: targetElement.offsetTop - navbarHeight, // Navbar yüksekliği kadar yukarıda durmasını sağla
+                    behavior: 'smooth'
+                });
+            }
+        });
     });
 }
