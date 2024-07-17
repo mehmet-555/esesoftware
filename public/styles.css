@@ -636,9 +636,6 @@ video {
 .top-\[-8px\] {
   top: -8px;
 }
-.top-\[170px\] {
-  top: 170px;
-}
 .top-\[37\%\] {
   top: 37%;
 }
@@ -844,6 +841,9 @@ video {
 }
 .mt-8 {
   margin-top: 2rem;
+}
+.mt-60 {
+  margin-top: 15rem;
 }
 .block {
   display: block;

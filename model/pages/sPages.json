@@ -1,0 +1,92 @@
+{
+    "pages": [
+        {
+            "pageTitle": "Statik Web Sitesi Kurulumu",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Statik Web Sitesi Geliştirme",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Statik Web Sitesi Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Statik Web Sitesi Avantajları"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Neden ve Ne Zaman Statik Web Sitesi Tercih Edilmeli?"},
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Statik Web Sitesi Geliştirme Süreci"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "Bu Alanda Kullandığımız Teknolojiler ve Araçlar"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader": "Statik Web Siteleri ve Dinamik Web Uygulamaları Arasındaki Farklar"}
+                    ]
+                },
+                "a2": {
+                    "header": "Statik Web Sitesi Oluşturun",
+                    "subHeaders": [
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader": "Bu Alanda Hizmetlerimiz"},
+                        {"id": "navLink11", "href": "#entryforObserver11", "sHeader": "Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink12", "href": "#entryforObserver12", "sHeader": "Statik Web Sitesi Fiyatlarına Etki Eden Faktörler"},
+                        {"id": "navLink13", "href": "#entryforObserver13", "sHeader": "Daha Fazla Bilgi Alın"},
+                        {"id": "navLink14", "href": "#entryforObserver14", "sHeader": "Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "content": {
+                "a1": {
+                    "header": "// Statik Web Sitesi Geliştirme",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Statik Web Sitesi Nedir?",
+                            "subContent": "<p class='text-sm'>Statik web sitesi, her kullanıcıya aynı içerik ve bilgileri sunan, sabit HTML dosyalarından oluşan bir web sitesidir. Bu tür siteler, her ziyaretçi için aynı şekilde görüntülenir ve dinamik içerik oluşturmaz. Statik web siteleri, genellikle küçük işletmeler, portföy siteleri, kişisel bloglar ve basit bilgi sunma amaçlı siteler için idealdir.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Statik Web Sitesi Avantajları",
+                            "subContent": "<ul class='pl-6'>\n<li class='mb-2'>\n<p>\n<span>1.</span>\n<span class='text-sm font-semibold'>Hızlı Yükleme Süresi:</span>\n<span class='text-sm'>Statik web siteleri, dinamik içerik oluşturma sürecini atladığı için çok hızlı yüklenir. Bu, kullanıcı deneyimini iyileştirir ve arama motorları tarafından daha iyi sıralanma sağlar.</span>\n</p>\n</li>\n<li class='mb-2'>\n<p>\n<span>2.</span>\n<span class='text-sm font-semibold'>Güvenlik:</span>\n<span class='text-sm'>Dinamik veri tabanları ve sunucu tarafı betikleri kullanmadığı için, statik web siteleri güvenlik açıklarına karşı daha dirençlidir.</span>\n</p>\n</li>\n<li class='mb-2'>\n<p>\n<span>3.</span>\n<span class='text-sm font-semibold'>Maliyet Etkinliği:</span>\n<span class='text-sm'>Statik web siteleri, dinamik sitelere göre daha düşük bakım ve barındırma maliyetlerine sahiptir.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Neden ve Ne Zaman Statik Web Sitesi Tercih Edilmeli?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Küçük İşletmeler:</span>\n<span class=\"text-sm\">Ürünlerini ve hizmetlerini tanıtmak için idealdir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Portföy Siteleri:</span>\n<span class=\"text-sm\">Tasarımcılar, yazarlar ve diğer yaratıcı profesyoneller için portföylerini sergilemek amacıyla kullanılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Bilgi Siteleri:</span>\n<span class=\"text-sm\">Sabit bilgileri ve içerikleri sunmak isteyen siteler için uygundur.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Kampanya Sayfaları:</span>\n<span class=\"text-sm\">Belirli bir kampanya veya etkinlik için tek sayfa web siteleri.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Statik Web Sitesi Geliştirme Süreci",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">İhtiyaç Analizi ve Planlama:</span>\n<span class=\"text-sm\">İşletmenizin gereksinimlerini ve hedeflerini belirlemek için detaylı bir analiz gerçekleştiriyoruz. Bu aşamada, hedef kitlenizi, web sitenizin amaçlarını ve gereksinimlerinizi netleştiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Tasarım ve İçerik Geliştirme:</span>\n<span class=\"text-sm\">Markanızı en iyi şekilde yansıtacak, modern ve kullanıcı dostu tasarımlar oluşturuyoruz. Ayrıca, web sitenizin içeriklerini (metinler, görseller, videolar vb.) profesyonel bir şekilde hazırlıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Koda Dökme:</span>\n<span class=\"text-sm\">Web sitenizin yapısını ve stilini HTML, CSS, JS, frontend web çerçeveleri, versiyon-kaynak kontrol sistemleri ve AI kullanarak geliştiriyoruz. En son web standartlarına ve en iyi uygulamalara uygun olarak temiz ve optimize edilmiş kodlar yazıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Barındırma ve Yayınlama:</span>\n<span class=\"text-sm\">Web sitenizin barındırma ihtiyaçlarını karşılıyor ve güvenli bir şekilde yayınlıyoruz. Güvenilir ve hızlı sunucular kullanarak, web sitenizin kesintisiz ve hızlı çalışmasını sağlıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">SEO Optimizasyonu:</span>\n<span class=\"text-sm\">Arama motorlarında üst sıralarda yer almanızı sağlamak için SEO dostu yapılar oluşturuyoruz. Anahtar kelime analizi, meta etiketler ve içerik optimizasyonu ile web sitenizin görünürlüğünü artırıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>6.</span>\n<span class=\"text-sm font-semibold\">Test ve Geri Bildirim:</span>\n<span class=\"text-sm\">Web sitenizi farklı cihaz ve tarayıcılarda test ederek, her yerde mükemmel bir kullanıcı deneyimi SEO başarısı sunduğundan emin oluyoruz. Ayrıca, müşteri geri bildirimlerine göre gerekli düzenlemeleri yapıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>7.</span>\n<span class=\"text-sm font-semibold\">Bakım ve Destek:</span>\n<span class=\"text-sm\">Web sitenizin sorunsuz çalışmasını sağlamak için sürekli bakım ve teknik destek hizmetleri sunarız. İçerik güncellemeleri, güvenlik yamaları ve performans iyileştirmeleri ile web sitenizin güncel ve güvenli kalmasını sağlarız.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Bu Alanda Kullandığımız Teknolojiler ve Araçlar",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Frontend:</span>\n<span class=\"text-sm\">HTML5, CSS3, TailwindCSS, Bootstrap, Javascript, JS Framework'leri, GİT, Github</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">SEO Araçları:</span>\n<span class=\"text-sm\">Google Analytics, Google Search Console, SEMrush, PagesSpeedInsgihts, KWFinder, Screaming Frog SEO Spider</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yazılım Geliştirme Prensipleri:</span>\n<span class=\"text-sm\">Responsive Design, Mobile-First, Web Accessibility Standards</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Barındırma, Dağıtım ve Optimizasyon Araçları:</span>\n<span class=\"text-sm\">Google Cloud Platform(GCP), Cloudflare</span>\n</p>\n</li>\n</ul>"
+                        },
+                    ]
+                }
+            }
+        },
+        {
+            "pageTitle": "page1",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Dinamik Web Uygulaması Geliştirme",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Dinamik Web Uygulaması Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Dinamik Web Uygulaması Artıları"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Neden ve Ne Zaman Dinamik Web Uygulamasına İhtiyaç Duyulur?"},
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Dinamik Web Uygulaması Geliştirme Süreci"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "Bu Alanda Kullandığımız Teknolojiler ve Araçlar"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader": "Statik Web Siteleri ve Dinamik Web Uygulamaları Arasındaki Farklar"}
+                    ]
+                },
+                "a2": {
+                    "header": "Dinamik Web Uygulaması Oluşturun",
+                    "subHeaders": [
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader": "Bu Alanda Hizmetlerimiz"},
+                        {"id": "navLink11", "href": "#entryforObserver11", "sHeader": "Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink12", "href": "#entryforObserver12", "sHeader": "Dinamik Web Uygulaması Fiyatlarına Etki Eden Faktörler"},
+                        {"id": "navLink13", "href": "#entryforObserver13", "sHeader": "Daha Fazla Bilgi Alın"},
+                        {"id": "navLink14", "href": "#entryforObserver14", "sHeader": "Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+    
+            },
+            "content": {
+ 
+            }
+        }
+    ]
+}
