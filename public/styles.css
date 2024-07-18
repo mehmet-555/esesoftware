@@ -1803,6 +1803,9 @@ video {
 .pt-\[5px\] {
   padding-top: 5px;
 }
+.pt-\[2px\] {
+  padding-top: 2px;
+}
 .text-center {
   text-align: center;
 }
