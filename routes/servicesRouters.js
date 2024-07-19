@@ -143,5 +143,30 @@ webSRouter.get("/ui-ux-development", [
         return res.status(400).json({ errors: errors.array() });
     };
 });
+webSRouter.get("/restructuring", [
+    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
+], async (req, res, next) => { 
 
+    console.log(req.originalUrl);
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()) {
+        try {
+            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
+            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
+            const pageObj = JSON.parse(pagesJson);
+            console.log(pageObj);
+            console.log(req.ip);
+            
+            res.status(200).render('services/webServices/servicesGeneralLayout', {
+                thePathArr: thePathArr,
+                page: pageObj.pages[4]
+            });
+        } catch (error) {
+            next(error);
+        };
+    }else {
+        return res.status(400).json({ errors: errors.array() });
+    };
+});
 module.exports = servicesRouter;

@@ -361,6 +361,87 @@
                 }
             }
 
+        },
+        {
+            "pageTitle": "Yeniden Yapılandırma",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Yeniden Yapılandırma",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader":"Yeniden Yapılandırma Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader":"Eski Web Sitenizi Baştan Yaratıyoruz"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader":"Esesoftware ile Yeniden Yapılandırmanın Artıları"},
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader":"Esesoftware ile Yeniden Yapılandırma Süreci"}
+                    ]
+                },
+                "a2": {
+                    "header": "Esesfotware ile Yeniden Yapılandırma Hizmeti",
+                    "subHeaders": [
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader":"Esesoftware ile Yeniden Yapılandırma Hizmetlerimiz"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader":"Esesoftware ile Yeniden Yapılandırma Fiyatlarına Etki Eden Faktörler"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// Yeniden Yapılandırma",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Yeniden Yapılandırma Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Yeniden yapılandırma, mevcut web sitenizin veya uygulamanızın sıfırdan yeniden tasarlanması ve geliştirilmesi sürecidir. Bu süreç, sitenizin görsel tasarımından teknik altyapısına kadar her şeyi kapsar. Amaç, sitenizi sadece estetik olarak değil, aynı zamanda işlevsellik, performans ve SEO açısından da en üst seviyeye çıkarmaktır.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Eski Web Sitenizi Baştan Yaratıyoruz",
+                            "subContent": "<p class=\"text-sm indent-4\">Eski veya modası geçmiş bir web siteniz mi var? Esesoftware olarak, web sitenizi modern teknolojilerle yeniden inşa ederek işinizi dijital dünyada öne çıkarıyoruz. Web sitenizin tasarımı, performansı ve kullanıcı deneyimi, markanızın çevrimiçi yüzüdür. Eğer siteniz yavaş, zor kullanılır veya günümüz standartlarına uymuyorsa, potansiyel müşterilerinizi kaybetme riskiyle karşı karşıyasınız. İşte tam bu noktada, Esesoftware’in yeniden yapılandırma hizmeti devreye giriyor.</p>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Esesoftware ile Yeniden Yapılandırmanın Artıları",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Modern ve Dinamik Tasarımlar:</span>\n<span class=\"text-sm\">Eski web sitenizi veya uygulamanızı estetik, kullanıcı dostu ve çağdaş tasarımlarla güncelliyoruz. Modern tasarım anlayışımız, sitenizin göze hitap etmesini ve kullanıcıların beğenisini kazanmasını sağlar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Gelişmiş Performans:</span>\n<span class=\"text-sm\">Eski ve yavaş çalışan sitenizi optimize ederek daha hızlı ve verimli hale getiriyoruz. Kullanıcılarınızın sitenizde sorunsuz bir deneyim yaşamasını sağlıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Mobil Uyumluluk:</span>\n<span class=\"text-sm\">Tüm cihazlarda kusursuz çalışan responsive tasarımlar oluşturuyoruz. Mobil kullanıcılar için mükemmel deneyimi garanti ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Güvenlik:</span>\n<span class=\"text-sm\">Sitenizi güncel güvenlik protokolleri ve önlemleri ile donatıyoruz. SSL sertifikaları, DDoS koruması ve güvenlik duvarları gibi güvenlik önlemleriyle sitenizi koruma altına alıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">SEO Optimizasyonu:</span>\n<span class=\"text-sm\">Kullanıcı dostu içerik yönetim sistemleri (CMS) ile web sitenizi kolayca yönetilebilir hale getiriyoruz. İçerik güncellemeleri ve site yönetimi artık daha pratik ve hızlı.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>6.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\">Kullanıcı dostu içerik yönetim sistemleri (CMS) ile web sitenizi kolayca yönetilebilir hale getiriyoruz. İçerik güncellemeleri ve site yönetimi artık daha pratik ve hızlı.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>7.</span>\n<span class=\"text-sm font-semibold\">Entegrasyonlar:</span>\n<span class=\"text-sm\">Sitenizi modern yazılım ve hizmetlerle entegre ediyoruz. Üçüncü parti API'ler, e-ticaret çözümleri ve sosyal medya entegrasyonları ile sitenizin işlevselliğini artırıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>8.</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Yeniden yapılandırma sürecinin her aşamasında yanınızdayız. 7/24 teknik destek ve danışmanlık hizmetlerimiz ile sitenizin sorunsuz çalışmasını sağlıyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "Esesoftware ile Yeniden Yapılandırma Süreci",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">İhtiyaç Analizi ve Planlama:</span>\n<span class=\"text-sm\">İşletmenizin gereksinimlerini belirleyip, hedeflerinizi analiz ediyoruz. Hedef kitlenizi, sitenizin amaçlarını ve teknik gereksinimlerinizi netleştiriyoruz. Size en uygun yeniden yapılandırma planını seçiyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Durum Değerlendirmesi:</span>\n<span class=\"text-sm\">Mevcut web sitenizin veya uygulamanızın durumunu analiz ediyoruz. Güçlü ve zayıf yönlerini belirleyerek yeniden yapılandırma stratejimizi oluşturuyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Tasarım ve Prototip Oluşturma:</span>\n<span class=\"text-sm\">Yeni tasarım ve işlevsellikleri belirlemek için wireframe ve prototipler oluşturuyoruz. Bu prototipler, sitenizin yeni görünümünü ve işlevselliğini test etmemizi sağlar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Geliştirme ve Optimizasyon:</span>\n<span class=\"text-sm\">Web sitenizi veya uygulamanızı en son teknolojiler ve en iyi uygulamalarla geliştiriyoruz. Performans optimizasyonları yaparak sitenizin hızlı ve verimli çalışmasını sağlıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Test ve Geri Bildirim:</span>\n<span class=\"text-sm\">Sitenizi farklı cihaz ve tarayıcılarda test ederek her yerde düzgün çalıştığından emin oluyoruz. Kullanıcı testleri yaparak geri bildirimleri topluyor ve gerekli iyileştirmeleri yapıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>6.</span>\n<span class=\"text-sm font-semibold\">SEO ve Güvenlik:</span>\n<span class=\"text-sm\">Sitenizi arama motorlarına uygun hale getiriyor ve gerekli güvenlik önlemlerini alıyoruz. SEO optimizasyonları ve güvenlik protokolleri ile sitenizin güvenli ve görünür olmasını sağlıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>7.</span>\n<span class=\"text-sm font-semibold\">Veri Taşıma ve Entegrasyon:</span>\n<span class=\"text-sm\">Mevcut verilerinizi güvenli bir şekilde yeni siteye taşıyoruz. Gerekli entegrasyonları yaparak sitenizin işlevselliğini artırıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>8.</span>\n<span class=\"text-sm font-semibold\">Yayınlama ve İzleme:</span>\n<span class=\"text-sm\">Yeniden yapılandırılan sitenizi yayına alıyor ve performansını sürekli olarak izliyoruz. Gerekli bakımları yaparak sitenizin sorunsuz çalışmasını sağlıyoruz.</span>\n</p>\n</li>\n</ul>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Yeniden Yapılandırma Hizmeti",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Esesoftware ile Yeniden Yapılandırma Hizmetlerimiz",
+                            "subContent": "<p class=\"text-sm indent-4\">Esesoftware olarak, kullanıcılarınızın dijital deneyimlerini en üst düzeye çıkarmak için yeniden yapılandırma hizmetleri sunuyoruz. Kullanıcı odaklı, estetik ve işlevsel tasarımlar oluşturarak, web sitenizin veya uygulamanızın kullanıcı deneyimini iyileştiriyoruz. Profesyonel ekibimizle birlikte, en son teknoloji ve trendleri takip ederek, işletmenize en uygun çözümleri sunuyoruz. Kişiselleştirilmiş müşteri desteği, sürekli iyileştirme ve tam entegrasyon ile dijital dünyada başarınızı sürdürülebilir kılmak için yanınızdayız.</p>"
+                        },
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "Esesoftware ile Yeniden Yapılandırma Fiyatlarına Etki Eden Faktörler",
+                            "subContent": "<table id=\"table2\" class=\"w-full pricingT\">\n<thead class=\"text-xs lg:text-sm\">\n<tr>\n<th>Özellik</th>\n<th class=\"text-center\">Standart Gereksinimler</th>\n<th class=\"text-center\">Yüksek Gereksinimler</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\n<p>\n<strong>Sayfa Düzeni Sayısı</strong>\n<span class=\"inline-flex justify-center items-center w-5 min-w-5 h-5 min-h-5 ml-2 text-2xl leading-[27px] mt-2 rounded-full bg-[#efefef] text-white cursor-pointer relative\" data-content=\"Sayfa sayısı ile sayfa düzeni farklı kavramlardır. Aynı sayfa düzeninden 10 adet kopyalamak ve sadece içeriği değiştirmek basit bir işlemdir, yeni sayfa düzenleri oluşturmak ise günlerce ve hatta haftalarca sürebilir.\" data-content-location=\"right\">\n<i class=\"fa-solid fa-question text-xs text-[#b8b8b8]\"></i>\n</span>\n</p>\n</td>\n<td>\n<span class=\"block text-center mb-auto\">1-5</span>\n<span class=\"block text-center\">(Ek Ücret İçermez)</span>\n</td>\n<td>\n<span class=\"block text-center\">6+</span>\n<span class=\"block text-center\">(+Her Sayfa Düzeni İçin 15K)</span>\n</td>\n</tr>\n<tr>\n<td><strong>Kullanıcı Araştırması</strong></td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Temel Araştırma</span>\n<span class=\"block text-center\">(Ek Ücret İçermez)</span>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Gelişmiş Araştırma</span>\n<span class=\"block text-center\">(+15K)</span>\n</td>\n</tr>\n<tr>\n<td><strong>Özgün Kompanent Sayısı</strong></td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Teklif Alınız</span>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Teklif Alınız</span>\n</td>\n</tr>\n<tr>\n<td><strong>Mobil ve Çapraz Platform Uyumu</strong></td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">(Ek Ücret İçermez)</span>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">(Ek Ücret İçermez)</span>\n</td>\n</tr>\n<tr>\n<td><strong>Gelişmiş UX Analizi</strong></td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Aylık Uygulanır</span>\n<span class=\"block text-center\">(+20K)</span>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Aylık Uygulanır</span>\n<span class=\"block text-center\">(+20K)</span>\n</td>\n</tr>\n<tr>\n<td>\n<p>\n<strong>Mevcut Altyapı ve Gereksinimler</strong>\n<span class=\"inline-flex justify-center items-center w-5 min-w-5 h-5 min-h-5 ml-2 text-2xl leading-[27px] mt-2 rounded-full bg-[#efefef] text-white cursor-pointer relative\" data-content=\"Web siteniz veya uygulamanız halihazırda entegre API, veritabanı, ödeme altyapısı veya 3. taraf servislerle çalışıyorsa, bu etkenlerin boyutu ve kapsamı fiyatı etkileyebilir. Proje başlat kısmından form doldurun veya bizimle iletişime geçin.\" data-content-location=\"right\">\n<i class=\"fa-solid fa-question text-xs text-[#b8b8b8]\"></i>\n</span>\n</p>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Teklif Alınız</span>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">Teklif Alınız</span>\n</td>\n</tr>\n<tr>\n<td><strong>Destek ve Danışma</strong></td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">7/24 Premium Destek</span>\n<span class=\"block text-center\">(E-posta, Telefon ve Canlı Destek)</span>\n<span class=\"block text-center\">(Ek Ücret İçermez)</span>\n</td>\n<td class=\"text-center\">\n<span class=\"block text-center mb-auto\">7/24 Premium Destek</span>\n<span class=\"block text-center\">(E-posta, Telefon ve Canlı Destek)</span>\n<span class=\"block text-center\">(Ek Ücret İçermez)</span>\n</td>\n</tr>\n</tbody>\n</table>\n<p class=\"text-xs text-[#4f4f4f] my-2 italic font-medium\">Bu fiyatlar, Esesoftware ile yeniden yapılandırma maliyetlerini etkileyen bazı faktörleri daha iyi anlamanız ve genel bir fikir edinmeniz amacıyla verilmiştir. Uygulamanın büyüklüğüne ve diğer gereksinimlerine göre esnek değişimler uygulanmaktadır, iletişime geçmenizi tavsiye ederiz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Deneyimli Ekip:</span>\n<span class=\"text-sm\">Uzman ekibimiz, en son teknoloji ve trendleri takip ederek işletmenize en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Odaklı Yaklaşım:</span>\n<span class=\"text-sm\">Her müşteri bizim için özeldir. İhtiyaçlarınızı dikkatle dinleyip size özel çözümler sunarız.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Geliştirme sürecinin her aşamasında yanınızdayız. Her türlü destek ve danışmanlık hizmeti ile işletmenizin dijital başarısını sürdürülebilir kılıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yenilikçi Çözümler:</span>\n<span class=\"text-sm\">Sürekli değişen dijital dünyada yenilikçi ve geleceğe yönelik çözümler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                        }
+                    ] 
+                }
+            }
         }
     ]
 }

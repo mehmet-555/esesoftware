@@ -1703,6 +1703,15 @@ table [data-content-location="right"]:hover::after {
   font-size: 12px;
 }
 
+/* Bu iki class ı geçici koydum tablonun içinde tooltiplerin renginin farklı olması için optimize edeceğim */
+
+span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2xl.leading-\[27px\].mt-2.rounded-full.bg-\[\#efefef\].text-white.cursor-pointer.relative {
+  background-color: #8f8f8f;
+}
+span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2xl.leading-\[27px\].mt-2.rounded-full.bg-\[\#efefef\].text-white.cursor-pointer.relative i {
+  color: #2e2e2e;
+}
+
 /* Medya Sorguları */
 @media (min-width: 1024px) {
   #table2 tr td:first-child {
