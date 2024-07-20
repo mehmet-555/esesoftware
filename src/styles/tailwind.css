@@ -1772,7 +1772,9 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 }
 
 /* Blog general Layout üzerin */
-
+.blogCommentSpan {
+  transition: all .2s linear
+}
 .blogCommentSpan::after {
   content: "";
   display: inline-block;
@@ -1783,9 +1785,30 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   width: 4px;
   height: 4px;
   border-width: 12px 6px 8px 4px;
+  border-color: #efefef transparent transparent transparent;
+  transition: all .2s linear;
+}
+.blogCommentsLink {
+  transition: all .2s linear;
+}
+.blogCommentsLink:hover .blogCommentSpan{
+  background-color: #c4c6c8;
+}
+.blogCommentsLink:hover .blogCommentSpan::after{
   border-color: #c4c6c8 transparent transparent transparent;
 }
-
+.blogsCustomUnderline2 {
+  transition: all .2s linear;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+.blogCommentsLink:hover .blogsCustomUnderline2 {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: #422d48;
+}
+.blogCommentsLink:hover
 .blogNameCUnderline {
   transition: all .2s linear;
   text-decoration: underline;
@@ -1801,9 +1824,9 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 .blogShareIcon::before {
   content: "";
   display: inline-block;
-  width: 2px;
+  width: 1px;
   height: 10px;
-  background-color: #c4c6c8;
+  background-color: #422d48;
   position: relative;
   bottom: 5px;
 }
@@ -1813,9 +1836,17 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   width: 5px;
   height: 5px;
   transform: rotate(45deg);
-  border-width: 2px 0px 0px 2px;
-  border-color: #c4c6c8;
+  border-width: 1px 0px 0px 1px;
+  border-color: #422d48;
   position: absolute;
   bottom: 11px;
   left: 2.5px;
+}
+.blogsOptsBtn {
+  outline: 2px solid #efefef;
+  transition: all .1s linear;
+}
+.blogsOptsBtn:hover,
+.blogsOptsBtn:active {
+  outline: 2px solid #c4c6c8;
 }
