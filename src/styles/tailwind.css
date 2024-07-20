@@ -1770,3 +1770,52 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 .blogCardLink:hover .secretArea {
   opacity: 1;
 }
+
+/* Blog general Layout üzerin */
+
+.blogCommentSpan::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  transform: rotate(-45deg);
+  bottom: -12px;
+  right: -2px;
+  width: 4px;
+  height: 4px;
+  border-width: 12px 6px 8px 4px;
+  border-color: #c4c6c8 transparent transparent transparent;
+}
+
+.blogNameCUnderline {
+  transition: all .2s linear;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: transparent;
+}
+
+.blogNameCUnderline:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: #422d48;
+}
+.blogShareIcon::before {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 10px;
+  background-color: #c4c6c8;
+  position: relative;
+  bottom: 5px;
+}
+.blogShareIcon::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  border-width: 2px 0px 0px 2px;
+  border-color: #c4c6c8;
+  position: absolute;
+  bottom: 11px;
+  left: 2.5px;
+}

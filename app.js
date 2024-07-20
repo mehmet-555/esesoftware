@@ -9,6 +9,7 @@ const rootDir = require("./utils/rootDir");
 const homeRouter = require("./routes/homeRouters");
 const projectRouter = require("./routes/projectRouters");
 const aboutRouter = require("./routes/aboutRouters");
+const blogRouter = require("./routes/blogRouters");
 const servicesRouter = require("./routes/servicesRouters.js");
 
 // App
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use("/services", servicesRouter);
 app.use("/project", projectRouter);
 app.use("/about", aboutRouter);
+app.use("/blog", blogRouter);
 app.use("/", homeRouter);
 module.exports = app;
 

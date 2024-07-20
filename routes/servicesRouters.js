@@ -21,19 +21,28 @@ console.log(rootDir)
 
 const { check, param, query, validationResult } = require("express-validator");
 
+function isMobile(userAgent) {
+    return /mobile/i.test(userAgent);
+}
 
 
-
+servicesRouter.all("*", (req, res, next) => {
+    const userAgent = req.headers['user-agent'];
+    console.log(userAgent)
+    if (isMobile(userAgent)) {
+        console.log(String("Bu istek bir mobil cihazdan geldi.").toLocaleUpperCase());
+    } else {
+        console.log(String("Bu istek bir masaüstü cihazdan geldi.").toLocaleUpperCase());
+    }
+    next();
+});
 
 servicesRouter.use("/web-services", webSRouter);
-
 
 servicesRouter.use("/", (req, res, next) => {
     res.status(200).render("services/services.ejs");
     console.log(req.ip)
 });
-
-
 
 
 
@@ -49,8 +58,8 @@ webSRouter.get("/creating-static-web-site", [
             const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
             const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
             const pageObj = JSON.parse(pagesJson);
-            console.log(pageObj);
-            console.log(req.ip);
+            // console.log(pageObj);
+            // console.log(req.ip);
     
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
@@ -76,8 +85,8 @@ webSRouter.get("/creating-dynamic-web-app", [
             const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
             const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
             const pageObj = JSON.parse(pagesJson);
-            console.log(pageObj);
-            console.log(req.ip);
+            // console.log(pageObj);
+            // console.log(req.ip);
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
@@ -103,8 +112,8 @@ webSRouter.get("/web-hosting-services", [
             const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
             const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
             const pageObj = JSON.parse(pagesJson);
-            console.log(pageObj);
-            console.log(req.ip);
+            // console.log(pageObj);
+            // console.log(req.ip);
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
@@ -129,8 +138,8 @@ webSRouter.get("/ui-ux-development", [
             const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
             const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
             const pageObj = JSON.parse(pagesJson);
-            console.log(pageObj);
-            console.log(req.ip);
+            // console.log(pageObj);
+            // console.log(req.ip);
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
@@ -146,7 +155,7 @@ webSRouter.get("/ui-ux-development", [
 webSRouter.get("/restructuring", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ], async (req, res, next) => { 
-
+    
     console.log(req.originalUrl);
     const errors = validationResult(req);
 
@@ -155,8 +164,8 @@ webSRouter.get("/restructuring", [
             const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
             const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
             const pageObj = JSON.parse(pagesJson);
-            console.log(pageObj);
-            console.log(req.ip);
+            // console.log(pageObj);
+            // console.log(req.ip);
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
@@ -170,3 +179,8 @@ webSRouter.get("/restructuring", [
     };
 });
 module.exports = servicesRouter;
+
+
+
+
+

@@ -1,0 +1,42 @@
+{
+    "blogs": [
+        {
+            "blogID": "abc10xyz2024",
+            "blogAuthor": "Name Surname",
+            "blogCTime": "dd/mm/20yy",
+            "blogTitle": "Blog Title",
+            "blogMainImage": "https//:api/path/to/image.jpg",
+            "blogShareLink": "https//:blog.esesoftware.com/name-surname/${String(blogTitle).toLowerCase()}",
+            "blogCardSummaryContent": "Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.",
+            "blogHeaders": {
+                "giris": {
+                    "girisTitle": "Giriş Başlığı",
+                    "subTitles": [
+                        {"id": "navLİnk1", "href": "#entryforObserver1", "sHeader":"subTitle1"},
+                        {"id": "navLİnk2", "href": "#entryforObserver2", "sHeader":"subTitle2"},
+                        {"id": "navLİnk3", "href": "#entryforObserver3", "sHeader":"subTitle3"}
+                    ]
+                },
+                "gelisme": {
+                    "girisTitle": "Gelişme Başlığı",
+                    "subTitles": [
+                        {"id": "navLİnk4", "href": "#entryforObserver4", "sHeader":"subTitle4"},
+                        {"id": "navLİnk5", "href": "#entryforObserver5", "sHeader":"subTitle5"},
+                        {"id": "navLİnk6", "href": "#entryforObserver6", "sHeader":"subTitle6"}
+                    ]
+                },
+                "sonuc": {
+                    "girisTitle": "Sonuç Başlığı",
+                    "subTitles": [
+                        {"id": "navLİnk7", "href": "#entryforObserver7", "sHeader":"subTitle7"},
+                        {"id": "navLİnk8", "href": "#entryforObserver8", "sHeader":"subTitle8"},
+                        {"id": "navLİnk9", "href": "#entryforObserver9", "sHeader":"subTitle9"}
+                    ]
+                }
+            },
+            "blogContents": {
+                "girisContents":
+            }
+        }
+    ]
+}
