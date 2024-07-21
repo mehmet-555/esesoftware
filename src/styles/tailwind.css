@@ -1850,3 +1850,39 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 .blogsOptsBtn:active {
   outline: 2px solid #c4c6c8;
 }
+
+.code-block {
+  color: #e0e0e0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Kod içindeki belirli öğeler için renk düzeni */
+.code-block .variable {
+  color: #ffffff;
+}
+.code-block .keyword {
+  color: #d4a1ff;  /* Yüksek kontrastlı mor */
+}
+
+.code-block .function {
+  color: #ef2a3a;  /* Yüksek kontrastlı mavi */
+}
+.code-block .class {
+  color: #ffffff;
+}
+.code-block .string {
+  color: #00a87e;  /* Yüksek kontrastlı yeşil */
+}
+
+.code-block .number {
+  color: #d6a57c;  /* Yüksek kontrastlı kahverengi */
+}
+
+.code-block .comment {
+  color: #a8a8a8;  /* Yüksek kontrastlı gri */
+}
+.code-block .require {
+  color: #e9950c;  
+}

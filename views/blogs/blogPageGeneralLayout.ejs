@@ -1,0 +1,494 @@
+<%- include("../partials/header") %>
+<body class="relative">
+    <%- include("../partials/navBarTop") %>
+        <%- include("../partials/servicesPageGeneralPartials/beetwenNavbarTopD1B") %>
+                    <!-- Breadcrumb -->
+                    <!-- <<<<<<<<< D1--B-- >>>>>>>>>> -->
+                    <%- include("../partials/servicesPageGeneralPartials/pageVariableBreadcrumb") %>
+                    <!-- <<<<<<<<< D1--S-- >>>>>>>>>> -->
+                    <%- include("../partials/servicesPageGeneralPartials/beetwenD1SD2B") %>
+                        <!-- <<<<<<<<< D2--B-- >>>>>>>>>> -->
+                        <div class="myVariableAre text-[#422d48]">
+
+                            <%- include("../partials/blogsPageGeneralPartials/blogAuthor") %>
+
+                            <%- include("../partials/blogsPageGeneralPartials/blogCommentsAndCTime") %>
+      
+
+                            <!-- observers -->
+                            <!-- section 1 -->
+                            <% blog.blogContents.girisContents.forEach(observer => { %>
+                            <div id="<%= observer.id %>" class="my-6 entryfoheader">
+
+                                <% observer.ordinaryContents.forEach(ordinaryContent => { %>
+                                <div class="my-4">
+                                    <%- ordinaryContent.content %>
+                                </div>
+                                <% }) %>
+
+                            </div> 
+                            <% }) %>
+
+                            <!-- section 2 -->
+                            <section class="flex justify-center">
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                            </section>
+
+                            <% blog.blogContents.gelismeContents.forEach(observer => { %>
+                            <div id="<%= observer.id %>" class="my-6 entryfoheader">
+
+                                <% observer.ordinaryContents.forEach(ordinaryContent => { %>
+                                <div class="my-4">
+                                    <%- ordinaryContent.content %>
+                                </div>
+                                <% }) %>
+ 
+                            </div> 
+                            <% }) %>
+
+                            <!-- section 3 -->
+                            <section class="flex justify-center">
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                            </section>
+
+                            <% blog.blogContents.sonucContents.forEach(observer => { %>
+                            <div id="<%= observer.id %>" class="my-6 entryfoheader">
+
+                                <% observer.ordinaryContents.forEach(ordinaryContent => { %>
+                                <div class="my-4">
+                                    <%- ordinaryContent.content %>
+                                </div>
+                                <% }) %>
+
+                            </div> 
+                            <% }) %>
+
+                            <%- include("../partials/blogsPageGeneralPartials/variableAreaBrandLogo") %>
+                            
+                        </div>
+                        <!-- <<<<<<<<< D2--S-- >>>>>>>>>> -->
+                    </div>
+                </div>
+            </div>
+            <div class="areaZ w-[22.5%] hidden lg:block border-l-2 bg-[#efefef] border-r-[#8080802e]"></div>
+        </div>
+        <div id="mainSecondElem" class="fixed bottom-0 w-full">
+            <%- include("../partials/blogsPageGeneralPartials/blogsCustomFooter") %>
+        </div>
+    </main>
+    <div
+        class="leftAsideSticky fixed top-16 z-20 left-0 w-full px-4 hidden lg:flex  flex-col justify-center items-center">
+        <div class="flex flex-col justify-start h-full max-w-60">
+            <div class="w-full flex items-center justify-start pl-4 py-3">
+                <div>
+                    <span class="hidden xxxs:inline-block  h-8 w-44 pt-[5px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="inline py-1" viewBox="0 0 204.61 17.18">
+                            <defs>
+                                <style>
+                                    .cls-1 {
+                                        fill: #efefef;
+                                    }
+                                </style>
+                            </defs>
+                            <g id="Layer_2" data-name="Layer 2">
+                                <g id="BACKGROUND">
+                                    <path class="cls-1"
+                                        d="M11,8.79v2.62A1.11,1.11,0,0,1,9.87,12.5H2.2v.63a1.19,1.19,0,0,0,.48.95l.63.52a1.62,1.62,0,0,0,1,.41H9.87A1.08,1.08,0,0,1,11,16.09a1,1,0,0,1-.33.76,1,1,0,0,1-.76.33H4.15A3.37,3.37,0,0,1,3,16.94a3.32,3.32,0,0,1-.92-.5l-1-.85a2.89,2.89,0,0,1-.76-1A2.86,2.86,0,0,1,0,13.39v-5A3.05,3.05,0,0,1,.33,7.26a3.07,3.07,0,0,1,.83-1.12l.91-.71a3.06,3.06,0,0,1,2-.72H7.1a3.13,3.13,0,0,1,2.17,1l.81.78A3,3,0,0,1,11,8.79ZM2.22,8.62V10.3H8.81V8.79a1.14,1.14,0,0,0-.37-.93L7.81,7.3a1.51,1.51,0,0,0-.88-.4H4.2a1.41,1.41,0,0,0-.92.35l-.63.53A1,1,0,0,0,2.22,8.62Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M20.64,4.71h5a3.26,3.26,0,0,1,2.06.69,1.86,1.86,0,0,1,.89,1.35,1,1,0,0,1-.33.76,1.06,1.06,0,0,1-.73.3,1.26,1.26,0,0,1-.94-.47,1.22,1.22,0,0,0-.89-.46H20.75q-.72,0-.72.6a.7.7,0,0,0,.48.64l5.78,2.57a3.32,3.32,0,0,1,1.44,1.25,3.41,3.41,0,0,1,.56,1.9,3.2,3.2,0,0,1-1,2.37,3.15,3.15,0,0,1-2.24,1h-4.4a3.59,3.59,0,0,1-2.11-.69c-.65-.45-1-.9-1-1.33a1.08,1.08,0,0,1,1.13-1.08,1.33,1.33,0,0,1,.89.46A1.86,1.86,0,0,0,21,15H25a1,1,0,0,0,.8-.37,1.28,1.28,0,0,0,.32-.85,1.1,1.1,0,0,0-.72-1.06l-5.83-2.62A2.83,2.83,0,0,1,18.29,9a2.59,2.59,0,0,1-.46-1.45,2.83,2.83,0,0,1,.81-2A2.65,2.65,0,0,1,20.64,4.71Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M46.11,8.79v2.62A1.11,1.11,0,0,1,45,12.5H37.35v.63a1.19,1.19,0,0,0,.48.95l.63.52a1.62,1.62,0,0,0,1,.41H45a1.08,1.08,0,0,1,1.08,1.08,1,1,0,0,1-.33.76,1,1,0,0,1-.75.33H39.3a3.37,3.37,0,0,1-1.2-.24,3.32,3.32,0,0,1-.92-.5l-1-.85a2.75,2.75,0,0,1-.75-1,2.74,2.74,0,0,1-.31-1.19v-5a3.05,3.05,0,0,1,.33-1.15,3.07,3.07,0,0,1,.83-1.12l.91-.71a3.06,3.06,0,0,1,2-.72h3a3.13,3.13,0,0,1,2.17,1l.81.78A3,3,0,0,1,46.11,8.79Zm-8.74-.17V10.3H44V8.79a1.15,1.15,0,0,0-.38-.93L43,7.3a1.51,1.51,0,0,0-.88-.4H39.35a1.43,1.43,0,0,0-.92.35l-.63.53A1,1,0,0,0,37.37,8.62Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M55.79,4.71h5a3.25,3.25,0,0,1,2,.69,1.83,1.83,0,0,1,.89,1.35,1,1,0,0,1-.33.76,1.06,1.06,0,0,1-.73.3,1.26,1.26,0,0,1-.94-.47,1.22,1.22,0,0,0-.89-.46H55.91c-.49,0-.73.2-.73.6a.69.69,0,0,0,.49.64l5.77,2.57a3.32,3.32,0,0,1,1.44,1.25,3.41,3.41,0,0,1,.56,1.9,3.2,3.2,0,0,1-1,2.37,3.14,3.14,0,0,1-2.24,1H55.82a3.6,3.6,0,0,1-2.12-.69c-.65-.45-1-.9-1-1.33a1.08,1.08,0,0,1,1.13-1.08,1.33,1.33,0,0,1,.89.46,1.86,1.86,0,0,0,1.36.47h4a1,1,0,0,0,.8-.37,1.28,1.28,0,0,0,.32-.85,1.1,1.1,0,0,0-.72-1.06l-5.83-2.62A2.83,2.83,0,0,1,53.44,9,2.65,2.65,0,0,1,53,7.57a2.82,2.82,0,0,1,.8-2A2.65,2.65,0,0,1,55.79,4.71Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M81.26,8.62v4.59a3.64,3.64,0,0,1-1.37,2.7,4.23,4.23,0,0,1-2.84,1.24H74.5a4.14,4.14,0,0,1-2.84-1.26,3.64,3.64,0,0,1-1.36-2.68V8.62a3.67,3.67,0,0,1,1.33-2.68A4.1,4.1,0,0,1,74.5,4.68h2.55a4.14,4.14,0,0,1,2.84,1.21A3.67,3.67,0,0,1,81.26,8.62Zm-8.76.09v4.4a1.14,1.14,0,0,0,.43.94l.81.7a1.15,1.15,0,0,0,.76.23H77a1.47,1.47,0,0,0,1-.4l.66-.58a1,1,0,0,0,.4-.87V8.74a1.14,1.14,0,0,0-.4-1l-.76-.61A1.4,1.4,0,0,0,77,6.85H74.77a1.66,1.66,0,0,0-1.13.35l-.74.63A1.1,1.1,0,0,0,72.5,8.71Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M92.85,6.88v9.21a1,1,0,0,1-.32.77,1.07,1.07,0,0,1-.76.32,1.09,1.09,0,0,1-.79-.32,1,1,0,0,1-.32-.77V6.88H89.54a1,1,0,0,1-.76-.33,1,1,0,0,1-.32-.76A1.15,1.15,0,0,1,88.75,5a1,1,0,0,1,.79-.32h1.14V3.86A3.64,3.64,0,0,1,91.83,1.1,4,4,0,0,1,94.68,0h2.54A1.06,1.06,0,0,1,98,.32a1.1,1.1,0,0,1,.32.79,1,1,0,0,1-.33.76,1,1,0,0,1-.76.33H94.68a1.84,1.84,0,0,0-1.29.46,1.55,1.55,0,0,0-.51,1.2v.85h2.17a1,1,0,0,1,.76.3,1.07,1.07,0,0,1,.33.78,1,1,0,0,1-.33.76,1,1,0,0,1-.76.33Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M113.1,17.18h-2.17a3.18,3.18,0,0,1-2.31-1,3.1,3.1,0,0,1-1-2.3v-7h-1.11a1.09,1.09,0,0,1-.77-.31,1.1,1.1,0,0,1,0-1.55,1,1,0,0,1,.77-.31h1.14V2A1.06,1.06,0,0,1,108.76,1a1,1,0,0,1,.76.32,1,1,0,0,1,.33.76V4.71h4.37A1,1,0,0,1,115,5a1.07,1.07,0,0,1,0,1.53,1.07,1.07,0,0,1-.76.32h-4.4v7a1,1,0,0,0,.33.76,1.07,1.07,0,0,0,.78.33h2.12a1.15,1.15,0,0,0,1.15-.94,1.12,1.12,0,0,1,1.1-.94,1,1,0,0,1,.78.32,1.06,1.06,0,0,1,.31.79,2.87,2.87,0,0,1-.93,2A3.1,3.1,0,0,1,113.1,17.18Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M129.61,9.52v2.57l1.44,2.51.76-2.48L132,5.79a1.11,1.11,0,0,1,.34-.76,1,1,0,0,1,.74-.32,1.09,1.09,0,0,1,.78.31,1,1,0,0,1,.31.77L134,12.55l-1.17,3.84a1,1,0,0,1-1,.79h-1.17a1.08,1.08,0,0,1-1-.6l-1.17-2-1.19,2a1.15,1.15,0,0,1-1,.63h-1.14a1.2,1.2,0,0,1-.68-.22.94.94,0,0,1-.38-.52l-1.13-4-.25-6.67a1,1,0,0,1,.32-.76,1.09,1.09,0,0,1,.79-.32,1,1,0,0,1,.73.3,1.08,1.08,0,0,1,.33.78l.25,6.36.71,2.43L127.41,12V9.52a1.06,1.06,0,0,1,.32-.77,1.09,1.09,0,0,1,.79-.31,1,1,0,0,1,.76.31A1,1,0,0,1,129.61,9.52Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M143.87,9.34h4.25a5.05,5.05,0,0,1,1,.16l0-1.54A1.08,1.08,0,0,0,148,6.88h-4.13a1.11,1.11,0,0,1-1.09-1.09,1.08,1.08,0,0,1,1.09-1.08H148a3.11,3.11,0,0,1,2.29.94,3.22,3.22,0,0,1,1,2.31l.28,8.13a1,1,0,0,1-.33.77,1.05,1.05,0,0,1-.76.32,1.1,1.1,0,0,1-.79-.32,1.06,1.06,0,0,1-.32-.77l-1.84,1.09h-3.67a3.28,3.28,0,0,1-3.29-3.29V12.63a3.29,3.29,0,0,1,3.29-3.29Zm5.42,4.23-.06-.92a1.1,1.1,0,0,0-.32-.77,1,1,0,0,0-.77-.31h-4.28a1,1,0,0,0-.77.31,1.06,1.06,0,0,0-.31.77v1.22A1.09,1.09,0,0,0,143.86,15h3.07Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M158.21,16.09V5.79a1.09,1.09,0,0,1,.31-.78,1,1,0,0,1,.77-.33,1.06,1.06,0,0,1,.77.32,1.1,1.1,0,0,1,.32.79V7.15l1.77-1.52a3.32,3.32,0,0,1,2.14-.92h1.59a3.12,3.12,0,0,1,2.3,1,3.14,3.14,0,0,1,1,2.3v.58a1.09,1.09,0,0,1-.32.79,1,1,0,0,1-.77.32,1.06,1.06,0,0,1-.77-.31,1,1,0,0,1-.31-.77V8a1.08,1.08,0,0,0-1.09-1.08h-1.41a1.67,1.67,0,0,0-1,.47L160.38,10v6.06a1,1,0,0,1-.33.77,1.08,1.08,0,0,1-1.84-.77Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M186.71,8.79v2.62a1,1,0,0,1-.32.76,1,1,0,0,1-.76.33H178v.63a1.19,1.19,0,0,0,.48.95l.63.52a1.66,1.66,0,0,0,1,.41h5.58a1,1,0,0,1,.76.31,1.07,1.07,0,0,1,0,1.53,1.06,1.06,0,0,1-.76.33H179.9a3.32,3.32,0,0,1-1.19-.24,3.25,3.25,0,0,1-.93-.5l-1-.85a2.75,2.75,0,0,1-.75-1,2.88,2.88,0,0,1-.31-1.19v-5a3.26,3.26,0,0,1,.33-1.15,3,3,0,0,1,.84-1.12l.9-.71a3.1,3.1,0,0,1,2-.72h3a3.11,3.11,0,0,1,2.17,1l.82.78A3,3,0,0,1,186.71,8.79ZM178,8.62V10.3h6.59V8.79a1.15,1.15,0,0,0-.38-.93l-.63-.56a1.51,1.51,0,0,0-.88-.4H180a1.39,1.39,0,0,0-.92.35l-.64.53A1,1,0,0,0,178,8.62Z">
+                                    </path>
+                                    <path class="cls-1"
+                                        d="M204.61,9.89v.84a1.17,1.17,0,0,1-.63,1l-8.56,5a1.38,1.38,0,0,1-.71.23,1.09,1.09,0,0,1-1.07-1.1,1,1,0,0,1,.49-.9l8-4.74-8-4.7a1,1,0,0,1-.49-.94,1,1,0,0,1,.33-.79,1.09,1.09,0,0,1,.74-.31,1.41,1.41,0,0,1,.71.23L204,8.85A1.16,1.16,0,0,1,204.61,9.89Z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+            <div>
+                <!-- <<<<<<<<< D3--B-- >>>>>>>>>> -->
+                <ul class="">
+                    <li class="mb-3">
+                        <h3 class="text-[#001527] font-custom-medium">Sayfa İçeriği</h3>
+                    </li>
+                    <li class="scrollspyNavA mb-2">
+                        <a role="button" class="flex items-center mb-2">
+                            <span class="scrollspyIconSpan flex items-center relative pointer-events-none"></span>
+                            <span class="text-[#4f4f4f] scrollspyNavACHeader font-custom-medium pointer-events-none">
+                                <% if(blog.blogHeaders.giris.girisTitle !== "") { %>
+                                    <%= blog.blogHeaders.giris.girisTitle %>
+                                <% } else { %>
+                                    <%= blog.blogHeaders.giris.subTitles[0].sHeader %>
+                                <% } %>
+                            </span>
+                        </a>
+                        <div class="scrollspyNavAC overflow-hidden">
+                            <ul>
+                                <% blog.blogHeaders.giris.subTitles.forEach(subTitle => { %>
+                                <li class="ml-2 mb-2">
+                                    <a id="<%= subTitle.id %>" href="<%= subTitle.href %>"
+                                        class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span>
+                                            <h4
+                                                class="text-sm text-[#4f4f4f] font-custom-medium transition-all duration-300"><%= subTitle.sHeader %></h4>
+                                        </span>
+                                    </a>
+                                </li>
+                                <% }) %>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="scrollspyNavA">
+                        <a role="button" class="flex items-center mb-2">
+                            <span class="scrollspyIconSpan flex items-center relative pointer-events-none"></span>
+                            <span class="text-[#4f4f4f] scrollspyNavACHeader font-custom-medium pointer-events-none">
+                                <% if(blog.blogHeaders.gelisme.girisTitle !== "") { %>
+                                    <%= blog.blogHeaders.gelisme.girisTitle %>
+                                <% } else { %>
+                                    <%= blog.blogHeaders.gelisme.subTitles[0].sHeader %>
+                                <% } %>
+                            </span>
+                        </a>
+                        <div class="scrollspyNavAC overflow-hidden">
+                            <ul>
+
+                                <% blog.blogHeaders.gelisme.subTitles.forEach(subTitle => { %>
+                                <li class="ml-2 mb-2">
+                                    <a id="<%= subTitle.id %>" href="<%= subTitle.href %>"
+                                        class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span>
+                                            <h4
+                                                class="text-sm text-[#4f4f4f] font-custom-medium transition-all duration-300"><%= subTitle.sHeader %></h4>
+                                        </span>
+                                    </a>
+                                </li>
+                                <% }) %>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="scrollspyNavA">
+                        <a role="button" class="flex items-center mb-2">
+                            <span class="scrollspyIconSpan flex items-center relative pointer-events-none"></span>
+                            <span class="text-[#4f4f4f] scrollspyNavACHeader font-custom-medium pointer-events-none">
+                                <% if(blog.blogHeaders.sonuc.girisTitle !== "") { %>
+                                    <%= blog.blogHeaders.sonuc.girisTitle %>
+                                <% } else { %>
+                                    <%= blog.blogHeaders.sonuc.subTitles[0].sHeader %>
+                                <% } %>
+                            </span>
+                        </a>
+                        <div class="scrollspyNavAC overflow-hidden">
+                            <ul>
+
+                                <% blog.blogHeaders.sonuc.subTitles.forEach(subTitle => { %>
+                                <li class="ml-2 mb-2">
+                                    <a id="<%= subTitle.id %>" href="<%= subTitle.href %>"
+                                        class="scrollspyNavACaElem flex items-center">
+                                        <span class="scrollspyIconSpan2 flex items-center"></span>
+                                        <span>
+                                            <h4
+                                                class="text-sm text-[#4f4f4f] font-custom-medium transition-all duration-300"><%= subTitle.sHeader %></h4>
+                                        </span>
+                                    </a>
+                                </li>
+                                <% }) %>
+
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <!-- <<<<<<<<< D3--S-- >>>>>>>>>> -->
+            </div>
+        </div>
+    </div>
+    <div class="rightAsideSticky fixed top-16 z-20 right-0 w-full px-4 hidden lg:flex  flex-col  bg-[#efefef]">
+        <div class="flex flex-col justify-start items-center h-full">
+            <div class="flex flex-col gap-8 pt-6 items-center justify-center">
+                <div class="w-5/6 max-w-72 min-w-48 h-36 blogShd blogUnit rounded-[4px] overflow-hidden">
+                    <a href="#" class="blogCardLink">
+                        <div class="relative h-full">
+                            <div class="w-full h-full">
+                                <img src="/images/blogBG.jpg" alt="Blog Image" class="w-full">
+                            </div>
+                            <div class="absolute top-0 bottom-0 left-0 right-0 bg-[#2413133d]">
+                            </div>
+                            <div
+                                class="flex absolute bottom-[-37px] blogLayer pointer-events-none flex-col py-2 bg-[#241313c8]">
+                                <div
+                                    class="max-h-14 text-center text-sm mb-1 pointer-events-none text-white indent-3 px-1 leading-4 truncate2">
+                                    SEO Dostu Tasarımın UI/UX Açısından İncelenmesi
+                                </div>
+                                <div
+                                    class="max-h-9 text-xs pointer-events-none font-custom-medium text-zinc-400 px-1 indent-1 pb-1 truncate2">
+                                    <p>
+                                        Merhaba! Bugün sizlere SEO dostu tasarımın UI/UX (Kullanıcı Arayüzü ve Kullanıcı
+                                        Deneyimi) açısından ne anlama geldiği hakkında biraz bilgi vermek istiyorum. Bu
+                                        yazıda, SEO dostu bir web sitesi tasarımının nasıl olması gerektiğini ve nelere
+                                        dikkat etmemiz gerektiğini birlikte inceleyeceğiz.
+
+                                        Kullanıcı Dostu Navigasyon
+                                        Öncelikle, kullanıcı dostu bir navigasyon oluşturmak çok önemli. Kullanıcıların
+                                        sitenizde kolayca gezinebilmesi için anlaşılır ve basit bir menü yapısı
+                                        oluşturmalıyız. Menülerin karmaşık olmaması, kullanıcıların istedikleri
+                                        bilgilere hızlıca ulaşmalarını sağlar. Aynı zamanda, breadcrumbs (yol gösterici
+                                        bağlantılar) kullanarak kullanıcıların hangi sayfada olduklarını anlamalarına
+                                        yardımcı olabiliriz. Bu sayede, geri dönüşleri de kolaylaşır.
+
+                                        Okunabilirlik
+                                        Okunabilirlik, kullanıcı deneyiminin en kritik bileşenlerinden biridir. Kolay
+                                        okunan yazı tipleri ve boyutları kullanarak kullanıcıların içeriği rahatça
+                                        okumasını sağlamalıyız. Yüksek kontrast oranları ve göz yormayan renk
+                                        kombinasyonları kullanarak okunabilirliği artırmak da önemli. Sonuçta, kimse
+                                        gözlerini kısmak zorunda kalmadan bir web sitesini gezmek ister, değil mi?
+
+                                        Hızlı Yükleme Süreleri
+                                        Hızlı yükleme süreleri hem kullanıcı deneyimi hem de SEO açısından büyük bir
+                                        avantaj sağlar. Bunun için görselleri optimize edebilir, gereksiz JavaScript ve
+                                        CSS kodlarını kaldırabiliriz. Minimalist bir tasarım benimsemek de bu konuda
+                                        oldukça yardımcı olabilir. Yani, gereksiz grafikler ve animasyonlardan kaçınarak
+                                        daha temiz ve hızlı yüklenen bir tasarım tercih edebiliriz.
+
+                                        Mobil Uyumluluk
+                                        Günümüzde mobil cihazlar üzerinden internete erişim çok yaygın. Bu yüzden, mobil
+                                        uyumlu bir tasarım olmazsa olmaz. Responsive (duyarlı) tasarım kullanarak farklı
+                                        cihazlarda ve ekran boyutlarında düzgün çalışan bir web sitesi oluşturmalıyız.
+                                        Ayrıca, mobil cihazlarda dokunma işlemlerinin kolay ve kullanıcı dostu olmasına
+                                        dikkat etmeliyiz.
+
+                                        İçerik Düzeni
+                                        İçeriği düzenlemek için başlık ve alt başlıkları (H1, H2, H3 vb.) kullanmak çok
+                                        önemlidir. Bu, hem kullanıcıların içeriği kolayca tarayabilmesini sağlar hem de
+                                        arama motorlarının sayfamızı daha iyi anlamasına yardımcı olur. Kısa ve
+                                        anlaşılır paragraflar kullanarak okuyucunun dikkatini koruyabiliriz. Bilgiyi
+                                        düzenli ve anlaşılır şekilde sunmak için listeler ve tablolar kullanmak da
+                                        oldukça etkili bir yöntemdir.
+
+                                        Kullanıcı Etkileşimi
+                                        Kullanıcı etkileşimini artırmak için hızlı ve kolay formlar oluşturabiliriz.
+                                        Kullanıcıların kolayca doldurabileceği ve gönderim yapabileceği basit ve kısa
+                                        formlar tasarlamak bu konuda büyük fark yaratır. Ayrıca, kullanıcıların içerikle
+                                        ilgili geri bildirim vermesini kolaylaştıran araçlar eklemek (örneğin, yorum
+                                        bölümleri, değerlendirme sistemleri) de etkileşimi artırır.
+
+                                        İç ve Dış Bağlantılar
+                                        Anlaşılır link metinleri kullanarak kullanıcıların neye tıklayacaklarını
+                                        anlamalarına yardımcı olabiliriz. İç bağlantılar, kullanıcıları site içinde
+                                        tutar ve arama motorlarının siteyi taramasını kolaylaştırır. Önemli sayfalara ve
+                                        içeriklere kolayca ulaşılabilecek bağlantılar yerleştirmek de kullanıcı
+                                        deneyimini iyileştirir.
+
+                                        İletişim Bilgileri ve Güvenilirlik
+                                        Kullanıcıların size kolayca ulaşabilmesi için iletişim bilgilerini görünür bir
+                                        yere koymak çok önemlidir. Güvenilirlik işaretleri (örneğin, SSL sertifikası,
+                                        güvenlik rozetleri) ekleyerek kullanıcı güvenini artırabiliriz. Sonuçta,
+                                        kullanıcılar güvenilir ve erişilebilir web sitelerine daha fazla güven duyarlar.
+
+                                        Kullanıcı Deneyimi (UX) Testleri
+                                        Tasarımın kullanıcı dostu olup olmadığını anlamak için kullanıcı testleri
+                                        yapmalıyız. Geri bildirimlere göre tasarımı iyileştirmek, kullanıcı deneyimini
+                                        sürekli olarak geliştirmemizi sağlar. Ayrıca, kullanıcı davranışlarını analiz
+                                        etmek için ısı haritaları ve diğer analiz araçlarını kullanarak, kullanıcıların
+                                        en çok etkileşimde bulundukları alanları optimize edebiliriz.
+
+                                        SEO dostu bir tasarımın UI/UX açısından temel amacı, kullanıcıların siteyi
+                                        rahatça kullanabilmesini sağlamak, aynı zamanda arama motorlarının sitenizi
+                                        doğru bir şekilde dizine eklemesine ve değerlendirmesine yardımcı olmaktır. Bu
+                                        prensipleri takip ederek, hem kullanıcı memnuniyetini artırabilir hem de arama
+                                        motorlarında daha iyi sıralamalar elde edebilirsiniz.
+
+                                        Bugünlük bu kadar! Umarım bu bilgiler işinize yarar ve web sitenizi daha
+                                        kullanıcı dostu hale getirmenize yardımcı olur. Başka sorularınız olursa, her
+                                        zaman buradayım. İyi çalışmalar!
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex secretArea pointer-events-none justify-between px-4 my-1 opacity-0 transition-all duration-300 bg-[#00474a] pb-[3px]">
+                                    <div>
+                                        <span class="text-xs text-[#efefef]">24/12/2024</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-[#efefef] font-custom-medium">// Yakup A.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="w-5/6 max-w-72 min-w-48 h-36 blogShd blogUnit rounded-[4px] overflow-hidden">
+                    <a href="#" class="blogCardLink">
+                        <div class="relative h-full">
+                            <div class="w-full h-full">
+                                <img src="/images/tailwind.svg" alt="Blog Image" class="w-full">
+                            </div>
+                            <div class="absolute top-0 bottom-0 left-0 right-0 bg-[#2413133d]">
+                            </div>
+                            <div
+                                class="flex absolute bottom-[-37px] blogLayer pointer-events-none flex-col py-2 bg-[#241313c8]">
+                                <div
+                                    class="max-h-14 text-center text-sm mb-1 pointer-events-none text-white indent-3 px-1 leading-4 truncate2">
+                                    SEO Dostu Tasarımın UI/UX Açısından İncelenmesi
+                                </div>
+                                <div
+                                    class="max-h-9 text-xs pointer-events-none font-custom-medium text-zinc-400 px-1 indent-1 pb-1 truncate2">
+                                    <p>
+                                        Merhaba! Bugün sizlere SEO dostu tasarımın UI/UX (Kullanıcı Arayüzü ve Kullanıcı
+                                        Deneyimi) açısından ne anlama geldiği hakkında biraz bilgi vermek istiyorum. Bu
+                                        yazıda, SEO dostu bir web sitesi tasarımının nasıl olması gerektiğini ve nelere
+                                        dikkat etmemiz gerektiğini birlikte inceleyeceğiz.
+
+                                        Kullanıcı Dostu Navigasyon
+                                        Öncelikle, kullanıcı dostu bir navigasyon oluşturmak çok önemli. Kullanıcıların
+                                        sitenizde kolayca gezinebilmesi için anlaşılır ve basit bir menü yapısı
+                                        oluşturmalıyız. Menülerin karmaşık olmaması, kullanıcıların istedikleri
+                                        bilgilere hızlıca ulaşmalarını sağlar. Aynı zamanda, breadcrumbs (yol gösterici
+                                        bağlantılar) kullanarak kullanıcıların hangi sayfada olduklarını anlamalarına
+                                        yardımcı olabiliriz. Bu sayede, geri dönüşleri de kolaylaşır.
+
+                                        Okunabilirlik
+                                        Okunabilirlik, kullanıcı deneyiminin en kritik bileşenlerinden biridir. Kolay
+                                        okunan yazı tipleri ve boyutları kullanarak kullanıcıların içeriği rahatça
+                                        okumasını sağlamalıyız. Yüksek kontrast oranları ve göz yormayan renk
+                                        kombinasyonları kullanarak okunabilirliği artırmak da önemli. Sonuçta, kimse
+                                        gözlerini kısmak zorunda kalmadan bir web sitesini gezmek ister, değil mi?
+
+                                        Hızlı Yükleme Süreleri
+                                        Hızlı yükleme süreleri hem kullanıcı deneyimi hem de SEO açısından büyük bir
+                                        avantaj sağlar. Bunun için görselleri optimize edebilir, gereksiz JavaScript ve
+                                        CSS kodlarını kaldırabiliriz. Minimalist bir tasarım benimsemek de bu konuda
+                                        oldukça yardımcı olabilir. Yani, gereksiz grafikler ve animasyonlardan kaçınarak
+                                        daha temiz ve hızlı yüklenen bir tasarım tercih edebiliriz.
+
+                                        Mobil Uyumluluk
+                                        Günümüzde mobil cihazlar üzerinden internete erişim çok yaygın. Bu yüzden, mobil
+                                        uyumlu bir tasarım olmazsa olmaz. Responsive (duyarlı) tasarım kullanarak farklı
+                                        cihazlarda ve ekran boyutlarında düzgün çalışan bir web sitesi oluşturmalıyız.
+                                        Ayrıca, mobil cihazlarda dokunma işlemlerinin kolay ve kullanıcı dostu olmasına
+                                        dikkat etmeliyiz.
+
+                                        İçerik Düzeni
+                                        İçeriği düzenlemek için başlık ve alt başlıkları (H1, H2, H3 vb.) kullanmak çok
+                                        önemlidir. Bu, hem kullanıcıların içeriği kolayca tarayabilmesini sağlar hem de
+                                        arama motorlarının sayfamızı daha iyi anlamasına yardımcı olur. Kısa ve
+                                        anlaşılır paragraflar kullanarak okuyucunun dikkatini koruyabiliriz. Bilgiyi
+                                        düzenli ve anlaşılır şekilde sunmak için listeler ve tablolar kullanmak da
+                                        oldukça etkili bir yöntemdir.
+
+                                        Kullanıcı Etkileşimi
+                                        Kullanıcı etkileşimini artırmak için hızlı ve kolay formlar oluşturabiliriz.
+                                        Kullanıcıların kolayca doldurabileceği ve gönderim yapabileceği basit ve kısa
+                                        formlar tasarlamak bu konuda büyük fark yaratır. Ayrıca, kullanıcıların içerikle
+                                        ilgili geri bildirim vermesini kolaylaştıran araçlar eklemek (örneğin, yorum
+                                        bölümleri, değerlendirme sistemleri) de etkileşimi artırır.
+
+                                        İç ve Dış Bağlantılar
+                                        Anlaşılır link metinleri kullanarak kullanıcıların neye tıklayacaklarını
+                                        anlamalarına yardımcı olabiliriz. İç bağlantılar, kullanıcıları site içinde
+                                        tutar ve arama motorlarının siteyi taramasını kolaylaştırır. Önemli sayfalara ve
+                                        içeriklere kolayca ulaşılabilecek bağlantılar yerleştirmek de kullanıcı
+                                        deneyimini iyileştirir.
+
+                                        İletişim Bilgileri ve Güvenilirlik
+                                        Kullanıcıların size kolayca ulaşabilmesi için iletişim bilgilerini görünür bir
+                                        yere koymak çok önemlidir. Güvenilirlik işaretleri (örneğin, SSL sertifikası,
+                                        güvenlik rozetleri) ekleyerek kullanıcı güvenini artırabiliriz. Sonuçta,
+                                        kullanıcılar güvenilir ve erişilebilir web sitelerine daha fazla güven duyarlar.
+
+                                        Kullanıcı Deneyimi (UX) Testleri
+                                        Tasarımın kullanıcı dostu olup olmadığını anlamak için kullanıcı testleri
+                                        yapmalıyız. Geri bildirimlere göre tasarımı iyileştirmek, kullanıcı deneyimini
+                                        sürekli olarak geliştirmemizi sağlar. Ayrıca, kullanıcı davranışlarını analiz
+                                        etmek için ısı haritaları ve diğer analiz araçlarını kullanarak, kullanıcıların
+                                        en çok etkileşimde bulundukları alanları optimize edebiliriz.
+
+                                        SEO dostu bir tasarımın UI/UX açısından temel amacı, kullanıcıların siteyi
+                                        rahatça kullanabilmesini sağlamak, aynı zamanda arama motorlarının sitenizi
+                                        doğru bir şekilde dizine eklemesine ve değerlendirmesine yardımcı olmaktır. Bu
+                                        prensipleri takip ederek, hem kullanıcı memnuniyetini artırabilir hem de arama
+                                        motorlarında daha iyi sıralamalar elde edebilirsiniz.
+
+                                        Bugünlük bu kadar! Umarım bu bilgiler işinize yarar ve web sitenizi daha
+                                        kullanıcı dostu hale getirmenize yardımcı olur. Başka sorularınız olursa, her
+                                        zaman buradayım. İyi çalışmalar!
+                                    </p>
+                                </div>
+                                <div
+                                    class="flex secretArea pointer-events-none justify-between px-4 my-1 opacity-0 transition-all duration-300 bg-[#00474a] pb-[3px]">
+                                    <div>
+                                        <span class="text-xs text-[#efefef]">24/12/2024</span>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs text-[#efefef] font-custom-medium">// Mehmet G.</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-4">
+                <a href="#" target="_blank"
+                    class="flex items-center border-2 hover:border-[#636871] justify-around max-w-52 min-w-48 py-1 bg-[#7d84ab91] rounded-md">
+                    <span class="pl-2">
+                        <svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-200 overflow-visible">
+                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round"></path>
+                        </svg>
+                    </span>
+                    <span class="text-[#2a2a2a] text-sm pr-1 -ml-3">Daha Fazla Blog / Makale</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <%- include("../partials/blogsPageGeneralPartials/blogsOtherModals") %>
+    <%- include("../partials/blogsPageGeneralPartials/blogPagesScripts") %>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<div class="border-b border-t py-4 border-[#efefef] flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-between">
+    <div class="flex justify-between sm:justify-normal items-center w-full sm:w-auto">
+        <div>
+            <a href="#" class="blogCommentsLink flex items-center py-1 px-3 rounded-md bg-transparent hover:bg-[#efefef]">
+                <div class="flex items-center">
+                    <div>
+                        <span class="blogCommentSpan relative inline-block w-6 max-w-6 min-w-6 h-6 min-h-6 max-h-6 bg-[#efefef] rounded-full"></span>
+                    </div>
+                    <div class="ml-2">
+                        <span class="text-base text-[#422d48] font-semibold"><%= blog.blogComments.blogCommentCounst %></span>
+                    </div>
+                </div>
+                <div class="ml-2">
+                    <span class="blogsCustomUnderline2 text-sm text-[#422d48] font-semibold">Yorumlar</span>
+                </div>
+            </a>
+        </div>
+        <div class="ml-8">
+            <span class="text-sm text-[#422d48]"><%= blog.blogCTime %></span>
+        </div>
+    </div>
+    <div class="flex items-center w-full sm:w-auto justify-end sm:justify-normal">
+        <div class="bg-[#efefef] group hover:bg-[#c4c6c8] transition-all duration-200 rounded-md">
+            <button class="flex items-center py-1 px-3">
+                <div class="pt-[8px] mr-2">
+                    <span class="relative inline-block w-[18px] min-w-[18px] max-w-[18px] h-[16px] min-h-[16px] max-h-[16px] rounded border border-[#422d48]">
+                        <span class="blogShareIcon absolute inline-block w-[10px] min-w-[10px] h-4 min-h-4 translate-x-[-50%] left-1/2 top-[-6px] bg-[#efefef] group-hover:bg-[#c4c6c8] transition-all duration-200"></span>
+                    </span>
+                </div>
+                <div class="w-[1px] h-5 min-h-5 bg-[#422d48]  mr-2"></div>
+                <div>
+                    <i class="fa-brands fa-x-twitter text-[#422d48]"></i>
+                    <i class="fa-brands fa-linkedin-in text-[#422d48]"></i>
+                    <i class="fa-brands fa-meta text-[#422d48]"></i>
+                </div>
+            </button>
+        </div>
+        <div class="ml-4">
+            <button class="blogsOptsBtn px-1 rounded-md">
+                <i class="fa-solid fa-ellipsis text-2xl text-[#422d48]"></i>
+            </button>
+        </div> 
+    </div>
+</div>   

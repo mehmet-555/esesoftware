@@ -228,7 +228,7 @@
                 <div class="fixed py-2 h-auto w-[86.5%] lg:w-[49.5%] top-[70px] lg:top-[76px] left-1/2 opacity-100 visible translate-x-centery bg-[#1e2125] rounded-lg transition-all duration-300 flex items-center z-[11]"
                     data-pageNav>
                     <!-- <<<<<<<<< D1--B-- >>>>>>>>>> -->
-                    <nav class="flex flex-wrap gap-1 lg:block text-slate-200 text-xs tracking-wider pl-3">
+                    <nav class="flex flex-wrap gap-1 lg:block text-slate-200 text-xs tracking-wider px-3">
                         <a href="/" class="bg-[#353d47] px-[6px] pb-[3px] pt-[2px] rounded">&#x1F3E0;</a>
                         <span class="font-custom-medium pt-[2px]">&gt;</span>
                         <a href="#" class="bg-[#353d47] px-[6px] pb-[3px] pt-[2px] rounded"
@@ -245,9 +245,9 @@
                 <div class="flex justify-center px-4 lg:px-2">
                     <div class="w-11/12">
                         <!-- <<<<<<<<< D2--B-- >>>>>>>>>> -->
-                        <div class="myVariableAre">
+                        <div class="myVariableAre text-[#422d48]">
 
-                            <div class="flex items-center pt-8 mb-6">
+                            <div class="flex items-center pt-12 mb-6">
                                 <div class="">
                                     <a href="#">
                                         <img class="w-16 h-16 max-w-16 max-h-16 rounded-full" src="images/mehmetg.jpg" alt="User Profile Picture">
@@ -267,8 +267,8 @@
                                 </div>
                             </div>
 
-                            <div class="border-b border-t py-4 border-[#efefef] flex items-center justify-between">
-                                <div class="flex items-center">
+                            <div class="border-b border-t py-4 border-[#efefef] flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-between">
+                                <div class="flex justify-between sm:justify-normal items-center w-full sm:w-auto">
                                     <div>
                                         <a href="#" class="blogCommentsLink flex items-center py-1 px-3 rounded-md bg-transparent hover:bg-[#efefef]">
                                             <div class="flex items-center">
@@ -288,7 +288,7 @@
                                         <span class="text-sm text-[#422d48]">July/24/2024</span>
                                     </div>
                                 </div>
-                                <div class="flex items-center">
+                                <div class="flex items-center w-full sm:w-auto justify-end sm:justify-normal">
                                     <div class="bg-[#efefef] group hover:bg-[#c4c6c8] transition-all duration-200 rounded-md">
                                         <button class="flex items-center py-1 px-3">
                                             <div class="pt-[8px] mr-2">
@@ -311,14 +311,235 @@
                                     </div> 
                                 </div>
                             </div>   
+      
+                            <div id="#entryforObserver1" class="my-6">
+                                <div class="my-4">
+                                    <h2 class="font-merriweather text-2xl sm:text-3xl md:text-4xl my-6 text-[#422d48] leading-[48px]">Node.js Çalışma Zamanı(Runtime) Nedir?</h2>
+                                </div>
+                                
+                                <div class="my-4">
+                                    <img class="w-full block cursor-zoom-in my-8" src="images/nojs-system.jpg" alt="NodeJS Runtime">
+                                </div>
+    
+                                <div class="my-4">
+                                    <p class="leading-6 indent-4">Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan, olay güdümlü, asenkron I/O modeli üzerine inşa edilmiş bir runtime ortamıdır. Bu makalede, Node.js runtime ifadesinin teknik detaylarını, iç yapılarını ve işleyişini derinlemesine inceleyeceğiz.</p>
+                                </div>
+                            </div>
+                            <div id="#entryforObserver2" class="my-6">
+                                <div class="my-4">
+                                    <h3 class="text-xl font-semibold mb-4">Node.js Runtime'ın Temel Bileşenleri</h3>
+                                </div>
+                                <div class="my-4">
+                                    <ul class="leading-6 list-decimal ml-7">
+                                        <li class="mb-2">
+                                            <h4 class="font-semibold">V8 JavaScript Motoru</h4>
+                                            <ul class="list-disc ml-3 sm:ml-5">
+                                                <li>
+                                                    <p class="">V8, Google'ın Chrome tarayıcısı için geliştirdiği yüksek performanslı JavaScript motorudur. V8, JavaScript kodunu makine diline çevirir ve doğrudan çalıştırır.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="">Node.js, V8 motorunu kullanarak JavaScript'in sunucu tarafında hızlı ve verimli çalışmasını sağlar.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2">
+                                            <h4 class="font-semibold">Libuv</h4>
+                                            <ul class="list-disc ml-3 sm:ml-5">
+                                                <li>
+                                                    <p class="">Libuv, asenkron I/O işlemlerini yöneten ve olay döngüsünü (event loop) sağlayan bir kütüphanedir. Libuv, platform bağımsızdır ve Node.js'in çeşitli işletim sistemlerinde çalışmasını mümkün kılar.</p>
+                                                </li>
+                                                <li>
+                                                    <p class="">Olay döngüsü, dosya sistemi, DNS, ağ ve diğer zamanlanmış işlemleri yönetir.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="mb-2">
+                                            <h4 class="font-semibold">Olay Döngüsü (Event Loop)</h4>
+                                            <ul class="list-disc ml-3 sm:ml-5">
+                                                <li>
+                                                    <p class="">Olay döngüsü, Node.js'in çekirdeğinde yer alır ve tüm asenkron işlemleri yönetir. Olay döngüsü, tek bir iş parçacığı üzerinde çalışır ve non-blocking I/O işlemlerini etkin bir şekilde yönetir.</p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
 
-                            <div class="my-4">
-                                <h2 class="font-merriweather text-4xl my-6 text-[#422d48] leading-[48px]">Node.js Çalışma Zamanı(Runtime) Nedir?</h2>
+                            <!-- section 2 -->
+                            <section class="flex justify-center">
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                            </section>
+
+                            <div id="#entryforObserver3" class="my-6">
+                                <div class="my-4">
+                                    <h3 class="text-xl font-semibold mb-4">Olay Döngüsünün İşleyişi</h3>
+                                    <p class="leading-6 indent-4 mb-4">Olay döngüsü, Node.js'in en önemli bileşenlerinden biridir. Olay döngüsü, sürekli olarak çalışır ve farklı aşamalardan geçer. Bu aşamalar şunlardır:</p>
+                                </div>
+    
+                                <div class="my-4">
+                                    <ul class="leading-6 list-decimal ml-7">
+                                        <li class="mb-2">
+                                            <p></p><span class="font-semibold">Timers:</span>
+                                            setTimeout ve setInterval gibi zamanlayıcı fonksiyonları burada çalıştırılır.
+                                            </p>
+                                        </li>
+                                        <li class="mb-2">
+                                            <p></p><span class="font-semibold">Pending Callbacks:</span>
+                                            Önceki döngüde tamamlanan bazı I/O işlemlerinin geri çağırma fonksiyonları burada çalıştırılır.
+                                            </p>
+                                        </li>
+                                        <li class="mb-2">
+                                            <p></p><span class="font-semibold">Idle, Prepare:</span>
+                                            İç kullanım için ayrılmıştır ve genellikle geliştiriciler tarafından doğrudan kullanılmaz.
+                                            </p>
+                                        </li>
+                                        <li class="mb-2">
+                                            <p></p><span class="font-semibold">Poll:</span>
+                                            Yeni I/O olaylarını alır ve uygun geri çağırma fonksiyonlarını çalıştırır. Bu aşama, olay döngüsünün kalbidir.
+                                            </p>
+                                        </li>
+                                        <li class="mb-2">
+                                            <p></p><span class="font-semibold">Check:</span>
+                                            setImmediate ile zamanlanmış işlevler burada çalıştırılır.
+                                            </p>
+                                        </li>
+                                        <li class="mb-2">
+                                            <p></p><span class="font-semibold">Close Callbacks:</span>
+                                            Kapanış olaylarını (örneğin, socket.on('close')) işler.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                            
-                            <div class="my-2">
-                                <img class="w-full block" src="images/nojs-system.jpg" alt="NodeJS Runtime">
+                            <div id="#entryforObserver4" class="my-6">
+                                <div class="my-4">
+                                    <h3 class="text-xl font-semibold mb-4">Asenkron ve Non-blocking I/O</h3>
+                                    <p class="leading-6 indent-4 mb-4">Node.js, asenkron ve non-blocking I/O modelini benimseyerek yüksek performans sağlar. Bu model, bir I/O işleminin tamamlanmasını beklemeden diğer işlemlerin devam etmesine olanak tanır.</p>
+                                </div>
+
+                                <div class="my-4">
+                                    <span class="font-semibold text-sm inline-block my-2">Örnek: Non-blocking I/O</span>
+                                    <div class="rounded-lg overflow-hidden">
+                                        <div class="bg-[#262626]">
+                                            <div>
+                                                <span class="inline-block text-[#efefef] text-sm cursor-pointer px-2 py-1">Node.js</span>
+                                            </div>
+                                        </div>
+                                        <pre class="bg-[#000000] px-4 overflow-auto">
+                                            <code class="code-block overflow-auto px-4">
+<span class="keyword">const</span> <span class="variable">fs</span> = <span class="require">require</span>('<span class="string">fs</span>');
+
+fs.<span class="function">readFile</span>('<span class="string">example.txt</span>', '<span class="string">utf-8</span>', (<span class="keyword">err</span>, <span class="keyword">data</span>) => {
+    <span class="keyword">if</span> (<span class="keyword">err</span>) {
+        <span class="class">console</span>.<span class="function">error</span>(<span class="keyword">err</span>);
+        <span class="keyword">return</span>;
+    }
+    <span class="class">console</span>.<span class="function">log</span>(<span class="keyword">data</span>);
+});
+
+<span class="class">console</span>.<span class="function">log</span>('<span class="string">Dosya okuma işlemi başlatıldı</span>');
+                                            </code>
+                                        </pre>
+                                    </div>
+
+                                    <span class="font-semibold text-sm inline-block my-2 indent-4">Bu örnekte, readFile fonksiyonu non-blocking bir şekilde çalışır ve dosya okuma işlemi tamamlanmadan console.log('Dosya okuma işlemi başlatıldı') satırı çalıştırılır. Bu, Node.js'in yüksek performanslı olmasını sağlayan temel mekanizmadır.</span>
+                                </div>
                             </div>
+                            <div id="#entryforObserver5" class="my-6">
+                                <div class="my-4">
+                                    <h3 class="text-xl font-semibold mb-4">İş Parçacığı Havuzu (Thread Pool)</h3>
+                                    <p class="leading-6 indent-4 mb-4">Node.js, CPU yoğun işlemler ve bazı I/O işlemleri için bir iş parçacığı havuzu kullanır. Varsayılan olarak, Node.js dört iş parçacığı oluşturur, ancak UV_THREADPOOL_SIZE ortam değişkeni kullanılarak bu sayı artırılabilir.</p>
+                                </div>
+
+                                <div class="my-4">
+                                    <span class="font-semibold text-sm inline-block my-2">Örnek: İş Parçacığı Havuzu Kullanımı</span>
+                                    <div class="rounded-lg overflow-hidden">
+                                        <div class="bg-[#262626]">
+                                            <div>
+                                                <span class="inline-block text-[#efefef] text-sm cursor-pointer px-2 py-1">Node.js</span>
+                                            </div>
+                                        </div>
+                                        <pre class="bg-[#000000] px-4 overflow-auto">
+                                            <code class="code-block overflow-auto px-4">
+<span class="keyword">const</span> <span class="variable">crypto</span> = <span class="require">require</span>('<span class="string">crypto</span>');
+
+<span class="keyword">for</span> (<span class="keyword">let</span> <span class="variable">i</span> = <span class="number">0</span>; <span class="variable">i</span> &lt; <span class="number">4</span>; <span class="variable">i</span>++) {
+    <span class="variable">crypto</span>.<span class="function">pbkdf2</span>('<span class="string">password</span>', '<span class="string">salt</span>', <span class="number">100000</span>, <span class="number">64</span>, '<span class="string">sha512</span>', (<span class="keyword">err</span>, <span class="variable">derivedKey</span>) =&gt; {
+        <span class="keyword">if</span> (<span class="keyword">err</span>) <span class="keyword">throw</span> <span class="keyword">err</span>;
+        <span class="class">console</span>.<span class="function">log</span>(<span class="variable">derivedKey</span>.<span class="function">toString</span>('<span class="string">hex</span>'));
+    });
+}
+
+<span class="class">console</span>.<span class="function">log</span>('<span class="string">İş parçacığı havuzu kullanımı</span>');
+                                            </code>
+                                        </pre>
+                                    </div>
+
+                                    <span class="font-semibold text-sm inline-block my-2 indent-4">Bu örnekte, crypto.pbkdf2 fonksiyonu iş parçacığı havuzunu kullanır ve dört ayrı iş parçacığında paralel olarak çalışır.</span>
+                                </div>
+                            </div>
+
+                            <!-- section 3 -->
+                            <section class="flex justify-center">
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                                <div>
+                                    <span class="inline-block w-5 h-5 text-2xl">*</span>
+                                </div>
+                            </section>
+
+                            <div id="#entryforObserver6" class="my-6">
+                                <div class="my-4">
+                                    <h3 class="text-xl font-semibold mb-4">Modüler Yapı ve npm</h3>
+                                    <p class="leading-6 indent-4 mb-4">Node.js, modüler bir yapıya sahiptir ve npm (Node Package Manager) ile genişletilebilir. Bu, geliştiricilerin projelerine kolayca üçüncü parti paketler eklemesini sağlar.</p>
+                                </div>
+
+                                <div class="my-4">
+                                    <span class="font-semibold text-sm inline-block my-2">Örnek: Basit Bir Modül Kullanımı</span>
+                                    <div class="rounded-lg overflow-hidden">
+                                        <div class="bg-[#262626]">
+                                            <div>
+                                                <span class="inline-block text-[#efefef] text-sm cursor-pointer px-2 py-1">Node.js</span>
+                                            </div>
+                                        </div>
+                                        <pre class="bg-[#000000] px-4 overflow-auto">
+                                            <code class="code-block overflow-auto px-4">
+<span class="text-gray-500">// myModule.js</span>
+<span class="keyword">module</span>.<span class="variable">exports</span> = {
+    <span class="function">sayHello</span>: function() {
+        console.<span class="function">log</span>('<span class="string">Hello, world!</span>');
+    }
+};
+
+<span class="text-gray-500">// main.js</span>
+<span class="keyword">const</span> myModule = <span class="require">require</span>('./myModule');
+myModule.<span class="function">sayHello</span>();
+                                            </code>
+                                        </pre>
+                                    </div>
+
+                                    <span class="font-semibold text-sm inline-block my-2 indent-4">Bu örnekte, myModule.js adlı bir modül oluşturulmuş ve main.js dosyasında bu modül kullanılmıştır.</span>
+                                </div>
+                            </div>
+                            <div id="#entryforObserver7" class="my-6">
+                                <div class="my-4">
+                                    <h3 class="text-xl font-semibold mb-4">Sonuç</h3>
+                                    <p class="leading-6 indent-4 mb-4">Node.js runtime, modern web uygulamaları ve sunucu tarafı programlama için güçlü ve esnek bir ortam sağlar. V8 motoru, Libuv kütüphanesi, olay döngüsü ve asenkron I/O modeli, Node.js'in yüksek performans ve ölçeklenebilirlik sunmasını sağlar. Node.js'in modüler yapısı ve geniş npm ekosistemi, geliştiricilerin projelerini hızlı ve verimli bir şekilde geliştirmesine olanak tanır. Bu teknik inceleme, Node.js runtime ifadesinin derinlemesine anlaşılmasına katkıda bulunmayı amaçlamaktadır.</p>
+                                </div>
+                            </div>
+
 
                             <div class="flex justify-center mt-60">
                                 <div class="w-2/5 mb-7 max-w-96">

@@ -63,7 +63,8 @@ webSRouter.get("/creating-static-web-site", [
     
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
-                page: pageObj.pages[0]
+                page: pageObj.pages[0],
+                pageTitle: pageObj.pages[0].pageTitle
             });
         } catch (error) {
             next(error);
@@ -90,7 +91,8 @@ webSRouter.get("/creating-dynamic-web-app", [
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
-                page: pageObj.pages[1]
+                page: pageObj.pages[1],
+                pageTitle: pageObj.pages[1].pageTitle
             });
         } catch (error) {
             next(error);
@@ -117,7 +119,8 @@ webSRouter.get("/web-hosting-services", [
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
-                page: pageObj.pages[2]
+                page: pageObj.pages[2],
+                pageTitle: pageObj.pages[2].pageTitle
             });
         } catch (error) {
             next(error);
@@ -143,7 +146,8 @@ webSRouter.get("/ui-ux-development", [
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
-                page: pageObj.pages[3]
+                page: pageObj.pages[3],
+                pageTitle: pageObj.pages[3].pageTitle
             });
         } catch (error) {
             next(error);
@@ -169,7 +173,8 @@ webSRouter.get("/restructuring", [
             
             res.status(200).render('services/webServices/servicesGeneralLayout', {
                 thePathArr: thePathArr,
-                page: pageObj.pages[4]
+                page: pageObj.pages[4],
+                pageTitle: pageObj.pages[4].pageTitle
             });
         } catch (error) {
             next(error);
