@@ -28,7 +28,10 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
 
         const blogsJson = await fs.readFile(path.join(rootDir, "model/blogs/blogs.json"), 'utf8');
         const blogObj = JSON.parse(blogsJson);
-        console.log(blogObj);
+        const mgAllBlogs = blogObj.blogs.filter(blog => blog.blogAuthor === "Mehmet Güngör");
+        const mgFirstTwoBlogs = mgAllBlogs.slice(0, 2);
+        // console.log(mgFirstTwoBlogs)
+        // console.log(blogObj);
         // console.log(req.ip);
         // console.log(thePathArr);
 
@@ -36,7 +39,8 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
             thePathArr: thePathArr,
             blog: blogObj.blogs[0],
             pageTitle: blogObj.blogs[0].blogTitle,
-            blogUser: usersObj.users[0]
+            blogUser: usersObj.users[0],
+            mgFirstTwoBlogs: mgFirstTwoBlogs
         });
     } catch (error) {
         next(error);
