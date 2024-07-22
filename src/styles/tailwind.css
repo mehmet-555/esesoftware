@@ -1808,7 +1808,7 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   text-underline-offset: 2px;
   text-decoration-color: #422d48;
 }
-.blogCommentsLink:hover
+/* .blogCommentsLink:hover */
 .blogNameCUnderline {
   transition: all .2s linear;
   text-decoration: underline;

@@ -5,30 +5,30 @@
             "userProfilePhoto": "/images/mehmetg.jpg",
             "nameSurname": "Mehmet Güngör",
             "userName": "paraliSuvari",
-            "password": "Süvari755/12*12?.%/",
+            "password": "Suvari755/12*12?.%/",
             "hisBlogs": [
                 "abc10xyz2024"
             ]
         },
         {
             "userId": "userr155912x",
-            "userProfilePhoto": "/images/mehmetg.jpg",
+            "userProfilePhoto": "/images/baby_cat.jpg",
             "nameSurname": "Yakup Arslan",
             "userName": "parasizSuvari",
-            "password": "Süvari756/12*12?.%/",
+            "password": "Suvari756/12*12?.%/",
             "hisBlogs": [
                 
             ]
         },
         {
-            "userId": "userr155912x",
+            "userId": "userr155913x",
             "userProfilePhoto": "/images/mehmetg.jpg",
             "nameSurname": "Hilal Ersöz",
             "userName": "besParasizSuvari",
-            "password": "Süvari757/12*12?.%/",
+            "password": "Suvari757/12*12?.%/",
             "hisBlogs": [
                 
             ]
         }
     ]
-}
+}  

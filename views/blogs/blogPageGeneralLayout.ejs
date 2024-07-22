@@ -91,6 +91,9 @@
                                 </div>
                             </section>
 
+                            <%- include("../partials/blogsPageGeneralPartials/blogsCommentsArea") %>
+                            
+
                             <%- include("../partials/blogsPageGeneralPartials/variableAreaBrandLogo") %>
                             
                         </div>
@@ -103,6 +106,76 @@
         <div id="mainSecondElem" class="fixed bottom-0 w-full">
             <%- include("../partials/blogsPageGeneralPartials/blogsCustomFooter") %>
         </div>
+        <div class="blogShareViaModal hidden fixed top-16 left-0 z-[+60] w-screen h-screen bg-black/70">
+            <div class="relative top-24 pt-8 sm:top-36 md:top-64 left-1/2 translate-x-[-50%] w-11/12 sm:w-3/4 md:w-2/4 max-w-96 rounded-b-lg bg-[#efefef]">
+                <div class="absolute -top-4 w-full flex items-center justify-between py-2 pl-2 pr-4 rounded-t-lg bg-black text-white">
+                    <div class="flex items-center">
+                        <span class="inline-block px-2 py-1 text-sm tracking-wider font-semibold text-[#efefef]">Paylaş</span><span class="inline-block -ml-1 text-sm font-semibold text-[#efefef]">:</span>
+                    </div>
+                    <div>
+                        <button id="closeShareModal" class="flex justify-center items-center px-2 py-1 border-2 border-[#efefef] rounded-md">
+                            <i class="fa-solid fa-xmark text-xl text-[#efefef]"></i>
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div class="px-4">
+                        <div class="px-2 py-6 border-b border-b-[#e0e0e0] mb-4">
+                            <div class="flex items-center">
+                                <div>
+                                    <img src="/images/nojs-system.jpg" class="w-24 min-w-24 max-w-24 h-16 min-h-16 max-h-16 object-fill rounded-lg" alt="Blog Card Image">
+                                </div>
+                                <div class="truncate2 max-h-[3.25rem] ml-4 leading-6">
+                                    <p class="max-h-[3.25rem] font-custom-medium text-[#422d48]">Node.js Çalışma Zamanı (Runtime) Teknik İncelenmesi Tek Bakışta</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-4 my-8">
+                            <div class="flex justify-around items-center">
+                                <div>
+                                    <button id="shareOnXBtn" type="button" class="flex items-center justify-center px-1 py-1 bg-[#e0e0e0] hover:bg-[#c4c6c8] transition-all duration-200 rounded-full w-[40px] min-w-[40px] max-w-[40px] h-[40px] min-h-[40px]max-h-[40px]">
+                                        <i class="fa-brands fa-x-twitter text-[#422d48] text-2xl"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type="button" class="flex items-center justify-center px-1 py-1 bg-[#e0e0e0] hover:bg-[#c4c6c8] transition-all duration-200 rounded-full w-[40px] min-w-[40px] max-w-[40px] h-[40px] min-h-[40px]max-h-[40px]">
+                                        <i class="fa-brands fa-meta text-[#422d48] text-2xl"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type="button" class="flex items-center justify-center px-1 py-1 bg-[#e0e0e0] hover:bg-[#c4c6c8] transition-all duration-200 rounded-full w-[40px] min-w-[40px] max-w-[40px] h-[40px] min-h-[40px]max-h-[40px]">
+                                        <i class="fa-brands fa-linkedin-in text-[#422d48] text-2xl"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type="button" class="flex items-center justify-center px-1 py-1 bg-[#e0e0e0] hover:bg-[#c4c6c8] transition-all duration-200 rounded-full w-[40px] min-w-[40px] max-w-[40px] h-[40px] min-h-[40px]max-h-[40px]">
+                                        <i class="fa-brands fa-telegram text-[#422d48] text-2xl"></i>
+                                    </button>
+                                </div>
+                                <div>
+                                    <button type="button" class="flex items-center justify-center px-1 py-1 bg-[#e0e0e0] hover:bg-[#c4c6c8] transition-all duration-200 rounded-full w-[40px] min-w-[40px] max-w-[40px] h-[40px] min-h-[40px]max-h-[40px]">
+                                        <i class="fa-brands fa-whatsapp text-[#422d48] text-2xl"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pb-10 px-2">
+                            <div class="mb-6">
+                                <span class="text-sm text-[#422d48] font-semibold">veya linki kopyala</span>
+                            </div>
+                            <div>
+                                <div class="relative rounded-lg overflow-hidden">
+                                    <input type="text" id="zattirizortInputu" value="https://blog.esesoftware.com/mehmet-gungor/what-is-node-js-runtime?" class="w-full outline-none border border-[#e0e0e0] focus:border-[#422d48] bg-[#efefef] pl-3 pr-20 py-3 rounded-lg overflow-hidden leading-5">
+                                    <button type="button" class="absolute h-full right-0 top-0 bg-[#5d28ba] hover:bg-[#4911a8] group transition-all duration-200">
+                                        <span class="px-2 text-sm font-semibold text-[#efefef] group-hover:text-[#fff] transition-all duration-200">Kopyala</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>     
     </main>
     <div
         class="leftAsideSticky fixed top-16 z-20 left-0 w-full px-4 hidden lg:flex  flex-col justify-center items-center">
@@ -261,70 +334,8 @@
             </div>
         </div>
     </div>
-    <div class="rightAsideSticky fixed top-16 z-20 right-0 w-full px-4 hidden lg:flex  flex-col  bg-[#efefef]">
-        <div class="flex flex-col justify-start items-center h-full">
-            <div>
 
-            </div>
-            <div class="flex flex-col gap-8 pt-6 items-center justify-center">
-
-                <% mgFirstTwoBlogs.forEach(blog => { %>
-
-                <div class="w-5/6 max-w-72 min-w-48 h-36 blogShd blogUnit rounded-[4px] overflow-hidden" data-blogid="<%= blog.blogID %>">
-                    <a href="#" class="blogCardLink">
-                        <div class="relative h-full">
-                            <div class="w-full h-full">
-                                <img src="<%= blog.blogMainImage %>" alt="Blog Image" class="w-full object-fill h-full">
-                            </div>
-                            <div class="absolute top-0 bottom-0 left-0 right-0 bg-[#2413133d]">
-                            </div>
-                            <div
-                                class="flex absolute bottom-[-73px] blogLayer pointer-events-none flex-col py-2 bg-[#000000d6]">
-                                <div
-                                    class="max-h-14 text-center text-sm mb-1 pointer-events-none text-white indent-3 px-1 leading-4 truncate2">
-                                    <%= blog.blogTitle %>
-                                </div>
-                                <div
-                                    class="max-h-9 text-xs pointer-events-none font-custom-medium text-zinc-400 px-1 indent-1 pb-1 truncate2">
-                                    <p>
-                                        <%= blog.blogCardSummaryContent %>
-                                    </p>
-                                </div>
-                                <div
-                                    class="flex secretArea pointer-events-none justify-between px-4 my-1 opacity-0 transition-all duration-300 bg-[#112f4a] pb-[3px]">
-                                    <div>
-                                        <span class="text-xs text-[#efefef]"><%= blog.blogCTime %></span>
-                                    </div>
-                                    <div>
-                                        <% 
-                                            const [firstName, lastName] = blog.blogAuthor.split(' ');
-                                            const formattedName = `${firstName} ${lastName.charAt(0)}.`;
-                                        %>
-                                        <span class="text-xs text-[#efefef] font-custom-medium">// <%= formattedName %></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <% }) %>
-
-            </div>
-            <div class="mt-4">
-                <a href="#" target="_blank"
-                    class="flex items-center border-2 hover:border-[#636871] justify-around max-w-52 min-w-48 py-1 bg-[#7d84ab91] rounded-md">
-                    <span class="pl-2">
-                        <svg width="3" height="24" viewBox="0 -9 3 24" class="mr-2 text-slate-200 overflow-visible">
-                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round"></path>
-                        </svg>
-                    </span>
-                    <span class="text-[#2a2a2a] text-sm pr-1 -ml-3">Daha Fazla Blog / Makale</span>
-                </a>
-            </div>
-        </div>
-    </div>
+    <%- include("../partials/blogsPageGeneralPartials/blogRightAsideMoreBlog") %>
     <%- include("../partials/blogsPageGeneralPartials/blogsOtherModals") %>
     <%- include("../partials/blogsPageGeneralPartials/blogPagesScripts") %>
 </body>

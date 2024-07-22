@@ -4,6 +4,7 @@
             "blogID": "abc10xyz2024",
             "blogAuthor": "Mehmet Güngör",
             "blogCTime": "21/July/2024",
+            "blogCTimeDetail": "12:45",
             "blogTitle": "Node.js Çalışma Zamanı(Runtime) Nedir?",
             "blogMainImage": "/images/nojs-system.jpg",
             "blogShareLink": "https//:blog.esesoftware.com/name-surname/${String(blogTitle).toLowerCase()}",
@@ -125,7 +126,27 @@
                 ]
             },
             "blogComments": {
-                "blogCommentCounst": 12
+                "blogCommentCounts": 2,
+                "comments": [
+                    {
+                        "commentId": "abc10xyz2024c1",
+                        "commentCTime": "21/July/2024",
+                        "commentCTimeDetail": "2024-07-22T16:39:00.000Z",
+                        "commentUserId": "userr155911x",
+                        "commentContent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sunt enim ducimus quae consequatur dolore nisi. Fuga animi velit distinctio eius recusandae incidunt magnam odio. (Fonksiyon deneme yorumu..)",
+                        "commentLikeCount": 3,
+                        "commentReportCount": 0
+                    },
+                    {
+                        "commentId": "abc10xyz2024c2",
+                        "commentCTime": "23/July/2024",
+                        "commentCTimeDetail": "2024-07-22T14:36:00.000Z",
+                        "commentUserId": "userr155912x",
+                        "commentContent": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nemo cum aliquid quos quo fuga ipsum porro voluptate accusamus, a maxime animi, amet dolorum totam, iure deleniti quae. Labore ducimus expedita assumenda eaque quod non sit ad omnis laboriosam. Quae aliquid dolore mollitia quaerat quidem? (Fonksiyon deneme yorumu..)",
+                        "commentLikeCount": 20,
+                        "commentReportCount": 0
+                    }
+                ]
             }
         },
         {
@@ -253,7 +274,7 @@
                 ]
             },
             "blogComments": {
-                "blogCommentCounst": 5
+                "blogCommentCounts": 2
             }
         },
         {
@@ -381,7 +402,7 @@
                 ]
             },
             "blogComments": {
-                "blogCommentCounst": 9
+                "blogCommentCounts": 9
             }
         },
         {
@@ -509,7 +530,7 @@
                 ]
             },
             "blogComments": {
-                "blogCommentCounst": 9
+                "blogCommentCounts": 9
             }
         }
     ]
