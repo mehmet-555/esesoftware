@@ -1385,6 +1385,18 @@ table [data-content-location="right"]::after {
 table [data-content-location="right"]:hover::after {
   border-color: transparent #3756ff transparent transparent;
 }
+
+.blogShareViaModal [data-content]::before {
+  background-color: #c4c6c8;
+  color: #422d48;
+  font-weight: 600;
+}
+.blogShareViaModal [data-content-location="top"]::after {
+  border-color: #c4c6c8 transparent transparent transparent;
+}
+.blogShareViaModal [data-content-location="top"]:hover::after {
+  border-color: #c4c6c8 transparent transparent transparent;
+}
 @media (min-width: 800px) {
   [data-content]::before {
     max-width: 160px;
@@ -1689,6 +1701,9 @@ table [data-content-location="right"]:hover::after {
 .entryfoheader h2.styleHeader {
   color: #2f2d9c; 
 }
+.entryfoheader h3.styleHeader {
+  color: #2f2d9c; 
+}
 
 /* statik web sitesi tablo 2 */
 
@@ -1744,7 +1759,7 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   transition: text-decoration-color .2s linear;
 }
 [data-pagenav] a:hover {
-  text-decoration-color: #efefef;
+  text-decoration-color: #422d48;
 }
 
 
@@ -1846,6 +1861,10 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   outline: 2px solid #efefef;
   transition: all .1s linear;
 }
+.blogsOptsBtn.open,
+.blogsOptsBtn.open:hover {
+  outline: 2px solid #422d48;
+}
 .blogsOptsBtn:hover,
 .blogsOptsBtn:active {
   outline: 2px solid #c4c6c8;
@@ -1885,4 +1904,23 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 }
 .code-block .require {
   color: #e9950c;  
+}
+
+
+.blogShareViaModal .blogShareIcon::before {
+  left: 5px;
+  background-color: #efefef;
+}
+.blogShareViaModal .blogShareIcon::after {
+  border-color: #efefef;
+}
+
+
+.loginBtn:hover + div {
+  width: 90%;
+  left: 5px;
+}
+.blogHomapage:hover + div {
+  width: 90%;
+  left: 5px;
 }

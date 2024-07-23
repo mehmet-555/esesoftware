@@ -452,9 +452,7 @@ window.addEventListener('resize', showFooter);
 
 
 
-// Blog Functions 
 
-// yazarız bakalım
 
 
 // PagePaginationNav func 
@@ -595,7 +593,6 @@ function hrefControl() {
 
     // Tüm iç bağlantıları seç
     const internalLinks = document.querySelectorAll('a[href^="#"]');
-
     // Her bağlantı için event listener ekle
     internalLinks.forEach(link => {
         link.addEventListener('click', function(e) {

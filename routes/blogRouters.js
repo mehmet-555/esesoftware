@@ -71,7 +71,8 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
                 pageTitle: blogObj.blogs[0].blogTitle,
                 blogUser: usersObj.users[0],
                 mgFirstTwoBlogs: mgFirstTwoBlogs,
-                commentUsersArr: commentUsersArr
+                commentUsersArr: commentUsersArr,
+                userLoggedIn: false
             });
 
         }else {
@@ -83,7 +84,8 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
                 pageTitle: blogObj.blogs[0].blogTitle,
                 blogUser: usersObj.users[0],
                 mgFirstTwoBlogs: mgFirstTwoBlogs,
-                commentUsersArr: null
+                commentUsersArr: null,
+                userLoggedIn: false
             });
         }        
     } catch (error) {

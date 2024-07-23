@@ -1,7 +1,7 @@
 <div class="border-b border-t py-4 border-[#efefef] flex flex-col sm:flex-row gap-4 sm:gap-0 items-center justify-between" data-blogid="<%= blog.blogID %>">
     <div class="flex justify-between sm:justify-normal items-center w-full sm:w-auto">
         <div>
-            <a href="#" class="blogCommentsLink flex items-center py-1 px-3 rounded-md bg-transparent hover:bg-[#efefef]">
+            <a href="#comments" class="blogCommentsLink flex items-center py-1 px-3 rounded-md bg-transparent hover:bg-[#efefef]">
                 <div class="flex items-center">
                     <div>
                         <span class="blogCommentSpan relative inline-block w-6 max-w-6 min-w-6 h-6 min-h-6 max-h-6 bg-[#efefef] rounded-full"></span>
@@ -35,10 +35,34 @@
                 </div>
             </button>
         </div>
-        <div class="ml-4">
+        <div class="ml-4 relative">
             <button class="blogsOptsBtn px-1 rounded-md">
-                <i class="fa-solid fa-ellipsis text-2xl text-[#422d48]"></i>
+                <i class="fa-solid fa-ellipsis text-2xl text-[#422d48] pointer-events-none"></i>
             </button>
+            <div class="absolute blogOptMenu hidden top-10 right-[-2px] border bg-[#efefef] rounded-md">
+                <ul class="px-1 py-2">
+                    <li class="mb-1">
+                        <button type="button" class="flex items-center justify-center min-w-fit px-2 py-[2px] rounded-sm w-full hover:bg-[#ccc] transition-all duration-200 group">
+                            <span class="inline-block text-xs min-w-36 py-1 text-[#422d48] text-nowrap font-custom-medium transition-all duration-200 group-hover:text-[#2f2d9c]">Daha Fazla Bu Türde Öner</span>
+                        </button>
+                    </li>
+                    <li class="mb-1">
+                        <button type="button" class="flex items-center justify-center min-w-fit px-2 py-[2px] rounded-sm w-full hover:bg-[#ccc] transition-all duration-200 group">
+                            <span class="inline-block text-xs min-w-36 py-1 text-[#422d48] text-nowrap font-custom-medium transition-all duration-200 group-hover:text-[#2f2d9c]">Daha Az Bu Türde Öner</span>
+                        </button>
+                    </li>
+                    <li class="mb-1">
+                        <button type="button" class="flex items-center justify-center min-w-fit px-2 py-[2px] rounded-sm w-full hover:bg-[#ccc] transition-all duration-200 group">
+                            <span class="inline-block text-xs min-w-36 py-1 text-[#422d48] text-nowrap font-custom-medium transition-all duration-200 group-hover:text-[#2f2d9c]">Profilime Kaydet</span>
+                        </button>
+                    </li>
+                    <li class="mb-1">
+                        <button type="button" class="flex items-center justify-center min-w-fit px-2 py-[2px] rounded-sm w-full hover:bg-[#ccc] transition-all duration-200 group">
+                            <span class="inline-block text-xs min-w-36 py-1 text-[#422d48] text-nowrap font-custom-medium transition-all duration-200 group-hover:text-[#2f2d9c]">Rapor Et</span>
+                        </button> 
+                    </li>
+                </ul>
+            </div>
         </div> 
     </div>
 </div>   

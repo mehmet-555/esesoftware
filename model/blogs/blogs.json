@@ -7,7 +7,7 @@
             "blogCTimeDetail": "12:45",
             "blogTitle": "Node.js Çalışma Zamanı(Runtime) Nedir?",
             "blogMainImage": "/images/nojs-system.jpg",
-            "blogShareLink": "https//:blog.esesoftware.com/name-surname/${String(blogTitle).toLowerCase()}",
+            "blogShareLink": "https://blog.esesoftware.com/mehmet-gungor-what-is-node-js-runtime",
             "blogCardSummaryContent": "Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan, olay güdümlü, asenkron I/O modeli üzerine inşa edilmiş bir runtime ortamıdır.",
             "blogHeaders": {
                 "giris": {
@@ -155,7 +155,7 @@
             "blogCTime": "21/July/2024",
             "blogTitle": "Node.js Çalışma Zamanı(Runtime) Nedir?",
             "blogMainImage": "/images/nojs-system.jpg",
-            "blogShareLink": "https//:blog.esesoftware.com/name-surname/${String(blogTitle).toLowerCase()}",
+            "blogShareLink": "-",
             "blogCardSummaryContent": "Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan, olay güdümlü, asenkron I/O modeli üzerine inşa edilmiş bir runtime ortamıdır.",
             "blogHeaders": {
                 "giris": {
@@ -283,7 +283,7 @@
             "blogCTime": "21/July/2024",
             "blogTitle": "Node.js Çalışma Zamanı(Runtime) Nedir?",
             "blogMainImage": "/images/nojs-system.jpg",
-            "blogShareLink": "https//:blog.esesoftware.com/name-surname/${String(blogTitle).toLowerCase()}",
+            "blogShareLink": "-",
             "blogCardSummaryContent": "Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan, olay güdümlü, asenkron I/O modeli üzerine inşa edilmiş bir runtime ortamıdır.",
             "blogHeaders": {
                 "giris": {
@@ -411,7 +411,7 @@
             "blogCTime": "21/July/2024",
             "blogTitle": "Node.js Çalışma Zamanı(Runtime) Nedir?",
             "blogMainImage": "/images/nojs-system.jpg",
-            "blogShareLink": "https//:blog.esesoftware.com/name-surname/${String(blogTitle).toLowerCase()}",
+            "blogShareLink": "-",
             "blogCardSummaryContent": "Node.js, sunucu tarafında JavaScript çalıştırmayı mümkün kılan, olay güdümlü, asenkron I/O modeli üzerine inşa edilmiş bir runtime ortamıdır.",
             "blogHeaders": {
                 "giris": {
