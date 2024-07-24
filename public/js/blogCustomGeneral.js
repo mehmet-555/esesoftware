@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     addListenerToMainForClosingTheOptMenu ()
 
     addBlurListenerToSearchInput ()
-
+    
+    // YOrum Yap Kısmında Custom Height 
+    addListenerToTextArea ()
 
 
     // Buradan İtibaren servicesjs den gelenleri başlatıyorum
@@ -523,7 +525,6 @@ function hrefControl() {
 
 function addBlurListenerToSearchInput () {
     const input = document.querySelector(".searchInput input");
-    console.log(input)
     input.addEventListener("blur", (e) => {
         if(e.target.value !== "") {
             input.style.width = "224px";
@@ -536,7 +537,26 @@ function addBlurListenerToSearchInput () {
     })
 }
 
+// YOrum Yap Kısmında Custom Height 
 
+function addListenerToTextArea () {
+    const customTA = document.getElementById("commentsACustomTA");
+
+    if(customTA) {
+        customTA.addEventListener("input", (e) => {
+            customTA.style.height = "20px";
+            customTA.style.height = customTA.scrollHeight + "px";
+        });
+    
+        // İlk yüklemede textarea'nın yüksekliğini ayarla
+        adjustTextareaHeight(customTA);
+    
+        function adjustTextareaHeight(element) {
+            element.style.height = '20px'; // Yüksekliği otomatik olarak ayarlamak için sıfırla
+            element.style.height = element.scrollHeight + 'px'; // İçeriğe göre yüksekliği ayarla
+        }
+    }
+}
 
 
 

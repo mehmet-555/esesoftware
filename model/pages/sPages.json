@@ -442,6 +442,58 @@
                     ] 
                 }
             }
+        },
+        {
+            "pageTitle": "App Engine İle Yeniden Dağıtım",
+            "pageHeaders": {
+                "a1": {
+                    "header": "AE ile Yeniden Dağıtım",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Sunucusuz Teknoloji(Serverless) Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Sunucusuz Teknolojinin Avantajları"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Esesoftware AE ile Yeniden Dağıtım Nedir?"},
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "App Engine'in Artıları"},
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "App Engine ile Sunuculu Sistemler Arasındaki Farklar"}
+                    ]
+                },
+                "a2": {
+                    "header": "Esesoftware ile App Engine",
+                    "subHeaders": [
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "AE ile Sunucusuz ve Ölçeklenebilir ÇÖzümler"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "AE ile Sunduğumuz Hizmetler"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader": "Esesoftware ile AE Fiyatlarına Etki Eden Faktörler"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// AE ile Yeniden Dağıtım",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Sunucusuz Teknoloji(Serverless) Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Sunucusuz teknoloji, geliştiricilerin sadece uygulama kodunu yazıp çalıştırmalarına olanak tanır, sunucu yönetimi ve bakımı bulut hizmet sağlayıcısı (örneğin Google) tarafından yapılır. 'Sunucusuz' terimi, sunucuların olmadığı anlamına gelmez; bu sunucuların yönetimi tamamen bulut sağlayıcısı tarafından üstlenilir.Geliştiriciler, sunucu yönetimiyle uğraşmak zorunda kalmadan kodlarını yazar ve dağıtır. Bu, projelerin daha hızlı hayata geçmesine ve zaman tasarrufuna yardımcı olur. Google App Engine gibi sunucusuz platformlar, hızlı, güvenli ve verimli uygulama geliştirme olanağı sağlar.Sunucusuz teknolojiler, projelerinizi bir üst seviyeye taşımanızda önemli bir rol oynar.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Sunucusuz Teknolojinin Avantajları",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\">Geliştiriciler, sunucu kurma, güncelleme ve bakım gibi teknik detaylarla uğraşmak zorunda kalmazlar. Bu işleri bulut sağlayıcısı otomatik olarak halleder.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Ölçeklenebilirlik:</span>\n<span class=\"text-sm\">Uygulamanızın kullanıcı sayısı artsa da azalsa da, sunucusuz hizmetler otomatik olarak ölçeklenir. Trafik yoğun olduğunda kaynaklar artırılır, düşük olduğunda ise gereksiz kaynaklar serbest bırakılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Maliyet Etkinliği:</span>\n<span class=\"text-sm\">Sunucusuz hizmetler, yalnızca kullandığınız kaynaklar için ödeme yapmanızı sağlar. Kullanmadığınız zamanlarda maliyetleriniz de düşer.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Hızlı Geliştirme:</span>\n<span class=\"text-sm\">Sunucusuz teknolojiler, geliştiricilerin yalnızca kodlarına odaklanmalarını sağlar, bu da geliştirme sürecini hızlandırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Güvenlik ve Güncellemeler:</span>\n<span class=\"text-sm\">Sunucuların güvenliği ve güncellemeleri bulut sağlayıcısı tarafından otomatik olarak yapılır. Bu sayede, uygulamanız her zaman güncel ve güvende olur.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Esesoftware AE ile Yeniden Dağıtım Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Google App Engine (AE), Google'ın sağladığı ve web uygulamalarınızı kolayca geliştirip internette yayınlamanızı sağlayan bir hizmettir. AE ile sunucu kurmak, yönetmek veya güncellemek gibi teknik detaylarla uğraşmanıza gerek kalmaz. Siz sadece uygulamanızın kodunu yazarsınız ve geri kalan her şeyi Google halleder. Bu sayede, uygulamanızı daha hızlı ve verimli bir şekilde kullanıcılara sunabilir ve projenizi bir üst seviyeye taşıyabilirsiniz</p>"
+                        },
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "App Engine'in Artıları",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\">Geliştiriciler, sunucu kurma, güncelleme ve bakım gibi teknik detaylarla uğraşmak zorunda kalmazlar. Bu işleri bulut sağlayıcısı otomatik olarak halleder.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Ölçeklenebilirlik:</span>\n<span class=\"text-sm\">Uygulamanızın kullanıcı sayısı artsa da azalsa da, sunucusuz hizmetler otomatik olarak ölçeklenir. Trafik yoğun olduğunda kaynaklar artırılır, düşük olduğunda ise gereksiz kaynaklar serbest bırakılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Maliyet Etkinliği:</span>\n<span class=\"text-sm\">Sunucusuz hizmetler, yalnızca kullandığınız kaynaklar için ödeme yapmanızı sağlar. Kullanmadığınız zamanlarda maliyetleriniz de düşer.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Hızlı Geliştirme:</span>\n<span class=\"text-sm\">Sunucusuz teknolojiler, geliştiricilerin yalnızca kodlarına odaklanmalarını sağlar, bu da geliştirme sürecini hızlandırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Güvenlik ve Güncellemeler:</span>\n<span class=\"text-sm\">Sunucuların güvenliği ve güncellemeleri bulut sağlayıcısı tarafından otomatik olarak yapılır. Bu sayede, uygulamanız her zaman güncel ve güvende olur.</span>\n</p>\n</li>\n</ul>"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }

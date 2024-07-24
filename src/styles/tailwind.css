@@ -1924,3 +1924,11 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   width: 90%;
   left: 5px;
 }
+
+
+#commentsACustomTA {
+  resize: none;
+  line-height: 20px;
+  min-height: 18px;
+  overflow-y: hidden;
+} 

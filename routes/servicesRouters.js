@@ -10,6 +10,7 @@ const validator = require('validator');
 const servicesRouter = express.Router();
 
 const webSRouter = express.Router();
+const gcpRouter = express.Router();
 const automationSRouter = express.Router();
 const gcpSRouter = express.Router();
 const corporateSRouter = express.Router();
@@ -38,6 +39,7 @@ servicesRouter.all("*", (req, res, next) => {
 });
 
 servicesRouter.use("/web-services", webSRouter);
+servicesRouter.use("/gcp", gcpRouter);
 
 servicesRouter.use("/", (req, res, next) => {
     res.status(200).render("services/services.ejs");
@@ -45,7 +47,7 @@ servicesRouter.use("/", (req, res, next) => {
 });
 
 
-
+// WEB SERVICES
 webSRouter.get("/creating-static-web-site", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ],  async (req, res, next) => {
@@ -101,7 +103,6 @@ webSRouter.get("/creating-dynamic-web-app", [
         return res.status(400).json({ errors: errors.array() });
     };
 });
-
 webSRouter.get("/web-hosting-services", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ], async (req, res, next) => { 
@@ -183,6 +184,12 @@ webSRouter.get("/restructuring", [
         return res.status(400).json({ errors: errors.array() });
     };
 });
+
+// GCP 
+// gcpRouter.get("/redistribution-with-ae",)
+
+
+
 module.exports = servicesRouter;
 
 

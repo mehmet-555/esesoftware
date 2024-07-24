@@ -57,11 +57,14 @@
 <% } else { %>
     <div>yorum yok henüz ? İlk sen yapmaya ne dersin sikik ?</div>
 <% } %>
+
+<% if(userLoggedIn) { %>
 <div id="comments" class="py-6 mt-12 mb-10 border-t border-b border-b-[#efefef] border-t-[#efefef]">
     <h3 class="text-base text-[#422d48] font-semibold">Yorum Yapmak İçin Giriş Yapınız</h3>
 </div>
+<% } else { %>
 <div class="px-0 sm:px-2 md:px-4">
-    <div class="border-t border-b border-b-[#efefef] border-t-[#efefef] py-4 mb-4" data-comment-id="abc10xyz2024c1">
+    <div class="border-t border-b border-b-[#efefef] border-t-[#efefef] py-4 mb-4" data-comment-id="">
         <div class="flex items-center">
             <div>
                 <a href="#">
@@ -70,33 +73,19 @@
             </div>
             <div class="ml-4">
                 <a href="#" class="inline-block text-[#422d48] font-semibold mb-1 blogNameCUnderline">Mehmet Güngör</a>
-                <div class="text-sm">1 gün önce</div>
             </div>
         </div>
         <div class="pl-1 sm:pl-4 md:pl-7 my-4">
-            <div class="border-l-2 pl-2 border-l-[#422d48]">
-                <p class="text-sm font-bold text-[#422d48] leading-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores sunt enim ducimus quae consequatur dolore nisi. Fuga animi velit distinctio eius recusandae incidunt magnam odio. (Fonksiyon deneme yorumu..)</p>
+            <div class="flex border-l-[#422d48]">
+                <textarea id="commentsACustomTA" class="h-5 font-bold text-sm outline-none w-full rounded-none border-l-2 border-l-[#422d48] pl-2" placeholder="Yorum yaz.."></textarea>
             </div>
         </div>
-        <div class="flex items-center justify-between">
-            <div class="flex items-center ml-1 sm:ml-2 md:ml-4">
-                <div>
-                    <button class="flex justify-center items-center rounded-full bg-[#efefef] hover:bg-[#c4c6c8] p-[6px]" type="button">
-                        <i class="fa-regular fa-thumbs-up"></i>
-                    </button>
-                </div>
-                <div>
-                    <span class="ml-2 font-semibold pointer-events-none">3</span>
-                </div>
-            </div>
-            <button class="flex items-center rounded-md bg-[#efefef] hover:bg-[#c4c6c8] transition-all duration-200 px-2 mr-1 sm:mr-2 md:mr-4">
-                <div>
-                    <span class="flex items-center justify-center w-4 min-w-4 h-4 min-h-4 bg-[#efefef] rounded-full">!</span>
-                </div>
-                <div class="ml-1 pr-1">
-                    <span class="font-semibold text-[#422d48] text-sm">Bildir</span>
-                </div>
+        <div class="flex justify-end">
+            <button class="bg-[#efefef] hover:bg-[#c4c6c8] flex items-center px-3 py-1 rounded-md transition-all duration-200 group">
+                <i class="fa-solid fa-pencil mr-1 text-sm text-[#9ca3af] group-hover:text-[#422d48] transition-all duration-200"></i>
+                <span class="text-[#9ca3af] group-hover:text-[#422d48] text-sm font-bold pb-[1px] ml-[2px] transition-all duration-200">Yorum Yap</span>
             </button>
         </div>
     </div>
 </div>
+<% } %>
