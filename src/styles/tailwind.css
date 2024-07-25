@@ -275,7 +275,19 @@
 
 }
 
+.textGrad3 {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-image: none;
+  -webkit-border-image: none; 
+  background: -webkit-linear-gradient(45deg, #09009f, #00ff95 80%);
+  background: linear-gradient(180deg, #efefef, #1D384E 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 
+}
 
 
 img.logo {
