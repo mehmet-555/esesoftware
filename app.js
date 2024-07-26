@@ -11,6 +11,7 @@ const projectRouter = require("./routes/projectRouters");
 const aboutRouter = require("./routes/aboutRouters");
 const blogRouter = require("./routes/blogRouters");
 const servicesRouter = require("./routes/servicesRouters.js");
+const privacyRouter = require("./routes/privacyRouters.js");
 
 // App
 const app = express();
@@ -26,6 +27,7 @@ app.use("/services", servicesRouter);
 app.use("/project", projectRouter);
 app.use("/about", aboutRouter);
 app.use("/blog", blogRouter);
+app.use("/privacy-policy", privacyRouter);
 app.use("/", homeRouter);
 module.exports = app;
 

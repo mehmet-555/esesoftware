@@ -1,0 +1,55 @@
+runtime: nodejs18
+instance_class: F1
+
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS_BASE64: "<BASE64_ENCODED_SERVICE_ACCOUNT_KEY>"
+
+handlers:
+  - url: /public
+    static_dir: public
+
+  - url: /services
+    script: auto
+
+  - url: /project
+    script: auto
+
+  - url: /about
+    script: auto
+
+  - url: /blog
+    script: auto
+
+  - url: /.*
+    script: auto
+
+  - url: /robots.txt
+    static_files:
+    path: robots.txt
+    upload: robots.txt
+ 
+  - url: /css/(.*)
+    static_files: public/css/\1
+    upload: public/css/(.*)
+
+  - url: /src/img/(.*)
+    static_files: public/src/img/\1
+    upload: public/src/img/(.*)
+
+  - url: /src/(.*)
+    static_files: public/src/\1
+    upload: public/src/(.*)
+
+  - url: /js/(.*)
+    static_files: public/pages/js/\1
+    upload: public/pages/js/(.*)
+
+  - url: /(.*)
+    static_files: public/\1
+    upload: public/(.*)
+
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1 
+  max_instances: 2
