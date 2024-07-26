@@ -12,12 +12,12 @@ export default class FormValidator {
     }
 
     init() {
-        console.log("init çalıştı")
+        // console.log("init çalıştı")
         this.validateSteps();
     }
 
     validateSteps() {
-        console.log("validateInputs çalıştı")
+        // console.log("validateInputs çalıştı")
         this.steps.forEach((step, index) => {
             const inputs = step.querySelectorAll("[data-validate]");
             const nextButton = step.querySelector(".btn-next");
@@ -69,10 +69,10 @@ export default class FormValidator {
             if(submitButton) {
                 submitButton.addEventListener("click", (e)=> {
                     e.preventDefault();
-                    console.log("SUBMIT BUTON TETİKLENDİ")
+                    // console.log("SUBMIT BUTON TETİKLENDİ")
                     const formData = new FormData(e.target.closest(".frm"));
                     this.collectFormData(formData); // Son form verilerini de toplama
-                    console.log("Final Form Data:", this.formData); // Tüm verileri gösterme
+                    // console.log("Final Form Data:", this.formData); // Tüm verileri gösterme
 
                     e.target.firstElementChild.classList.add("unvsble");
                     e.target.querySelector(".loader").classList.add("visible");
@@ -105,14 +105,14 @@ export default class FormValidator {
                         }
                     })
                     .then(response => {
-                        console.log(response.ok)
+                        // console.log(response.ok)
                         if (!response.ok) {
                             throw new Error('Network response was not ok');
                         }
                         return response.text();
                     })
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         setTimeout(() => {
                             e.target.querySelector(".loader").classList.remove("visible");
                             e.target.querySelector(".tickSign").classList.add("visible");
@@ -135,7 +135,7 @@ export default class FormValidator {
                         }, 1500);
                     })
                     .catch(error => {
-                        console.error('Error:', error);
+                        // console.error('Error:', error);
 
                         setTimeout(() => {
                             e.target.querySelector(".loader").classList.remove("visible");

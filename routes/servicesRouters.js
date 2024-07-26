@@ -18,7 +18,7 @@ const scrapingSRouter = express.Router();
 
 // Utils and MW's
 const rootDir = require("../utils/rootDir");
-console.log(rootDir)
+// console.log(rootDir)
 
 const { check, param, query, validationResult } = require("express-validator");
 
@@ -29,7 +29,7 @@ function isMobile(userAgent) {
 
 servicesRouter.all("*", (req, res, next) => {
     const userAgent = req.headers['user-agent'];
-    console.log(userAgent)
+    // console.log(userAgent)
     if (isMobile(userAgent)) {
         console.log(String("Bu istek bir mobil cihazdan geldi.").toLocaleUpperCase());
     } else {
@@ -52,7 +52,7 @@ webSRouter.get("/creating-static-web-site", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ],  async (req, res, next) => {
 
-    console.log(req.originalUrl);
+    // console.log(req.originalUrl);
     const errors = validationResult(req);
 
     if(errors.isEmpty()) {
@@ -80,7 +80,7 @@ webSRouter.get("/creating-dynamic-web-app", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ], async (req, res, next) => {
 
-    console.log(req.originalUrl);
+    // console.log(req.originalUrl);
     const errors = validationResult(req);
 
     if(errors.isEmpty()) {
@@ -107,7 +107,7 @@ webSRouter.get("/web-hosting-services", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ], async (req, res, next) => { 
 
-    console.log(req.originalUrl);
+    // console.log(req.originalUrl);
     const errors = validationResult(req);
 
     if(errors.isEmpty()) {
@@ -134,7 +134,7 @@ webSRouter.get("/ui-ux-development", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ], async (req, res, next) => { 
 
-    console.log(req.originalUrl);
+    // console.log(req.originalUrl);
     const errors = validationResult(req);
 
     if(errors.isEmpty()) {
@@ -161,7 +161,7 @@ webSRouter.get("/restructuring", [
     // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
 ], async (req, res, next) => { 
     
-    console.log(req.originalUrl);
+    // console.log(req.originalUrl);
     const errors = validationResult(req);
 
     if(errors.isEmpty()) {

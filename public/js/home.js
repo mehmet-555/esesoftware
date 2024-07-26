@@ -218,7 +218,7 @@ function aiRwdScrollFunc() {
     Array.from(slideBtns).forEach(slideBtn => {
         slideBtn.addEventListener("click", (e) => {
             const scrollAmount = parseInt(window.getComputedStyle(slideShow.parentElement).getPropertyValue("width"));
-            console.log(scrollAmount);
+            // console.log(scrollAmount);
             
             const index = Number(slideBtn.dataset.index);
             let extraScroll = 0;
@@ -248,7 +248,7 @@ function aiRwdScrollFunc() {
                 left: (index * scrollAmount) + extraScroll, 
                 behavior: 'smooth' 
             });
-            console.log(slideShow.scrollLeft);
+            // console.log(slideShow.scrollLeft);
         });
     });
      
@@ -732,7 +732,7 @@ function addEventListenerToContactBtnOnOpt ()  {
                 top: window.scrollY - 100,
                 behavior: "smooth"
             });
-            console.log("çalıştı");
+            // console.log("çalıştı");
         }, 250); // scrollIntoView işleminin tamamlanmasını bekleyin
     });
 };

@@ -63,7 +63,7 @@ function nextPageWithValueF () {
         for (const i of inputs) {
             if (i.checked) {
                 nextPageName = i.value;
-                console.log(nextPageName);
+                // console.log(nextPageName);
                 break;
             }
         }
@@ -71,10 +71,10 @@ function nextPageWithValueF () {
         if (nextPageName) {
             const safeNextPageName = encodeURIComponent(nextPageName);
             const newUrl = `/project/web-project/${safeNextPageName}`;
-            console.log(newUrl);
+            // console.log(newUrl);
             window.location.href = newUrl;
         } else {
-            console.log("No radio button selected.");
+            // console.log("No radio button selected.");
         }
     })
 }

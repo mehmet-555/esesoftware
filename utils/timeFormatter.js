@@ -1,7 +1,7 @@
 function timeFormatter(date) {
     const now = new Date();
     const commentDate = new Date(date);
-    console.log(commentDate)
+    // console.log(commentDate)
 
     const timezoneOffset = 3 * 60 * 60 * 1000; 
     const adjustedCommentDate = new Date(commentDate.getTime() - timezoneOffset);

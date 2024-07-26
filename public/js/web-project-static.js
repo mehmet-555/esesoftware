@@ -52,7 +52,7 @@ function validateSteps() {
         }
         if (submitButton) {
             submitButton.addEventListener("click", (e) => {
-                console.log("awdadwa");
+                // console.log("awdadwa");
             })
         }
     });

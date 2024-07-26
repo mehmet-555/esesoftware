@@ -31,7 +31,7 @@ async function getBlogs() {
 router.use("/mehmet-gungor", mgRouter);
 
 mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
-    console.log(req.originalUrl);
+    // console.log(req.originalUrl);
     try {
         const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
         const [usersObj, blogObj] = await Promise.all([getUsers(), getBlogs()]);
@@ -41,11 +41,11 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
 
         if(blogObj.blogs[0].blogComments.blogCommentCounts > 0) {
             const commentUsersIdArr = [];
-            console.log("yorum var")
+            // console.log("yorum var")
             blogObj.blogs[0].blogComments.comments.forEach(comment => {
                 commentUsersIdArr.push(comment.commentUserId);
             });
-            console.log(commentUsersIdArr);
+            // console.log(commentUsersIdArr);
 
             const commentUsersArr = [];
 
@@ -63,8 +63,8 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
             })
 
             // commentId, userPic, time, commentContent, likeCount,
-            console.log(commentUsersArr);
-            console.log("--------------------------------------------------")
+            // console.log(commentUsersArr);
+            // console.log("--------------------------------------------------")
             res.status(200).render('blogs/blogPageGeneralLayout', {
                 thePathArr: thePathArr,
                 blog: blogObj.blogs[0],
@@ -76,8 +76,8 @@ mgRouter.get("/what-is-node-js-runtime", async (req, res, next)=> {
             });
 
         }else {
-            console.log("yorum yok")
-            console.log("--------------------------------------------------")
+            // console.log("yorum yok")
+            // console.log("--------------------------------------------------")
             res.status(200).render('blogs/blogPageGeneralLayout', {
                 thePathArr: thePathArr,
                 blog: blogObj.blogs[0],

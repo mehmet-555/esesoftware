@@ -441,7 +441,7 @@ function showFooter() {
         leftAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
         rightAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
     } else {
-        console.error("Element not found.");
+        // console.error("Element not found.");
     }
 }
 
