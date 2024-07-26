@@ -70,7 +70,7 @@ function nextPageWithValueF () {
 
         if (nextPageName) {
             const safeNextPageName = encodeURIComponent(nextPageName);
-            const newUrl = `http://192.168.1.108:3000/project/web-project/${safeNextPageName}`;
+            const newUrl = `https://esesoftware.com/project/web-project/${safeNextPageName}`;
             console.log(newUrl);
             window.location.href = newUrl;
         } else {
