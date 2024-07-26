@@ -1491,7 +1491,7 @@
                 </a>
                 <div class="w-11/12">
                     <div class="bg-[#19202aa1] rounded-xl px-4 py-4">
-                        <h3 class="text-white text-2xl text-center mb-6">İletişim Formu</h3>
+                        <h3 id="contact" class="text-white text-2xl text-center mb-6">İletişim Formu</h3>
                         <form class="contactFormT">
                             <div class="flex flex-col lg:flex-row lg:justify-center">
                                 <div class="mr-0 lg:mr-9 min-w-60">
@@ -1663,7 +1663,7 @@
                                         <a href="#" class="text-xs md:text-sm text-[#989898] hover:text-[#e8e8e8] transition-all duration-200">İletişim</a>
                                     </li>
                                     <li class=" my-3">
-                                        <a href="#" class="text-xs md:text-sm text-[#989898] whitespace-nowrap hover:text-[#e8e8e8] transition-all duration-200">Gizlilik Politikası</a>
+                                        <a href="#" class="text-xs md:text-sm text-[#989898] whitespace-nowrap hover:text-[#e8e8e8] transition-all duration-200">KVKK ve Gizlilik Politikası</a>
                                     </li>
                                     <li class=" my-3">
                                         <a href="#" class="text-xs md:text-sm text-[#989898] hover:text-[#e8e8e8] transition-all duration-200">Kariyer</a>
@@ -1981,7 +1981,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
+                    <a href="#" id="servicesAndServicesBtn" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
                         <span class="optSpan">Servisler ve Hizmetler</span>
                         <div class="w-[166px] h-[1px] bg-gradient-to-r from-blue-600 to-red-600"></div>
                     </a>
@@ -2005,7 +2005,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
+                    <a id="contacBtn" href="#contact" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
                         <span class="optSpan">İletişim</span>
                         <div class="w-[55px] h-[1px] bg-gradient-to-r from-blue-600 to-red-600"></div>
                     </a>
@@ -2013,7 +2013,28 @@
             </ul>
         </div>
     </div>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            console.log(window.location);
+            setTimeout(function() {
+                console.log(window.location.hash);
+                if (window.location.hash === "#contact") {
+                    const contactElement = document.getElementById("contact");
+                    console.log(contactElement);
+                    if (contactElement) {
+                        contactElement.scrollIntoView({ behavior: "smooth" });
+                        setTimeout(function() {
+                            window.scrollTo({
+                                top: window.scrollY - 100,
+                                behavior: "smooth"
+                            });
+                            console.log("çalıştı");
+                        }, 750); // scrollIntoView işleminin tamamlanmasını bekleyin
+                    }
+                }
+            }, 200); // İlk gecikme
+        });
+    </script>
     <script src="/js/home.js"></script>
     <script src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"> </script>
 </body>

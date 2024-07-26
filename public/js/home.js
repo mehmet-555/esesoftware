@@ -25,6 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mobile RightBar
     ModalFunction ()
+
+    // options modalında contact a tıkalyınca options modalını kaptma şeyleri
+    addEventListenerToContactBtnOnOpt ()  
+
+
+    // options modalında servicesBtn a tıklayınca mobilde left menuyu açma fonksiyonu 
+
+    addEventListenerToservicesBtnOnRightModal()
 });
 
 function sssAddListenerFunc () {
@@ -292,22 +300,7 @@ function aiRwdScrollFunc() {
 
 
 
-// Sayfada Kaldığım Yer Başlangıç
-window.addEventListener("beforeunload", function() {
-    localStorage.setItem("scrollPosition", document.querySelector(".mainCustomheigth").scrollTop);
-});
 
-document.querySelector(".mainCustomheigth").addEventListener("scroll", function() {
-    localStorage.setItem("scrollPosition", document.querySelector(".mainCustomheigth").scrollTop);
-});
-
-window.addEventListener("load", function() {
-    var scrollPosition = localStorage.getItem("scrollPosition");
-    if (scrollPosition !== null) {
-        document.querySelector(".mainCustomheigth").scrollTop = parseInt(scrollPosition, 10);
-    }
-});
-// Sayfada Kaldığım Yer Son
 
 
 
@@ -595,6 +588,7 @@ function mobileLeftBarNavliElemCollapseF() {
     const btns = document.querySelectorAll(".font-poppins .navLiABtnCollapse:not(.disabled)");
     btns.forEach(btn => {
       btn.addEventListener("click", (e) => {
+        e.preventDefault();
         const modal = e.currentTarget.nextElementSibling;
         if (modal.classList.contains("close")) {
           closeAllBtnModals(btns);
@@ -647,7 +641,7 @@ function mobileLeftBarNavliElemCollapseF() {
 
 function ModalFunction () {
     const navMenuBtn = document.getElementById("navMenuBtn");
-    const modal = document.querySelector(".mobileOptionsModalCntr ");
+    const modal = document.querySelector(".mobileOptionsModalCntr");
 
     navMenuBtn.addEventListener("click", (e)=> {
         if(modal.classList.contains("translate-x-full")) {
@@ -717,4 +711,52 @@ function convertBtnBackStyle() {
     mappings.forEach(mapping => {
         toggleClass(mapping[0], mapping[1], mapping[2]);
     });
+}
+
+
+
+
+
+// options modalında contact a tıkalyınca options modalını kaptma şeyleri
+
+
+function addEventListenerToContactBtnOnOpt ()  {
+    const contacBtn = document.getElementById("contacBtn");
+    const navMenuBtn = document.getElementById("navMenuBtn");
+
+    contacBtn.addEventListener("click", (e)=>{
+        navMenuBtn.click();
+
+        setTimeout(function() {
+            window.scrollTo({
+                top: window.scrollY - 100,
+                behavior: "smooth"
+            });
+            console.log("çalıştı");
+        }, 250); // scrollIntoView işleminin tamamlanmasını bekleyin
+    });
+};
+
+
+
+
+
+// options modalında servicesBtn a tıklayınca mobilde left menuyu açma fonksiyonu 
+
+function addEventListenerToservicesBtnOnRightModal() {
+    const servicesAndServicesBtn = document.getElementById("servicesAndServicesBtn");
+
+    const navMenuBtn = document.getElementById("navMenuBtn");
+    const mobileLeftBarBtn = document.getElementById("mobileLeftBarBtn");
+
+    if (window.innerWidth < 768) {
+        servicesAndServicesBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            navMenuBtn.click();
+            setTimeout(() => {
+                mobileLeftBarBtn.click();
+            }, 250);
+        });
+    }
+
 }

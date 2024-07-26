@@ -10,7 +10,10 @@ document.addEventListener("DOMContentLoaded", ()=> {
         mobileLeftBarNavliElemCollapseF();
     
         // Mobile RightBar
-        ModalFunction ()
+        ModalFunction ();
+
+        // options modalında servicesBtn a tıklayınca mobilde left menuyu açma fonksiyonu 
+        addEventListenerToservicesBtnOnRightModal()
 });
 
 
@@ -427,4 +430,37 @@ function convertBtnBackStyle() {
     mappings.forEach(mapping => {
         toggleClass(mapping[0], mapping[1], mapping[2]);
     });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// options modalında servicesBtn a tıklayınca mobilde left menuyu açma fonksiyonu 
+
+function addEventListenerToservicesBtnOnRightModal() {
+    const servicesAndServicesBtn = document.getElementById("servicesAndServicesBtn");
+
+    const navMenuBtn = document.getElementById("navMenuBtn");
+    const mobileLeftBarBtn = document.getElementById("mobileLeftBarBtn");
+
+    if (window.innerWidth < 768) {
+        servicesAndServicesBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            navMenuBtn.click();
+            setTimeout(() => {
+                mobileLeftBarBtn.click();
+            }, 250);
+        });
+    }
+
 }
