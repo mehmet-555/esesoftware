@@ -22,11 +22,6 @@ handlers:
 
   - url: /.*
     script: auto
-
-  - url: /robots.txt
-    static_files:
-    path: robots.txt
-    upload: robots.txt
  
   - url: /css/(.*)
     static_files: public/css/\1
