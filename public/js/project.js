@@ -61,7 +61,7 @@ function nextPageWithValueF () {
 
         if (nextPageName) {
             const safeNextPageName = encodeURIComponent(nextPageName);
-            const newUrl = `https://esesoftware.com/project/${safeNextPageName}`;
+            const newUrl = `/project/${safeNextPageName}`;
             console.log(newUrl);
             window.location.href = newUrl;
         } else {
