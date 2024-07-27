@@ -5,7 +5,7 @@ const projectRouter = express.Router();
 const rootDir = require("../utils/rootDir");
 
 projectRouter.get("/", (req, res, next)=> {
-    res.sendFile(path.join(__dirname, "../public/pages/privacP.html"));
+    res.render("staticContents/privacyPolicy");
 });
 
 module.exports = projectRouter;
