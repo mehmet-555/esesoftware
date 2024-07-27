@@ -1940,3 +1940,10 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   min-height: 18px;
   overflow-y: hidden;
 } 
+
+
+/* Ansayfa Map SVG Custom Rotate */
+
+.customRotate {
+  transform: rotateX(70deg);
+}
