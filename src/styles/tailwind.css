@@ -65,16 +65,9 @@
   box-shadow: 0 0 10px 10px #461a32;
 }
 
-#getStartedBtn {
-  transition: all .2s linear;
-  img {
-    transition: all .2s linear;
+#getStartedBtn img{
     width: 50px;
     height: 50px;
-  }
-  &:hover img {
-    background: #fff;
-  }
 }
 #navMenuBtn {
   i {
@@ -338,7 +331,7 @@ img.logo {
 .gradient-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 24px;
   padding: 8px;
 }
 
@@ -366,7 +359,7 @@ img.logo {
 }
 
 .card {
-  max-width: 550px;
+  max-width: 376px;
   border: 0;
   width: 100%;
   margin-inline: auto;
@@ -381,20 +374,23 @@ img.logo {
   padding: 24px 20px;
   transition: all .4s linear;
   img {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 }
 .container-card:hover {
   cursor: pointer;
   position: relative;
   border: 2px solid rgb(163, 163, 163);
-  background: linear-gradient(180deg, #422d48, #1a171c, #080509);
+  /* background: linear-gradient(180deg, #422d48, #1a171c, #080509); */
   background-clip: padding-box;
   border-radius: 22px;
   padding: 24px 20px;
   img {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
+}
+p.card-description.text-sm.md\:text-base {
+  transition: color .2s linear;
 }
 .container-card:hover .card-description {
   color: white
@@ -445,7 +441,7 @@ img.logo {
 
 .card-description {
   font-weight: 600;
-  line-height: 32px;
+  line-height: 24px;
   color: #ffffff99;
   max-width: 470px;
 }

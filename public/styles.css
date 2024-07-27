@@ -1300,6 +1300,9 @@ video {
 .max-w-\[40px\] {
   max-width: 40px;
 }
+.max-w-\[654px\] {
+  max-width: 654px;
+}
 .max-w-\[700px\] {
   max-width: 700px;
 }
@@ -1574,9 +1577,6 @@ video {
 .border-2 {
   border-width: 2px;
 }
-.border-4 {
-  border-width: 4px;
-}
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1771,6 +1771,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(47 29 55 / var(--tw-bg-opacity));
 }
+.bg-\[\#350818\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(53 8 24 / var(--tw-bg-opacity));
+}
 .bg-\[\#353d47\] {
   --tw-bg-opacity: 1;
   background-color: rgb(53 61 71 / var(--tw-bg-opacity));
@@ -1791,15 +1795,15 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(93 40 186 / var(--tw-bg-opacity));
 }
-.bg-\[\#5f4343\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(95 67 67 / var(--tw-bg-opacity));
-}
 .bg-\[\#77889912\] {
   background-color: #77889912;
 }
 .bg-\[\#7d84ab91\] {
   background-color: #7d84ab91;
+}
+.bg-\[\#92e3a9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(146 227 169 / var(--tw-bg-opacity));
 }
 .bg-\[\#ab2dff\] {
   --tw-bg-opacity: 1;
@@ -2085,6 +2089,9 @@ video {
 .pt-0 {
   padding-top: 0px;
 }
+.pt-1 {
+  padding-top: 0.25rem;
+}
 .pt-10 {
   padding-top: 2.5rem;
 }
@@ -2247,10 +2254,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(0 21 39 / var(--tw-text-opacity));
 }
-.text-\[\#01178e\] {
-  --tw-text-opacity: 1;
-  color: rgb(1 23 142 / var(--tw-text-opacity));
-}
 .text-\[\#2a2a2a\] {
   --tw-text-opacity: 1;
   color: rgb(42 42 42 / var(--tw-text-opacity));
@@ -2343,6 +2346,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(224 224 224 / var(--tw-text-opacity));
 }
+.text-\[\#e1c9c9\] {
+  --tw-text-opacity: 1;
+  color: rgb(225 201 201 / var(--tw-text-opacity));
+}
 .text-\[\#e6e6e6\] {
   --tw-text-opacity: 1;
   color: rgb(230 230 230 / var(--tw-text-opacity));
@@ -2400,9 +2407,6 @@ video {
 }
 .underline {
   text-decoration-line: underline;
-}
-.underline-offset-2 {
-  text-underline-offset: 2px;
 }
 .underline-offset-4 {
   text-underline-offset: 4px;
@@ -2558,16 +2562,9 @@ video {
   box-shadow: 0 0 10px 10px #461a32;
 }
 
-#getStartedBtn {
-  transition: all .2s linear;
-  img {
-    transition: all .2s linear;
+#getStartedBtn img{
     width: 50px;
     height: 50px;
-  }
-  &:hover img {
-    background: #fff;
-  }
 }
 #navMenuBtn {
   i {
@@ -2845,7 +2842,7 @@ img.logo {
 .gradient-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
+  gap: 24px;
   padding: 8px;
 }
 
@@ -2873,7 +2870,7 @@ img.logo {
 }
 
 .card {
-  max-width: 550px;
+  max-width: 376px;
   border: 0;
   width: 100%;
   margin-inline: auto;
@@ -2888,20 +2885,23 @@ img.logo {
   padding: 24px 20px;
   transition: all .4s linear;
   img {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
 }
 .container-card:hover {
   cursor: pointer;
   position: relative;
   border: 2px solid rgb(163, 163, 163);
-  background: linear-gradient(180deg, #422d48, #1a171c, #080509);
+  /* background: linear-gradient(180deg, #422d48, #1a171c, #080509); */
   background-clip: padding-box;
   border-radius: 22px;
   padding: 24px 20px;
   img {
-    margin-bottom: 20px;
+    margin-bottom: 12px;
   }
+}
+p.card-description.text-sm.md\:text-base {
+  transition: color .2s linear;
 }
 .container-card:hover .card-description {
   color: white
@@ -2952,7 +2952,7 @@ img.logo {
 
 .card-description {
   font-weight: 600;
-  line-height: 32px;
+  line-height: 24px;
   color: #ffffff99;
   max-width: 470px;
 }
@@ -4645,12 +4645,6 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 }
 
 
-.hover\:border-\[\#8466ff\]:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(132 102 255 / var(--tw-border-opacity));
-}
-
-
 .hover\:border-\[\#d3d3d35f\]:hover {
   border-color: #d3d3d35f;
 }
@@ -4745,6 +4739,12 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 .group:hover .group-hover\:bg-\[\#c4c6c8\] {
   --tw-bg-opacity: 1;
   background-color: rgb(196 198 200 / var(--tw-bg-opacity));
+}
+
+
+.group:hover .group-hover\:bg-\[\#efefef\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 239 239 / var(--tw-bg-opacity));
 }
 
 
