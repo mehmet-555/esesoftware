@@ -2,7 +2,7 @@ const path = require("path");
 const express = require('express');
 const router = express.Router();
 const rootDir = require("../utils/rootDir");
-router.get('/robots.txt', (req, res) => {
+router.get('/', (req, res) => {
     res.type('text/plain');
     res.send(`User-agent: *
 Disallow: /private/

@@ -2,7 +2,7 @@ const path = require("path");
 const express = require('express');
 const router = express.Router();
 const rootDir = require("../utils/rootDir");
-router.get('/sitemap.xml', (req, res) => {
+router.get('/', (req, res) => {
     const urls = [
         { loc: 'https://www.esesoftware.com/', lastmod: new Date().toISOString().split('T')[0], changefreq: 'daily', priority: 1.0 },
         { loc: 'https://www.esesoftware.com/about', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },

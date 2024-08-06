@@ -34,7 +34,7 @@ app.use("/privacy-policy", privacyRouter);
 app.use("/", homeRouter);
 
 // Router'ları kullanma ykp
-app.use(robotsRouter);
-app.use(sitemapRouter);
+app.use("/robots.txt", robotsRouter);
+app.use("/sitemap.xml", sitemapRouter);
 module.exports = app;
 
