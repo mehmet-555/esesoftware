@@ -12,6 +12,9 @@ const aboutRouter = require("./routes/aboutRouters");
 const blogRouter = require("./routes/blogRouters");
 const servicesRouter = require("./routes/servicesRouters.js");
 const privacyRouter = require("./routes/privacyRouters.js");
+// Router dosyalarını içe aktarma ykp
+const robotsRouter = require('./routes/robotsRouter');
+const sitemapRouter = require('./routes/sitemapRouter');
 
 // App
 const app = express();
@@ -29,5 +32,9 @@ app.use("/about", aboutRouter);
 app.use("/blog", blogRouter);
 app.use("/privacy-policy", privacyRouter);
 app.use("/", homeRouter);
+
+// Router'ları kullanma ykp
+app.use(robotsRouter);
+app.use(sitemapRouter);
 module.exports = app;
 
