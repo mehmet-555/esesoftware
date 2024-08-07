@@ -1861,6 +1861,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-\[\#FFEB3B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 235 59 / var(--tw-bg-opacity));
+}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -2405,6 +2409,10 @@ video {
   --tw-text-opacity: 1;
   color: rgb(161 161 170 / var(--tw-text-opacity));
 }
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
 .underline {
   text-decoration-line: underline;
 }
@@ -2740,10 +2748,10 @@ video {
   }
 
   #contactSubmiBtn { 
-    box-shadow: 0 0 10px 10px transparent;
+    box-shadow: 0px 0px 5px 0px transparent;
   }
   #contactSubmiBtn:hover {
-    box-shadow: 0 0 10px 10px #461a32;
+    box-shadow: 0px 0px 5px 0px #ffffffb6;
   }
 }
 

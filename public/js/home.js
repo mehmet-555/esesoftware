@@ -2,7 +2,17 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     // ContactFormFunction
-    contactFormAddStyleListenerFunc ()
+    contactFormAddStyleListenerFunc ();
+
+    // contactFormActiveGettingMessage
+    // Contact form submit listener
+    const contactFormT = document.querySelector(".contactFormT");
+    if (contactFormT) {
+        contactFormT.addEventListener("submit", (e) => {
+            e.preventDefault(); // Formun doğal olarak gönderilmesini durdurur
+            activeContactMessageFunc();
+        });
+    }
 
     // SSSFunction
     sssAddListenerFunc ();
@@ -298,7 +308,21 @@ function aiRwdScrollFunc() {
 
 
 
+// Contact Fonksiyonu
 
+// Contact Fonksiyonu
+function activeContactMessageFunc() {
+    const contactFormT = document.querySelector(".contactFormT");
+    const contactSubmiBtn = document.getElementById("contactSubmiBtn");
+
+    if (contactFormT) {
+        const formData = new FormData(contactFormT);
+
+        contactSubmiBtn.firstElementChild.style.opacity = 0;
+        contactSubmiBtn.firstElementChild.nextElementSibling.firstElementChild.style.opacity = 1;
+
+    }
+}
 
 
 

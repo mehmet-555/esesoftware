@@ -7,5 +7,9 @@ const rootDir = require("../utils/rootDir");
 router.get("/", (req, res, next)=> {
     res.sendFile(path.join(__dirname, "../public/pages/index.html"));
 });
+router.post("/contact", (req, res, next) => {
+    
+});
+
 
 module.exports = router;
