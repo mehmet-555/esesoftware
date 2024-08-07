@@ -1895,8 +1895,8 @@
                 </a>
                 <div class="w-11/12">
                     <div class="bg-[#19202aa1] rounded-xl px-4 py-4">
-                        <h3 id="contact" class="text-white text-2xl text-center mb-6">İletişim Formu</h3>
-                        <form class="contactFormT" action="/contact" method="post">
+                        <h3 id="contact" class="text-white text-2xl text-center mb-2 md:mb-6">İletişim Formu</h3>
+                        <form class="contactFormT">
                             <div class="flex flex-col lg:flex-row lg:justify-center">
                                 <div class="mr-0 lg:mr-9 min-w-60">
                                     <div class="flex flex-col justify-between mb-1 md:mb-4 h-14">
@@ -1954,12 +1954,12 @@
                                     </div>
                                 </div>
                                 <div class=" min-w-52 flex flex-col w-full">
-                                    <div class="flex flex-col justify-between h-[200px] mb-auto">
+                                    <div class="flex flex-col justify-between h-[150px] md:h-[200px] mb-auto">
                                         <label for="contactMessage" class="contactLabelT relative text-white"
                                             style="position: relative;
                                         color: #67afb1; transition: all .4s ease; font-size: 16px; top: 15px; left: 10px; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; border-radius: 0 !important;">Mesajınız</label>
                                         <textarea name="contactMessage" id="contactMessage"
-                                            class="relative outline-none border-b-2 bg-transparent text-white resize-none h-[176px]"
+                                            class="relative outline-none border-b-2 bg-transparent text-white resize-none h-[130px] md:h-[176px]"
                                             style="-webkit-appearance: none !important;
                                         -moz-appearance: none !important;
                                         appearance: none !important;
@@ -1967,8 +1967,8 @@
                                         box-shadow: none !important;
                                         box-sizing: border-box;"></textarea>
                                     </div>
-                                    <div class="flex justify-center my-8">
-                                        <button id="contactSubmiBtn" type="submit"
+                                    <div class="flex justify-center mt-4 md:my-8">
+                                        <button id="contactSubmiBtn"
                                             class="relative text-[#606fc2] outline-none border-2 border-[#309ea3] hover:border-white hover:text-slate-100 font-semibold transition-all duration-200 rounded-xl px-2 py-2 roboto-mono-regular">
                                             &lt; 
                                             <span class="mx-2 text-[#b8b8b8] transition-opacity duration-500 pointer-events-none">Gönder</span>
@@ -1985,8 +1985,16 @@
                             </div>
                         </form>
                     </div>
-                    <div class="mt-4">
-                        <p class="text-black bg-[#FFEB3B] font-semibold tracking-widest text-sm py-1 pl-2 rounded-md">Lütfen formu geçerli formatta doldurunuz.</p>
+                    <div class="contactFormMessageBox">
+                        <div class="mt-4" data-status="invalidFormat">
+                            <p class="text-black bg-[#FFEB3B] font-semibold tracking-widest text-sm py-1 pl-2 rounded-md">Lütfen formu geçerli formatta doğru bir şekilde doldurunuz</p>
+                        </div>
+                        <div class="mt-4" data-status="valid">
+                            <p class="text-black bg-[#079b0b] font-semibold tracking-widest text-sm py-1 pl-2 rounded-md">Form başarıyla gönderildi</p>
+                        </div>
+                        <div class="mt-4" data-status="error">
+                            <p class="text-black bg-[#4b5859] font-semibold tracking-widest text-sm py-1 pl-2 rounded-md">Form gönderme işleme sırasında bir hata meydana geldi. Hata tarafımıza rapor edilmiştir. Daha sonra tekrar deneyin veya diğer iletişim kanallarımızı kullanın.</p>
+                        </div>
                     </div>
                 </div>
             </div>

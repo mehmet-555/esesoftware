@@ -5,14 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     contactFormAddStyleListenerFunc ();
 
     // contactFormActiveGettingMessage
-    // Contact form submit listener
-    const contactFormT = document.querySelector(".contactFormT");
-    if (contactFormT) {
-        contactFormT.addEventListener("submit", (e) => {
-            e.preventDefault(); // Formun doğal olarak gönderilmesini durdurur
-            activeContactMessageFunc();
-        });
-    }
+    activeContactMessageFunc();
 
     // SSSFunction
     sssAddListenerFunc ();
@@ -315,19 +308,51 @@ function activeContactMessageFunc() {
     const contactFormT = document.querySelector(".contactFormT");
     const contactSubmiBtn = document.getElementById("contactSubmiBtn");
 
-    if (contactFormT) {
-        const formData = new FormData(contactFormT);
+    contactSubmiBtn.addEventListener("click", (e) => {
+        e.preventDefault();
 
-        contactSubmiBtn.firstElementChild.style.opacity = 0;
-        contactSubmiBtn.firstElementChild.nextElementSibling.firstElementChild.style.opacity = 1;
-
-    }
+        if (contactFormT && validateContactForm())  {
+            console.log("basarili")
+            
+        }else {
+            console.log("basarisiz")
+        }
+    })
 }
 
 
+function validateContactForm() {
+
+    const contactFormT = document.querySelector(".contactFormT");
+
+    const nameInputValue = contactFormT.querySelector("[name='contactName']").value.trim();
+    const emailInputValue = contactFormT.querySelector("[name='contactEmail']").value.trim();
+    const phoneInputValue = contactFormT.querySelector("[name='contactPhone']").value.trim();
+    const subjectInput = contactFormT.querySelector("[name='contactSubject']").value.trim();
+    const messageTextareaValue = contactFormT.querySelector("[name='contactMessage']").value.trim();
+
+    const namePattern = /^([a-zA-Z]{2,}\s+){1,2}[a-zA-Z]{2,}$/;
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const phonePattern = /^(\+90|0)?\s*(5\d{2}|(2\d{2}|3\d{2}))\s*\d{3}\s*\d{2}\s*\d{2}$/;
 
 
-
+    if (!namePattern.test(nameInputValue)) {
+        return false;
+    }
+    if (!emailPattern.test(emailInputValue)) {
+        return false;
+    }
+    if (!phonePattern.test(phoneInputValue)) {
+        return false;
+    }
+    if (subjectInput === "") {
+        return false;
+    }
+    if (messageTextareaValue.length < 10) {
+        return false;
+    }
+    return true
+}
 
 
 
