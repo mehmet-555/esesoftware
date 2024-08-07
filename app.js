@@ -16,8 +16,8 @@ const privacyRouter = require("./routes/privacyRouters.js");
 const robotsRouter = require('./routes/robotsRouter');
 const sitemapRouter = require('./routes/sitemapRouter');
 
-// // App
-// const app = express();
+// App
+const app = express();
 // // URL Yönlendirmeleri
 // app.use((req, res, next) => {
 //     if (!req.hostname.startsWith('www.')) {
