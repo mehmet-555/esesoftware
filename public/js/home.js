@@ -312,10 +312,10 @@ function activeContactMessageFunc() {
         e.preventDefault();
 
         if (contactFormT && validateContactForm())  {
-            console.log("basarili")
+            // doğru format başarılı------> Burada spin çıkacak tick işaretine dönecek ve öylece kalacak hem box hem tick işareti sonrasında ise çerez yüklenecek ve birgün boyunca yeniden gönderemeyecek.
             
         }else {
-            console.log("basarisiz")
+            // yanlış format başarısız-----> Burada rotate den sonra cross işareti çıkacak ve invalid box gözükecek (2sn spin animation )
         }
     })
 }
