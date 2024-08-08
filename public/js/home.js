@@ -307,19 +307,81 @@ function aiRwdScrollFunc() {
 function activeContactMessageFunc() {
     const contactFormT = document.querySelector(".contactFormT");
     const contactSubmiBtn = document.getElementById("contactSubmiBtn");
+    const contactFormMessageBox = document.querySelector(".contactFormMessageBox");
+
+    const gonderTextElem = contactSubmiBtn.firstElementChild
+    const loaderSpinElemContainer = gonderTextElem.nextElementSibling
+    const crossSignElem = loaderSpinElemContainer.nextElementSibling
+    const tickSignElem = crossSignElem.nextElementSibling
+
 
     contactSubmiBtn.addEventListener("click", (e) => {
         e.preventDefault();
 
         if (contactFormT && validateContactForm())  {
             // doğru format başarılı------> Burada spin çıkacak tick işaretine dönecek ve öylece kalacak hem box hem tick işareti sonrasında ise çerez yüklenecek ve birgün boyunca yeniden gönderemeyecek.
+            gonderTextElem.style.opacity = 0
+            loaderSpinElemContainer.firstElementChild.style.opacity = 1
+            const message = validateContactForm();
+            
+            sendMessage(JSON.stringify(message))
+            .then(response => {
+                if(response.ok) {
+                    setTimeout(() => {
+                        loaderSpinElemContainer.firstElementChild.style.opacity = 0
+                        tickSignElem.style.opacity = 1
+                        Array.from(contactFormMessageBox.children).forEach(messageElem => {
+                            if(messageElem.dataset.status === "valid") {
+                                messageElem.style.display = "flex";
+                            }
+                        });
+                        contactSubmiBtn.disabled = true
+                    }, 1000)
+                }
+            }).catch(err => {
+                setTimeout(() => {
+                    loaderSpinElemContainer.firstElementChild.style.opacity = 0
+                    crossSignElem.style.opacity = 1
+                    Array.from(contactFormMessageBox.children).forEach(messageElem => {
+                        if(messageElem.dataset.status === "error") {
+                            messageElem.style.display = "flex";
+                        }
+                    });
+                    contactSubmiBtn.disabled = true
+                }, 1000);
+            })
+
             
         }else {
             // yanlış format başarısız-----> Burada rotate den sonra cross işareti çıkacak ve invalid box gözükecek (2sn spin animation )
+            Array.from(contactFormMessageBox.children).forEach(messageElem => {
+                if(messageElem.dataset.status === "invalid") {
+                    messageElem.style.display = "flex"
+                }
+                messageElem.style.display = "none";
+            });
+            
         }
     })
 }
 
+function sendMessage (messageJson) {
+    return new Promise((resolve, reject) => {
+
+        fetch("/contact", {
+            method: "POST",
+            body: messageJson,
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            resolve(response)
+        }).catch(err => {
+            reject(err)
+        })
+    })
+}
 
 function validateContactForm() {
 
@@ -351,7 +413,16 @@ function validateContactForm() {
     if (messageTextareaValue.length < 10) {
         return false;
     }
-    return true
+
+    let message = {
+        nameSurname: nameInputValue,
+        email: emailInputValue,
+        phone: phoneInputValue,
+        subject: subjectInput,
+        message: messageTextareaValue
+    }
+
+    return message
 }
 
 
