@@ -26,6 +26,7 @@ jobs:
     - name: Set environment variables
       run: |
         echo "ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX=${{ secrets.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX }}" >> $GITHUB_ENV
+        echo "ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX=${{ secrets.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX }}" >> $GITHUB_WORKSPACE/.env
 
     - name: Deploy to App Engine
       run: |
