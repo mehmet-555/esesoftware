@@ -2030,6 +2030,9 @@ video {
 .pb-20 {
   padding-bottom: 5rem;
 }
+.pb-24 {
+  padding-bottom: 6rem;
+}
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -5383,6 +5386,11 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
   .lg\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .lg\:font-normal {

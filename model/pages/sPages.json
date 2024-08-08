@@ -452,18 +452,19 @@
                         {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Sunucusuz Teknoloji(Serverless) Nedir?"},
                         {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Sunucusuz Teknolojinin Avantajları"},
                         {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Esesoftware AE ile Yeniden Dağıtım Nedir?"},
-                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "App Engine'in Artıları"},
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Esesoftware ile App Engine Kullanımının Artıları"},
                         {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "App Engine ile Sunuculu Sistemler Arasındaki Farklar"}
                     ]
                 },
                 "a2": {
                     "header": "Esesoftware ile App Engine",
                     "subHeaders": [
-                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "AE ile Sunucusuz ve Ölçeklenebilir ÇÖzümler"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "AE ile Sunucusuz ve Ölçeklenebilir Çözümler"},
                         {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "AE ile Sunduğumuz Hizmetler"},
-                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader": "Esesoftware ile AE Fiyatlarına Etki Eden Faktörler"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader": "AE ile Maliyetlendirme Modelleri(Örnek Maliyet Hesaplama Tablosu)"},
                         {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
-                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink11", "href": "#entryforObserver11", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
                     ]
                 }
             },
@@ -474,22 +475,143 @@
                         {
                             "id": "entryforObserver1",
                             "subContentHeader": "Sunucusuz Teknoloji(Serverless) Nedir?",
-                            "subContent": "<p class=\"text-sm indent-4\">Sunucusuz teknoloji, geliştiricilerin sadece uygulama kodunu yazıp çalıştırmalarına olanak tanır, sunucu yönetimi ve bakımı bulut hizmet sağlayıcısı (örneğin Google) tarafından yapılır. 'Sunucusuz' terimi, sunucuların olmadığı anlamına gelmez; bu sunucuların yönetimi tamamen bulut sağlayıcısı tarafından üstlenilir.Geliştiriciler, sunucu yönetimiyle uğraşmak zorunda kalmadan kodlarını yazar ve dağıtır. Bu, projelerin daha hızlı hayata geçmesine ve zaman tasarrufuna yardımcı olur. Google App Engine gibi sunucusuz platformlar, hızlı, güvenli ve verimli uygulama geliştirme olanağı sağlar.Sunucusuz teknolojiler, projelerinizi bir üst seviyeye taşımanızda önemli bir rol oynar.</p>"
+                            "subContent": "<p class=\"text-sm indent-4\">Sunucusuz teknoloji, geliştiricilerin sadece uygulama kodunu yazıp çalıştırmalarına olanak tanır. Sunucu yönetimi ve bakımı tamamen bulut hizmet sağlayıcısı (Esesoftware) tarafından yapılır. Geliştiriciler, sunucu yönetimiyle uğraşmak zorunda kalmadan kodlarını yazar ve dağıtır. Bu, projelerin daha hızlı hayata geçmesine ve zaman tasarrufuna yardımcı olur. Google App Engine gibi sunucusuz platformlar, hızlı, güvenli ve verimli uygulama geliştirme olanağı sağlar. Ancak, bu teknolojinin etkin ve verimli bir şekilde kullanılması, uzmanlık ve deneyim gerektirir.</p>"
                         },
                         {
                             "id": "entryforObserver2",
                             "subContentHeader": "Sunucusuz Teknolojinin Avantajları",
-                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\">Geliştiriciler, sunucu kurma, güncelleme ve bakım gibi teknik detaylarla uğraşmak zorunda kalmazlar. Bu işleri bulut sağlayıcısı otomatik olarak halleder.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Ölçeklenebilirlik:</span>\n<span class=\"text-sm\">Uygulamanızın kullanıcı sayısı artsa da azalsa da, sunucusuz hizmetler otomatik olarak ölçeklenir. Trafik yoğun olduğunda kaynaklar artırılır, düşük olduğunda ise gereksiz kaynaklar serbest bırakılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Maliyet Etkinliği:</span>\n<span class=\"text-sm\">Sunucusuz hizmetler, yalnızca kullandığınız kaynaklar için ödeme yapmanızı sağlar. Kullanmadığınız zamanlarda maliyetleriniz de düşer.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Hızlı Geliştirme:</span>\n<span class=\"text-sm\">Sunucusuz teknolojiler, geliştiricilerin yalnızca kodlarına odaklanmalarını sağlar, bu da geliştirme sürecini hızlandırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Güvenlik ve Güncellemeler:</span>\n<span class=\"text-sm\">Sunucuların güvenliği ve güncellemeleri bulut sağlayıcısı tarafından otomatik olarak yapılır. Bu sayede, uygulamanız her zaman güncel ve güvende olur.</span>\n</p>\n</li>\n</ul>"
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\"> Sunucu kurma, güncelleme ve bakım gibi teknik detaylarla uğraşmanıza gerek kalmaz. Bu işleri Esesoftware otomatik olarak halleder.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Ölçeklenebilirlik:</span>\n<span class=\"text-sm\">Uygulamanızın kullanıcı sayısı artsa da azalsa da, sunucusuz hizmetler otomatik olarak ölçeklenir. Trafik yoğun olduğunda kaynaklar artırılır, düşük olduğunda ise gereksiz kaynaklar serbest bırakılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Maliyet Etkinliği:</span>\n<span class=\"text-sm\">Sunucusuz hizmetler, yalnızca kullandığınız kaynaklar için ödeme yapmanızı sağlar. Kullanmadığınız zamanlarda maliyetleriniz de düşer.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Hızlı Geliştirme:</span>\n<span class=\"text-sm\">Sunucusuz teknolojiler, geliştiricilerin yalnızca kodlarına odaklanmalarını sağlar, bu da geliştirme sürecini hızlandırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Güvenlik ve Güncellemeler:</span>\n<span class=\"text-sm\">Sunucuların güvenliği ve güncellemeleri Esesoftware tarafından otomatik olarak yapılır. Bu sayede, uygulamanız her zaman güncel ve güvende olur.</span>\n</p>\n</li>\n</ul>"
                         },
                         {
                             "id": "entryforObserver3",
                             "subContentHeader": "Esesoftware AE ile Yeniden Dağıtım Nedir?",
-                            "subContent": "<p class=\"text-sm indent-4\">Google App Engine (AE), Google'ın sağladığı ve web uygulamalarınızı kolayca geliştirip internette yayınlamanızı sağlayan bir hizmettir. AE ile sunucu kurmak, yönetmek veya güncellemek gibi teknik detaylarla uğraşmanıza gerek kalmaz. Siz sadece uygulamanızın kodunu yazarsınız ve geri kalan her şeyi Google halleder. Bu sayede, uygulamanızı daha hızlı ve verimli bir şekilde kullanıcılara sunabilir ve projenizi bir üst seviyeye taşıyabilirsiniz</p>"
+                            "subContent": "<p class=\"text-sm indent-4\">Google App Engine (AE), web uygulamalarınızı kolayca geliştirip internette yayınlamanızı sağlayan bir hizmettir. Ancak, AE'nin tüm avantajlarını tam anlamıyla kullanmak için uzmanlık gereklidir. Esesoftware olarak biz, AE'yi kullanarak müşterilerimize en uygun çözümleri sunuyoruz ve projelerinizi bir üst seviyeye taşıyoruz.</p>"
                         },
                         {
                             "id": "entryforObserver4",
-                            "subContentHeader": "App Engine'in Artıları",
+                            "subContentHeader": "Esesoftware ile App Engine Kullanımının Artıları",
                             "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\">Geliştiriciler, sunucu kurma, güncelleme ve bakım gibi teknik detaylarla uğraşmak zorunda kalmazlar. Bu işleri bulut sağlayıcısı otomatik olarak halleder.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Ölçeklenebilirlik:</span>\n<span class=\"text-sm\">Uygulamanızın kullanıcı sayısı artsa da azalsa da, sunucusuz hizmetler otomatik olarak ölçeklenir. Trafik yoğun olduğunda kaynaklar artırılır, düşük olduğunda ise gereksiz kaynaklar serbest bırakılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Maliyet Etkinliği:</span>\n<span class=\"text-sm\">Sunucusuz hizmetler, yalnızca kullandığınız kaynaklar için ödeme yapmanızı sağlar. Kullanmadığınız zamanlarda maliyetleriniz de düşer.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Hızlı Geliştirme:</span>\n<span class=\"text-sm\">Sunucusuz teknolojiler, geliştiricilerin yalnızca kodlarına odaklanmalarını sağlar, bu da geliştirme sürecini hızlandırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Güvenlik ve Güncellemeler:</span>\n<span class=\"text-sm\">Sunucuların güvenliği ve güncellemeleri bulut sağlayıcısı tarafından otomatik olarak yapılır. Bu sayede, uygulamanız her zaman güncel ve güvende olur.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "App Engine ile Sunuculu Sistemler Arasındaki Farklar",
+                            "subContent": "<table>\n<thead>\n<tr>\n<th>Özellik</th>\n<th>Esesoftware ile Google AE</th>\n<th>Sunuculu Sistemler</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Ölçeklenme</strong></td>\n<td>Dinamik, otomatik ölçeklenir</td>\n<td>Sabit, manuel ölçeklenir</td>\n</tr>\n<tr>\n<td><strong>Güncelleme</strong></td>\n<td>Otomatik veya API ile Kolay</td>\n<td>Manuel güncellemeler gerekli</td>\n</tr>\n<tr>\n<td><strong>Performans</strong></td>\n<td>Kullanıma göre Ölçeklenir</td>\n<td>Fiziksel sunuculara bağlı</td>\n</tr>\n<tr>\n<td><strong>Sunucu Gereksinimleri</strong></td>\n<td>Yok, Esesoftware tarafından yönetilir</td>\n<td>Yüksek, özel donanım gerekebilir</td>\n</tr>\n<tr>\n<td><strong>Veritabanı</strong></td>\n<td>Google Cloud veritabanları</td>\n<td>Yerel veya bulut veritabanları</td>\n</tr>\n<tr>\n<td><strong>Kullanıcı Etkileşimi</strong></td>\n<td>Yüksek, otomatik yük dengeler</td>\n<td>Yüksek, manuel müdahale gerekebilir </td>\n</tr>\n<tr>\n<td><strong>Örnek Teknolojiler</strong></td>\n<td>Python, Java, Node.js, Go</td>\n<td>PHP, ASP.NET, Java, Ruby on Rails</td>\n</tr>\n</tbody>\n</table>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Esesoftware ile App Engine",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "AE ile Sunucusuz ve Ölçeklenebilir Çözümler",
+                            "subContent": "<p class=\"indent-4\">\n<span class=\"text-sm font-semibold custom-underline\">Esesoftware</span>\n<span class=\"text-sm\">Google App Engine, sunduğu sunucusuz altyapı ve ölçeklendirilebilirlik avantajlarıyla, işletmelerin ve geliştiricilerin projelerini hızlı, güvenli ve etkili bir şekilde hayata geçirmelerine yardımcı olur. Bir Google Cloud Platform ürünü olan App Engine'in kurulumu, yönetimi, güvenliği ve sistemin istikrarı bakımından yalnızca uzman ve alanında deneyimli ekiplerce entegre edilmesi gereken bir üründür. Aksi takdirde, yanlış ve deneyimsiz ekiplerce kurulan ve entegre edilen bu ürün, hem geliştiriciyi hem de işletmeyi yüksek maliyetler karşısında zor durumda bırakabilir. Esesoftware olarak, Google App Engine'i kullanarak müşterilerimize geniş bir yelpazede yüksek kaliteli hizmetler sunuyoruz.</span>\n</p>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "App Engine Tabanında Verdiğimiz Hizmetler",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Bulut Geçişi ve Altyapı Modernizasyonu:</span>\n<span class=\"text-sm\">Mevcut sistemlerinizi Google Cloud'a taşıyarak altyapınızı modernize ediyoruz. AE ile sorunsuz bir geçiş sağlıyor ve mevcut altyapınızı optimize ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Bulut tabanlı hosting ve CI/CD süreçlerinde yeterliliği olmayan ya da yalnızca projelerini geliştirmeye odaklanmak isteyen geliştiriciler için tüm bu işlemleri Esesoftware olarak biz yönetiyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "AE ile Maliyetlendirme Modelleri(Örnek Maliyet Hesaplama Tablosu)",
+                            "subContent": "<table id=\"table2\" class=\"w-full pricingT\"><thead class=\"text-xs lg:text-sm\"><tr><th>Kaynak Türü</th><th class=\"text-center\">Kullanım Süresi</th><th class=\"text-center\">Miktar</th><th class=\"text-center\">Birim Fiyat</th></tr></thead><tbody><tr><td><p><strong>Instance Saatleri</strong></p></td><td><span class=\"block text-center\">720 saat</span></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">$0.1/saat</span></td></tr><tr><td><strong>CPU (Standart)</strong></td><td><span class=\"block text-center\">10 saat</span></td><td><span class=\"block text-center\">2 vCPU</span></td><td><span class=\"block text-center\">$0.1/saat</span></td></tr><tr><td><strong>Bellek (RAM)</strong></td><td><span class=\"block text-center\">10 saat</span></td><td><span class=\"block text-center\">4 GB</span></td><td><span class=\"block text-center\">$0.02/GB-saat</span></td></tr><tr><td><strong>Depolama</strong></td><td><span class=\"block text-center\">1 ay</span></td><td><span class=\"block text-center\">10 GB</span></td><td><span class=\"block text-center\">$0.04/GB-ay</span></td></tr><tr><td><strong>Ağ Trafiği (Giden)</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">50 GB</span></td><td><span class=\"block text-center\">$0.24/GB</span></td></tr><tr><td><strong>Ağ Trafiği (Gelen)</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">100 GB</span></td><td><span class=\"block text-center\">$0.06/GB</span></td></tr><tr><td><strong>Görev Kuyrukları</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">1 milyon görev</span></td><td><span class=\"block text-center\">$0.80/milyon görev</span></td></tr><tr><td><strong>Veritabanı İstekleri</strong></td><td><span class=\"block text-center\">720 saat</span></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">$0.16/saat</span></td></tr><tr><td><strong>Toplam Maliyet</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">$209.20</span></td></tr></tbody></table>\n<p class=\"text-xs text-[#4f4f4f] my-2 italic font-medium\">Bu fiyatlar, App Engine ile Hosting ve bulut maliyetlerini etkileyen bazı faktörleri daha iyi anlamanız ve genel bir fikir edinmeniz amacıyla verilmiştir. Uygulamanın büyüklüğüne ve diğer gereksinimlerine göre esnek değişimler uygulanmaktadır, iletişime geçmenizi tavsiye ederiz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Deneyimli Ekip:</span>\n<span class=\"text-sm\">Uzman ekibimiz, en son teknoloji ve trendleri takip ederek işletmenize en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Odaklı Yaklaşım:</span>\n<span class=\"text-sm\">Her müşteri bizim için özeldir. İhtiyaçlarınızı dikkatle dinleyip size özel çözümler sunarız.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Geliştirme sürecinin her aşamasında yanınızdayız. Her türlü destek ve danışmanlık hizmeti ile işletmenizin dijital başarısını sürdürülebilir kılıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yenilikçi Çözümler:</span>\n<span class=\"text-sm\">Sürekli değişen dijital dünyada yenilikçi ve geleceğe yönelik çözümler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver10",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver11",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "pageTitle": "Cloud Run ile Yeniden Dağıtım",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Cloud Run ile Yeniden Dağıtım",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Google Cloud Run Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Esesoftware ile Cloud Run Kullanımının Artıları"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Google Cloud Run(CR) ile Google App Engine(AE) Arasındaki Farklar"}
+                    ]
+                },
+                "a2": {
+                    "header": "Esesoftware ile Google Cloud Run Hizmeti",
+                    "subHeaders": [
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Esesoftware ile Google Cloud Run Kullanımı"},
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Bu Alanda Spesifik Hizmetlerimiz"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Örnek Maliyet Hesaplama Tablosu"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// Esesoftware ile Google Cloud Run Hizmeti",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Google Cloud Run Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Google Cloud Run, konteyner bazlı uygulamaları hızlı ve kolay bir şekilde dağıtmanızı sağlayan bir platformdur. Ancak, Cloud Run’ın tüm avantajlarını tam anlamıyla kullanmak için uzmanlık gereklidir. Esesoftware olarak biz, Cloud Run'ı kullanarak müşterilerimize en uygun çözümleri sunuyoruz ve projelerinizi bir üst seviyeye taşıyoruz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Esesoftware ile Cloud Run Kullanımının Artıları",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Kolay Kullanım:</span>\n<span class=\"text-sm\">Cloud Run, teknik detaylarla uğraşmadan uygulamanızı geliştirmenizi sağlanır. Bu  sürecin verimli ve etkili olması için Esesoftware'in deneyimli ekibi devreye girer.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Otomatik Ayarlamalar:</span>\n<span class=\"text-sm\">Uygulamanızın trafiği arttığında otomatik olarak ek kaynaklar sağlar ve trafiğiniz azaldığında bu kaynakları serbest bırakır. Bu, uzman ekiplerimiz tarafından optimize edilir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Esnek Programlama Desteği:</span>\n<span class=\"text-sm\">Cloud Run, birçok popüler programlama dilini destekler. Esesoftware, bu dillerde uzmanlaşmış geliştiricileriyle ihtiyaçlarınıza en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Güvenlik:</span>\n<span class=\"text-sm\">Google’ın yüksek güvenlik standartlarıyla birlikte, Esesoftware'in entegre ek güvenlik önlemleri ile verileriniz sürekli güvende olur.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Diğer Google Hizmetleri ile Uyum:</span>\n<span class=\"text-sm\">Cloud Run, Google’ın diğer hizmetleri(Cloud Pub/Sub, Big Query, Cloud Functions gibi.) ile sorunsuz bir şekilde çalışır ve Esesoftware, bu entegrasyonları sizin için sağlar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>6.</span>\n<span class=\"text-sm font-semibold\">Kolay Yönetim:</span>\n<span class=\"text-sm\">Cloud Run, uygulamanızı dağıtmayı ve yönetmeyi kolaylaştırır. Esesoftware'in kullanıcı dostu arayüzleri sayesinde uygulamanızı izleyebilir ve yönetebilirsiniz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>7.</span>\n<span class=\"text-sm font-semibold\">Yüksek Performans:</span>\n<span class=\"text-sm\">Google’ın güçlü altyapısı ve Esesoftware'in optimizasyon çözümleri sayesinde uygulamanız her zaman hızlı ve verimli çalışır.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Google Cloud Run(CR) ile Google App Engine(AE) Arasındaki Farklar",
+                            "subContent": "<table>\n<thead>\n<tr>\n<th>Özellik</th>\n<th>Esesoftware ile Google CR (Sunucusuz)</th>\n<th>Esesoftware ile Google AE(Sunucusuz)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Otomatik Ölçeklenebilirlik</strong></td>\n<td>Evet</td>\n<td>Evet</td>\n</tr>\n<tr>\n<td><strong>Konteyner Yönetimi</strong></td>\n<td>Evet</td>\n<td>Hayır</td>\n</tr>\n<tr>\n<td><strong>Dağıtım Yöntemi</strong></td>\n<td>Konteyner</td>\n<td>Kaynak Kodu</td>\n</tr>\n<tr>\n<td><strong>Başlatma Süresi</strong></td>\n<td>Hızlı</td>\n<td>Orta</td>\n</tr>\n<tr>\n<td><strong>Ölçeklenebilirlik Kontrolü</strong></td>\n<td>Yüksek</td>\n<td>Orta</td>\n</tr>\n<tr>\n<td><strong>Performans</strong></td>\n<td>Daha hızlı</td>\n<td>Hızlı</td>\n</tr>\n<tr>\n<td><strong>Sunucu Gereksinimleri</strong></td>\n<td>Yok, Esesoftware tarafından yönetilir</td>\n<td>Yok, Esesoftware tarafından yönetilir</td>\n</tr>\n</tbody>\n</table>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Esesoftware ile Google Cloud Run Hizmeti",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "Esesoftware ile Google Cloud Run Kullanımı",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"text-sm font-semibold\">Cloud Run ile Sunucusuz ve Ölçeklenebilir Çözümler:</span>\n<span class=\"text-sm\">Google Cloud Run, sunduğu sunucusuz altyapı ve otomatik ölçeklenebilirlik avantajlarıyla, işletmelerin ve geliştiricilerin projelerini hızlı ve etkili bir şekilde hayata geçirmelerine yardımcı olur. Esesoftware olarak, Google Cloud Run'ı kullanarak müşterilerimize geniş bir yelpazede hizmetler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Bu Alanda Spesifik Hizmetlerimiz",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Bulut Geçişi ve Altyapı Modernizasyonu:</span>\n<span class=\"text-sm\">Mevcut sistemlerinizi Google Cloud'a taşıyarak, altyapınızı modernize ediyoruz. Cloud Run ile sorunsuz bir geçiş sağlıyor ve mevcut altyapınızı optimize ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">API Geliştirme ve Yönetimi:</span>\n<span class=\"text-sm\">Cloud Run kullanarak, güçlü ve güvenilir API çözümleri geliştiriyoruz. API'lerinizin performansını ve güvenliğini en üst düzeye çıkarıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Destek ve Bakım Hizmetleri:</span>\n<span class=\"text-sm\">Uygulamalarınızın kesintisiz çalışması için kapsamlı destek ve bakım hizmetleri sunuyoruz. Cloud Run'ın sunduğu otomatik güncellemeler ve yedekleme çözümleri ile, sistemlerinizin her zaman en iyi performansı göstermesini sağlıyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "Örnek Maliyet Hesaplama Tablosu",
+                            "subContent": "<table id=\"table2\" class=\"w-full pricingT\"><thead class=\"text-xs lg:text-sm\"><tr><th>Kaynak Türü</th><th class=\"text-center\">Kullanım Süresi</th><th class=\"text-center\">Miktar</th><th class=\"text-center\">Birim Fiyat</th></tr></thead><tbody><tr><td><p><strong>CPU Standart</strong></p></td><td><span class=\"block text-center\">10 saat</span></td><td><span class=\"block text-center\">2 vCPU</span></td><td><span class=\"block text-center\">$4/saat</span></td></tr><tr><td><strong>Bellek (RAM)</strong></td><td><span class=\"block text-center\">10 saat</span></td><td><span class=\"block text-center\">4 GB</span></td><td><span class=\"block text-center\">$0.08/GB-saat</span></td></tr><tr><td><strong>Depolama</strong></td><td><span class=\"block text-center\">1 ay</span></td><td><span class=\"block text-center\">10 GB</span></td><td><span class=\"block text-center\">$0.16/GB-ay</span></td></tr><tr><td><strong>Ağ Trafiği(Giden)</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">50 GB</span></td><td><span class=\"block text-center\">$0.96/GB</span></td></tr><tr><td><strong>Ağ Trafiği (Gelen)</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">100 GB</span></td><td><span class=\"block text-center\">$0.24/GB</span></td></tr><tr><td><strong>Toplam Maliyet</strong></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\"></span></td><td><span class=\"block text-center\">$84.80</span></td></tr></tbody></table>\n<p class=\"text-xs text-[#4f4f4f] my-2 italic font-medium\">Bu fiyatlar, Cloud ile Hosting ve bulut maliyetlerini etkileyen bazı faktörleri daha iyi anlamanız ve genel bir fikir edinmeniz amacıyla verilmiştir. Uygulamanın büyüklüğüne ve diğer gereksinimlerine göre esnek değişimler uygulanmaktadır, iletişime geçmenizi tavsiye ederiz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Deneyimli Ekip:</span>\n<span class=\"text-sm\">Uzman ekibimiz, en son teknoloji ve trendleri takip ederek işletmenize en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Odaklı Yaklaşım:</span>\n<span class=\"text-sm\">Her müşteri bizim için özeldir. İhtiyaçlarınızı dikkatle dinleyip size özel çözümler sunarız.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Geliştirme sürecinin her aşamasında yanınızdayız. Her türlü destek ve danışmanlık hizmeti ile işletmenizin dijital başarısını sürdürülebilir kılıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yenilikçi Çözümler:</span>\n<span class=\"text-sm\">Sürekli değişen dijital dünyada yenilikçi ve geleceğe yönelik çözümler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
                         }
                     ]
                 }
