@@ -336,6 +336,7 @@ function activeContactMessageFunc() {
                             }
                         });
                         contactSubmiBtn.disabled = true
+                        contactFormTransformFirstState(contactFormT)
                     }, 1000)
                 }
             }).catch(err => {
@@ -354,11 +355,16 @@ function activeContactMessageFunc() {
             
         }else {
             // yanlış format başarısız-----> Burada rotate den sonra cross işareti çıkacak ve invalid box gözükecek (2sn spin animation )
+            console.log("Form başarısız formatta")
             Array.from(contactFormMessageBox.children).forEach(messageElem => {
-                if(messageElem.dataset.status === "invalid") {
+                if(messageElem.dataset.status === "invalidFormat") {
                     messageElem.style.display = "flex"
+                    setTimeout(() => {
+                        messageElem.style.display = "none"
+                    }, 3000);
+                }else {
+                    messageElem.style.display = "none";
                 }
-                messageElem.style.display = "none";
             });
             
         }
@@ -425,7 +431,14 @@ function validateContactForm() {
     return message
 }
 
+function contactFormTransformFirstState(contactFormT) {
 
+    contactFormT.querySelector("[name='contactName']").value= "";
+    contactFormT.querySelector("[name='contactEmail']").value = "";
+    contactFormT.querySelector("[name='contactPhone']").value = "";
+    contactFormT.querySelector("[name='contactSubject']").value = "";
+    contactFormT.querySelector("[name='contactMessage']").value = "";
+}
 
 
 
