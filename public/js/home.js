@@ -361,7 +361,7 @@ function activeContactMessageFunc() {
                     messageElem.style.display = "flex"
                     setTimeout(() => {
                         messageElem.style.display = "none"
-                    }, 3000);
+                    }, 5000);
                 }else {
                     messageElem.style.display = "none";
                 }
@@ -399,7 +399,7 @@ function validateContactForm() {
     const subjectInput = contactFormT.querySelector("[name='contactSubject']").value.trim();
     const messageTextareaValue = contactFormT.querySelector("[name='contactMessage']").value.trim();
 
-    const namePattern = /^([a-zA-Z]{2,}\s+){1,2}[a-zA-Z]{2,}$/;
+    const namePattern = /^([a-zA-ZçÇğĞıİöÖşŞüÜ]{2,}\s+){1,2}[a-zA-ZçÇğĞıİöÖşŞüÜ]{2,}$/;
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const phonePattern = /^(\+90|0)?\s*(5\d{2}|(2\d{2}|3\d{2}))\s*\d{3}\s*\d{2}\s*\d{2}$/;
 
