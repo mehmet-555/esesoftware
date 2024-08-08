@@ -25,9 +25,9 @@ router.post("/contact", (req, res, next) => {
         userSendMessage: true
     }
     // JWT Oluşturma
-    const sendMessageJWT = jwt.sign(messageSend, secretKey, { expiresIn: '1d' });
+    const sendMessageJWT = jwt.sign(messageSend, secretKey, { expiresIn: '6h' });
 
-    res.cookie("ES_smCookie", sendMessageJWT, { httpOnly: true, maxAge: 24 * 60 * 60 * 1000, secure: true });
+    res.cookie("ES_smCookie", sendMessageJWT, { httpOnly: true, maxAge: 6 * 60 * 60 * 1000, secure: true });
     res.status(200).send("Message received and cookie send")
 });
 
