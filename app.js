@@ -19,30 +19,16 @@ const sitemapRouter = require('./routes/sitemapRouter');
 // App
 const app = express();
 // // URL Yönlendirmeleri
-// app.use((req, res, next) => {
-//     if (!req.hostname.startsWith('www.')) {
-//       res.redirect(301, 'https://www.' + req.hostname + req.originalUrl);
-//     } else {
-//       next();
-//     }
-//   });
+app.use((req, res, next) => {
+    if (req.hostname.startsWith('www.')) {
+        const redirectAdress =  req.hostname + req.originalUrl;
+        console.log(redirectAdress)
+      res.redirect(301, redirectAdress);
+    } else {
+      next();
+    }
+  });
   
-//   app.use((req, res, next) => {
-//     if (req.header('x-forwarded-proto') !== 'https') {
-//       res.redirect(301, `https://${req.hostname}${req.originalUrl}`);
-//     } else {
-//       next();
-//     }
-//   });
-  
-//   app.use((req, res, next) => {
-//     const canonicalUrl = 'https://www.esesoftware.com';
-//     if (req.hostname !== 'www.esesoftware.com' || req.protocol !== 'https') {
-//       res.redirect(301, canonicalUrl + req.originalUrl);
-//     } else {
-//       next();
-//     }
-//   });
 
 // Internal Middlewares
 app.set("view engine", "ejs");
