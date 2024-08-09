@@ -47,7 +47,10 @@ const app = express();
 // Internal Middlewares
 app.set("view engine", "ejs");
 app.set("views", path.join(rootDir, "views"));
-app.use(express.static(path.join(rootDir, "/public")));
+app.use(express.static(path.join(rootDir, "/public"), {
+    etag: true,
+    lastModified: true
+}));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
