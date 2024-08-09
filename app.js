@@ -20,9 +20,10 @@ const sitemapRouter = require('./routes/sitemapRouter');
 const app = express();
 
 // URL Yönlendirmeleri
+
 app.use((req, res, next) => {
     if (req.hostname.startsWith('www.')) {
-        const redirectAddress = `https://${req.hostname}${req.originalUrl}`;
+        const redirectAddress = `https://esesoftware.com${req.originalUrl}`;
         console.log(redirectAddress);
         res.redirect(301, redirectAddress);
     } else {
