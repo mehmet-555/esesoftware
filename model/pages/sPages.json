@@ -510,7 +510,7 @@
                         {
                             "id": "entryforObserver7",
                             "subContentHeader": "App Engine Tabanında Verdiğimiz Hizmetler",
-                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Bulut Geçişi ve Altyapı Modernizasyonu:</span>\n<span class=\"text-sm\">Mevcut sistemlerinizi Google Cloud'a taşıyarak altyapınızı modernize ediyoruz. AE ile sorunsuz bir geçiş sağlıyor ve mevcut altyapınızı optimize ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Bulut tabanlı hosting ve CI/CD süreçlerinde yeterliliği olmayan ya da yalnızca projelerini geliştirmeye odaklanmak isteyen geliştiriciler için tüm bu işlemleri Esesoftware olarak biz yönetiyoruz.</span>\n</p>\n</li>\n</ul>"
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Bulut Geçişi ve Altyapı Modernizasyonu:</span>\n<span class=\"text-sm\">Mevcut sistemlerinizi Google Cloud'a taşıyarak altyapınızı modernize ediyoruz. AE ile sorunsuz bir geçiş sağlıyor ve mevcut altyapınızı optimize ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Geliştiriciler İçin AE ile Hosting ve CI/CD Desteği:</span>\n<span class=\"text-sm\">Bulut tabanlı hosting ve CI/CD süreçlerinde yeterliliği olmayan ya da yalnızca projelerini geliştirmeye odaklanmak isteyen geliştiriciler için tüm bu işlemleri Esesoftware olarak biz yönetiyoruz.</span>\n</p>\n</li>\n</ul>"
                         },
                         {
                             "id": "entryforObserver8",

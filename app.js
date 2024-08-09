@@ -18,17 +18,17 @@ const sitemapRouter = require('./routes/sitemapRouter');
 
 // App
 const app = express();
-// // URL Yönlendirmeleri
+
+// URL Yönlendirmeleri
 app.use((req, res, next) => {
-    if (req.hostname.startsWith('www.')) {
-        const redirectAdress =  req.hostname + req.originalUrl;
-        console.log(redirectAdress)
-      res.redirect(301, redirectAdress);
+    if (!req.hostname.startsWith('www.')) {
+        const redirectAddress = `https://www.${req.hostname}${req.originalUrl}`;
+        console.log(redirectAddress);
+        res.redirect(301, redirectAddress);
     } else {
-      next();
+        next();
     }
-  });
-  
+});
 
 // Internal Middlewares
 app.set("view engine", "ejs");
