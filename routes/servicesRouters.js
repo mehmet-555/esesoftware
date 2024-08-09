@@ -54,7 +54,7 @@ webSRouter.get("/creating-static-web-site", [
 
     // console.log(req.originalUrl);
     const errors = validationResult(req);
-    console.log(req.headers)
+
     if(errors.isEmpty()) {
         try {
             const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
