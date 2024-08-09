@@ -21,8 +21,8 @@ const app = express();
 
 // URL Yönlendirmeleri
 app.use((req, res, next) => {
-    if (!req.hostname.startsWith('www.')) {
-        const redirectAddress = `https://www.${req.hostname}${req.originalUrl}`;
+    if (req.hostname.startsWith('www.')) {
+        const redirectAddress = `https://${req.hostname}${req.originalUrl}`;
         console.log(redirectAddress);
         res.redirect(301, redirectAddress);
     } else {
