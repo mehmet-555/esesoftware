@@ -630,7 +630,7 @@
                     ]
                 },
                 "a2": {
-                    "header": "Esesoftware Olarak Kurumsal İntranet Çözümü Geliştirme Hizmetimiz",
+                    "header": "Kurumsal İntranet Çözümü Geliştirme Hizmetimiz",
                     "subHeaders": [
                         {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Özelleştirilebilir İntranet Tasarımı"},
                         {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Entegrasyon ve Uygulama Desteği"},
@@ -670,7 +670,7 @@
                     ]
                 },
                 "a2": {
-                    "header": "// Esesoftware Olarak Kurumsal İntranet Çözümleri Hizmetlerimiz",
+                    "header": "// Kurumsal İntranet Çözümleri Hizmetlerimiz",
                     "subContents": [
                         {
                             "id": "entryforObserver5",
