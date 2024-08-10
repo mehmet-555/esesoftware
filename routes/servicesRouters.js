@@ -12,8 +12,7 @@ const servicesRouter = express.Router();
 const webSRouter = express.Router();
 const gcpRouter = express.Router();
 const automationSRouter = express.Router();
-const gcpSRouter = express.Router();
-const corporateSRouter = express.Router();
+const corporateRouter = express.Router();
 const scrapingSRouter = express.Router();
 
 // Utils and MW's
@@ -40,6 +39,7 @@ servicesRouter.all("*", (req, res, next) => {
 
 servicesRouter.use("/web-services", webSRouter);
 servicesRouter.use("/gcp", gcpRouter);
+servicesRouter.use("/corparate", corporateRouter);
 
 servicesRouter.use("/", (req, res, next) => {
     res.status(200).render("services/services.ejs");
@@ -241,7 +241,34 @@ gcpRouter.get("/redistribution-with-cr", [
     };
 });
 
+// CORPARATE
+corporateRouter.get("/corparate-intranet-solutions", [
+    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
+], async (req, res, next) => { 
+    
+    // console.log(req.originalUrl);
+    const errors = validationResult(req);
 
+    if(errors.isEmpty()) {
+        try {
+            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
+            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
+            const pageObj = JSON.parse(pagesJson);
+            // console.log(pageObj);
+            // console.log(req.ip);
+            
+            res.status(200).render('services/webServices/servicesGeneralLayout', {
+                thePathArr: thePathArr,
+                page: pageObj.pages[7],
+                pageTitle: pageObj.pages[7].pageTitle
+            });
+        } catch (error) {
+            next(error);
+        };
+    }else {
+        return res.status(400).json({ errors: errors.array() });
+    };
+})
 module.exports = servicesRouter;
 
 

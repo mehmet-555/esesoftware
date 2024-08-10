@@ -616,6 +616,105 @@
                     ]
                 }
             }
+        },
+        {
+            "pageTitle": "Kurumsal İntranet Çözümleri",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Kurumsal İntranet Çözümleri",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Kurumsal İntranet Çözümleri Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Bilgi ve Kaynak Yönetimi"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Güvenlik ve Erişim Kontrolü"},
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Yazılımın Arayüz ve Kullanıcı Deneyimi"}
+                    ]
+                },
+                "a2": {
+                    "header": "Esesoftware Olarak Kurumsal İntranet Çözümü Geliştirme Hizmetimiz",
+                    "subHeaders": [
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Özelleştirilebilir İntranet Tasarımı"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Entegrasyon ve Uygulama Desteği"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "Intranet Uygulaması Geliştirme Süreci"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader": "Kurulum ve Eğitim Hizmetleri"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader": "Kişiselleştirilmiş Özel İntranet Çözümleri Geliştirme Maliyet Değişkenleri"},
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink11", "href": "#entryforObserver11", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink12", "href": "#entryforObserver12", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// Kurumsal İntranet Çözümleri",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Kurumsal İntranet Çözümleri Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Kurumsal intranet çözümleri, çalışanların daha etkili iletişim kurmasını ve iş birliği yapmasını sağlamak için geliştirilmiş kapsamlı bir platform sunar. Bu platform, e-posta trafiğini azaltırken, anlık mesajlaşma, video konferans, dosya paylaşımı, merkezi yönetim ve görev yönetimi gibi özelliklerle iş süreçlerini hızlandırır ve ekip çalışmasını destekler. Ayrıca, çalışanlar arasında bilgi paylaşımını kolaylaştırarak, şirket içi iletişimde bütünlük sağlar.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Bilgi ve Kaynak Yönetimi",
+                            "subContent": "<p class=\"text-sm indent-4\">Bir intranet sistemi, şirket içi bilgi ve kaynakların düzenli bir şekilde yönetilmesini sağlar. Çalışanlar, ihtiyaç duydukları belgelere, prosedürlere, rehberlere ve diğer kaynaklara tek bir noktadan erişebilir. Bu da, bilgiye ulaşma süresini kısaltır ve iş süreçlerinde verimliliği artırır. Tüm bilgiler merkezi bir veri tabanında toplandığı için, bilgilere erişim kolaylaşır ve güncellemeler anında tüm kullanıcılarla paylaşılır.</p>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Güvenlik ve Erişim Kontrolü",
+                            "subContent": "<p class=\"text-sm indent-4\">Kurumsal intranet çözümleri, güvenliğin üst düzeyde olduğu bir ortam sunar. Çalışanların yalnızca yetkili oldukları bilgilere erişebilmesi için gelişmiş erişim kontrol mekanizmaları kullanılır. Yönetici ve çalışan statülerine göre erişim seviyeleri belirlenir, böylece hassas bilgilerin yetkisiz kişilere ulaşması engellenir. Veri güvenliği, şifreleme teknolojileri ve düzenli güvenlik güncellemeleri ile sağlanır.</p>"
+                        },
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "Yazılımın Arayüz ve Kullanıcı Deneyimi",
+                            "subContent": "<p class=\"text-sm indent-4\">Intranet sistemlerinin başarısı, kullanıcı dostu bir arayüz, kesintisiz çalışma, düzenli bakım ve güncellenmesine  bağlıdır. Esesoftware'in sunduğu intranet çözümleri, modern ve kullanıcı dostu arayüzleriyle dikkat çeker. Kullanıcılar, ihtiyaç duydukları bilgilere kolayca ulaşabilir ve işlerini hızlı bir şekilde halledebilir. Ayrıca, sistem, farklı departman ve kullanıcı gruplarına özel olarak özelleştirilebilir, bu da çalışanların iş akışını kolaylaştırır ve yazılımın adaptasyonunu hızlandırır.</p>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Esesoftware Olarak Kurumsal İntranet Çözümleri Hizmetlerimiz",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Özelleştirilebilir İntranet Tasarımı",
+                            "subContent": "<p class=\"text-sm indent-4\">Esesoftware olarak, tamamen şirketinizin ihtiyaçlarına uygun özelleştirilmiş intranet çözümleri geliştiriyoruz. Her şirketin yapısı ve ihtiyaçları farklıdır, bu nedenle intranet sistemlerimizi tamamen size özel olarak tasarlıyoruz. Çalışanlarınızın günlük iş akışını kolaylaştıracak, kullanıcı dostu arayüzler ve işlevsel modüller geliştiriyoruz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "Entegrasyon ve Uygulama Desteği",
+                            "subContent": "<p class=\"text-sm indent-4\">Kurumsal intranet çözümlerimiz, mevcut sistemlerinizle sorunsuz bir şekilde entegre edilebilir. Varsa diğer ERP, CRM gibi kritik iş uygulamalarınızla entegrasyon sağlayarak, çalışanlarınızın farklı sistemler arasında geçiş yapmadan tek bir platform üzerinden çalışmalarına olanak tanır. Ayrıca, mobil cihazlar ve uzaktan erişim için tamamen webde çalışan uygulamanıza düzenli optimizasyonlar yaparak, her yerden erişilebilir bir intranet deneyimi sunuyoruz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Intranet Çözümü Geliştirme Süreci",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Esesoftware olarak, kurumsal intranet çözümlerini hayata geçirirken izlediğimiz yapılandırılmış ve profesyonel bir geliştirme süreci sunuyoruz. Bu süreç, şirketinizin ihtiyaçlarına en uygun çözümü oluşturmak için adım adım ilerler:</p><ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">İhtiyaç Analizi:</span>\n<span class=\"text-sm\">İlk olarak, şirketinizin mevcut iş süreçlerini, ihtiyaçlarını ve hedeflerini ayrıntılı bir şekilde analiz ediyoruz. Bu analiz, intranet sisteminin hangi özelliklere sahip olması gerektiğini belirlememizi sağlar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tasarım ve Planlama:</span>\n<span class=\"text-sm\">Analiz sonucunda elde edilen bilgiler doğrultusunda, özelleştirilmiş bir intranet tasarımı oluşturuyoruz. Bu aşamada, kullanıcı dostu bir arayüz tasarımı, entegrasyon ihtiyaçları ve güvenlik önlemleri gibi kritik unsurlar planlanır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Geliştirme ve Entegrasyon:</span>\n<span class=\"text-sm\">Tasarım onaylandıktan sonra, yazılım geliştirme ekibimiz intranet çözümünü oluşturur. Mevcut sistemlerle entegrasyonlar yapılır ve gerekli modüller eklenir. Bu aşama, projenin teknik açıdan en yoğun kısmıdır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Test ve Uygulama:</span>\n<span class=\"text-sm\">Geliştirilen intranet sistemi, geniş kapsamlı testlerden geçirilir. Her modülün ve entegrasyonun sorunsuz çalıştığından emin olduktan sonra, sistem canlıya alınır ve kullanıcıların erişimine açılır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Eğitim ve Destek:</span>\n<span class=\"text-sm\">Canlıya alındıktan sonra, çalışanlarınıza yeni sistemi nasıl kullanacakları konusunda eğitimler verilir. Ayrıca, karşılaşılabilecek sorunlar için sürekli destek hizmeti sunuyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Sürekli İyileştirme:</span>\n<span class=\"text-sm\">Intranet sistemi devreye girdikten sonra, çalışanlarınızın geri bildirimleri doğrultusunda düzenli iyileştirmeler ve güncellemeler yapılır. Bu sayede sisteminizin her zaman en yüksek performansla çalışmasını sağlarız.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "Kurulum ve Eğitim Hizmetleri",
+                            "subContent": "<p class=\"text-sm indent-4\">Yeni bir intranet sisteminin geliştirilmesi ve çalışanlarınıza bu sistemi nasıl kullanacakları konusunda eğitimler vermek, süreçlerin sorunsuz bir şekilde ilerlemesi için kritik öneme sahiptir. Esesoftware olarak, kurulum aşamasından başlayarak, tüm çalışanlarınıza intranet sisteminin nasıl kullanılacağını öğretiyor ve ihtiyaçlarınıza göre sürekli destek sağlıyoruz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Kişiselleştirilmiş Özel İntranet Çözümleri Geliştirme Maliyet Değişkenleri",
+                            "subContent": "<table>\n<thead>\n<tr>\n<th>Hizmet Bileşeni</th>\n<th>Açıklama</th>\n<th>Maliyet</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>İhtiyaç Analizi ve Danışmanlık</strong></td>\n<td>Proje kapsamının belirlenmesi, gereksinim analizi</td>\n<td>Esesoftware tarafından ücretsiz yerinde inceleme ve danışmanlık</td>\n</tr>\n<tr>\n<td><strong>Özelleştirilmiş Yazılım Geliştirme</strong></td>\n<td>Şirket ihtiyaçlarına özel intranet modüllerinin geliştirilmesi</td>\n<td>Modül sayısı, işlevsellik seviyesi, entegrasyon karmaşıklığına göre değişir</td>\n</tr>\n<tr>\n<td><strong>Entegrasyon ve Sistem Uyumu</strong></td>\n<td>Mevcut sistemlerle entegrasyon ve uyumluluk çalışmaları</td>\n<td>Mevcut sistemlerin karmaşıklığı ve entegrasyon gereksinimlerine göre değişir</td>\n</tr>\n<tr>\n<td><strong>Tasarım ve Kullanıcı Deneyimi (UI/UX)</strong></td>\n<td>Kullanıcı dostu arayüz ve deneyim tasarımı</td>\n<td>İstenen tasarım özelliklerine ve kullanıcı deneyimi detaylarına bağlı olarak değişir</td>\n</tr>\n<tr>\n<td><strong>Güvenlik ve Erişim Kontrolü</strong></td>\n<td>Güvenlik seviyeleri, kullanıcı yetkilendirmesi ve veri koruma önlemleri</td>\n<td>Şirketin güvenlik gereksinimlerine, kullanıcı sayısına ve veri hassasiyetine göre değişir</td>\n</tr>\n<tr>\n<td><strong>Portal için Çalışan Eğitimi</strong></td>\n<td>Kurulum sonrası şirket içi eğitim verilir</td>\n<td>Tamamen ücretsizdir</td>\n</tr>\n<tr>\n<td><strong>Bakım</strong></td>\n<td>Kurulum sonrası geliştirme aşamasında olduğumuz gibi üzerinde çalışmaya devam ediyorsüreklioptimizeediyoruz</td>\n<td>Kurulumdan sonra ilk 1 yıl aylık bakım ücreti $270 dir. Sonraki her yıl aylık $170 dir</td>\n</tr>\n<tr>\n<td><strong>Veritabanı Yönetimi ve Yedekleme</strong></td>\n<td>Veritabanı yapısının oluşturulması ve düzenli yedekleme hizmetleri</td>\n<td>Veritabanı boyutu, yedekleme sıklığı ve veri yönetimi ihtiyacına göre değişir</td>\n</tr>\n<tr>\n<td><strong>Gelişmiş Raporlama ve Analitik</strong></td>\n<td>İş süreçlerinin analizi için özelleştirilmiş raporlama özelliği</td>\n<td>Raporlama gereksinimleri ve analitik derinliğe göre değişir</td>\n</tr>\n<tr>\n<td><strong>Sürekli Güncelleme ve İyileştirme</strong></td>\n<td>Yazılımın güncellenmesi, yeni özelliklerin eklenmesi</td>\n<td>Bakım ücretine dahildir fakat yinede güncelleme sıklığı ve yeni özellik isteğine göre değişebilir</td>\n</tr>\n</tbody>\n</table>\n<p class=\"text-xs text-[#4f4f4f] my-2 italic font-medium\">Bu tablo, projenizin maliyetini etkileyen çeşitli parametreleri ve bu parametrelerin etkilerini özetlemektedir. Her bir hizmet bileşeni, projenin kapsamı, şirketin ihtiyaçları ve proje gereksinimlerine göre farklı maliyetlere neden olabilir. Bu nedenle, fiyatlandırma tamamen proje kapsamına göre belirlenir ve her projeye özel olarak yapılandırılır. Esesoftware olarak, ihtiyaçlarınıza en uygun intranet çözümünü sunmak için detaylı bir analiz yaparak size özel esnek teklifler hazırlamaktan memnuniyet duyarız.</p>"
+                        },
+                        {
+                            "id": "entryforObserver10",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Deneyimli Ekip:</span>\n<span class=\"text-sm\">Uzman ekibimiz, en son teknoloji ve trendleri takip ederek işletmenize en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Odaklı Yaklaşım:</span>\n<span class=\"text-sm\">Her müşteri bizim için özeldir. İhtiyaçlarınızı dikkatle dinleyip size özel çözümler sunarız.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Geliştirme sürecinin her aşamasında yanınızdayız. Her türlü destek ve danışmanlık hizmeti ile işletmenizin dijital başarısını sürdürülebilir kılıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yenilikçi Çözümler:</span>\n<span class=\"text-sm\">Sürekli değişen dijital dünyada yenilikçi ve geleceğe yönelik çözümler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver11",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver12",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }
