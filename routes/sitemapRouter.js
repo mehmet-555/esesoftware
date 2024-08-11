@@ -27,9 +27,7 @@ router.get('/', (req, res) => {
             loc: 'https://esesoftware.com/videos/iStock-1995393129.mp4',
             title: 'Esesoftware',
             description: 'Esesoftware zengin içerik video.',
-            thumbnail: 'https://esesoftware.com/videos/thumbnail-iStock-1995393129.jpg',
-            uploadDate: '2024-08-06',
-            duration: 'PT11S', // 11 saniye
+            thumbnail: 'https://esesoftware.com/videos/thumbnail-iStock-1995393129.jpg'
         },
         
     ];
