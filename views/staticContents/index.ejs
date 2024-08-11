@@ -50,9 +50,9 @@
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Esesoftware",
-          "url": "https://www.esesoftware.com",
-          "logo": "https://www.esesoftware.com/logoiconw.svg",
-          "image": "https://www.esesoftware.com/logoiconw.svg",
+          "url": "https://esesoftware.com",
+          "logo": "https://esesoftware.com/logoiconw.svg",
+          "image": "https://esesoftware.com/logoiconw.svg",
           "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+90-542-173-3348",
@@ -95,24 +95,30 @@
               }
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Yazılım Geliştirme",
-                "description": "İş ihtiyaçlarınıza özel yazılım çözümleri."
-              }
+              "@type": "Service",
+              "name": "Yazılım Geliştirme",
+              "description": "İş ihtiyaçlarınıza özel yazılım çözümleri."
             },
             {
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": "Google Cloud Hizmetleri",
-                "description": "Güvenli ve ölçeklenebilir bulut çözümleri."
-              }
+              "@type": "Service",
+              "name": "Google Cloud Hizmetleri",
+              "description": "Güvenli ve ölçeklenebilir bulut çözümleri."
             }
           ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "VideoObject",
+          "name": "Esesoftware",
+          "description": "Esesoftware Zengin İçerik Video",
+          "thumbnailUrl": "https://esesoftware.com/videos/thumbnail-iStock-1995393129.png",
+          "uploadDate": "2024-08-06T12:00:00+00:00",
+          "contentUrl": "https://esesoftware.com/videos/iStock-1995393129.mp4",
+          "embedUrl": "https://esesoftware.com/videos/iStock-1995393129.mp4",
+          "duration": "PT11S"
         }
         </script>
+        
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
@@ -125,30 +131,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
         rel="stylesheet">
-    <!-- Google Tag Manager -->
-    <!-- <script>(function (w, d, s, l, i) {
-            w[l] = w[l] || []; w[l].push({
-                'gtm.start':
-                    new Date().getTime(), event: 'gtm.js'
-            }); var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-WR88TCSK');</script> -->
-    <!-- End Google Tag Manager -->
+    
 </head>
 
 <body class="h-screen relative">
-    <!-- Google Tag Manager (noscript) -->
-    <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WR88TCSK" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript> -->
-    <!-- End Google Tag Manager (noscript) -->
 
     <nav
         class="fixed w-full bg-black border-b border-b-[#fafad278] flex items-center justify-between xs:justify-around h-16 overflow-hidden z-30">
         <div class="logoContainer">
-            <a href="/" class="flex items-center px-4 py-3 xs:min-w-[260px] overflow-hidden">
+            <a href="/" class="flex items-center px-4 py-3 xs:min-w-[260px] overflow-hidden" aria-label="Anasayfaya dön">
                 <span class="inline-block h-10 w-10 mr-3 rotate-animation">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.46 62.46">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62.46 62.46" aria-labelledby="logo-title">
+                        <title id="logo-title">Esesoftware logosu</title>
                         <defs>
                             <style>
                                 .cls-1 {
@@ -300,7 +294,8 @@
         </div>
         <div class="block lg:hidden">
             <button type="button" id="navMenuBtn"
-                class="px-2 py-2 mr-4 ml-1 outline-none transition-all duration-200 border-2 border-gray-400 hover:border-white rounded-lg">
+                class="px-2 py-2 mr-4 ml-1 outline-none transition-all duration-200 border-2 border-gray-400 hover:border-white rounded-lg"
+                aria-label="Gezinme menüsü butonu">
                 <div class="btnLines flex flex-col gap-[7px]">
                     <div id="pice1" class="flex translate-y-0">
                         <div id="pice2" class="w-[10px] h-[2px] bg-white origin-right rotate-0"></div>
@@ -322,7 +317,9 @@
         <div class="relative mt-12 flex justify-center">
             <video src="/videos/iStock-1995393129.mp4"
                 class="w-[95%] sm:w-11/12 md:w-5/6 lg:w-9/12 xl:w-[70%] rounded-3xl " loop muted autoplay
-                playsinline></video>
+                playsinline>
+                <track kind="captions" src="/videos/altyazi.vtt" srclang="en" label="English">
+            </video>
         </div>
         <div class="relative flex justify-center">
             <div class="w-11/12 flex flex-col items-center absolute top-[45%] translate-y-centery translate-x-centerx">
@@ -521,11 +518,11 @@
                     </div>
                     <div class="flex justify-center">
                         <nav class="slideBtnNav">
-                            <button class="slideBtn active" data-index="0"></button>
-                            <button class="slideBtn" data-index="1"></button>
-                            <button class="slideBtn" data-index="2"></button>
-                            <button class="slideBtn" data-index="3"></button>
-                            <button class="slideBtn" data-index="4"></button>
+                            <button class="slideBtn active" data-index="0"  aria-label="Yapay zeka ile analiz"></button>
+                            <button class="slideBtn" data-index="1" aria-label="Yapay zeka ile öngörü ve tahmin "></button>
+                            <button class="slideBtn" data-index="2" aria-label="Yapay zeka ile geliştirme"></button>
+                            <button class="slideBtn" data-index="3" aria-label="Yapay zeka ile test ve optimizasyon"></button>
+                            <button class="slideBtn" data-index="4" aria-label="Yapay zeka ile lasman ve  bakım"></button>
                         </nav>
                     </div>
                 </div>
@@ -616,10 +613,11 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Genel Sorular</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" 
+                                        class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Genel sorular ile ilgili sık sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
-                                </div>
+                                </div>  
                             </div>
                             <div class="acordionTopBody">
                                 <ul>
@@ -630,7 +628,7 @@
                                                 nelerdir ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Esesoftware ile çalışmanın avantajları neler cevabını gör ">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -652,7 +650,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Web Geliştirme</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Web geliştirme ile ilgili sık sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -666,7 +664,7 @@
                                             </h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Bir web sitesi projesi ne kadar sürer cevabını  gör ">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -687,7 +685,7 @@
                                                 nedir?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Web sitesi tasarımı ve geliştirme maliyeti nedir cevabını gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -709,7 +707,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Bulut Çözümleri</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Bulut Çözümleri ile ilgili sık sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -722,7 +720,7 @@
                                             <h4 class="text-lg text-gray-400">Veri güvenliği nasıl sağlanıyor ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Veri güvenliği nasıl sağlanıyor sorusunun cevabını gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -742,7 +740,7 @@
                                             <h4 class="text-lg text-gray-400">Bulut hizmetlerinin maliyeti nedir ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Bulut hizmetleri nasıl sağlanıyor sorusunun cevabını gör">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -764,7 +762,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Google Cloud Platform (GCP) Hizmetleri</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Google Cloud Platform (GCP) Hizmetleri ile ilgili sıkşa sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -778,7 +776,7 @@
                                             </h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="GCP nedir ve hangi avantajları sunar sorusunun cevabını gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -798,7 +796,7 @@
                                             <h4 class="text-lg text-gray-400">GCP'nin maliyeti nedir ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="GCP'nin maliyeti nedir sorusunun cevabını gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -819,7 +817,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Web Scraping</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Web Scraping ile ilgili sıkça sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -832,7 +830,7 @@
                                             <h4 class="text-lg text-gray-400">Web scraping nedir ve nasıl çalışır ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Web scraping nedir ve nasıl çalışırın cevabını  gör. ">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -851,7 +849,7 @@
                                             <h4 class="text-lg text-gray-400">Hangi verileri toplayabilirsiniz ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Web Scraping ile hangi verileri toplayabilirsinizin cevabını  gör ">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -870,7 +868,7 @@
                                             <h4 class="text-lg text-gray-400">Web scraping yasallığı nedir ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Web scraping yasallağı nedirin sorusunun cevabını gör">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -892,7 +890,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Otomasyon Çözümleri</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Otomasyon çözümleri ile ilgili sıkça sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -906,7 +904,8 @@
                                                 süreçlerine uygulanabilir ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Otomasyon çözümleri nelerdir ve hangi iş
+                                                    süreçlerine uygulanabilir sorusunun cevabını gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -927,7 +926,7 @@
                                             </h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Otomasyon çözümlerinin maliyeti nedir sorusunun cevabını gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -949,7 +948,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">İşletme Güvenliği</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="İşletme güvenliği ile ilgili sıkça sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -963,7 +962,7 @@
                                             </h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Hangi tür güvenlik kamerlarının sunulduğunu gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -984,7 +983,7 @@
                                             </h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Güvenlik hizmetlerinin maliyeti nedir? Cevabını gör">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -1003,7 +1002,7 @@
                                             <h4 class="text-lg text-gray-400">7/24 izleme hizmeti nasıl çalışır ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="7/24 izleme hizmeti nasıl çalışır ? Cevabını gör">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -1025,7 +1024,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Yapay Zeka Kullanımı</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Yapay zeka kullanımız hakkında sıkça sorulan soruları  gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -1039,7 +1038,8 @@
                                                 kullanıyorsunuz ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Yazılım geliştirmede yapay zekayı nasıl
+                                                    kullandığımızı gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -1060,7 +1060,7 @@
                                                 çözüyorsunuz ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Yapay zeka ile hangi sorunları çözdüğümüzü gör">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -1082,7 +1082,7 @@
                             <div class="flex justify-between items-center">
                                 <h3 class="text-xl text-gray-400">Proje Yönetimi ve Destek</h3>
                                 <div class="flex ml-4 sm:ml-2">
-                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center">
+                                    <button type="button" class="sssBigBtn w-5 h-5 flex justify-center items-center" aria-label="Proje Yönetimi ve Destek ilgili sıkça sorulan soruları gör.">
                                         <span class="pointer-events-none topLiBtnAnim"></span>
                                     </button>
                                 </div>
@@ -1096,7 +1096,7 @@
                                                 nelerdir ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Proje sonrası destek hizmetlerimizi gör">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -1117,7 +1117,7 @@
                                                 nasıl işliyor ?</h4>
                                             <div class="flex ml-4 sm:ml-2">
                                                 <button type="button"
-                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center">
+                                                    class="sssSmBtn w-4 h-4 flex justify-center items-center" aria-label="Proje güncellemeleri ve  bakım hizmetlerimizi gör.">
                                                     <span class="pointer-events-none innerLiBtnAnim"></span>
                                                 </button>
                                             </div>
@@ -1144,7 +1144,7 @@
                 class="flex flex-col lg:flex-row items-center justify-center w-11/12 xs:w-4/5 md:w-3/5 lg:w-2/3 xl:w-7/12 max-w-screen-xl">
                 <a id="locationBtn"
                     href="https://www.google.com/maps/dir//esesoftwareservices/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x14cc1588f093423d:0x304d1e55a22949a3?sa=X&ved=1t:3061&ictx=111"
-                    target="_blank" class="mr-0 lg:mr-24 mb-12 lg:mb-0">
+                    target="_blank" class="mr-0 lg:mr-24 mb-12 lg:mb-0" aria-label="Esesoftware için yol tarifi sayfasını aç">
                     <div
                         class="w-72 sm:w-80 md:w-96 h-64 sm:h-72 md:h-80 lg:h-96  rounded-full overflow-hidden bgDeneme">
                         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -2362,19 +2362,19 @@
                                 <h3 class="text-sm md:text-base text-[#e6e6e6] mb-4 tracking-wider">Sosyal Ağlar</h3>
                                 <div class="socialBtn my-3 flex justify-center gap-3">
                                     <a href="#" target="_blank"
-                                        class="github flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200">
+                                        class="github flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200" aria-label="Esesoftware'in Github Sayfasını  aç.">
                                         <i class="fa-brands fa-github text-[#989898]"></i>
                                     </a>
                                     <a href="https://linkedin.com/company/esesoftware" target="_blank"
-                                        class="linkedin flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200">
+                                        class="linkedin flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200" aria-label="Esesoftware'in LinkedIn sayfasını aç">
                                         <i class="fa-brands fa-linkedin text-[#989898]"></i>
                                     </a>
                                     <a href="https://x.com/esesoftwaretr" target="_blank"
-                                        class="twitter flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200">
+                                        class="twitter flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200" aria-label="Esesoftware'in Twitter sayfasını aç">
                                         <i class="fa-brands fa-x-twitter text-[#989898]"></i>
                                     </a>
                                     <a href="https://www.instagram.com/esesoftware" target="_blank"
-                                        class="instagram flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200">
+                                        class="instagram flex items-center justify-center w-8 h-8 p-3 border border-[#989898] hover:border-white transition-all duration-200" aria-label="Esesoftware'in İnstagram sayfasını aç">
                                         <i class="fa-brands fa-instagram text-[#989898]"></i>
                                     </a>
                                 </div>
@@ -2630,7 +2630,7 @@
         <div class="lbBtnArea">
             <button id="mobileLeftBarBtn"
                 style="background-color: rgba(80, 116, 255, 1); color: #000; padding: 1.5rem 0.4rem 1.5rem 0.5rem; border: none; border-radius: 0; border-top-right-radius: 20px; -webkit-border-top-right-radius: 20px; border-bottom-right-radius: 20px; -webkit-border-bottom-right-radius: 20px;"><i
-                    class="fa-solid fa-chevron-right close text-stone-800 text-xl pt-[1px]"></i></button>
+                    class="fa-solid fa-chevron-right close text-stone-800 text-xl pt-[1px]" aria-label="Servislerimizi ve hizmetlerimizi gör"></i></button>
         </div>
         <nav class="font-poppins pb-40">
             <ul>
@@ -3081,7 +3081,7 @@
             <ul class="font-poppins font-bold text-base text-center flex flex-col gap-3 py-4">
                 <li class="flex justify-center p-4">
                     <a id="getStardedBtnFromMobile" href="/project" target="_blank"
-                        class="relative roboto-mono-regular flex items-center outline before:transition-all duration-300 outline-[#06252f] hover:outline-[#1c4654] rounded-[1px] px-1 py-[2px] before:content-[''] before:absolute before:w-full before:top-0 before:left-0 before:rounded-[8px] before:min-h-full">
+                        class="relative roboto-mono-regular flex items-center outline before:transition-all duration-300 outline-[#06252f] hover:outline-[#1c4654] rounded-[1px] px-1 py-[2px] before:content-[''] before:absolute before:w-full before:top-0 before:left-0 before:rounded-[8px] before:min-h-full" aria-label="Proje Başlat ve Teklif Al sayfasına git">
                         <span class="text-white mx-[6px]"> &lt; </span>
                         <div class="flex flex-col">
                             <span class="whitespace-nowrap text-[#606fc2] text-[13px] leading-4">Proje Başlat</span>
@@ -3092,13 +3092,13 @@
                 </li>
                 <li>
                     <a href="#" id="servicesAndServicesBtn"
-                        class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
+                        class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200" aria-label="Servisler ve Hizmetler sayfasına git.">
                         <span class="optSpan">Servisler ve Hizmetler</span>
                         <div class="w-[166px] h-[1px] bg-gradient-to-r from-blue-600 to-red-600"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
+                    <a href="#" class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200"  aria-label="Devops sayfasına git." >
                         <div><span class="optSpan">Devops</span><span
                                 class="px-[2px] ml-[.3rem] text-white font-bold bg-[#079b0b] rounded text-xs pointer-events-none">Beta</span>
                         </div>
@@ -3119,7 +3119,7 @@
                 </li>
                 <li>
                     <a id="contacBtn" href="#contact"
-                        class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200">
+                        class="py-1 px-6 flex flex-col items-center w-full transition-all duration-200" aria-label="İletişim sayfasına git." >
                         <span class="optSpan">İletişim</span>
                         <div class="w-[55px] h-[1px] bg-gradient-to-r from-blue-600 to-red-600"></div>
                     </a>
