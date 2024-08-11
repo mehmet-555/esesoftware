@@ -5,19 +5,19 @@ const rootDir = require("../utils/rootDir");
 
 router.get('/', (req, res) => {
     const urls = [
-        { loc: 'https://www.esesoftware.com/', lastmod: new Date().toISOString().split('T')[0], changefreq: 'daily', priority: 1.0 },
-        { loc: 'https://www.esesoftware.com/about', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/web-services/creating-static-web-site', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/web-services/creating-dynamic-web-app', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/web-services/web-hosting-services', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/web-services/ui-ux-development', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/web-services/restructuring', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/gcp/redistribution-with-ae', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/services/gcp/redistribution-with-cr', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/project', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/project/web-project', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/project/web-project/static-web', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
-        { loc: 'https://www.esesoftware.com/project/web-project/dynamic-web', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/', lastmod: new Date().toISOString().split('T')[0], changefreq: 'daily', priority: 1.0 },
+        { loc: 'https://esesoftware.com/about', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/web-services/creating-static-web-site', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/web-services/creating-dynamic-web-app', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/web-services/web-hosting-services', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/web-services/ui-ux-development', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/web-services/restructuring', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/gcp/redistribution-with-ae', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/services/gcp/redistribution-with-cr', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/project', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/project/web-project', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/project/web-project/static-web', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
+        { loc: 'https://esesoftware.com/project/web-project/dynamic-web', lastmod: new Date().toISOString().split('T')[0], changefreq: 'monthly', priority: 0.8 },
     
     ];
 

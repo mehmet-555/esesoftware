@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     res.send(`User-agent: *
 Disallow: /private/
 
-Sitemap: https://www.esesoftware.com/sitemap.xml`);
+Sitemap: https://esesoftware.com/sitemap.xml`);
 });
 
 module.exports = router;
