@@ -27,7 +27,7 @@ router.get('/', (req, res) => {
             loc: 'https://esesoftware.com/videos/iStock-1995393129.mp4',
             title: 'Esesoftware',
             description: 'Esesoftware zengin içerik video.',
-            thumbnail: 'https://esesoftware.com/videos/thumbnail-iStock-1995393129.jpg'
+            thumbnail: 'https://esesoftware.com/videos/iStock-1995393129.png'
         },
         
     ];
@@ -50,8 +50,6 @@ router.get('/', (req, res) => {
                 sitemap += `      <video:title>${video.title}</video:title>\n`;
                 sitemap += `      <video:description>${video.description}</video:description>\n`;
                 sitemap += `      <video:content_loc>${video.loc}</video:content_loc>\n`;
-                sitemap += `      <video:upload_date>${video.uploadDate}</video:upload_date>\n`;
-                sitemap += `      <video:duration>${video.duration}</video:duration>\n`;
                 sitemap += `    </video:video>\n`;
             }
         });
