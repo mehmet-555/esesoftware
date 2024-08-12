@@ -2,16 +2,23 @@
 <html lang="tr-TR" prefix="og: https://ogp.me/ns#">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MY5PJM12QG"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-     gtag('js', new Date());
+    window.onload = function() {
+        // Google Tag Manager
+        var gtmScript = document.createElement('script');
+        gtmScript.src = "https://www.googletagmanager.com/gtag/js?id=G-MY5PJM12QG";
+        document.head.appendChild(gtmScript);
 
-    gtag('config', 'G-MY5PJM12QG');
+        var gtmConfigScript = document.createElement('script');
+        gtmConfigScript.innerHTML = "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-MY5PJM12QG');";
+        document.head.appendChild(gtmConfigScript);
+
+        // Cookieyes Banner
+        var cookieyesScript = document.createElement('script');
+        cookieyesScript.src = "https://cdn-cookieyes.com/client_data/8f99896837a490ce8ae467d7/script.js";
+        document.head.appendChild(cookieyesScript);
+    };
     </script>
-    <!-- Start cookieyes banner --> <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/8f99896837a490ce8ae467d7/script.js"></script> <!-- End cookieyes banner -->
     <title>Anasayfa | Esesoftware</title>
     <meta name="description" content="Esesoftware, web geliştirme, bulut çözümleri,seo,cms,sistem tasarımı, otomasyon hizmetleri ve güvenlik çözümleri sunan yenilikçi bir teknoloji şirketidir. Uzman ekibimizle iş süreçlerinizi optimize edin ve dijital dünyada öne çıkın.">
     <meta charset="UTF-8">
@@ -20,10 +27,10 @@
     <meta http-equiv="X-Frame-Options" content="DENY">
     <meta property="og:title" content="Esesoftware | Anasayfa">
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.esesoftware.com">
+    <meta property="og:url" content="https://esesoftware.com">
     <meta property="og:site_name" content="Esesoftware" />
     <meta property="og:locale" content="tr_TR" />
-    <meta property="og:image" content="https://www.esesoftware.com/images/logoiconw.svg">
+    <meta property="og:image" content="https://esesoftware.com/images/logoiconw.svg">
     <meta property="og:image:width" content="62" />
     <meta property="og:image:height" content="62" />
     <meta name="robots" content="index, follow">
@@ -32,7 +39,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Esesoftware | Web Tasarım ve Yazılım Geliştirme">
     <meta name="twitter:description" content="Esesoftware, web geliştirme, bulut çözümleri,seo,cms, sistem tasarımı, otomasyon hizmetleri ve güvenlik çözümleri sunan yenilikçi bir teknoloji şirketidir. Uzman ekibimizle iş süreçlerinizi optimize edin ve dijital dünyada öne çıkın.">
-    <meta name="twitter:image" content="https://www.esesoftware.com/images/logoiconw.svg">
+    <meta name="twitter:image" content="https://esesoftware.com/images/logoiconw.svg">
     <meta name="twitter:site" content="@esesoftwaretr"> 
     <meta name='dmca-site-verification' content='TThjcEw5VXIveVdwSmZNUlcwQWlRUT090' />
     <meta name="apple-mobile-web-app-title" content="Esesoftware">
@@ -437,8 +444,8 @@
                     <div class="flex items-start gap-5 overflow-x-scroll slideShow snap-mandatory snap-x">
                         <figure
                             class="flex-grow w-full flex-shrink-0 basis-auto flex flex-col justify-center items-center mb-0 sm:mb-3 md:mb-4 px-2 overflow-hidden snap-start snap-always">
-                            <img src="/images/aibgbyfreepik21.webp" alt="ai Picture"
-                                class="w-full rounded-xl aspect-[5/3]">
+                            <img src="/images/aibgbyfreepik21.webp" alt="ai Picture "
+                                class="w-full rounded-xl aspect-[5/3]" loading="lazy">
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-center my-2">
                                     <span class="w-3 h-3 rounded-full bg-black mr-4"></span>
@@ -454,7 +461,7 @@
                         <figure
                             class="flex-grow w-full flex-shrink-0 basis-auto flex flex-col justify-center items-center mb-0 sm:mb-3 md:mb-4 px-2 overflow-hidden snap-start snap-always">
                             <img src="/images/aibgbyfreepik121.webp" alt="ai Picture"
-                                class="w-full rounded-xl aspect-[5/3]">
+                                class="w-full rounded-xl aspect-[5/3]" loading="lazy">
                             <div class="flex flex-col gap-3">
                                 <div class="flex items-center my-2">
                                     <span class="w-3 h-3 rounded-full bg-black mr-4"></span>
@@ -575,28 +582,28 @@
         <div class="h-80 flex items-center overflow-hidden pointer-events-none">
             <div class="overflow-hidden min-w-[3318px] py-14 pointer-events-none w-full bg-[#f4f4f4] whitespace-nowrap">
                 <div class=" logoSlide">
-                    <img src="/images/cf.svg" alt="Resim 1" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/dotnet.svg" alt="Resim 2" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/express.svg" alt="Resim 3" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/jvt.svg" alt="Resim 4" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/mongo.svg" alt="Resim 5" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/ckarepng1.webp" alt="Resim 6" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/nodejs.svg" alt="Resim 7" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/react.svg" alt="Resim 8" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
+                    <img src="/images/cf.svg" alt="Resim 1" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/dotnet.svg" alt="Resim 2" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/express.svg" alt="Resim 3" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/jvt.svg" alt="Resim 4" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/mongo.svg" alt="Resim 5" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/ckarepng1.webp" alt="Resim 6" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/nodejs.svg" alt="Resim 7" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/react.svg" alt="Resim 8" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
                     <img src="/images/tailwind.svg" alt="Resim 9"
                         class="w-24 flex-shrink-0 h-auto mx-6 inline-block logo">
                     <img src="/images/webpack.svg" alt="Resim 10" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
                     <img src="/images/openai.svg" alt="Resim 11" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
                 </div>
                 <div class="logoSlide">
-                    <img src="/images/cf.svg" alt="Resim 1" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/dotnet.svg" alt="Resim 2" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/express.svg" alt="Resim 3" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/jvt.svg" alt="Resim 4" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/mongo.svg" alt="Resim 5" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/ckarepng1.webp" alt="Resim 6" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/nodejs.svg" alt="Resim 7" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
-                    <img src="/images/react.svg" alt="Resim 8" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
+                    <img src="/images/cf.svg" alt="Resim 1" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/dotnet.svg" alt="Resim 2" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/express.svg" alt="Resim 3" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/jvt.svg" alt="Resim 4" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/mongo.svg" alt="Resim 5" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/ckarepng1.webp" alt="Resim 6" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/nodejs.svg" alt="Resim 7" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
+                    <img src="/images/react.svg" alt="Resim 8" class="w-24 flex-shrink-0 h-auto mx-6 inline-block" loading="lazy">
                     <img src="/images/tailwind.svg" alt="Resim 9"
                         class="w-24 flex-shrink-0 h-auto mx-6 inline-block logo">
                     <img src="/images/webpack.svg" alt="Resim 10" class="w-24 flex-shrink-0 h-auto mx-6 inline-block">
@@ -2387,7 +2394,7 @@
                                             <a href="//www.dmca.com/Protection/Status.aspx?ID=82fde931-bbe9-47aa-9476-52013cfb3c3c"
                                                 title="DMCA.com Protection Status" class="dmca-badge"> <img
                                                     src="https://images.dmca.com/Badges/dmca_protected_26_120.png?ID=82fde931-bbe9-47aa-9476-52013cfb3c3c"
-                                                    alt="DMCA.com Protection Status" class="w-24 md:w-auto" /></a>
+                                                    alt="DMCA.com Protection Status" class="w-24 md:w-auto"  loading="lazy"/></a>
                                         </div>
                                         <div>
                                             <div class="cursor-pointer">
