@@ -13,11 +13,11 @@ const secretKey = process.env.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX;
 router.use(cookieParser());
 
 router.get("/", checkSignedCookie, (req, res, next) => {
-    console.log("ÇLAIŞTI 4")
+    // console.log("ÇLAIŞTI 4")
     res.status(200).render("staticContents/index", {
         sendMessage: true
     })
-    console.log("ÇLAIŞTI 5")
+    // console.log("ÇLAIŞTI 5")
 })
 router.post("/contact", (req, res, next) => {
     console.log(req.body)
@@ -38,9 +38,9 @@ router.post("/contact", (req, res, next) => {
 // İmzalı çerezi kontrol eden middleware
 function checkSignedCookie(req, res, next) {
     const ES_smCookie = req.cookies.ES_smCookie;
-    console.log(ES_smCookie)
+    // console.log(ES_smCookie)
     if (!ES_smCookie) {
-        console.log("ÇLAIŞTI 3")
+        // console.log("ÇLAIŞTI 3")
         return res.status(200).render("staticContents/index", {
             sendMessage: false
         })
@@ -49,9 +49,9 @@ function checkSignedCookie(req, res, next) {
     try {
         const verified = jwt.verify(ES_smCookie, secretKey);
         next();
-        console.log("ÇLAIŞTI 1")
+        // console.log("ÇLAIŞTI 1")
     } catch (err) {
-        console.log("ÇLAIŞTI 2")
+        // console.log("ÇLAIŞTI 2")
         return res.status(200).render("staticContents/index", {
             sendMessage: false
         });

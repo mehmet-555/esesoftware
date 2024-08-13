@@ -30,9 +30,9 @@ servicesRouter.all("*", (req, res, next) => {
     const userAgent = req.headers['user-agent'];
     // console.log(userAgent)
     if (isMobile(userAgent)) {
-        console.log(String("Bu istek bir mobil cihazdan geldi.").toLocaleUpperCase());
+        // console.log(String("Bu istek bir mobil cihazdan geldi.").toLocaleUpperCase());
     } else {
-        console.log(String("Bu istek bir masaüstü cihazdan geldi.").toLocaleUpperCase());
+        // console.log(String("Bu istek bir masaüstü cihazdan geldi.").toLocaleUpperCase());
     }
     next();
 });
@@ -40,10 +40,11 @@ servicesRouter.all("*", (req, res, next) => {
 servicesRouter.use("/web-services", webSRouter);
 servicesRouter.use("/gcp", gcpRouter);
 servicesRouter.use("/corparate", corporateRouter);
+servicesRouter.use("/web-scraping", scrapingSRouter);
 
 servicesRouter.use("/", (req, res, next) => {
     res.status(200).render("services/services.ejs");
-    console.log(req.ip)
+    // console.log(req.ip)
 });
 
 
@@ -296,6 +297,37 @@ corporateRouter.get("/qr-menu-application", [
         return res.status(400).json({ errors: errors.array() });
     };
 });
+
+// WEB SCRAPING
+scrapingSRouter.get("/web-scraping-and-web-automation", [
+    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
+], async (req, res, next) => { 
+    
+    // console.log(req.originalUrl);
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()) {
+        try {
+            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
+            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
+            const pageObj = JSON.parse(pagesJson);
+            // console.log(pageObj);
+            // console.log(req.ip);
+            
+            res.status(200).render('services/webServices/servicesGeneralLayout', {
+                thePathArr: thePathArr,
+                page: pageObj.pages[9],
+                pageTitle: pageObj.pages[9].pageTitle
+            });
+        } catch (error) {
+            next(error);
+        };
+    }else {
+        return res.status(400).json({ errors: errors.array() });
+    };
+});
+
+
 module.exports = servicesRouter;
 
 

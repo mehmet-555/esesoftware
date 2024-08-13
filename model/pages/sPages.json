@@ -802,6 +802,87 @@
                     ]
                 }
             }
+        },
+        {
+            "pageTitle": "Web Scraping ve Web Otomasyonu",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Web Scraping Hizmeti",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Web Scraping Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Şirketler Web Scraping'i Ne İçin Kullanır?"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Web Scraping İşleminin Yasal Boyutu Nedir?"}
+                    ]
+                },
+                "a2": {
+                    "header": "Web Scraping Hizmetlerimiz",
+                    "subHeaders": [
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Esesoftware Olarak Web Scraping Çözümlerimiz"},
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Veri Toplama ve Otomasyon Botu"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Web Scraping ve Web Otomasyon Botu Ortalama Fiyat Tablosu"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// Web Scraping Hizmeti",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Web Scraping Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Web scraping, bir web sitesinden veri toplama işlemidir. Bu süreçte, belirli bir web sayfasındaki içerikler otomatik olarak çekilir, analiz edilir ve ihtiyaçlara uygun bir formatta saklanır. Bu yöntemde genellikle HTTP istekleri kullanılır ve elde edilen HTML içeriği üzerinde işlem yapılır. Daha sonra, bu içerikten anlamlı bilgiler çıkarılır ve Excel dosyası, JSON gibi çeşitli formatlarda kaydedilebilir.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Şirketler Web Scraping'i Ne İçin Kullanır?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Pazar Araştırması ve Rakip Analizi:</span>\n<span class=\"text-sm\">Şirketler, rakiplerinin ürün ve hizmet fiyatlarını, ürün stok durumlarını ve sundukları hizmetleri sürekli izlemek için web scraping kullanır. Bu veriler, şirketlerin kendi fiyatlandırma stratejilerini optimize etmelerine ve pazardaki konumlarını güçlendirmelerine yardımcı olur.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Veri Toplama ve Analiz:</span>\n<span class=\"text-sm\">Büyük veri analitiği için veri toplama önemli bir adımdır. Web scraping, halka açık verilerden büyük miktarlarda bilgi toplamanın hızlı ve verimli bir yolunu sunar. Bu veriler, kullanıcı davranışları, trend analizleri ve pazarlama stratejileri oluşturmak için analiz edilir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">İçerik Toplama:</span>\n<span class=\"text-sm\">Şirketler, çeşitli web sitelerinden içerik toplamak ve bu içerikleri kendi platformlarında kullanmak için scraping yapabilir. Örneğin, haber siteleri veya bloglar, internetten haber başlıkları ve makaleler toplayarak kendi içeriklerini oluşturabilir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Yorumları ve Geri Bildirim Analizi:</span>\n<span class=\"text-sm\">Müşteri geri bildirimlerini ve yorumlarını takip etmek, müşteri memnuniyeti ve ürün iyileştirme süreçlerinde büyük önem taşır. Web scraping, bu tür geri bildirimleri toplamak ve analiz etmek için de kullanılabilir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">İlan ve Fırsat Takibi:</span>\n<span class=\"text-sm\">E-ticaret şirketleri, ürün ve hizmetlerle ilgili fırsatları ve indirimleri izlemek için web scraping kullanabilir. Bu sayede, rekabet avantajı elde edebilirler.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Web Scraping İşleminin Yasal Boyutu Nedir?",
+                            "subContent": "<p class=\"text-sm indent-4\">Web scraping, web sitelerinden veri toplama sürecidir, ancak bu işlemin yasal boyutları önemlidir. Web sitelerinin içerikleri genellikle telif hakkı koruması altındadır ve izinsiz veri kopyalamak telif hakkı ihlaline yol açabilir. Ayrıca, birçok web sitesi kullanım şartlarında scraping'e izin vermeyebilir, bu şartların ihlali yasal sorunlara neden olabilir. Kişisel verilerin scraping yoluyla toplanması ise GDPR gibi veri koruma yasalarını ihlal edebilir. Web siteleri robots.txt dosyası kullanarak hangi sayfaların taranmasına izin verdiğini belirtebilir, bu dosyaya saygı göstermek etik bir davranıştır. Web scraping yapmadan önce yasalara ve web sitesinin kurallarına uyulduğundan emin olmak, izin almak veya alternatif veri toplama yöntemlerini değerlendirmek en güvenli yaklaşımdır.</p>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Web Scraping Hizmetlerimiz",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "Esesoftware Olarak Web Scraping Çözümlerimiz",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Esesoftware olarak, web scraping hizmetlerimizle müşterilerimize geniş bir yelpazede veri toplama çözümleri sunuyoruz. İşletmenizin ihtiyaçlarına özel olarak tasarlanmış scraping modülleri(scriptleri) ve isteğe bağlı olarak araçlar geliştiriyoruz. Hizmetlerimiz arasında şunlar yer alır:</p>\n<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">E-ticaret:</span>\n<span class=\"text-sm\">Ürün fiyatları, stok bilgileri, müşteri yorumları ve diğer satış verileri toplanır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Finans:</span>\n<span class=\"text-sm\">Hisse senedi fiyatları, döviz kurları, ekonomik göstergeler ve finansal raporlar izlenir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Haber ve Medya:</span>\n<span class=\"text-sm\">Haber başlıkları, makaleler, sosyal medya içerikleri toplanır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Akademik Araştırmalar:</span>\n<span class=\"text-sm\">Bilimsel makaleler, veri kümeleri ve diğer akademik içerikler elde edilir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Pazarlama ve Reklamcılık:</span>\n<span class=\"text-sm\">Müşteri davranışları, pazar trendleri ve rakip stratejileri analiz edilir.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Veri Toplama ve Otomasyon Botu",
+                            "subContent": "<p class=\"text-sm indent-4\">Esesoftware olarak, veri toplama süreçlerini optimize eden web scraping çözümlerimizin yanı sıra, şirketlerin ihtiyaç duyduğu özel görevleri otomatikleştirmek için gelişmiş otomasyon ve web botları da geliştirmekteyiz. Bu sayede, tekrarlayan işlemleri hızlandırıyor, verimliliği artırıyor ve iş süreçlerinizi daha akıllı hale getiriyoruz. Size özel çözümlerimizle, dijital dünyada bir adım önde olmanızı sağlıyoruz. Bu konuda herhangi bir ihtiyacınız için iletişime geçip özel bir teklif alabilirsiniz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "Web Scraping ve Web Otomasyon Botu Ortalama Fiyat Tablosu",
+                            "subContent": "<table  style=\"width: 100%;\">\n<thead>\n<tr>\n<th>Hizmet Adı</th>\n<th>Açıklama</th>\n<th  style=\"text-align: center;\">Fiyat</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><strong>Temel Web Scraping</strong></td>\n<td>Basit veri çekimi ve belirli sayfa elementlerinin toplanması.</td>\n<td class=\"text-center\">4,000TL/Proje</td>\n</tr>\n<tr>\n<td><strong>İleri Seviye Web Scraping</strong></td>\n<td>Özel veri çekimi, dinamik sayfa etkileşimleri ve sayfa gezintileri.</td>\n<td class=\"text-center\">12,400TL/Proje</td>\n</tr>\n<tr>\n<td><strong>Web Bot Geliştirme</strong></td>\n<td>Belirli görevler için özel web botları geliştirilmesi ve otomasyon.</td>\n<td class=\"text-center\">27,000TL/Proje</td>\n</tr>\n<tr>\n<td><strong>Sürekli Web Scraping</strong></td>\n<td>Belirli aralıklarla düzenli olarak veri çekimi ve raporlama.</td>\n<td class=\"text-center\">4,500TL/Ay</td>\n</tr>\n<tr>\n<td><strong>Sürekli Web Bot Hizmeti</strong></td>\n<td>Belirli görevleri otomatik olarak gerçekleştiren sürekli çalışan web bot.</td>\n<td class=\"text-center\">5,500TL/Ay</td>\n</tr>\n<tr>\n<td><strong>Danışmanlık Hizmeti</strong></td>\n<td>Web scraping veya web bot geliştirme konusunda stratejik danışmanlık.</td>\n<td class=\"text-center\">(Ücretsiz)</td>\n</tr>\n</tbody>\n</table>\n<p class=\"text-xs text-[#4f4f4f] my-2 italic font-medium\">Bu fiyatlar, KDV dahil fiyatlardır. Esesoftware fiyatlarda değişiklik yapma, güncelleme ve abonelik sonlandırma hakkını saklı tutar.</p>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Deneyimli Ekip:</span>\n<span class=\"text-sm\">Uzman ekibimiz, en son teknoloji ve trendleri takip ederek işletmenize en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Odaklı Yaklaşım:</span>\n<span class=\"text-sm\">Her müşteri bizim için özeldir. İhtiyaçlarınızı dikkatle dinleyip size özel çözümler sunarız.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Geliştirme sürecinin her aşamasında yanınızdayız. Her türlü destek ve danışmanlık hizmeti ile işletmenizin dijital başarısını sürdürülebilir kılıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yenilikçi Çözümler:</span>\n<span class=\"text-sm\">Sürekli değişen dijital dünyada yenilikçi ve geleceğe yönelik çözümler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                        }
+                    ]
+                }
+            }
         }
     ]
 }

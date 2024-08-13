@@ -73,17 +73,17 @@ function copyLinkF () {
 
     copyButton.addEventListener("click", function() {
         const blogUrl = input.value;
-        console.log(blogUrl);
+        // console.log(blogUrl);
 
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(blogUrl).then(function() {
-                console.log('Link panoya kopyalandı!');
+                // console.log('Link panoya kopyalandı!');
                 copiedF(copyButton);
             }, function(err) {
-                console.error('Kopyalama başarısız:', err);
+                // console.error('Kopyalama başarısız:', err);
             });
         } else {
-            console.log("clipboard çalışmiyir");
+            // console.log("clipboard çalışmiyir");
         }
     });
 };
@@ -340,7 +340,7 @@ function showFooter() {
         leftAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
         rightAsideSticky.style.height = `calc(100vh - 4rem - ${footerHeight})`;
     } else {
-        console.error("Element not found.");
+        // console.error("Element not found.");
     }
 }
 
@@ -505,7 +505,7 @@ function hrefControl() {
             // console.log(targetElement)
             if (targetElement) {
                 targetElement.firstElementChild.firstElementChild.classList.add("styleHeader");
-                console.log(targetElement.firstElementChild.firstElementChild)
+                // console.log(targetElement.firstElementChild.firstElementChild)
                 setTimeout(() => {
                     targetElement.firstElementChild.firstElementChild.classList.remove("styleHeader");
                 }, 750);

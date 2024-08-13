@@ -24,7 +24,7 @@ const app = express();
 app.use((req, res, next) => {
     if (req.hostname.startsWith('www.')) {
         const redirectAddress = `https://esesoftware.com${req.originalUrl}`;
-        console.log(redirectAddress);
+        // console.log(redirectAddress);
         res.redirect(301, redirectAddress);
     } else {
         next();
