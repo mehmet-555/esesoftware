@@ -818,7 +818,7 @@
                     "header": "Web Scraping Hizmetlerimiz",
                     "subHeaders": [
                         {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Esesoftware Olarak Web Scraping Çözümlerimiz"},
-                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Veri Toplama ve Otomasyon Botu"},
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Web Scraping ve Otomasyon Botu"},
                         {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Web Scraping ve Web Otomasyon Botu Ortalama Fiyat Tablosu"},
                         {"id": "navLink7", "href": "#entryforObserver7", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
                         {"id": "navLink8", "href": "#entryforObserver8", "sHeader":"Daha Fazla Bilgi Alın"},
@@ -857,7 +857,7 @@
                         },
                         {
                             "id": "entryforObserver5",
-                            "subContentHeader": "Veri Toplama ve Otomasyon Botu",
+                            "subContentHeader": "Web Scraping ve Otomasyon Botu",
                             "subContent": "<p class=\"text-sm indent-4\">Esesoftware olarak, veri toplama süreçlerini optimize eden web scraping çözümlerimizin yanı sıra, şirketlerin ihtiyaç duyduğu özel görevleri otomatikleştirmek için gelişmiş otomasyon ve web botları da geliştirmekteyiz. Bu sayede, tekrarlayan işlemleri hızlandırıyor, verimliliği artırıyor ve iş süreçlerinizi daha akıllı hale getiriyoruz. Size özel çözümlerimizle, dijital dünyada bir adım önde olmanızı sağlıyoruz. Bu konuda herhangi bir ihtiyacınız için iletişime geçip özel bir teklif alabilirsiniz.</p>"
                         },
                         {
