@@ -41,6 +41,7 @@ servicesRouter.use("/web-services", webSRouter);
 servicesRouter.use("/gcp", gcpRouter);
 servicesRouter.use("/corparate", corporateRouter);
 servicesRouter.use("/web-scraping", scrapingSRouter);
+servicesRouter.use("/automation", automationSRouter);
 
 servicesRouter.use("/", (req, res, next) => {
     res.status(200).render("services/services.ejs");
@@ -233,6 +234,62 @@ gcpRouter.get("/redistribution-with-cr", [
                 thePathArr: thePathArr,
                 page: pageObj.pages[6],
                 pageTitle: pageObj.pages[6].pageTitle
+            });
+        } catch (error) {
+            next(error);
+        };
+    }else {
+        return res.status(400).json({ errors: errors.array() });
+    };
+});
+gcpRouter.get("/virtual-server-with-gce", [
+    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
+], async (req, res, next) => { 
+    
+    // console.log(req.originalUrl);
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()) {
+        try {
+            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
+            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
+            const pageObj = JSON.parse(pagesJson);
+            // console.log(pageObj);
+            // console.log(req.ip);
+            
+            res.status(200).render('services/webServices/servicesGeneralLayout', {
+                thePathArr: thePathArr,
+                page: pageObj.pages[10],
+                pageTitle: pageObj.pages[10].pageTitle
+            });
+        } catch (error) {
+            next(error);
+        };
+    }else {
+        return res.status(400).json({ errors: errors.array() });
+    };
+});
+
+// AUTOMATION
+automationSRouter.get("/automation-solutions", [
+    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
+], async (req, res, next) => { 
+    
+    // console.log(req.originalUrl);
+    const errors = validationResult(req);
+
+    if(errors.isEmpty()) {
+        try {
+            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
+            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
+            const pageObj = JSON.parse(pagesJson);
+            // console.log(pageObj);
+            // console.log(req.ip);
+            
+            res.status(200).render('services/webServices/servicesGeneralLayout', {
+                thePathArr: thePathArr,
+                page: pageObj.pages[11],
+                pageTitle: pageObj.pages[11].pageTitle
             });
         } catch (error) {
             next(error);

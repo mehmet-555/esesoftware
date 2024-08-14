@@ -227,7 +227,7 @@
                         },
                         {
                             "id": "entryforObserver3",
-                            "subContentHeader": "Esesfotware ile Web Hosting Süreci",
+                            "subContentHeader": "Esesoftware ile Web Hosting Süreci",
                             "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">İhtiyaç Analizi ve Planlama:</span>\n<span class=\"text-sm\">İşletmenizin gereksinimlerini belirleyip, hedeflerinizi analiz ediyoruz. Hedef kitlenizi, web sitenizin amaçlarını ve teknik gereksinimlerinizi netleştiriyoruz. Size en uygun hosting planını seçiyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Hosting Sağlayıcısını Seçme:</span>\n<span class=\"text-sm\">Güvenilir ve kaliteli hizmet sunan PaaS ve IaaS sağlayıcılar arasından en uygun olanı seçiyoruz. Sağlayıcının sunduğu performans, güvenlik ve destek hizmetlerini değerlendiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Hosting Planını Satın Alma:</span>\n<span class=\"text-sm\">İhtiyaçlarınıza uygun hosting planını satın alıyor, gerekli alan adı kayıt işlemlerini gerçekleştiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Sunucu Kurulumu ve Konfigürasyonu:</span>\n<span class=\"text-sm\">Hosting sunucunuzu kuruyor ve gerekli yazılımları yapılandırıyoruz. SSL sertifikaları ve güvenlik önlemlerini etkinleştiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Web Sitesi Dosyalarını Yükleme:</span>\n<span class=\"text-sm\">Web sitenizin dosyalarını sunucuya yüklüyor ve veritabanı yapılandırmasını gerçekleştiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>6.</span>\n<span class=\"text-sm font-semibold\">Alan Adı ve DNS Ayarları:</span>\n<span class=\"text-sm\">Alan adınızı sunucularımıza yönlendirmek için gerekli DNS ayarlarını yapıyoruz ve yayılma sürecini takip ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>7.</span>\n<span class=\"text-sm font-semibold\">Web Sitesinin Test Edilmesi:</span>\n<span class=\"text-sm\">Web sitenizi farklı cihaz ve tarayıcılarda test ederek her yerde düzgün çalıştığından emin oluyoruz. Performans ve yükleme sürelerini test ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>8.</span>\n<span class=\"text-sm font-semibold\">E-posta Hizmeti Kurulumu:</span>\n<span class=\"text-sm\">Alan adınıza özel e-posta hesapları oluşturuyor ve e-posta hizmetlerini yapılandırıyoruz. E-posta yönlendirme ve spam filtresi gibi ek hizmetler sunuyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>9.</span>\n<span class=\"text-sm font-semibold\">Veri Yedekleme ve Geri Yükleme:</span>\n<span class=\"text-sm\">Düzenli veri yedeklemeleri yapıyor ve veri kaybı durumunda geri yükleme işlemlerini gerçekleştiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>10.</span>\n<span class=\"text-sm font-semibold\">Sürekli İzleme ve Bakım:</span>\n<span class=\"text-sm\">Web sitenizin performansını, güvenliğini ve erişilebilirliğini sürekli olarak izliyor ve gerekli bakımları yapıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>11.</span>\n<span class=\"text-sm font-semibold\">Teknik Detaylar:</span>\n<span class=\"text-sm\">Esesoftware olarak, web hosting sürecinizin her aşamasında yanınızdayız ve tüm teknik detayları biz yönetiyoruz, böylece siz sadece işinize odaklanabilirsiniz.</span>\n</p>\n</li>\n</ul>"
                         },
                         {
@@ -877,6 +877,180 @@
                         },
                         {
                             "id": "entryforObserver9",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "pageTitle": "Compute Engine ile Sanal Sunucu",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Google Cloud Compute Engine(Sanal Makine)",
+                    "subHeaders" : [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Google Cloud Compute Engine Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Google Cloud Compute Engine'in Özellikleri"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Google Cloud Compute Engine ile Sistem Geliştirme Süreci"},
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Google Cloud Compute Engine Sürekli Çalışabilirlik ve Veri Güvenliği"}
+                    ]
+                },
+                "a2": {
+                    "header": "Esesoftware ile Google Cloud Compute Engine Hizmetleri ve Fiyatlandırma",
+                    "subHeaders": [
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Esesoftware Olarak Google Cloud Compute Engine Hizmetleri"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Google Cloud Compute Engine ile İşletmelere Yüksek Performanslı Bulut Hizmetlerimiz"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "Esesoftware ile Google Cloud Compute Engine Ortalama Fiyatlandırma Tablosu"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// Google Cloud Compute Engine(Sanal Makine)",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Google Cloud Compute Engine Nedir?",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Google Cloud Compute Engine, Google Cloud Platform'un (GCP) güçlü ve esnek altyapısı üzerinde sanal makineler oluşturmanıza ve çalıştırmanıza olanak tanır. Yüksek performanslı iş yükleri için optimize edilmiş bu hizmet, güvenli ve ölçeklenebilir bulut çözümleri sunar.</p><p class=\"text-sm mb-4 indent-4\">Compute Engine, bulut ortamında çalıştırılması gereken uygulamalar, veri işleme, büyük veri analitiği ve yapay zeka/makine öğrenmesi iş yükleri için idealdir.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Google Cloud Compute Engine'in Özellikleri",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Esneklik:</span>\n<span class=\"text-sm\">İhtiyaçlarınıza göre sanal makineleri özelleştirebilir, CPU, RAM, disk türü ve boyutu gibi kaynakları isteğinize göre seçebilirsiniz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Ölçeklenebilirlik:</span>\n<span class=\"text-sm\">Compute Engine, iş yüklerinize göre otomatik olarak ölçeklenir. Trafik arttığında hızlı bir şekilde daha fazla kaynak ekleyerek performansı koruyabilirsiniz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Güvenlik:</span>\n<span class=\"text-sm\">Google'ın güçlü güvenlik altyapısı üzerinde çalışır ve veri şifreleme, güvenlik duvarları, kimlik yönetimi gibi birçok güvenlik özelliği sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Entegrasyon:</span>\n<span class=\"text-sm\">Compute Engine, diğer Google Cloud hizmetleriyle sorunsuz bir şekilde entegre çalışır. Örneğin, BigQuery, Google Kubernetes Engine (GKE) ve Cloud Storage ile uyum içinde kullanmanızı sağlar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Global Erişim:</span>\n<span class=\"text-sm\"> Farklı coğrafi bölgelerdeki veri merkezleri aracılığıyla uygulamalarınızı küresel olarak dağıtabilir ve kullanıcılarınıza en yakın veri merkezinden hizmet sunabilirsiniz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Google Cloud Compute Engine ile Sistem Geliştirme Süreci",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">İhtiyaç Analizi ve Planlama Aşaması:</span>\n<span class=\"text-sm\">İşletmenizin ihtiyaçlarını derinlemesine analiz ediyor, proje gereksinimlerini belirliyor ve maliyet tahmini yapıyoruz. İş yükleriniz, güvenlik gereksinimleriniz ve performans beklentileriniz bu aşamada detaylı bir şekilde ele alınır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Kurulum Aşaması:</span>\n<span class=\"text-sm\">Yaptığımız tespitlere göre, Google Cloud Compute Engine üzerinde sanal makineleri yapılandırıyoruz. İşletim sistemi, disk türü ve ağ ayarları gibi teknik özellikleri optimize ederken güvenliği de sağlıyoruz. Mevcut verilerinizi güvenli bir şekilde bulut ortamına taşıyor ve gerekli entegrasyonları gerçekleştiriyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Test ve Optimizasyon Aşaması:</span>\n<span class=\"text-sm\">Kurulum tamamlandıktan sonra, sistemin performansını ve güvenliğini çeşitli testlerle kontrol ediyoruz. Performans testleriyle sistemin beklenen iş yüklerini karşıladığından emin olurken, güvenlik testleriyle olası açıkları tespit ediyor ve gideriyoruz. Gerekirse sistem optimizasyonları yapıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Teslimat Aşaması:</span>\n<span class=\"text-sm\">Testleri başarıyla geçen sistemi teslim ediyoruz. Bu aşamada, sistemin kullanımı konusunda eğitim veriyor ve tüm proje dokümantasyonunu sağlıyoruz. Sistem, canlı ortama alınarak işletmenizin ve müşterilerinizin kullanımına sunulur.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Destek ve Yönetim Aşaması:</span>\n<span class=\"text-sm\">Proje teslim edildikten sonra 7/24 destek hizmeti sunuyoruz. Sistemlerin düzenli olarak izlenmesi, güncellenmesi ve yedeklenmesi sağlanarak, performans raporlarıyla sistem durumu hakkında sürekli geri bildirim veriyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "Google Cloud Compute Engine Sürekli Çalışabilirlik ve Veri Güvenliği",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Felaket Kurtarma Çözümleri:</span>\n<span class=\"text-sm\">Verilerin düzenli yedeklenmesi, anlık görüntüler oluşturulması ve yedek veri merkezlerinde iş yüklerinin devreye alınması.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yüksek Erişilebilirlik:</span>\n<span class=\"text-sm\">Otomatik yük dengeleme, otomatik ölçekleme ve birden fazla bölgede (region) dağıtımla kesintisiz hizmet sunumu.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Veri Merkezi Yedekliliği:</span>\n<span class=\"text-sm\">Birden fazla veri merkezinde iş yüklerinin yedeklenmesi, veri kaybı riskini azaltma ve hizmet sürekliliğini sağlama.</span>\n</p>\n</li>\n</ul>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Esesoftware ile Google Cloud Compute Engine Hizmetleri ve Fiyatlandırma",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Esesoftware Olarak Google Cloud Compute Engine Hizmetleri",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Esesoftware olarak, Google Compute Engine'i en etkin şekilde kullanmanız için profesyonel destek sağlıyoruz. İhtiyacınız olan tüm hizmetleri, başlangıçtan son aşamaya kadar, özenle ve güvenli bir şekilde sunuyoruz. Mevcut altyapınızı Google Compute Engine'e taşıma sürecinde de her adımda yanınızda olarak, sorunsuz bir geçiş sağlıyoruz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "Google Cloud Compute Engine ile İşletmelere Yüksek Performanslı Bulut Hizmetlerimiz",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yüksek Performanslı Uygulama Sunucuları:</span>\n<span class=\"text-sm\">E-ticaret siteleri, oyun sunucuları ve büyük veri analitiği uygulamaları için optimize edilmiş güçlü sunucu altyapıları sunuyoruz. İşletmenizin büyüyen ihtiyaçlarına esnek ve sağlam çözümler sağlıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Web Hosting ve Web Uygulama Sunucuları:</span>\n<span class=\"text-sm\">Web siteleriniz ve web tabanlı uygulamalarınız için güvenli, hızlı ve ölçeklenebilir hosting çözümleri sunuyoruz. Dijital varlığınızı performanslı ve güvenli bir ortamda barındırıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Veri Tabanı Sunucuları:</span>\n<span class=\"text-sm\">MySQL, PostgreSQL gibi popüler veritabanları için güvenilir ve yüksek performanslı sunucu çözümleri sağlıyoruz. Veritabanı yönetimi ve yedekleme süreçlerinde maksimum güvenliği garanti ediyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">İş Sürekliliği ve Yedekleme Çözümleri:</span>\n<span class=\"text-sm\">Kritik verilerinizin korunması ve iş sürekliliğinizin sağlanması için güçlü bir altyapı sunuyoruz. Felaket kurtarma ve hızlı geri yükleme süreçleriyle verilerinizi her zaman güvende tutuyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Test ve Geliştirme Ortamları:</span>\n<span class=\"text-sm\">Geliştirme ve test süreçleriniz için izole edilmiş sanal makineler sağlıyoruz. Yazılımlarınızı gerçek dünya senaryolarında güvenle test edebilir ve optimize edebilirsiniz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Esesoftware ile Google Cloud Compute Engine Ortalama Fiyatlandırma Tablosu",
+                            "subContent": "<table id=\"table2\" class=\"w-full pricingT\">\n<thead class=\"text-xs lg:text-sm\">\n<tr>\n<th>Şirket Büyüklüğü</th>\n<th class=\"text-center\">Kullanım Senaryosu</th>\n<th class=\"text-center\">Örnek Yapılandırma</th>\n<th class=\"text-center\">Aylık Tahmini Maliyet</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\n<strong>Küçük Ölçekli Şirketler</strong>\n</td>\n<td>\n<span class=\"block text-center mb-auto\">Web hosting, test ve geliştirme ortamları</span>\n</td>\n<td>\n<span class=\"block text-center\">n1-standard-1 (1 vCPU, 3.75GB RAM), 50GB SSD, 730 saat/ay, lowa(us-central1)</span>\n</td>\n<td>\n<span class=\"block text-center\">$50 - $80</span>\n</td>\n</tr>\n<tr>\n<td>\n<strong>Orta Ölçekli Şirketler</strong>\n</td>\n<td>\n<span class=\"block text-center mb-auto\">Üretim ortamları, veri tabanı sunucuları, karmaşık web uygulamaları</span>\n</td>\n<td>\n<span class=\"block text-center\">n1-highmen-32 (32 vCPU, 208GB RAM), 1TB SSD, 730 saat/ay, lowa(us-central1)</span>\n</td>\n<td>\n<span class=\"block text-center\">$250 - $455</span>\n</td>\n</tr>\n<tr>\n<td>\n<strong>Büyük Ölçekli Şirketler</strong>\n</td>\n<td>\n<span class=\"block text-center mb-auto\">Büyük veri analitiği, yapay zeka/makine öğrenmesi iş yükleri</span>\n</td>\n<td>\n<span class=\"block text-center\">n1-highmen-32 (32 vCPU, 208GB RAM), 1TB SSD, 730 saat/ay, lowa(us-central1)</span>\n</td>\n<td>\n<span class=\"block text-center\">$3500 - $6000</span>\n</td>\n</tr>\n<tr>\n<td>\n<strong>Tüm Şirketler</strong>\n</td>\n<td>\n<span class=\"block text-center mb-auto\">Kurulum ve Destek Hizmetleri</span>\n</td>\n<td>\n<span class=\"block text-center\">Tüm Senaryolar</span>\n</td>\n<td>\n<span class=\"block text-center\">Teklif alınız.</span>\n</td>\n</tr>\n</tbody>\n</table>\n<p class=\"text-xs text-[#4f4f4f] my-2 italic font-medium\">Bu fiyatlar, web geliştirme maliyetlerini etkileyen bazı faktörleri daha iyi anlamanız ve genel bir fikir edinmeniz amacıyla verilmiştir. Uygulamanın büyüklüğüne ve diğer gereksinimlerine göre esnek değişimler uygulanmaktadır, iletişime geçmenizi tavsiye ederiz.</p>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Deneyimli Ekip:</span>\n<span class=\"text-sm\">Uzman ekibimiz, en son teknoloji ve trendleri takip ederek işletmenize en uygun çözümleri sunar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Müşteri Odaklı Yaklaşım:</span>\n<span class=\"text-sm\">Her müşteri bizim için özeldir. İhtiyaçlarınızı dikkatle dinleyip size özel çözümler sunarız.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Tam Destek:</span>\n<span class=\"text-sm\">Geliştirme sürecinin her aşamasında yanınızdayız. Her türlü destek ve danışmanlık hizmeti ile işletmenizin dijital başarısını sürdürülebilir kılıyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Yenilikçi Çözümler:</span>\n<span class=\"text-sm\">Sürekli değişen dijital dünyada yenilikçi ve geleceğe yönelik çözümler sunuyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver10",
+                            "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "pageTitle": "Otomasyon Çözümleri",
+            "pageHeaders": {
+                "a1": {
+                    "header": "Otomasyon Çözümleri ve Hizmetlerimiz",
+                    "subHeaders": [
+                        {"id": "navLink1", "href": "#entryforObserver1", "sHeader": "Otomasyon Nedir?"},
+                        {"id": "navLink2", "href": "#entryforObserver2", "sHeader": "Otomasyonun Sistemlerinin Başlıca Unsurları"},
+                        {"id": "navLink3", "href": "#entryforObserver3", "sHeader": "Sektörlere Özel Çözümler"},
+                        {"id": "navLink4", "href": "#entryforObserver4", "sHeader": "Otomasyonun Geleceği"}
+                    ]
+                },
+                "a2": {
+                    "header": "Otomasyon Yaklaşımımız",
+                    "subHeaders": [
+                        {"id": "navLink5", "href": "#entryforObserver5", "sHeader": "Esesoftware Kalitesiyle Otomasyon Çözümleri"},
+                        {"id": "navLink6", "href": "#entryforObserver6", "sHeader": "Otomasyon Alanında Hizmetlerimiz"},
+                        {"id": "navLink7", "href": "#entryforObserver7", "sHeader": "Fiyatlandırmaya Etki Eden Faktörler"},
+                        {"id": "navLink8", "href": "#entryforObserver8", "sHeader":"Neden Bizi Tercih Etmelisiniz?"},
+                        {"id": "navLink9", "href": "#entryforObserver9", "sHeader":"Daha Fazla Bilgi Alın"},
+                        {"id": "navLink10", "href": "#entryforObserver10", "sHeader":"Hemen Bir Teklif Al / Proje Başlat"}
+                    ]
+                }
+            },
+            "contents": {
+                "a1": {
+                    "header": "// Otomasyon Çözümleri ve Hizmetlerimiz",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver1",
+                            "subContentHeader": "Otomasyon Nedir?",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Otomasyon, iş süreçlerini daha hızlı, verimli ve hatasız bir şekilde yürütmek için teknolojinin uygulanmasıdır. Temel amacı, manuel müdahaleleri en aza indirerek iş süreçlerini otomatik hale getirmek ve böylece işletmelerin verimliliğini artırmaktır. Otomasyon, üretim hattından ofis işlerine kadar birçok alanda kullanılabilir ve işletmelerin rekabet avantajını artırmasına yardımcı olur.</p>"
+                        },
+                        {
+                            "id": "entryforObserver2",
+                            "subContentHeader": "Otomasyonun Sistemlerinin Başlıca Unsurları",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span>1.</span>\n<span class=\"text-sm font-semibold\">Tekrarlayan Görevlerin Otomatikleştirilmesi:</span>\n<span class=\"text-sm\">Otomasyon, sürekli tekrar eden görevlerin makineler, yazılımlar veya robotlar aracılığıyla otomatik olarak yapılmasını sağlar. Bu, insan hatasını azaltır ve iş süreçlerini hızlandırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>2.</span>\n<span class=\"text-sm font-semibold\">Verimlilik Artışı:</span>\n<span class=\"text-sm\">Otomasyon, insan iş gücünü daha stratejik görevlere odaklanmaya olanak tanır, bu da genel iş verimliliğini artırır.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>3.</span>\n<span class=\"text-sm font-semibold\">Maliyet Tasarrufu:</span>\n<span class=\"text-sm\">Otomasyon, insan müdahalesine olan ihtiyacı azaltarak maliyetlerin düşürülmesine yardımcı olur. Daha az hatalı işlem, daha az kaynak israfı anlamına gelir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>4.</span>\n<span class=\"text-sm font-semibold\">Hata Azaltma:</span>\n<span class=\"text-sm\">Manuel süreçler genellikle insan hatasına açıktır. Otomasyon, bu hataların büyük bir kısmını ortadan kaldırarak daha güvenilir sonuçlar elde edilmesini sağlar.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span>5.</span>\n<span class=\"text-sm font-semibold\">Hız ve Esneklik:</span>\n<span class=\"text-sm\">Otomatik sistemler, işlemleri daha hızlı ve genellikle 7/24 gerçekleştirebilir, bu da işletmelere zaman ve esneklik kazandırır.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver3",
+                            "subContentHeader": "Sektörlere Özel Çözümler",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Sağlık Sektörü İçin Otomasyon:</span>\n<span class=\"text-sm\">Hastaneler, klinikler ve sağlık merkezleri için hasta kayıtları, randevu yönetimi ve tıbbi cihaz entegrasyonu gibi süreçlerin otomatikleştirilmesine yönelik çözümler.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Eğitim ve Yurt Otomasyonu:</span>\n<span class=\"text-sm\">Okullar, üniversiteler ve yurtlar için öğrenci kayıtları, giriş-çıkış takibi, ders ve etkinlik yönetimi gibi eğitim ve yurt süreçlerinin otomatikleştirilmesi.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Perakende ve Mağazacılık Otomasyonu:</span>\n<span class=\"text-sm\">Mağaza yönetimini ve perakende işlemlerini optimize etmek amacıyla sunulan çözümler; stok yönetimi, satış noktası sistemleri, müşteri ilişkileri yönetimi ve raporlama gibi iş süreçlerini içerir.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Hizmet Sektörü Otomasyonu:</span>\n<span class=\"text-sm\">Restoranlar, oteller ve diğer hizmet sektöründeki işletmeler için rezervasyon sistemleri, müşteri hizmetleri, envanter yönetimi ve raporlama çözümleri. Bu çözümler, hizmet kalitesini artırır ve operasyonel verimliliği destekler.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">İnşaat Sektörü Otomasyonu:</span>\n<span class=\"text-sm\">İnşaat projelerinde proje yönetimi, malzeme yönetimi, zaman çizelgeleri ve iş gücü yönetimini otomatikleştiren çözümler. Bu çözümler, proje sürelerini kısaltır ve maliyetleri düşürür.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver4",
+                            "subContentHeader": "Otomasyonun Geleceği",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Gelişen yapay zeka (AI) ve makine öğrenimi (ML) teknolojileriyle birlikte otomasyon, daha karmaşık ve akıllı hale gelmektedir. Bu, iş süreçlerinin daha iyi optimize edilmesine, daha akıllı kararların alınmasına ve işletmelerin hızla değişen pazar koşullarına uyum sağlamasına yardımcı olur.</p><p class=\"text-sm mb-4 indent-4\">Otomasyon, günümüzde işletmeler için vazgeçilmez bir araç haline gelmiştir ve işletmelerin sürdürülebilir rekabet avantajı elde etmeleri için kritik bir rol oynamaktadır.</p>"
+                        }
+                    ]
+                },
+                "a2": {
+                    "header": "// Otomasyon Yaklaşımımız",
+                    "subContents": [
+                        {
+                            "id": "entryforObserver5",
+                            "subContentHeader": "Esesoftware Kalitesiyle Otomasyon Çözümleri",
+                            "subContent": "<p class=\"text-sm mb-4 indent-4\">Esesoftware, işletmelere yönelik çeşitli otomasyon çözümleri sunar. Bu çözümler, iş süreçlerini optimize etmek, verimliliği artırmak ve insan hatasını minimize etmek amacıyla geliştirilmiştir. Esesoftware, endüstriyel otomasyon, iş süreci otomasyonu, veri entegrasyonu, robotik süreç otomasyonu (RPA), tarım otomasyonu, bulut tabanlı sistemler ve daha fazlasını kapsayan hizmetler sunar. Ayrıca, otomasyon sistemlerinin entegrasyonu, teknik destek ve sürekli iyileştirme gibi alanlarda da danışmanlık hizmetleri sağlar.</p>"
+                        },
+                        {
+                            "id": "entryforObserver6",
+                            "subContentHeader": "Otomasyon Alanında Hizmetlerimiz",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Otomasyon Çözümleri:</span>\n<span class=\"text-sm\"> İşletmenizin verimliliğini artırmak ve süreçlerinizi optimize etmek için sunduğumuz kapsamlı otomasyon çözümleri.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">İş Süreci Otomasyonu:</span>\n<span class=\"text-sm\"> Manuel iş süreçlerini otomatikleştirerek, operasyonel verimliliği artıran ve insan hatasını minimize eden yazılım çözümleri.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Veri Entegrasyonu Otomasyonu:</span>\n<span class=\"text-sm\">Farklı sistemler arasında veri akışını sağlamak ve merkezi bir noktada veri yönetimini kolaylaştırmak için geliştirilen entegrasyon çözümleri.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Depo ve Lojistik Otomasyonu:</span>\n<span class=\"text-sm\">Depo yönetimi, envanter kontrolü ve lojistik süreçlerin otomatikleştirilmesi ile tedarik zincirinin daha etkin yönetilmesini sağlayan çözümler.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver7",
+                            "subContentHeader": "Fiyatlandırmaya Etki Eden Faktörler",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Proje Kapsamı:</span>\n<span class=\"text-sm\">Proje büyüklüğü ve karmaşıklığı.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Geliştirme Süresi:</span>\n<span class=\"text-sm\">Projenin tamamlanması için gereken süre</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Teknoloji ve Araçlar:</span>\n<span class=\"text-sm\">Kullanılan yazılım ve donanım araçları</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Destek ve Bakım:</span>\n<span class=\"text-sm\">Sürekli destek ve bakım hizmetleri</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Entegrasyon Gereksinimleri:</span>\n<span class=\"text-sm\">Mevcut sistemlerle entegrasyon ihtiyacı</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver8",
+                            "subContentHeader": "Neden Bizi Tercih Etmelisiniz?",
+                            "subContent": "<ul class=\"pl-6\">\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Otomasyon ve Danışmanlık Hizmetleri:</span>\n<span class=\"text-sm\">İşletmenizin ihtiyaçlarına yönelik otomasyon çözümlerini belirlemek ve stratejik yol haritaları oluşturmak için sunduğumuz profesyonel danışmanlık hizmetleri.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Teknik Destek ve Bakım Hizmetleri:</span>\n<span class=\"text-sm\">Otomasyon sistemlerinizin sorunsuz çalışması için sürekli teknik destek ve bakım hizmetleri sunuyoruz.</span>\n</p>\n</li>\n<li class=\"mb-2\">\n<p>\n<span class=\"inline-block relative top-1\">*</span>\n<span class=\"text-sm font-semibold\">Sürekli İyileştirme ve Optimizasyon:</span>\n<span class=\"text-sm\"> Mevcut otomasyon çözümlerinizin performansını sürekli izleyerek, iyileştirme ve optimizasyon hizmetleri sağlıyoruz.</span>\n</p>\n</li>\n</ul>"
+                        },
+                        {
+                            "id": "entryforObserver9",
+                            "subContentHeader": "Daha Fazla Bilgi Alın",
+                            "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel çözümlerimiz hakkında daha fazla bilgi almak ister misiniz? Aşağıdaki butona tıklayarak bizimle iletişime geçin.</p>\n<div class=\"flex justify-center mt-4 mb-8\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-[#2a2a2a] bg-[#7d84ab91] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; İletişime Geç &gt; </a>\n</div>"
+                        },
+                        {
+                            "id": "entryforObserver10",
                             "subContentHeader": "Hemen Bir Teklif Al / Proje Başlat",
                             "subContent": "<p class=\"text-sm indent-4\">Projeleriniz için özel olarak hazırlanacak tekliflerimizle hedeflerinize ulaşmanızı sağlamak için buradayız. Aşağıdaki butona tıklayarak projeniz hakkında bilgi verin ve size özel teklifimizi alın!</p>\n<div class=\"flex justify-center my-4\">\n<a href=\"#\" class=\"inline-block text-center w-5/6 sm:w-3/4 md:w-2/3 lg:w-7/12 xl:w-1/2 text-base px-1 py-1 text-white bg-[#0027ff] border-2 hover:border-[#636871] tracking-widest font-custom-medium rounded-lg transition-all duration-200\"> &lt; Proje Başlat &gt; </a>\n</div>"
                         }
