@@ -621,7 +621,7 @@ function showContentsOnServicesOnModal(index) {
         ],
         [   
             `<li class='fade-in text-lg font-medium text-[#adadad] ml-3 tracking-wider'>İşletme / Kurumsal</li>`,
-            `<li class='fade-in'><a href="/services/corparate/corparate-intranet-solutions" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span>Kurumsal İntranet Çözümleri</a></li>`,
+            `<li class='fade-in'><a href="/services/corparate/corparate-intranet-solutions" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> Kurumsal İntranet Çözümleri</a></li>`,
             `<li class='fade-in'><a href="/services/corparate/qr-menu-application" class='inline-block w-full whitespace-nowrap py-2 px-3 bg-transparent hover:bg-[#10151e] rounded-lg transition-all duration-200'><span class='text-sm text-gray-400 mr-1'>></span> İşletmeler için QR Menü Uygulaması</a></li>`,
         ],
         [   
