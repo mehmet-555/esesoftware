@@ -385,6 +385,16 @@ scrapingSRouter.get("/web-scraping-and-web-automation", [
 });
 
 
+
+app.get('/', (req, res) => {
+    res.render('some-page', { 
+        pageTitle: 'Esesoftware | Some Page',
+        pageCanonicalUrl: `https://esesoftware.com/some-page`
+    });
+});
+
+
+
 module.exports = servicesRouter;
 
 
