@@ -27,8 +27,8 @@ jobs:
       run: |
         echo "ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX=${{ secrets.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX }}" >> $GITHUB_ENV
         echo "ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX=${{ secrets.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX }}" >> $GITHUB_WORKSPACE/.env
-        echo "NEW_SECRET_KEY=${{ secrets.EMAIL_APPLICATION_KEY }}" >> $GITHUB_ENV
-        echo "NEW_SECRET_KEY=${{ secrets.EMAIL_APPLICATION_KEY }}" >> $GITHUB_WORKSPACE/.env
+        echo "EMAIL_APPLICATION_KEY=${{ secrets.EMAIL_APPLICATION_KEY }}" >> $GITHUB_ENV
+        echo "EMAIL_APPLICATION_KEY=${{ secrets.EMAIL_APPLICATION_KEY }}" >> $GITHUB_WORKSPACE/.env
 
     - name: Deploy to App Engine
       run: |
