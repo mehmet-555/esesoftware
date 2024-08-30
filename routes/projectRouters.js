@@ -25,7 +25,7 @@ webProjectRouter.route("/static-web")
             service: 'gmail', 
             auth: {
                 user: 'esesoftwaretr@gmail.com', 
-                pass: process.env.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX
+                pass: process.env.EMAIL_APPLICATION_KEY
             }
         })
 
