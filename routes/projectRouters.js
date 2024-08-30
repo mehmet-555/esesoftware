@@ -16,9 +16,6 @@ webProjectRouter.route("/static-web")
         res.sendFile(path.join(__dirname, "../public/pages/project/web-staticForm.html"));
     })
     .post((req, res, next) => {
-        console.log(typeof req.body);
-        console.log(req.body);
-
         const formData = req.body;
 
         let transporter = nodemailer.createTransport({
@@ -31,7 +28,7 @@ webProjectRouter.route("/static-web")
 
         // Gönderilecek e-posta ayarları
         let mailOptions = {
-            from: 'your-email@gmail.com', 
+            from: 'esesoftwaretr@gmail.com', 
             to: 'info@esesoftware.com', 
             subject: `Proje Başlat Formu`, 
             text: `Statik veya Dinamik Web Uygulaması Proje Başlat Formu: ${JSON.stringify(formData, null, 2)}` 
@@ -44,7 +41,7 @@ webProjectRouter.route("/static-web")
                 return res.status(500).send('Bir hata oluştu. Lütfen tekrar deneyin.');
             }
             console.log('Email sent: ' + info.response);
-            return res.status(201).send("Server response: Request received successfully");  // Buraya yazınca çalışmıyor 
+            return res.status(201).send("Server response: Request received successfully");
         });
     });
 
@@ -53,8 +50,6 @@ webProjectRouter.route("/dynamic-web")        // Bence burası hiç çalışmıy
         res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html"));
     })
     .post((req, res, next) => {
-        console.log(typeof req.body);
-        console.log(req.body);
         res.status(201).send("Server response: Request received successfully");
     });
 
