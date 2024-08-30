@@ -36,8 +36,3 @@ jobs:
         export GOOGLE_APPLICATION_CREDENTIALS="$GITHUB_WORKSPACE/ser.json"
         gcloud app deploy --quiet
 
-
-
-
-
-        bsqa wtuo lcmt edzk
