@@ -38,7 +38,7 @@ router.post("/contact", (req, res, next) => {
         from: "esesoftwaretr@gmail.com",
         to: "info@esesoftware.com",
         subject: "Anasayfa İletişim Kutusu",
-        message: `İletişime Geçme Mesajı: <br>
+        html: `İletişime Geçme Mesajı: <br>
         ${messageContent}`
     }
 
