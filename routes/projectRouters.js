@@ -44,9 +44,8 @@ webProjectRouter.route("/static-web")
                 return res.status(500).send('Bir hata oluştu. Lütfen tekrar deneyin.');
             }
             console.log('Email sent: ' + info.response);
-            res.status(201).send("Server response: Request received successfully");
+            return res.status(201).send("Server response: Request received successfully");  // Buraya yazınca çalışmıyor 
         });
-        
     });
 
 webProjectRouter.route("/dynamic-web")        // Bence burası hiç çalışmıyir...
