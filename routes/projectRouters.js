@@ -1,6 +1,8 @@
 
 const path = require("path");
 const express = require("express");
+const nodemailer = require('nodemailer');
+
 
 const projectRouter = express.Router();
 const webProjectRouter = express.Router();
@@ -14,17 +16,44 @@ webProjectRouter.route("/static-web")
         res.sendFile(path.join(__dirname, "../public/pages/project/web-staticForm.html"));
     })
     .post((req, res, next) => {
-        // console.log(typeof req.body);
+        console.log(typeof req.body);
         console.log(req.body);
+
+        const formData = req.body;
+
+        let transporter = nodemailer.createTransport({
+            service: 'gmail', 
+            auth: {
+                user: 'esesoftwaretr@gmail.com', 
+                pass: process.env.ESESOFTWARE_SECRET_KEY_FOR_CONTACT_BOX
+            }
+        })
+
+        // Gönderilecek e-posta ayarları
+        let mailOptions = {
+            from: 'your-email@gmail.com', 
+            to: 'info@esesoftware.com', 
+            subject: `Proje Başlat Formu`, 
+            text: `Statik veya Dinamik Web Uygulaması Proje Başlat Formu: ${JSON.stringify(formData, null, 2)}` 
+        };
+
+        // E-posta gönderme
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                console.log(error);
+                return res.status(500).send('Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
+            console.log('Email sent: ' + info.response);
+        });
         res.status(201).send("Server response: Request received successfully");
     });
 
-webProjectRouter.route("/dynamic-web")
+webProjectRouter.route("/dynamic-web")        // Bence burası hiç çalışmıyir...
     .get((req, res, next) => {
         res.sendFile(path.join(__dirname, "../public/pages/project/web-dynamicForm.html"));
     })
     .post((req, res, next) => {
-        // console.log(typeof req.body);
+        console.log(typeof req.body);
         console.log(req.body);
         res.status(201).send("Server response: Request received successfully");
     });
