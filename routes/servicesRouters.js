@@ -1,10 +1,4 @@
-const fs = require("fs").promises;
-const path = require("path");
-
 const express = require("express");
-const validator = require('validator');
-
-
 
 // Routers
 const servicesRouter = express.Router();
@@ -16,14 +10,12 @@ const corporateRouter = express.Router();
 const scrapingSRouter = express.Router();
 
 // Utils and MW's
-const rootDir = require("../utils/rootDir");
-// console.log(rootDir)
-
-const { check, param, query, validationResult } = require("express-validator");
-
 function isMobile(userAgent) {
     return /mobile/i.test(userAgent);
-}
+};
+
+// servicesController
+const servicesController = require("../controllers/servicesController.js");
 
 
 servicesRouter.all("*", (req, res, next) => {
@@ -45,353 +37,54 @@ servicesRouter.use("/automation", automationSRouter);
 
 servicesRouter.use("/", (req, res, next) => {
     res.status(200).render("services/services.ejs");
-    // console.log(req.ip)
 });
 
 
 // WEB SERVICES
-webSRouter.get("/creating-static-web-site", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-],  async (req, res, next) => {
-
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-    
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[0],
-                pageTitle: pageObj.pages[0].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
-    
+webSRouter.get("/creating-static-web-site", (req, res, next) => {
+    servicesController.handlePage(req, res, next, 0);
 });
-webSRouter.get("/creating-dynamic-web-app", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => {
-
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[1],
-                pageTitle: pageObj.pages[1].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+webSRouter.get("/creating-dynamic-web-app", (req, res, next) => {
+    servicesController.handlePage(req, res, next, 1);
 });
-webSRouter.get("/web-hosting-services", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[2],
-                pageTitle: pageObj.pages[2].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+webSRouter.get("/web-hosting-services", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 2);
 });
-webSRouter.get("/ui-ux-development", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[3],
-                pageTitle: pageObj.pages[3].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+webSRouter.get("/ui-ux-development", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 3);
 });
-webSRouter.get("/restructuring", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[4],
-                pageTitle: pageObj.pages[4].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+webSRouter.get("/restructuring", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 4);
 });
 
 // GCP 
-gcpRouter.get("/redistribution-with-ae", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[5],
-                pageTitle: pageObj.pages[5].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+gcpRouter.get("/redistribution-with-ae", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 5);
 });
-gcpRouter.get("/redistribution-with-cr", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[6],
-                pageTitle: pageObj.pages[6].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+gcpRouter.get("/redistribution-with-cr", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 6);
 });
-gcpRouter.get("/virtual-server-with-gce", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[10],
-                pageTitle: pageObj.pages[10].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+gcpRouter.get("/virtual-server-with-gce", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 10);
 });
 
 // AUTOMATION
-automationSRouter.get("/automation-solutions", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[11],
-                pageTitle: pageObj.pages[11].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+automationSRouter.get("/automation-solutions", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 11);
 });
 
 // CORPARATE
-corporateRouter.get("/corparate-intranet-solutions", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[7],
-                pageTitle: pageObj.pages[7].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+corporateRouter.get("/corparate-intranet-solutions", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 7);
 });
-corporateRouter.get("/qr-menu-application", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[8],
-                pageTitle: pageObj.pages[8].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+corporateRouter.get("/qr-menu-application", (req, res, next) => { 
+    servicesController.handlePage(req, res, next, 8);
 });
 
 // WEB SCRAPING
-scrapingSRouter.get("/web-scraping-and-web-automation", [
-    // query('url').isURL().withMessage('Must be a valid URL')   // Daha sonra aktif edeceğim!!!
-], async (req, res, next) => { 
-    
-    // console.log(req.originalUrl);
-    const errors = validationResult(req);
-
-    if(errors.isEmpty()) {
-        try {
-            const thePathArr = req.originalUrl.split("/").slice(1).map(part => validator.escape(part));
-            const pagesJson = await fs.readFile(path.join(rootDir, "model/pages/sPages.json"), 'utf8');
-            const pageObj = JSON.parse(pagesJson);
-            // console.log(pageObj);
-            // console.log(req.ip);
-            
-            res.status(200).render('services/webServices/servicesGeneralLayout', {
-                thePathArr: thePathArr,
-                page: pageObj.pages[9],
-                pageTitle: pageObj.pages[9].pageTitle
-            });
-        } catch (error) {
-            next(error);
-        };
-    }else {
-        return res.status(400).json({ errors: errors.array() });
-    };
+scrapingSRouter.get("/web-scraping-and-web-automation", (req, res, next)=> {
+    servicesController.handlePage(req, res, next, 9);
 });
-
-
-
-// app.get('/', (req, res) => {
-//     res.render('some-page', { 
-//         pageTitle: 'Esesoftware | Some Page',
-//         pageCanonicalUrl: `https://esesoftware.com/some-page`
-//     });
-// });
 
 
 
