@@ -13,7 +13,11 @@ function activeValidator() {
     const userEmail = urlParams.get('email');
 
     unsubscribeBtn.addEventListener("click", (e)=> {
-        sendCancelRequest(emailInput.value);
+        sendCancelRequest(emailInput.value)
+            .then(response => {
+                console.log(response.message)
+                window.location.reload(true);
+            })
     })
 
     emailInput.addEventListener("input", async (e)=> {
@@ -84,9 +88,10 @@ async function sendCancelRequest(email) {
             body: JSON.stringify({email: email})
         });
 
-        if(!response.ok) {
-            if(response.status === 404) {
+        if (!response.ok) {
+            if (response.status === 404) {
                 console.log("Unsubscribe failed.");
+                alert("E-posta aboneliği iptali başarısız oldu.");  // Kullanıcıya geri bildirim ver
                 return false;
             }
             throw new Error("Network response was not ok");
@@ -97,6 +102,7 @@ async function sendCancelRequest(email) {
         return true;
     } catch (error) {
         console.error("Fetch error:", error);
+        alert("Sunucuyla iletişimde bir sorun oluştu. Lütfen tekrar deneyin.");  // Hata durumunda kullanıcıyı bilgilendir
         return false;
     }
 }
