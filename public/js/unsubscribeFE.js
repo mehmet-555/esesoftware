@@ -18,6 +18,7 @@ function activeValidator() {
         if (validateEmail(email)) {
             if(email === userEmail) {
                 const sonuc = controlDB(email);
+                console.log(sonuc)
             }
 
 
