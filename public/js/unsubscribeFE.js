@@ -92,8 +92,8 @@ async function sendCancelRequest(email) {
             throw new Error("Network response was not ok");
         }
 
-        const data = await response.text();
-        console.log(data);
+        const data = await response.json();
+        console.log(data.message);
         return true;
     } catch (error) {
         console.error("Fetch error:", error);
