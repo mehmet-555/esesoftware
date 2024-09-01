@@ -1,36 +1,28 @@
 const fs = require("fs").promises;
 const path = require("path");
-const rootDir = require("../../utils/rootDir");
-
-
 
 async function userIsUnsubscribed(email, token) {
     try {
-        const subscribesJson = await fs.readFile("./subscribes.json");
+        const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"));
         const subscribesObj = JSON.parse(subscribesJson);
-        
         // E-posta adresine göre kullanıcıyı bul
         const user = subscribesObj.subscribes.find(subscribe => 
-            subscribe.email === email
+            subscribe.businessEmail === email
         );
-        console.log("cosnole 5")
-        console.log(user.businessName)
+        
+        console.log(user, user.businessEmail, user.businessName)
         if (user) {
-            if(user.isSubscribed) {
-                console.log("cosnole 1")
+            if(user.isSubscribed === "true") {
                 return true
                 
             }else {
-                console.log("cosnole 2")
                 return false
             }
         } else {
             // Kullanıcı bulunamazsa, false döndürülür
-            console.log("cosnole 3")
             return false;
         }
     } catch (error) {
-        console.log("cosnole 4")
         console.error("Error reading or parsing subscribes.json:", error);
         // Hata durumunda false döndürüyoruz
         return false;
