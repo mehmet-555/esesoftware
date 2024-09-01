@@ -64,8 +64,11 @@ async function cancelSubscribe(email) {
 
             // Güncellenmiş veriyi JSON olarak tekrar yaz
             await fs.writeFile(path.join(__dirname, "subscribes.json"), JSON.stringify(subscribesObj, null, 2));
-
+            
             console.log("JSON dosyası başarıyla güncellendi.");
+
+            const updatedJson = await fs.readFile(path.join(__dirname, "subscribes.json"), 'utf-8');
+            console.log("Güncellenmiş dosya içeriği:", updatedJson);
             return true;
         } else {
             console.log(`Kullanıcı ${email} bulunamadı.`);
