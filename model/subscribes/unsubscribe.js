@@ -2,7 +2,7 @@ const fs = require("fs").promises;
 const path = require("path");
 const rootDir = require("../../utils/rootDir");
 
-const subsPath = path.join(rootDir, "model", "subscribes", "subscribes.json");
+const subsPath = path.join("../", "../", "model", "subscribes", "subscribes.json");
 
 async function userIsUnsubscribed(email, token) {
     try {
