@@ -12,6 +12,8 @@ const aboutRouter = require("./routes/aboutRouters");
 const blogRouter = require("./routes/blogRouters");
 const servicesRouter = require("./routes/servicesRouters.js");
 const privacyRouter = require("./routes/privacyRouters.js");
+const unsubscribeRouter = require("./routes/unsubscribeRouters.js");
+
 // Router dosyalarını içe aktarma ykp
 const robotsRouter = require('./routes/robotsRouter');
 const sitemapRouter = require('./routes/sitemapRouter');
@@ -46,6 +48,7 @@ app.use("/project", projectRouter);
 app.use("/about", aboutRouter);
 app.use("/blog", blogRouter);
 app.use("/privacy-policy", privacyRouter);
+app.use("/unsubscribe", unsubscribeRouter);
 app.use("/", homeRouter);
 
 // Router'ları kullanma ykp
