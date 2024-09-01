@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { userIsUnsubscribed, isThereEmail } = require('./path/to/your/module');
+const { userIsUnsubscribed, isThereEmail } = require('../model/subscribes/unsubscribe');
 
 router.route("/")
     .get(async (req, res, next) => { // .get metodunu async olarak tanımlıyoruz
