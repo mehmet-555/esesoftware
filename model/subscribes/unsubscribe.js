@@ -28,5 +28,25 @@ async function userIsUnsubscribed(email, token) {
         return false;
     }
 }
+async function isThereEmail(email) {
+    try {
+        const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"));
+        const subscribesObj = JSON.parse(subscribesJson);
 
-module.exports = userIsUnsubscribed;
+        // `some` metodu, koşulu sağlayan bir öğe bulursa `true` döner ve döngüyü sonlandırır
+        const emailExists = subscribesObj.subscribes.some(subscribe => 
+            subscribe.businessEmail === email
+        );
+
+        return emailExists;
+    } catch (error) {
+        console.error("Error reading or parsing subscribes.json:", error);
+        return false;
+    }
+}
+
+
+module.exports = {
+    userIsUnsubscribed,
+    isThereEmail
+};

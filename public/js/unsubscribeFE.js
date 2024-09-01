@@ -17,7 +17,7 @@ function activeValidator() {
         const email = e.target.value;
         if (validateEmail(email)) {
             if(email === userEmail) {
-                controlDB(email);
+                const sonuc = controlDB(email);
             }
 
 
@@ -30,7 +30,7 @@ function activeValidator() {
 
 async function controlDB(email) {
     try {
-        const response = await fetch('https://esesoftware.com/unsubscribe/controlEmail', {
+        const response = await fetch('/unsubscribe/controlEmail', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -39,6 +39,10 @@ async function controlDB(email) {
         });
 
         if (!response.ok) {
+            if (response.status === 404) {
+                console.log('Email not found');
+                return false;
+            }
             throw new Error('Network response was not ok');
         }
 
@@ -46,6 +50,7 @@ async function controlDB(email) {
         return data; // Beklenen yanıt veritabanından dönen yanıt
     } catch (error) {
         console.error('Fetch error:', error);
+        return false;
     }
 };
 

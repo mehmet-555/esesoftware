@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const userIsUnsubscribed = require("../model/subscribes/unsubscribe");
+const { userIsUnsubscribed, isThereEmail } = require('./path/to/your/module');
 
 router.route("/")
     .get(async (req, res, next) => { // .get metodunu async olarak tanımlıyoruz
@@ -27,8 +27,18 @@ router.route("/")
         // POST işlemi burada yapılabilir
     });
 
-router.post("/controlEmail", (req, res, next)=> {
-    console.log(req.body, "REQQQQQ BODYYYYYYY")
+router.post("/controlEmail", async (req, res, next)=> {
+    try {
+        const value = await isThereEmail(req.body.email);
+        if(value === true) {
+            res.status(201).send("true");
+        } else {
+            res.status(404).send("Email not found");
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
 })
 
 module.exports = router; 
