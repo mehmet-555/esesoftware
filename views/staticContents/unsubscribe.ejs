@@ -125,7 +125,9 @@
             <div class="my-8">
                 <h2 class="text-center text-3xl font-custom-medium text-gray-700">Abonelikten Çık / (Unsubscribe)</h2>
             </div>
-            <div class="henuzIptalYapilmamissa hidden">
+
+            <% if(!isUnsubscribedYet) { %>
+            <div>
                 <div class="my-8">
                     <p class="text-lg font-normal text-left">Gittiğiniz için üzgünüz, lütfen e-posta aboneliğinizi sonlandırmak istediğiniz e-posta adresinizi doğrulayın.</p>
                 </div>
@@ -141,13 +143,15 @@
                     <button type="button" class="bg-slate-950/85 hover:bg-slate-950 rounded-md outline-none text-white px-3 py-2 transition-all duration-200">E-posta almak istemiyorum</button>
                 </div>
             </div>
-            <div class="iptalYapilmissa">
+            <% } else { %>
+            <div>
                 <ul class="list-disc">
                     <li>
                         <p>E-posta aboneliğiniz başarılı bir şekilde iptal edilmiştir. Esesoftware'den daha fazla bildirim ve tanıtım e-postası almayacaksınız.</p>
                     </li>
                 </ul>
             </div>
+            <% } %>
         </div>
     </div>
 </body>
