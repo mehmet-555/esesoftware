@@ -12,6 +12,7 @@ async function userIsUnsubscribed(email, token) {
             subscribe.email === email
         );
         console.log("cosnole 5")
+        console.log(user.businessName)
         if (user) {
             if(user.isSubscribed) {
                 console.log("cosnole 1")
