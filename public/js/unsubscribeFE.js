@@ -19,10 +19,11 @@ function activeValidator() {
             if(email === userEmail) {
                 try {
                     const sonuc = await controlDB(email);
+                    console.log(sonuc)
                 } catch (error) {
                     console.error(error);
                 }
-                console.log(sonuc)
+                
             }else {
                 console.warn("girilen email ve url deki email eşit değil.")
             }
