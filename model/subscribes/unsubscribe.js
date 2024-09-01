@@ -2,9 +2,12 @@ const fs = require("fs").promises;
 const path = require("path");
 const rootDir = require("../../utils/rootDir");
 
+const subsPath = path.join(rootDir, "model", "subscribes", "subscribes.json");
+
 async function userIsUnsubscribed(email, token) {
     try {
-        const subscribesJson = await fs.readFile(path.join(rootDir, "model", "subscribes", "subscribes.json"));
+        console.log(subsPath)
+        const subscribesJson = await fs.readFile(subsPath);
         const subscribesObj = JSON.parse(subscribesJson);
         
         // E-posta adresine göre kullanıcıyı bul
