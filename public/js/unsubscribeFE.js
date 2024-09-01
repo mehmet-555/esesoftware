@@ -14,11 +14,13 @@ function activeValidator() {
 
 
     emailInput.addEventListener("input", async (e)=> {
+        emailInput.classList.remove("validEmailInput");
         const email = e.target.value;
         if (validateEmail(email)) {
             if(email === userEmail) {
                 try {
                     const sonuc = await controlDB(email);
+                    emailInput.classList.add("validEmailInput")
                     console.log(sonuc)
                 } catch (error) {
                     console.error(error);
