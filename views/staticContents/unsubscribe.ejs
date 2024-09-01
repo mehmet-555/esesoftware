@@ -140,7 +140,7 @@
                     </div>
                 </div>
                 <div class="my-8">
-                    <button type="button" class="bg-slate-950/85 hover:bg-slate-950 rounded-md outline-none text-white px-3 py-2 transition-all duration-200">E-posta almak istemiyorum</button>
+                    <button id="unsubscribeBtn" type="button" class="bg-slate-950/85 hover:bg-slate-950 rounded-md outline-none text-white px-3 py-2 transition-all duration-200" disabled>E-posta almak istemiyorum</button>
                 </div>
             </div>
             <% } else { %>
@@ -154,5 +154,9 @@
             <% } %>
         </div>
     </div>
+    <% if(!isUnsubscribedYet) { %>
+        <script src="/js/unsubscribeFE.js"></script>
+    <% } %>
+
 </body>
 </html>
