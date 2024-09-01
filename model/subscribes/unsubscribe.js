@@ -46,32 +46,35 @@ async function isThereEmail(email) {
 }
 
 async function cancelSubscribe(email) {
-    try {
-        // JSON dosyasını oku
-        const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"), 'utf-8');
-        const subscribesObj = JSON.parse(subscribesJson);
-
-        // E-posta adresine göre kullanıcıyı bul
-        const user = subscribesObj.subscribes.find(subscribe => 
-            subscribe.businessEmail === email
-        );
-
-        if (user) {
-            // `isSubscribed` property’sini `false` olarak değiştir
-            user.isSubscribed = true;
-
-            // Güncellenmiş veriyi JSON olarak tekrar yaz
-            await fs.writeFile(path.join(__dirname, "subscribes.json"), JSON.stringify(subscribesObj, null, 2));
-
-            console.log(`Kullanıcı ${email} aboneliği iptal edildi.`);
-            return true;
-        } else {
-            console.log(`Kullanıcı ${email} bulunamadı.`);
+    async function cancelSubscribe(email) {
+        try {
+            // JSON dosyasını oku
+            const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"), 'utf-8');
+            const subscribesObj = JSON.parse(subscribesJson);
+    
+            // E-posta adresine göre kullanıcıyı bul
+            const user = subscribesObj.subscribes.find(subscribe => 
+                subscribe.businessEmail === email
+            );
+    
+            if (user) {
+                console.log(`Kullanıcı bulundu: ${user.businessEmail}`);
+                // `isSubscribed` property’sini `true` olarak değiştir
+                user.isSubscribed = true;
+    
+                // Güncellenmiş veriyi JSON olarak tekrar yaz
+                await fs.writeFile(path.join(__dirname, "subscribes.json"), JSON.stringify(subscribesObj, null, 2));
+    
+                console.log(`Kullanıcı ${email} aboneliği iptal edildi.`);
+                return true;
+            } else {
+                console.log(`Kullanıcı ${email} bulunamadı.`);
+                return false;
+            }
+        } catch (error) {
+            console.error("Bir hata oluştu:", error);
             return false;
         }
-    } catch (error) {
-        console.error("Bir hata oluştu:", error);
-        return false;
     }
 }
 
