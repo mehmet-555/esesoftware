@@ -24,7 +24,8 @@ router.route("/")
         }
     })
     .post((req, res, next) => {
-        // POST işlemi burada yapılabilir
+        console.log(req.body);
+        res.send("İptal isteği sunucuya ulaştı eposta ile bareber")
     });
 
 router.post("/controlEmail", async (req, res, next)=> {

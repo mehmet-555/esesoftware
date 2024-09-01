@@ -1952,3 +1952,6 @@ span.inline-flex.justify-center.items-center.w-5.min-w-5.h-5.min-h-5.ml-2.text-2
 .validEmailInput {
   outline: 2px solid green;
 }
+#unsubscribeBtn[disabled] {
+  background-color: #02061773;
+}
