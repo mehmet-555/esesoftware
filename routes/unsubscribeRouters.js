@@ -24,6 +24,7 @@ router.route("/")
         }
     })
     .post(async (req, res, next) => {
+        console.log("POST /unsubscribe isteği alındı:", req.body);  // Debugging için log ekleyin
         try {
             const isSubscribedValue = await cancelSubscribe(req.body.email);
     

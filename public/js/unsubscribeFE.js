@@ -18,6 +18,9 @@ function activeValidator() {
                 console.log(response.message)
                 window.location.reload(true);
             })
+            .catch(err => {
+                console.error(err);
+            })
     })
 
     emailInput.addEventListener("input", async (e)=> {
