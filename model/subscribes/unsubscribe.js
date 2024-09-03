@@ -19,6 +19,7 @@ async function initializeFirebase() {
     });
 
     db = admin.firestore("esesoftwaredatabase167");
+    console.log("Firestore DB Object:", db); // Firestore nesnesini kontrol etmek için eklendi
     console.log("Firebase başarıyla başlatıldı.");
   } catch (error) {
     console.error("Firebase başlatma hatası:", error);
