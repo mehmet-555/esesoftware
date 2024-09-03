@@ -1,18 +1,17 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-
 const admin = require('firebase-admin');
-// const serviceAccount = require(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY);
 
-// console.log("Services Account: ", serviceAccount);
+// Base64 string'i alıp JSON formatına çeviriyoruz
+const serviceAccount = JSON.parse(Buffer.from(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY, 'base64').toString('utf8'));
 
+// Firebase Admin SDK'yı başlatıyoruz
 admin.initializeApp({
-  credential: admin.credential.cert(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY)
+  credential: admin.credential.cert(serviceAccount)
 });
 
 const db = admin.firestore();
-
 
 
 
