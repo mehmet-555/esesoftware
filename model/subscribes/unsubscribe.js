@@ -23,14 +23,6 @@ async function initializeFirebase() {
 
 async function startApp() {
   await initializeFirebase();
-
-  // Firebase başlatıldıktan sonra bu işlevleri çağırın
-  try {
-    const result = await isTheUserCurrentlySubscribed('example@example.com');
-    console.log(result);
-  } catch (error) {
-    console.error("Veritabanı sorgulama hatası:", error);
-  }
 }
 
 startApp();
