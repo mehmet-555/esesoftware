@@ -33,6 +33,17 @@ app.use((req, res, next) => {
     }
 });
 
+const admin = require('firebase-admin');
+const serviceAccount = require('./keys/serviceAccountKey.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+
+
+
 // Internal Middlewares
 app.set("view engine", "ejs");
 app.set("views", path.join(rootDir, "views"));

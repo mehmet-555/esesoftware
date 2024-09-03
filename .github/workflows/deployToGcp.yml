@@ -30,8 +30,8 @@ jobs:
         echo "EMAIL_APPLICATION_KEY=${{ secrets.EMAIL_APPLICATION_KEY }}" >> $GITHUB_ENV
         echo "EMAIL_APPLICATION_KEY=${{ secrets.EMAIL_APPLICATION_KEY }}" >> $GITHUB_WORKSPACE/.env
 
-    - name: Deploy to App Engine
+    - name: Set GOOGLE_APPLICATION_CREDENTIALS environment variable
       run: |
-        echo "${{ secrets.GCP_SA_KEY }}" > $GITHUB_WORKSPACE/ser.json
-        export GOOGLE_APPLICATION_CREDENTIALS="$GITHUB_WORKSPACE/ser.json"
-        gcloud app deploy --quiet
+        echo "${{ secrets.GCPCLOUDFIRESTOREBASE64JSONKEY }}" | base64 -d > $HOME/gcp_key.json
+        echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcp_key.json" >> $GITHUB_ENV
+
