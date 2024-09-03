@@ -34,4 +34,4 @@ jobs:
       run: |
         echo "${{ secrets.GCPCLOUDFIRESTOREBASE64JSONKEY }}" | base64 -d > $HOME/gcp_key.json
         echo "GOOGLE_APPLICATION_CREDENTIALS=$HOME/gcp_key.json" >> $GITHUB_ENV
-
+        gcloud app deploy --quiet
