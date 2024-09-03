@@ -46,7 +46,7 @@ async function isTheUserCurrentlySubscribed(email) {
                                     .get();
 
         if(userSnapshot.empty) {
-            console.log("Bu email'e sahip bir abone bulunamadı.");
+            console.log("Bu email'e sahip bir abone bulunamadı. -1");
             return false;
         };
         let isSubscribed = false;
@@ -59,7 +59,7 @@ async function isTheUserCurrentlySubscribed(email) {
         })
         return isSubscribed;
     } catch (error) {
-        console.error("FB CS veri sorgulama hatası:", error);
+        console.error("FB CS veri sorgulama hatası: 1", error);
         return false;
     }
 };
@@ -75,7 +75,7 @@ async function isThereEmail(email) {
         // Snapshot boş değilse, email vardır
         return !userSnapshot.empty;
     } catch (error) {
-        console.error("FB CS veri sorgulama hatası:", error);
+        console.error("FB CS veri sorgulama hatası: 2", error);
         return false;
     }
 }
@@ -90,7 +90,7 @@ async function cancelSubscribe(email) {
                                     .get();
 
         if (userSnapshot.empty) {
-            console.log(`Kullanıcı ${email} bulunamadı.`);
+            console.log(`Kullanıcı ${email} bulunamadı. 3`);
             return false;
         }
 
@@ -98,14 +98,14 @@ async function cancelSubscribe(email) {
         userSnapshot.forEach(async (doc) => {
             const userRef = db.collection('emailSubscribes').doc(doc.id);
             await userRef.update({ isSubscribeNow: false });
-            console.log("Güncelleme sonrası isSubscribeNow değeri:", false);
+            console.log("Güncelleme sonrası isSubscribeNow değeri: 4", false);
             success = true;
         });
 
         return success;
 
     } catch (error) {
-        console.error("FB CS veri güncelleme hatası:", error);
+        console.error("FB CS veri güncelleme hatası: 5", error);
         return false;
     }
 }
