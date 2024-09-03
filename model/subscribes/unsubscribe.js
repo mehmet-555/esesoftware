@@ -15,6 +15,7 @@ async function initializeFirebase() {
 
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
+      databaseURL: 'https://<esesoftwaredatabase167>.firebaseio.com'
     });
 
     db = admin.firestore();
