@@ -3,12 +3,12 @@ const path = require("path");
 
 
 const admin = require('firebase-admin');
-const serviceAccount = require(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY);
+// const serviceAccount = require();
 
 console.log("Services Account: ", serviceAccount);
 
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY)
 });
 
 const db = admin.firestore();
