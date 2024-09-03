@@ -2,32 +2,38 @@ const fs = require('fs').promises;
 const path = require('path');
 const admin = require('firebase-admin');
 
-// db değişkenini global olarak tanımlayın
 let db;
 
 async function initializeFirebase() {
   try {
-    // Dosya yolunu tanımlayın
     const theKeyJsonPath = path.join(__dirname, "key.json");
-
-    // JSON dosyasını asenkron olarak okuyun ve JSON nesnesine dönüştürün
     const serviceAccountData = await fs.readFile(theKeyJsonPath, 'utf8');
     const serviceAccount = JSON.parse(serviceAccountData);
 
-    // Firebase Admin SDK'yı başlatın
     admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount)
+      credential: admin.credential.cert(serviceAccount),
     });
 
-    // db değişkenini başlatın
     db = admin.firestore();
     console.log("Firebase başarıyla başlatıldı.");
-
   } catch (error) {
     console.error("Firebase başlatma hatası:", error);
   }
 }
 
+async function startApp() {
+  await initializeFirebase();
+
+  // Firebase başlatıldıktan sonra bu işlevleri çağırın
+  try {
+    const result = await isTheUserCurrentlySubscribed('example@example.com');
+    console.log(result);
+  } catch (error) {
+    console.error("Veritabanı sorgulama hatası:", error);
+  }
+}
+
+startApp();
 
 // Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
 //DA: Verilen e-mail ile veritabanında bir sorgulama yapılıyor; eğer bir sonuç yoksa false döndürülüyor. Sonrasında let ile isSubscribed değişkeni false olarak tanımlanıyor. veritabanı sorgusunda ilgili döküman bulunursa ve 
