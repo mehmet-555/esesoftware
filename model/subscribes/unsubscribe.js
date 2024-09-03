@@ -3,7 +3,7 @@ const path = require("path");
 
 
 const admin = require('firebase-admin');
-// const serviceAccount = require();
+// const serviceAccount = require(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY);
 
 // console.log("Services Account: ", serviceAccount);
 
