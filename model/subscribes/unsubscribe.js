@@ -3,12 +3,11 @@ const path = require("path");
 
 const admin = require('firebase-admin');
 
-// Base64 string'i alıp JSON formatına çeviriyoruz
-const serviceAccount = JSON.parse(Buffer.from(process.env.GCPCLOUDFIRESTOREBASE64JSONKEY, 'base64').toString('utf8'));
+
 
 // Firebase Admin SDK'yı başlatıyoruz
 admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
+  credential: admin.credential.cert("./key.json")
 });
 
 const db = admin.firestore();

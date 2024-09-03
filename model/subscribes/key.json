@@ -1,0 +1,14 @@
+{
+    "type": "service_account",
+    "project_id": "zinc-advice-422101-a2",
+    "private_key_id": "05bd4820deadc4015f81cf2586d9cecebbd2da75",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCppSmy9xajixay\nSWj0Y5eeR1KVjxqCV2cwy9HDyC2EBDl2RdkjBs+g551XCOEOy4qsliiOXuo64WN/\nRq9cULoOfMQtss7g5CrDu79uMWF1iq7aIxKrlHymJsncn2JIxSvI+RCK09Xl6usR\neL4vaOtsJf4SzPZLZJE4jDxjtvuI3R3SsY17gSd7JYcH7gHmhLcdOE8ceJbE6iHJ\nFtxYrS6MzH28iW5B9+RLkyKhsPOCK9m9Tfgk8iyly77RIajcE/AJ3Wy35znRXLUx\nIvEflANwCUXFiIvqPDx33FHdwj/MJwUCvQf3NcY314G+U12ocQU19uSdIfpe1rdA\n3KMwq48hAgMBAAECgf9Ju//QIh8NgCHdSEYRBpr9YceNJhIuWbs7SQzFxs+Lh/vA\nieovWQtveAEIogSSc4MD4wUMZkhoTywNVxgIh9LMtEaQWzFU8Jv0itc9K2DEhMeO\nkjnQHrAO6fRwl3N5LZxaUXDBq2TM4pM1mIpMTAka7qOJw3iEmyeXJ4Qrq6GUvOS/\nclSRjP/aOz+DDcwsEMjm9CYYOoPp1EY65o5ttYaLJNGAavqG/T7BJV6UlUICBouU\nAbUyh/5r+IirUa7Lmy4WANoOtw9ryO9WTfFfl+v7pYO6zXFqcCYeXWyQHmMyAw8H\nZ97luR3kwdCmWzOdiBF75aCDcFgP9BE7CLTSnAsCgYEA4KkQ6Y+xULE+IWTq7Roe\n3aE9K58MxyMRC2kwfzO4nEsqr2Te5FXCttZHmFmbtY6iagwm4wymf0dZTFnTkony\nJPy8KyA6ECL1va2rk/gNLoaRTKP/bH8MdGSYf3p36a6j46NEMez5ciGpku6oEwyG\nVsL5db7+/h5xaGHwRwix6+MCgYEAwU9tIvUF1pGf19kA9BF4FssSpeaQMVoWPoA9\nCz4Br1GzjmJFtMoJR4hk1BeF6ELhGHfee4nlpsB8dcWaQ108fDUl0u3jZsefwSpt\nEwiPcaDAAlppqmA41e0YGSsW8xS3ul2bZqRvFsKrjOP7RhKqA/ub7YZ4FhZ5t2Vf\nAqtGUCsCgYEA2nEpI6B3DXm5aqkAkFhkiKUdoEt/FiWvjgPShuxYZYfk0jPnUedd\nc3/4j1cZwrgUjb6RFRWY0osidc2lnYeJrZMct2YXbtc/UBYMjcyTrJhlsTqIwgrq\npkWlzdXbwJjxfAak6VJ83Q+EHXz2acc03Cmqe2Wh9J7PMGqCQd9feHcCgYB4L5Oh\nCknI7907a/XFyR6qvTMo5kJ8DJCL51sMpE6T2+4Q9lR0ZLCEQu69VqqwjvQ4LD6s\n/D1GAaLf7i1M+KjkaH7Nt42Ml0xh4qjSDp5wfQsj62aKwSxVBQXYkAvCsfzQ5+X4\nWP+gXQQfopbVKEGAHG0Drnj28p5WQbZiiG485QKBgQDX7w6xd66rymJ8/wB5l1nt\n6bzx9heTyhwdgQ1mqauj0jJZPrOAsjgK9LpcFLYmfHjdDzTQOok+yUduWlbSYsrU\nnUk47TGkjWQW/+MJ8oH2CQ+ORMYD5xELBXW9aog2d8ydUsfdUHOgJolysdUnY/dD\nV597J2VZ3GHINxDIee088Q==\n-----END PRIVATE KEY-----\n",
+    "client_email": "cloudfirestoreaccount3sept@zinc-advice-422101-a2.iam.gserviceaccount.com",
+    "client_id": "103871931484911587688",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudfirestoreaccount3sept%40zinc-advice-422101-a2.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
+  
