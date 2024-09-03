@@ -14,7 +14,7 @@ async function initializeFirebase() {
       credential: admin.credential.cert(serviceAccount),
     });
 
-    db = admin.firestore();
+    db = admin.firestore("esesoftwaredatabase167");
     console.log("Firebase başarıyla başlatıldı.");
   } catch (error) {
     console.error("Firebase başlatma hatası:", error);
