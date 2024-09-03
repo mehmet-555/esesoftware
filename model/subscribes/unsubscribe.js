@@ -2,6 +2,9 @@ const fs = require('fs').promises;
 const path = require('path');
 const admin = require('firebase-admin');
 
+// db değişkenini global olarak tanımlayın
+let db;
+
 async function initializeFirebase() {
   try {
     // Dosya yolunu tanımlayın
@@ -16,16 +19,14 @@ async function initializeFirebase() {
       credential: admin.credential.cert(serviceAccount)
     });
 
-    const db = admin.firestore();
+    // db değişkenini başlatın
+    db = admin.firestore();
     console.log("Firebase başarıyla başlatıldı.");
 
   } catch (error) {
     console.error("Firebase başlatma hatası:", error);
   }
 }
-
-// Firebase'i başlatmak için fonksiyonu çağırın
-initializeFirebase();
 
 
 // Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
