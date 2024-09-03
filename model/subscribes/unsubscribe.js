@@ -6,9 +6,12 @@ let db;
 
 async function initializeFirebase() {
   try {
+    console.log("Firebase başlatılıyor...");  // Firebase başlatma süreci başladı.
     const theKeyJsonPath = path.join(__dirname, "key.json");
     const serviceAccountData = await fs.readFile(theKeyJsonPath, 'utf8');
+    console.log("Service account JSON dosyası okundu.");  // JSON dosyası başarıyla okundu.
     const serviceAccount = JSON.parse(serviceAccountData);
+    console.log("Service account JSON parse edildi.");  // JSON dosyası başarıyla parse edildi.
 
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
@@ -33,6 +36,7 @@ startApp();
 async function isTheUserCurrentlySubscribed(email) {
     try {
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
+        console.log(`Veritabanında ${email} sorgulanıyor...`);  // E-mail veritabanında sorgulanıyor.
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
@@ -59,6 +63,7 @@ async function isTheUserCurrentlySubscribed(email) {
 //Bu fonkiyon veritabanında böyle bir email in olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
 async function isThereEmail(email) {
     try {
+        console.log(`Veritabanında ${email} olup olmadığı kontrol ediliyor...`);  // E-mail var mı kontrol ediliyor.
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
@@ -76,6 +81,7 @@ async function isThereEmail(email) {
 // Verilen e-mail ile veritabanında ilgili koleksiyonda bu e-mail e sahip bir döküman var mı bakılıyor; eğer yoksa fonksiyon false dönderiyor varsa bu dökümanın isSubscribeNow değeri false olarak güncelleniyor ve fonksiyon success(true) dönüyor.  
 async function cancelSubscribe(email) {
     try {
+        console.log(`Abonelik iptali için ${email} sorgulanıyor...`);  // Abonelik iptali için e-mail sorgulanıyor.
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
