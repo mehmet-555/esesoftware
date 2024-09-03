@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { userIsUnsubscribed, isThereEmail, cancelSubscribe } = require('../model/subscribes/unsubscribe');
+const { isTheUserCurrentlySubscribed, isThereEmail, cancelSubscribe } = require('../model/subscribes/unsubscribe');
 
 router.route("/")
     .get(async (req, res, next) => { // .get metodunu async olarak tanımlıyoruz
@@ -8,14 +8,14 @@ router.route("/")
         const token = req.query.token;
 
         try {
-            const isUnsubscribed = await userIsUnsubscribed(email, token); // await kullanıyoruz
-            if (isUnsubscribed) {
+            const isSubscribeNow = await isTheUserCurrentlySubscribed(email); // await kullanıyoruz
+            if (isSubscribeNow) {
                 res.status(200).render("staticContents/unsubscribe", {
-                    isUnsubscribedYet: true
+                    isSubscribeNow: true
                 });
             } else {
                 res.status(200).render("staticContents/unsubscribe", {
-                    isUnsubscribedYet: false
+                    isSubscribeNow: false
                 });
             }
         } catch (error) {
@@ -24,18 +24,17 @@ router.route("/")
         }
     })
     .post(async (req, res, next) => {
-        console.log("POST /unsubscribe isteği alındı:", req.body);  // Debugging için log ekleyin
         try {
-            const isSubscribedValue = await cancelSubscribe(req.body.email);
+            const didTheUserCancelSub = await cancelSubscribe(req.body.email);
     
-            if (isSubscribedValue === true) {
+            if (didTheUserCancelSub === true) {
                 res.status(201).json({ message: "E-posta aboneliği iptal edildi." });
             } else {
                 res.status(404).json({ message: "E-posta aboneliği iptali sırasında bir hata oluştu" });
             }
         } catch (error) {
-            console.error("Hata oluştu:", error);
-            res.status(500).json({ message: "Sunucu hatası." });
+            console.error("Hata oluştu:(cancelSubscribe  fonksiyonu)", error);
+            res.status(500).json({ message: "Sunucu hatası.(cancelSubscribe  fonksiyonu)" });
         }
     });
 
@@ -43,13 +42,13 @@ router.post("/controlEmail", async (req, res, next)=> {
     try {
         const value = await isThereEmail(req.body.email);
         if(value === true) {
-            res.status(201).send("true");
+            res.status(201).send("Kullanıcı var");
         } else {
-            res.status(404).send("Email not found");
+            res.status(404).send("Email bulunamadı kullanıcı yok");
         }
     } catch (error) {
         console.error(error);
-        res.status(500).send("Internal Server Error");
+        res.status(500).send("Internal Server Error(isThereEmail fonksiyonu çalışması sırasında bir hata meydana geldi)");
     }
 })
 

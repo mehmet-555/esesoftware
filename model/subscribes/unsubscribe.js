@@ -1,87 +1,97 @@
 const fs = require("fs").promises;
 const path = require("path");
 
-async function userIsUnsubscribed(email, token) {
+
+const admin = require('firebase-admin');
+const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+
+const db = admin.firestore();
+
+
+
+
+
+// Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
+//DA: Verilen e-mail ile veritabanında bir sorgulama yapılıyor; eğer bir sonuç yoksa false döndürülüyor. Sonrasında let ile isSubscribed değişkeni false olarak tanımlanıyor. veritabanı sorgusunda ilgili döküman bulunursa ve 
+//isSubscribeNow değeri true ise isSubscribed değeri true olarak güncellenip bu değişken gönderiliyor. isSubscribeNow değeri false ise isSubscribed değişkeni false olarak kalıyor ve sonuçta false dönderiliyor.
+async function isTheUserCurrentlySubscribed(email) {
     try {
-        const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"));
-        const subscribesObj = JSON.parse(subscribesJson);
-        // E-posta adresine göre kullanıcıyı bul
-        const user = subscribesObj.subscribes.find(subscribe => 
-            subscribe.businessEmail === email
-        );
-        
-        console.log(user, user.businessEmail, user.businessName)
-        if (user) {
-            if(user.isSubscribed === "true") {
-                return true
-                
-            }else {
-                return false
-            }
-        } else {
-            // Kullanıcı bulunamazsa, false döndürülür
+        // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
+        const userSnapshot = await db.collection('emailSubscribes')
+                                    .where('businessEmail', '==', email)
+                                    .get();
+
+        if(userSnapshot.empty) {
+            console.log("Bu email'e sahip bir abone bulunamadı.");
             return false;
-        }
+        };
+        let isSubscribed = false;
+        userSnapshot.forEach(doc => {
+            const userData = doc.data();
+            // isSubscribeNow değerini kontrol ediyoruz
+            if (userData.isSubscribeNow === true) {
+                isSubscribed = true;
+            }
+        })
+        return isSubscribed;
     } catch (error) {
-        console.error("Error reading or parsing subscribes.json:", error);
-        // Hata durumunda false döndürüyoruz
+        console.error("FB CS veri sorgulama hatası:", error);
         return false;
     }
-}
+};
+
+//Bu fonkiyon veritabanında böyle bir email in olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
 async function isThereEmail(email) {
     try {
-        const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"));
-        const subscribesObj = JSON.parse(subscribesJson);
+        // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
+        const userSnapshot = await db.collection('emailSubscribes')
+                                    .where('businessEmail', '==', email)
+                                    .get();
 
-        // `some` metodu, koşulu sağlayan bir öğe bulursa `true` döner ve döngüyü sonlandırır
-        const emailExists = subscribesObj.subscribes.some(subscribe => 
-            subscribe.businessEmail === email
-        );
-
-        return emailExists;
+        // Snapshot boş değilse, email vardır
+        return !userSnapshot.empty;
     } catch (error) {
-        console.error("Error reading or parsing subscribes.json:", error);
+        console.error("FB CS veri sorgulama hatası:", error);
         return false;
     }
 }
 
+//Bu fonksiyon ile kullanıcı "E-Posta Listesinden Çık" butonuna tıklayarak yeni e-mail alımını engelliyor(Veritabanında isSubscribeNow "false" olarak güncelleniyor.)
+// Verilen e-mail ile veritabanında ilgili koleksiyonda bu e-mail e sahip bir döküman var mı bakılıyor; eğer yoksa fonksiyon false dönderiyor varsa bu dökümanın isSubscribeNow değeri false olarak güncelleniyor ve fonksiyon success(true) dönüyor.  
 async function cancelSubscribe(email) {
     try {
-        const subscribesJson = await fs.readFile(path.join(__dirname, "subscribes.json"), 'utf-8');
-        const subscribesObj = JSON.parse(subscribesJson);
+        // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
+        const userSnapshot = await db.collection('emailSubscribes')
+                                    .where('businessEmail', '==', email)
+                                    .get();
 
-        const user = subscribesObj.subscribes.find(subscribe => 
-            subscribe.businessEmail === email
-        );
-
-        if (user) {
-            console.log(`Kullanıcı bulundu: ${user.businessEmail}, isSubscribed: ${user.isSubscribed}`);
-
-            // isSubscribed'ı true olarak değiştiriyoruz
-            user.isSubscribed = true;
-
-            console.log("Güncelleme sonrası isSubscribed değeri:", user.isSubscribed);
-
-            // Güncellenmiş veriyi JSON olarak tekrar yaz
-            await fs.writeFile(path.join(__dirname, "subscribes.json"), JSON.stringify(subscribesObj, null, 2));
-            
-            console.log("JSON dosyası başarıyla güncellendi.");
-
-            const updatedJson = await fs.readFile(path.join(__dirname, "subscribes.json"), 'utf-8');
-            console.log("Güncellenmiş dosya içeriği:", updatedJson);
-            return true;
-        } else {
+        if (userSnapshot.empty) {
             console.log(`Kullanıcı ${email} bulunamadı.`);
             return false;
         }
+
+        let success = false;
+        userSnapshot.forEach(async (doc) => {
+            const userRef = db.collection('emailSubscribes').doc(doc.id);
+            await userRef.update({ isSubscribeNow: false });
+            console.log("Güncelleme sonrası isSubscribeNow değeri:", false);
+            success = true;
+        });
+
+        return success;
+
     } catch (error) {
-        console.error("Bir hata oluştu:", error);
+        console.error("FB CS veri güncelleme hatası:", error);
         return false;
     }
 }
 
 module.exports = {
-    userIsUnsubscribed,
+    isTheUserCurrentlySubscribed,
     isThereEmail,
     cancelSubscribe
 };
