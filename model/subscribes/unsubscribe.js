@@ -3,11 +3,11 @@ const path = require("path");
 
 const admin = require('firebase-admin');
 
-
+const theKeyJsonPath = path.join(__dirname, "key.json");
 
 // Firebase Admin SDK'yı başlatıyoruz
 admin.initializeApp({
-  credential: admin.credential.cert("./key.json")
+  credential: admin.credential.cert(theKeyJsonPath)
 });
 
 const db = admin.firestore();
