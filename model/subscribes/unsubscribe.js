@@ -1,18 +1,31 @@
-const fs = require("fs").promises;
-const path = require("path");
-
+const fs = require('fs').promises;
+const path = require('path');
 const admin = require('firebase-admin');
 
-const theKeyJsonPath = path.join(__dirname, "key.json");
+async function initializeFirebase() {
+  try {
+    // Dosya yolunu tanımlayın
+    const theKeyJsonPath = path.join(__dirname, "key.json");
 
-// Firebase Admin SDK'yı başlatıyoruz
-admin.initializeApp({
-  credential: admin.credential.cert(theKeyJsonPath)
-});
+    // JSON dosyasını asenkron olarak okuyun ve JSON nesnesine dönüştürün
+    const serviceAccountData = await fs.readFile(theKeyJsonPath, 'utf8');
+    const serviceAccount = JSON.parse(serviceAccountData);
 
-const db = admin.firestore();
+    // Firebase Admin SDK'yı başlatın
+    admin.initializeApp({
+      credential: admin.credential.cert(serviceAccount)
+    });
 
+    const db = admin.firestore();
+    console.log("Firebase başarıyla başlatıldı.");
 
+  } catch (error) {
+    console.error("Firebase başlatma hatası:", error);
+  }
+}
+
+// Firebase'i başlatmak için fonksiyonu çağırın
+initializeFirebase();
 
 
 // Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
