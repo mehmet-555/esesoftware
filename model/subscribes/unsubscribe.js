@@ -39,7 +39,7 @@ async function isTheUserCurrentlySubscribed(email) {
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
-
+        console.log("Firestore yanıtı alındı: ", userSnapshot);
         if(userSnapshot.empty) {
             console.log("Bu email'e sahip bir abone bulunamadı. -1");
             return false;
@@ -68,7 +68,7 @@ async function isThereEmail(email) {
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
-
+        console.log("Firestore yanıtı alındı: ", userSnapshot);
         // Snapshot boş değilse, email vardır
         return !userSnapshot.empty;
     } catch (error) {
@@ -87,7 +87,7 @@ async function cancelSubscribe(email) {
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
-
+        console.log("Firestore yanıtı alındı: ", userSnapshot);
         if (userSnapshot.empty) {
             console.log(`Kullanıcı ${email} bulunamadı. 3`);
             return false;
