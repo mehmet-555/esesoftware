@@ -2,15 +2,31 @@ const fs = require('fs').promises;
 const path = require('path');
 const admin = require('firebase-admin');
 
-const serviceAccount = path.join(__dirname, "key.json");
+let db; // Global olarak tanımlıyoruz
 
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://<zinc-advice-422101-a2>.firebaseio.com'
-});
+async function startDB () {
+    try {
+        const keyJson = await fs.readFile(path.join(__dirname, "key.json"), {encoding: "utf-8"});
+        const serviceAccount = JSON.parse(keyJson);
 
-db = admin.firestore();
-console.log("DBDB: ", db)
+        admin.initializeApp({
+            credential: admin.credential.cert(serviceAccount),
+            databaseURL: 'https://zinc-advice-422101-a2.firebaseio.com' // Proje URL'ni güncellediğinden emin ol
+        });
+        
+        db = admin.firestore();
+        console.log("DB bağlantısı kuruldu.");
+    } catch (error) {
+        console.error("Veritabanı başlatma hatası: ", error);
+    }
+}
+
+// Fonksiyonları çağırmadan önce veritabanı başlatıldığından emin oluyoruz
+async function ensureDBInitialized() {
+    if (!db) {
+        await startDB(); // Eğer db henüz başlatılmadıysa, başlat
+    }
+}
 
 // Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
 //DA: Verilen e-mail ile veritabanında bir sorgulama yapılıyor; eğer bir sonuç yoksa false döndürülüyor. Sonrasında let ile isSubscribed değişkeni false olarak tanımlanıyor. veritabanı sorgusunda ilgili döküman bulunursa ve 
