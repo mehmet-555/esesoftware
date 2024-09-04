@@ -36,6 +36,10 @@ async function isTheUserCurrentlySubscribed(email) {
     try {
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
         console.log(`Veritabanında ${email} sorgulanıyor...`);  // E-mail veritabanında sorgulanıyor.
+        const snapshot2 = await db.collection('emailSubscribes').get();
+        snapshot2.forEach(doc => {
+            console.log(doc.id, '=>', doc.data());  // Tüm verileri loglayarak e-posta var mı kontrol edelim
+        });
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
@@ -65,6 +69,10 @@ async function isThereEmail(email) {
     try {
         console.log(`Veritabanında ${email} olup olmadığı kontrol ediliyor...`);  // E-mail var mı kontrol ediliyor.
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
+        const snapshot2 = await db.collection('emailSubscribes').get();
+        snapshot2.forEach(doc => {
+            console.log(doc.id, '=>', doc.data());  // Tüm verileri loglayarak e-posta var mı kontrol edelim
+        });
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
@@ -84,6 +92,10 @@ async function cancelSubscribe(email) {
     try {
         console.log(`Abonelik iptali için ${email} sorgulanıyor...`);  // Abonelik iptali için e-mail sorgulanıyor.
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
+        const snapshot2 = await db.collection('emailSubscribes').get();
+        snapshot2.forEach(doc => {
+            console.log(doc.id, '=>', doc.data());  // Tüm verileri loglayarak e-posta var mı kontrol edelim
+        });
         const userSnapshot = await db.collection('emailSubscribes')
                                     .where('businessEmail', '==', email)
                                     .get();
