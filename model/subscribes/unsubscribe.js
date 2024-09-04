@@ -6,10 +6,10 @@ const serviceAccount = path.join(__dirname, "key.json");
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
-    databaseURL: 'https://<esesoftwaredatabase167>.firebaseio.com'
+    databaseURL: 'https://<zinc-advice-422101-a2>.firebaseio.com'
 });
 
-db = admin.firestore("esesoftwaredatabase167");
+db = admin.firestore();
 console.log("DBDB: ", db)
 
 // Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
