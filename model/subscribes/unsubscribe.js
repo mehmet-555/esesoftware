@@ -2,35 +2,13 @@ const fs = require('fs').promises;
 const path = require('path');
 const admin = require('firebase-admin');
 
-let db;
+admin.initializeApp({
+    credential: admin.credential.cert(serviceAccount),
+    databaseURL: 'https://<esesoftwaredatabase167>.firebaseio.com'
+});
 
-async function initializeFirebase() {
-  try {
-    console.log("Firebase başlatılıyor...");  // Firebase başlatma süreci başladı.
-    const theKeyJsonPath = path.join(__dirname, "key.json");
-    const serviceAccountData = await fs.readFile(theKeyJsonPath, 'utf8');
-    console.log("Service account JSON dosyası okundu.");  // JSON dosyası başarıyla okundu.
-    const serviceAccount = JSON.parse(serviceAccountData);
-    console.log("Service account JSON parse edildi.");  // JSON dosyası başarıyla parse edildi.
-
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-      databaseURL: 'https://<esesoftwaredatabase167>.firebaseio.com'
-    });
-
-    db = admin.firestore("esesoftwaredatabase167");
-    console.log("Firestore DB Object:", db); // Firestore nesnesini kontrol etmek için eklendi
-    console.log("Firebase başarıyla başlatıldı.");
-  } catch (error) {
-    console.error("Firebase başlatma hatası:", error);
-  }
-}
-
-async function startApp() {
-  await initializeFirebase();
-}
-
-startApp();
+db = admin.firestore("esesoftwaredatabase167");
+console.log("DBDB: ", db)
 
 // Bu fonksiyon kullanıcının şuanda abone olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
 //DA: Verilen e-mail ile veritabanında bir sorgulama yapılıyor; eğer bir sonuç yoksa false döndürülüyor. Sonrasında let ile isSubscribed değişkeni false olarak tanımlanıyor. veritabanı sorgusunda ilgili döküman bulunursa ve 
