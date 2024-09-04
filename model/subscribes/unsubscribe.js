@@ -2,6 +2,8 @@ const fs = require('fs').promises;
 const path = require('path');
 const admin = require('firebase-admin');
 
+const serviceAccount = path.join(__dirname, "key.json");
+
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
     databaseURL: 'https://<esesoftwaredatabase167>.firebaseio.com'
