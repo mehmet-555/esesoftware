@@ -32,6 +32,7 @@ async function ensureDBInitialized() {
 //DA: Verilen e-mail ile veritabanında bir sorgulama yapılıyor; eğer bir sonuç yoksa false döndürülüyor. Sonrasında let ile isSubscribed değişkeni false olarak tanımlanıyor. veritabanı sorgusunda ilgili döküman bulunursa ve 
 //isSubscribeNow değeri true ise isSubscribed değeri true olarak güncellenip bu değişken gönderiliyor. isSubscribeNow değeri false ise isSubscribed değişkeni false olarak kalıyor ve sonuçta false dönderiliyor.
 async function isTheUserCurrentlySubscribed(email) {
+    await ensureDBInitialized(); // Veritabanının başlatıldığından emin ol
     try {
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
         console.log(`Veritabanında ${email} sorgulanıyor...`);  // E-mail veritabanında sorgulanıyor.
@@ -60,6 +61,7 @@ async function isTheUserCurrentlySubscribed(email) {
 
 //Bu fonkiyon veritabanında böyle bir email in olup olmadığını kontrol ediyor, sonuca göre true | false dönderiyor.
 async function isThereEmail(email) {
+    await ensureDBInitialized(); // Veritabanının başlatıldığından emin ol
     try {
         console.log(`Veritabanında ${email} olup olmadığı kontrol ediliyor...`);  // E-mail var mı kontrol ediliyor.
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
@@ -78,6 +80,7 @@ async function isThereEmail(email) {
 //Bu fonksiyon ile kullanıcı "E-Posta Listesinden Çık" butonuna tıklayarak yeni e-mail alımını engelliyor(Veritabanında isSubscribeNow "false" olarak güncelleniyor.)
 // Verilen e-mail ile veritabanında ilgili koleksiyonda bu e-mail e sahip bir döküman var mı bakılıyor; eğer yoksa fonksiyon false dönderiyor varsa bu dökümanın isSubscribeNow değeri false olarak güncelleniyor ve fonksiyon success(true) dönüyor.  
 async function cancelSubscribe(email) {
+    await ensureDBInitialized(); // Veritabanının başlatıldığından emin ol
     try {
         console.log(`Abonelik iptali için ${email} sorgulanıyor...`);  // Abonelik iptali için e-mail sorgulanıyor.
         // Firestore'da 'emailSubscribes' koleksiyonunda email ile eşleşen belgeyi sorguluyoruz
