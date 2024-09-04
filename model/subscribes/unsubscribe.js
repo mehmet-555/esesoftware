@@ -13,9 +13,9 @@ async function startDB () {
             credential: admin.credential.cert(serviceAccount),
             databaseURL: 'https://zinc-advice-422101-a2.firebaseio.com' // Proje URL'ni güncellediğinden emin ol
         });
-        
+        console.log("Firebase admin başlatıldı"); // Bunu kontrol edin
         db = admin.firestore();
-        console.log("DB bağlantısı kuruldu.");
+        console.log("Firestore başlatıldı");
     } catch (error) {
         console.error("Veritabanı başlatma hatası: ", error);
     }
