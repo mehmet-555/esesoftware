@@ -42,13 +42,13 @@ router.post("/controlEmail", async (req, res, next)=> {
     try {
         const value = await isThereEmail(req.body.email);
         if(value === true) {
-            res.status(201).json("Kullanıcı var");
+            res.status(201).json({message: "Kullanıcı var"});
         } else {
-            res.status(404).json("Email bulunamadı kullanıcı yok");
+            res.status(404).json({message: "Kullanıcı yok"});
         }
     } catch (error) {
         console.error(error);
-        res.status(500).send("Internal Server Error(isThereEmail fonksiyonu çalışması sırasında bir hata meydana geldi)");
+        res.status(500).json({message: "Internal Server Error(isThereEmail fonksiyonu çalışması sırasında bir hata meydana geldi)"});
     }
 })
 
