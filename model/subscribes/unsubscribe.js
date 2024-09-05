@@ -111,9 +111,11 @@ async function cancelSubscribe(email) {
             await userRef.update({ isSubscribeNow: false });
             console.log("Güncelleme sonrası isSubscribeNow değeri: 4", false);
             success = true;
+
+            return success;
         });
 
-        return success;
+        
 
     } catch (error) {
         console.error("FB CS veri güncelleme hatası: 5", error);
