@@ -26,7 +26,7 @@ router.route("/")
     .post(async (req, res, next) => {
         try {
             const didTheUserCancelSub = await cancelSubscribe(req.body.email);
-    
+            console.log("didTheUserCancelSub: ", didTheUserCancelSub);
             if (didTheUserCancelSub === true) {
                 res.status(201).json({ message: "E-posta aboneliği iptal edildi." });
             } else {
