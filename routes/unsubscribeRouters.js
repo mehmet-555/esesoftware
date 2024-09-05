@@ -42,9 +42,9 @@ router.post("/controlEmail", async (req, res, next)=> {
     try {
         const value = await isThereEmail(req.body.email);
         if(value === true) {
-            res.status(201).send("Kullanıcı var");
+            res.status(201).json("Kullanıcı var");
         } else {
-            res.status(404).send("Email bulunamadı kullanıcı yok");
+            res.status(404).json("Email bulunamadı kullanıcı yok");
         }
     } catch (error) {
         console.error(error);
