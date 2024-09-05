@@ -736,6 +736,10 @@ video {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.my-7 {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+}
 .my-8 {
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -1251,8 +1255,8 @@ video {
 .min-w-\[3318px\] {
   min-width: 3318px;
 }
-.min-w-\[364px\] {
-  min-width: 364px;
+.min-w-\[342px\] {
+  min-width: 342px;
 }
 .min-w-\[40px\] {
   min-width: 40px;
@@ -1828,6 +1832,9 @@ video {
 .bg-\[\#ab2dff\] {
   --tw-bg-opacity: 1;
   background-color: rgb(171 45 255 / var(--tw-bg-opacity));
+}
+.bg-\[\#bdbdbd45\] {
+  background-color: #bdbdbd45;
 }
 .bg-\[\#c4c6c8\] {
   --tw-bg-opacity: 1;
