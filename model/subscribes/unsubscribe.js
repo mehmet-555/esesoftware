@@ -101,24 +101,23 @@ async function cancelSubscribe(email) {
                                     .get();
         console.log("Firestore yanıtı alındı: ", userSnapshot);
         if (userSnapshot.empty) {
-            console.log(`Kullanıcı ${email} bulunamadı. 3`);
+            console.log(`Kullanıcı ${email} bulunamadı.`);
             return false;
         }
 
-        let success = false;
-        userSnapshot.forEach(async (doc) => {
+        // Burada userSnapshot'daki tüm belgeleri güncellemek için Promise.all kullanıyoruz
+        const updatePromises = userSnapshot.docs.map(async (doc) => {
             const userRef = db.collection('emailSubscribes').doc(doc.id);
             await userRef.update({ isSubscribeNow: false });
-            console.log("Güncelleme sonrası isSubscribeNow değeri: 4", false);
-            success = true;
-
-            return success;
+            console.log("Güncelleme sonrası isSubscribeNow değeri: ", false);
+            return true;
         });
 
-        
+        const results = await Promise.all(updatePromises);
+        return results.every(result => result);  // Eğer tüm güncellemeler başarılı olduysa true döndür
 
     } catch (error) {
-        console.error("FB CS veri güncelleme hatası: 5", error);
+        console.error("FB CS veri güncelleme hatası: ", error);
         return false;
     }
 }
